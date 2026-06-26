@@ -583,13 +583,13 @@
       <aside class="verdict">
         <h2>优先行动</h2>
         <p><strong>先看 1503/28 Harbour Street。</strong>它的价格、2B2B、楼内 gym、入住日期和通勤条件最干净。</p>
-        <p><strong>第二梯队：</strong>Arncliffe 的 Bonar St 日期也好，但要确认“2B + study”是否接受；Redfern 位置极强，主要谈 7 月 21 日后起租。</p>
+        <p><strong>第二梯队：</strong>Redfern 位置极强；North Sydney 更便宜且有 Metro，但都要谈 7 月 21 日后起租。</p>
       </aside>
     </section>
 
     <section class="stats" aria-label="筛选摘要">
-      <div class="stat"><strong>8</strong><span>当前候选房源，含同楼备选</span></div>
-      <div class="stat"><strong>$1000-$1200</strong><span>每周租金范围</span></div>
+      <div class="stat"><strong>9</strong><span>当前候选房源，含 $1000 以下备选</span></div>
+      <div class="stat"><strong>≤ $1200</strong><span>每周租金上限，没有下限</span></div>
       <div class="stat"><strong>10-45 min</strong><span>估算轨道+步行/公交通勤</span></div>
       <div class="stat"><strong>2</strong><span>日期最接近你要求的强匹配</span></div>
     </section>
@@ -598,6 +598,7 @@
       <div class="filters">
         <button class="filter-btn active" type="button" data-filter="all" title="显示全部候选"><i data-lucide="list-filter"></i>全部</button>
         <button class="filter-btn" type="button" data-filter="strong" title="日期和条件最稳"><i data-lucide="check-circle-2"></i>强匹配</button>
+        <button class="filter-btn" type="button" data-filter="budget" title="显示每周租金低于 $1000 的候选"><i data-lucide="badge-dollar-sign"></i>低于$1000</button>
         <button class="filter-btn" type="button" data-filter="negotiate" title="需要向中介谈起租日"><i data-lucide="calendar-clock"></i>起租日需谈</button>
         <button class="filter-btn" type="button" data-filter="verify" title="户型或 gym 标注需要二次确认"><i data-lucide="circle-alert"></i>需确认</button>
         <button class="filter-btn" type="button" data-filter="mascot" title="只看 Mascot 同楼或附近备选"><i data-lucide="train-front"></i>Mascot 备选</button>
@@ -677,7 +678,7 @@
       },
       {
         id: "bonar",
-        rank: 2,
+        rank: 3,
         categories: ["strong", "verify"],
         address: "L4B/12-40 Bonar Street, Arncliffe",
         suburb: "Arncliffe",
@@ -702,7 +703,7 @@
       },
       {
         id: "gibbons",
-        rank: 3,
+        rank: 2,
         categories: ["negotiate"],
         address: "41/39-61 Gibbons Street, Redfern",
         suburb: "Redfern",
@@ -726,8 +727,33 @@
         risk: "可入住日期早于你的 7 月 21 日目标，必须确认能否晚一周起租。"
       },
       {
-        id: "defries",
+        id: "miller",
         rank: 4,
+        categories: ["negotiate", "budget"],
+        address: "707/221 Miller Street, North Sydney",
+        suburb: "North Sydney",
+        rent: 950,
+        availableSort: 20260704,
+        available: "2026-07-04",
+        beds: "2B2B",
+        gym: "Gym, sauna, steam room",
+        commute: 38,
+        station: "Victoria Cross Metro / North Sydney",
+        lat: -33.83587,
+        lng: 151.20717,
+        stationLat: -33.83874,
+        stationLng: 151.20725,
+        image: "assets/rentals/707-221-miller-st-north-sydney.jpg",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-north+sydney-444495324",
+        status: "低于$1000",
+        accent: "#7a4f9f",
+        good: "价格明显低于上限，North Sydney 生活和 Metro 通勤都强；listing 写有 gym/sauna/steam room。",
+        risk: "可入住日期早于 7 月 21 日；要确认晚起租空间，以及 North Sydney 到 USYD 的实际课表时段通勤。"
+      },
+      {
+        id: "defries",
+        rank: 5,
         categories: ["negotiate", "verify"],
         address: "629/5 Defries Avenue, Zetland",
         suburb: "Zetland",
@@ -752,7 +778,7 @@
       },
       {
         id: "coward-1020",
-        rank: 5,
+        rank: 6,
         categories: ["negotiate", "mascot"],
         address: "1020/256A Coward Street, Mascot",
         suburb: "Mascot",
@@ -777,7 +803,7 @@
       },
       {
         id: "coward-1021",
-        rank: 6,
+        rank: 7,
         categories: ["negotiate", "mascot"],
         address: "1021/256A Coward Street, Mascot",
         suburb: "Mascot",
@@ -802,7 +828,7 @@
       },
       {
         id: "coward-2b",
-        rank: 7,
+        rank: 8,
         categories: ["negotiate", "mascot"],
         address: "2B/256B Coward Street, Mascot",
         suburb: "Mascot",
@@ -827,7 +853,7 @@
       },
       {
         id: "gardeners",
-        rank: 8,
+        rank: 9,
         categories: ["negotiate", "verify", "mascot"],
         address: "S903/661-669 Gardeners Road, Mascot",
         suburb: "Mascot",
@@ -862,7 +888,9 @@
       { name: "Redfern", lat: -33.89227, lng: 151.19885, lines: ["T4", "T8"] },
       { name: "Central", lat: -33.88303, lng: 151.2066, lines: ["T4", "T8", "M1"] },
       { name: "Town Hall", lat: -33.87337, lng: 151.20605, lines: ["T8"] },
-      { name: "Gadigal", lat: -33.8771, lng: 151.20876, lines: ["M1"] }
+      { name: "Gadigal", lat: -33.8771, lng: 151.20876, lines: ["M1"] },
+      { name: "Barangaroo", lat: -33.8602, lng: 151.2015, lines: ["M1"] },
+      { name: "Victoria Cross", lat: -33.83874, lng: 151.20725, lines: ["M1"] }
     ];
 
     const transitLines = [
@@ -896,7 +924,9 @@
           [-33.91478, 151.16697],
           [-33.89544, 151.20732],
           [-33.88303, 151.2066],
-          [-33.8771, 151.20876]
+          [-33.8771, 151.20876],
+          [-33.8602, 151.2015],
+          [-33.83874, 151.20725]
         ]
       }
     ];
