@@ -576,19 +576,19 @@
   <main class="page">
     <section class="hero">
       <div>
-        <p class="section-label">USYD rental shortlist · captured 2026-06-26</p>
+        <p class="section-label">USYD rental shortlist · captured 2026-06-27</p>
         <h1>2B2B + Gym，50 分钟轨道通勤内的租房候选</h1>
         <p class="lede">筛选口径：租房、2 卧 2 卫、公寓楼内有健身房、周租不超过 $1200、火车/地铁到 University of Sydney Camperdown/Darlington 主校区约 50 分钟内。页面把起租日风险单独标出，方便你先约看最稳的。</p>
       </div>
       <aside class="verdict">
         <h2>优先行动</h2>
         <p><strong>先看 1503/28 Harbour Street。</strong>它的价格、2B2B、楼内 gym、入住日期和通勤条件最干净。</p>
-        <p><strong>第二梯队：</strong>Redfern 位置极强；North Sydney 更便宜且有 Metro，但都要谈 7 月 21 日后起租。</p>
+        <p><strong>第二梯队：</strong>本轮新增先看 Waterloo 的 Potter St 和 Zetland 的 Gadigal Ave；Redfern 位置极强，North Sydney 更便宜，但起租日都要谈。</p>
       </aside>
     </section>
 
     <section class="stats" aria-label="筛选摘要">
-      <div class="stat"><strong>9</strong><span>当前候选房源，含 $1000 以下备选</span></div>
+      <div class="stat"><strong>13</strong><span>当前候选房源，本轮新增 4 套</span></div>
       <div class="stat"><strong>≤ $1200</strong><span>每周租金上限，没有下限</span></div>
       <div class="stat"><strong>10-45 min</strong><span>估算轨道+步行/公交通勤</span></div>
       <div class="stat"><strong>2</strong><span>日期最接近你要求的强匹配</span></div>
@@ -598,6 +598,7 @@
       <div class="filters">
         <button class="filter-btn active" type="button" data-filter="all" title="显示全部候选"><i data-lucide="list-filter"></i>全部</button>
         <button class="filter-btn" type="button" data-filter="strong" title="日期和条件最稳"><i data-lucide="check-circle-2"></i>强匹配</button>
+        <button class="filter-btn" type="button" data-filter="fresh" title="显示本轮新补入的候选"><i data-lucide="sparkles"></i>本轮新增</button>
         <button class="filter-btn" type="button" data-filter="budget" title="显示每周租金低于 $1000 的候选"><i data-lucide="badge-dollar-sign"></i>低于$1000</button>
         <button class="filter-btn" type="button" data-filter="negotiate" title="需要向中介谈起租日"><i data-lucide="calendar-clock"></i>起租日需谈</button>
         <button class="filter-btn" type="button" data-filter="verify" title="户型或 gym 标注需要二次确认"><i data-lucide="circle-alert"></i>需确认</button>
@@ -752,8 +753,108 @@
         risk: "可入住日期早于 7 月 21 日；要确认晚起租空间，以及 North Sydney 到 USYD 的实际课表时段通勤。"
       },
       {
-        id: "defries",
+        id: "potter",
         rank: 5,
+        categories: ["fresh", "negotiate"],
+        address: "77/15 Potter Street, Waterloo",
+        suburb: "Waterloo",
+        rent: 1200,
+        availableSort: 20260720,
+        available: "2026-07-20",
+        beds: "2B2B + 1 car",
+        gym: "Pool, spa, sauna, gym",
+        commute: 24,
+        station: "Waterloo Metro / Green Square",
+        lat: -33.90008,
+        lng: 151.20748,
+        stationLat: -33.89544,
+        stationLng: 151.20732,
+        image: "assets/rentals/77-15-potter-st-waterloo.jpg",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-waterloo-444472180",
+        status: "本轮新增",
+        accent: "#c15f2e",
+        good: "Waterloo 离 USYD 很近，Metro 接驳强；listing 写有 pool/spa/sauna/gym，起租日只差目标日一天。",
+        risk: "周租刚好 $1200，且可入住是 7 月 20 日；申请前问能否 7 月 21 日或之后起租。"
+      },
+      {
+        id: "gadigal",
+        rank: 6,
+        categories: ["fresh", "negotiate"],
+        address: "418/20 Gadigal Avenue, Zetland",
+        suburb: "Zetland",
+        rent: 1100,
+        availableSort: 20260709,
+        available: "2026-07-09",
+        beds: "2B2B + 1 car",
+        gym: "Gym, pool",
+        commute: 34,
+        station: "Waterloo Metro / Green Square",
+        lat: -33.90555,
+        lng: 151.21315,
+        stationLat: -33.89544,
+        stationLng: 151.20732,
+        image: "assets/rentals/418-20-gadigal-ave-zetland.jpg",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-zetland-444420184",
+        status: "本轮新增",
+        accent: "#168388",
+        good: "Zetland / Victoria Park 生活配套好，listing 写有 gym 和 outdoor pool；价格低于上限。",
+        risk: "7 月 9 日可入住，离你的目标早了约两周；要谈晚起租或接受空置成本。"
+      },
+      {
+        id: "victoria-park",
+        rank: 7,
+        categories: ["fresh", "negotiate"],
+        address: "2B/9 Victoria Park Parade, Zetland",
+        suburb: "Zetland",
+        rent: 1050,
+        availableSort: 20260627,
+        available: "Available now",
+        beds: "2B2B + 1 car",
+        gym: "Gym, pool",
+        commute: 35,
+        station: "Waterloo Metro / Green Square",
+        lat: -33.90702,
+        lng: 151.21138,
+        stationLat: -33.89544,
+        stationLng: 151.20732,
+        image: "assets/rentals/2b-9-victoria-park-parade-zetland.jpg",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-zetland-442135476",
+        status: "本轮新增",
+        accent: "#5f7f46",
+        good: "价格 $1050/w，2B2B 带车位，listing 写有 pool/gym；Zetland 到 USYD 通勤弹性好。",
+        risk: "Available now，若中介不愿意等到 7 月 21 日，实际成本会被提前起租拉高。"
+      },
+      {
+        id: "naulty",
+        rank: 8,
+        categories: ["fresh", "negotiate"],
+        address: "2N/3 Naulty Place, Zetland",
+        suburb: "Zetland",
+        rent: 1060,
+        availableSort: 20260627,
+        available: "Available now",
+        beds: "2B2B",
+        gym: "Gym, pool",
+        commute: 35,
+        station: "Waterloo Metro / Green Square",
+        lat: -33.90755,
+        lng: 151.21018,
+        stationLat: -33.89544,
+        stationLng: 151.20732,
+        image: "assets/rentals/2n-3-naulty-place-zetland.jpg",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-zetland-444512848",
+        status: "本轮新增",
+        accent: "#8a6f2a",
+        good: "价格 $1060/w，listing 写有 gym 和 pool，且说明 2 weeks free；预算余量比 $1200 档舒服。",
+        risk: "没有明确车位标签；Available now 需要谈起租日，并确认优惠是否影响租约总成本。"
+      },
+      {
+        id: "defries",
+        rank: 9,
         categories: ["negotiate", "verify"],
         address: "629/5 Defries Avenue, Zetland",
         suburb: "Zetland",
@@ -778,7 +879,7 @@
       },
       {
         id: "coward-1020",
-        rank: 6,
+        rank: 10,
         categories: ["negotiate", "mascot"],
         address: "1020/256A Coward Street, Mascot",
         suburb: "Mascot",
@@ -803,7 +904,7 @@
       },
       {
         id: "coward-1021",
-        rank: 7,
+        rank: 11,
         categories: ["negotiate", "mascot"],
         address: "1021/256A Coward Street, Mascot",
         suburb: "Mascot",
@@ -828,7 +929,7 @@
       },
       {
         id: "coward-2b",
-        rank: 8,
+        rank: 12,
         categories: ["negotiate", "mascot"],
         address: "2B/256B Coward Street, Mascot",
         suburb: "Mascot",
@@ -853,7 +954,7 @@
       },
       {
         id: "gardeners",
-        rank: 9,
+        rank: 13,
         categories: ["negotiate", "verify", "mascot"],
         address: "S903/661-669 Gardeners Road, Mascot",
         suburb: "Mascot",
