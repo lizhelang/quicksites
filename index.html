@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>USYD 2B2B Rental Shortlist</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2326231e'/%3E%3Cpath d='M7 22V10h4v12H7Zm7 0V6h4v16h-4Zm7 0V13h4v9h-4Z' fill='%23fffaf0'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <title>quicksites</title>
   <style>
     :root {
       --paper: #f7f1e6;
@@ -14,21 +12,12 @@
       --line: #d8c8b1;
       --card: #fffaf0;
       --dark: #26231e;
-      --blue: #2f5f9b;
-      --teal: #127d75;
-      --green: #2d7f44;
       --red: #b94632;
-      --gold: #a4761d;
       --shadow: 0 18px 48px rgba(33, 31, 27, 0.12);
-      --radius: 8px;
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -43,1067 +32,108 @@
       letter-spacing: 0;
     }
 
-    button,
-    a,
-    select {
-      font: inherit;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .page {
-      width: min(1640px, calc(100vw - 32px));
+    main {
+      width: min(960px, calc(100vw - 32px));
       margin: 0 auto;
-      padding: 30px 0 44px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.14fr) minmax(360px, 0.86fr);
-      gap: 20px;
-      align-items: end;
-      margin-bottom: 18px;
+      padding: 48px 0;
     }
 
     h1 {
       margin: 0 0 12px;
-      max-width: 980px;
-      font-size: clamp(2.1rem, 4.4vw, 4.85rem);
-      line-height: 0.98;
+      font-size: clamp(2.6rem, 7vw, 5.2rem);
+      line-height: 0.96;
       font-weight: 900;
     }
 
     .lede {
-      margin: 0;
-      max-width: 840px;
+      margin: 0 0 24px;
+      max-width: 700px;
       color: var(--muted);
-      font-size: 1.06rem;
+      font-size: 1.08rem;
       line-height: 1.55;
     }
 
-    .verdict {
-      background: var(--dark);
-      color: #fff7e9;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius);
+    .site-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .site-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 250, 240, 0.9);
       padding: 18px;
       box-shadow: var(--shadow);
     }
 
-    .section-label,
-    .verdict h2,
-    .control-label {
-      margin: 0 0 10px;
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.88rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .verdict p {
-      margin: 8px 0 0;
-      color: #eadcc8;
-      line-height: 1.5;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin: 18px 0;
-    }
-
-    .stat {
-      min-height: 92px;
-      border: 1px solid var(--line);
-      background: rgba(255, 250, 240, 0.86);
-      border-radius: var(--radius);
-      padding: 14px;
-      box-shadow: 0 8px 22px rgba(33, 31, 27, 0.07);
-    }
-
-    .stat strong {
-      display: block;
-      margin-bottom: 4px;
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+    .site-card h2 {
+      margin: 0 0 6px;
       font-size: 1.35rem;
-      line-height: 1;
+      line-height: 1.15;
     }
 
-    .stat span {
+    .site-card p {
+      margin: 0;
       color: var(--muted);
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
-    .toolbar {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 16px;
-      padding: 10px;
-      border: 1px solid var(--line);
-      background: rgba(247, 241, 230, 0.94);
-      border-radius: var(--radius);
-      backdrop-filter: blur(16px);
-    }
-
-    .filters {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .filter-btn,
-    .sort-select,
-    .map-action,
-    .source-link {
-      min-height: 38px;
-      border: 1px solid #bba98f;
-      background: #fffaf0;
-      color: var(--ink);
-      border-radius: 6px;
-      padding: 8px 11px;
-    }
-
-    .filter-btn,
-    .map-action,
-    .source-link {
+    .open-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 7px;
-      cursor: pointer;
+      min-height: 40px;
+      border: 1px solid var(--dark);
+      border-radius: 6px;
+      background: var(--dark);
+      color: #fffaf0;
+      padding: 9px 13px;
+      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
       text-decoration: none;
-      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
-    }
-
-    .filter-btn:hover,
-    .map-action:hover,
-    .source-link:hover {
-      transform: translateY(-1px);
-      border-color: var(--dark);
-    }
-
-    .filter-btn.active {
-      background: var(--dark);
-      color: #fffaf0;
-      border-color: var(--dark);
-    }
-
-    .sort-wrap {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--muted);
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.9rem;
       white-space: nowrap;
     }
 
-    .sort-select {
-      cursor: pointer;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(520px, 0.92fr) minmax(520px, 1.08fr);
-      gap: 18px;
-      align-items: start;
-    }
-
-    .list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .property-card {
-      display: grid;
-      grid-template-columns: 176px minmax(0, 1fr);
-      gap: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255, 250, 240, 0.9);
-      border-radius: var(--radius);
-      padding: 12px;
-      box-shadow: 0 10px 28px rgba(33, 31, 27, 0.08);
-      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
-    }
-
-    .property-card:hover,
-    .property-card.selected {
-      border-color: color-mix(in srgb, var(--accent), #211f1b 24%);
-      box-shadow: 0 16px 36px rgba(33, 31, 27, 0.13);
-      transform: translateY(-1px);
-    }
-
-    .photo-wrap {
-      position: relative;
-      min-height: 150px;
-      border-radius: 7px;
-      overflow: hidden;
-      background: #ddd0bb;
-    }
-
-    .photo-wrap img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      min-height: 150px;
-      object-fit: cover;
-    }
-
-    .rank {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      display: grid;
-      place-items: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--dark);
-      color: #fffaf0;
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-weight: 900;
-      box-shadow: 0 8px 18px rgba(33, 31, 27, 0.22);
-    }
-
-    .status-ribbon {
-      position: absolute;
-      right: 8px;
-      bottom: 8px;
-      max-width: calc(100% - 16px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      border-radius: 999px;
-      background: rgba(38, 35, 30, 0.86);
-      color: #fffaf0;
-      padding: 5px 8px;
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.76rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .card-main {
-      min-width: 0;
-    }
-
-    .card-topline {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-
-    .address {
-      margin: 0;
-      font-size: 1.13rem;
-      line-height: 1.2;
-      font-weight: 900;
-    }
-
-    .price {
-      flex: 0 0 auto;
-      color: var(--red);
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-size: 1.02rem;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .meta-row,
-    .badges {
-      display: flex;
-      gap: 7px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .meta-row {
-      margin: 0 0 8px;
+    .meta {
+      margin-top: 24px;
       color: var(--muted);
       font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
       font-size: 0.9rem;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      min-height: 27px;
-      border: 1px solid color-mix(in srgb, var(--badge), #211f1b 18%);
-      background: color-mix(in srgb, var(--badge), #fffaf0 83%);
-      border-radius: 999px;
-      padding: 4px 8px;
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.79rem;
-      white-space: nowrap;
-    }
-
-    .notes {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 8px;
-      margin: 10px 0;
-    }
-
-    .note {
-      border-left: 3px solid var(--note-color);
-      background: rgba(247, 241, 230, 0.72);
-      padding: 8px 10px;
-      border-radius: 0 6px 6px 0;
-      color: #3c362f;
-      line-height: 1.36;
-      font-size: 0.9rem;
-    }
-
-    .actions {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .map-action {
-      border-color: color-mix(in srgb, var(--accent), #211f1b 24%);
-      background: color-mix(in srgb, var(--accent), #fffaf0 86%);
-    }
-
-    .source-link {
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.88rem;
-    }
-
-    .map-panel {
-      position: sticky;
-      top: 74px;
-      display: grid;
-      gap: 10px;
-    }
-
-    .map-shell {
-      position: relative;
-      border: 1px solid var(--line);
-      background: rgba(255, 250, 240, 0.92);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    #map {
-      width: 100%;
-      height: min(72vh, 760px);
-      min-height: 560px;
-      background: #e2dccd;
-    }
-
-    .map-note {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-      border: 1px solid var(--line);
-      background: rgba(255, 250, 240, 0.9);
-      border-radius: var(--radius);
-      padding: 10px;
-    }
-
-    .legend-item {
-      display: flex;
-      gap: 7px;
-      align-items: center;
-      min-width: 0;
-      color: var(--muted);
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.82rem;
-      line-height: 1.2;
-    }
-
-    .line-swatch,
-    .dot-swatch {
-      flex: 0 0 auto;
-      width: 28px;
-      height: 4px;
-      border-radius: 999px;
-      background: var(--swatch);
-    }
-
-    .dot-swatch {
-      width: 11px;
-      height: 11px;
-      border: 2px solid #fffaf0;
-      box-shadow: 0 0 0 1px var(--swatch);
-    }
-
-    .source-panel {
-      margin-top: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255, 250, 240, 0.76);
-      border-radius: var(--radius);
-      padding: 14px;
-      color: var(--muted);
-      line-height: 1.5;
-      font-size: 0.92rem;
-    }
-
-    .source-panel p {
-      margin: 0 0 8px;
-    }
-
-    .source-panel p:last-child {
-      margin-bottom: 0;
-    }
-
-    .leaflet-popup-content-wrapper {
-      border-radius: 8px;
-    }
-
-    .popup-title {
-      margin: 0 0 4px;
-      font-weight: 900;
-      color: var(--ink);
-    }
-
-    .popup-meta {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.35;
-    }
-
-    .property-marker,
-    .usyd-marker {
-      display: grid;
-      place-items: center;
-      width: 32px;
-      height: 32px;
-      border: 2px solid #fffaf0;
-      border-radius: 50%;
-      background: var(--marker);
-      color: #fffaf0;
-      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
-      font-weight: 900;
-      box-shadow: 0 7px 18px rgba(33, 31, 27, 0.28);
-    }
-
-    .usyd-marker {
-      width: 38px;
-      height: 38px;
-      background: #181410;
-      font-size: 0.78rem;
-    }
-
-    .station-label {
-      display: grid;
-      place-items: center;
-      width: 12px;
-      height: 12px;
-      border: 2px solid #fffaf0;
-      border-radius: 50%;
-      background: var(--station);
-      box-shadow: 0 0 0 1px rgba(33, 31, 27, 0.25);
-    }
-
-    @media (max-width: 1180px) {
-      .hero,
-      .layout {
+    @media (max-width: 640px) {
+      .site-card {
         grid-template-columns: 1fr;
       }
 
-      .map-panel {
-        position: relative;
-        top: auto;
-      }
-
-      #map {
-        height: 620px;
-        min-height: 520px;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .page {
-        width: min(100vw - 18px, 1640px);
-        padding-top: 16px;
-      }
-
-      .hero,
-      .stats,
-      .map-note {
-        grid-template-columns: 1fr;
-      }
-
-      .toolbar {
-        position: relative;
-        grid-template-columns: 1fr;
-      }
-
-      .sort-wrap {
-        justify-content: space-between;
-        white-space: normal;
-      }
-
-      .sort-select {
-        width: min(220px, 100%);
-      }
-
-      .property-card {
-        grid-template-columns: 1fr;
-      }
-
-      .photo-wrap img,
-      .photo-wrap {
-        min-height: 210px;
-      }
-
-      .notes {
-        grid-template-columns: 1fr;
-      }
-
-      #map {
-        height: 560px;
-        min-height: 480px;
+      .open-link {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <div>
-        <p class="section-label">USYD rental shortlist · captured 2026-06-26</p>
-        <h1>2B2B + Gym，50 分钟轨道通勤内的租房候选</h1>
-        <p class="lede">筛选口径：租房、2 卧 2 卫、公寓楼内有健身房、周租不超过 $1200、火车/地铁到 University of Sydney Camperdown/Darlington 主校区约 50 分钟内。页面把起租日风险单独标出，方便你先约看最稳的。</p>
-      </div>
-      <aside class="verdict">
-        <h2>优先行动</h2>
-        <p><strong>先看 1503/28 Harbour Street。</strong>它的价格、2B2B、楼内 gym、入住日期和通勤条件最干净。</p>
-        <p><strong>第二梯队：</strong>Arncliffe 的 Bonar St 日期也好，但要确认“2B + study”是否接受；Redfern 位置极强，主要谈 7 月 21 日后起租。</p>
-      </aside>
-    </section>
+  <main>
+    <h1>quicksites</h1>
+    <p class="lede">这是一些临时但可公开访问的小网页。根目录只做索引，具体页面使用独立路径，方便之后继续添加更多站点。</p>
 
-    <section class="stats" aria-label="筛选摘要">
-      <div class="stat"><strong>8</strong><span>当前候选房源，含同楼备选</span></div>
-      <div class="stat"><strong>$1000-$1200</strong><span>每周租金范围</span></div>
-      <div class="stat"><strong>10-45 min</strong><span>估算轨道+步行/公交通勤</span></div>
-      <div class="stat"><strong>2</strong><span>日期最接近你要求的强匹配</span></div>
-    </section>
-
-    <section class="toolbar" aria-label="筛选和排序">
-      <div class="filters">
-        <button class="filter-btn active" type="button" data-filter="all" title="显示全部候选"><i data-lucide="list-filter"></i>全部</button>
-        <button class="filter-btn" type="button" data-filter="strong" title="日期和条件最稳"><i data-lucide="check-circle-2"></i>强匹配</button>
-        <button class="filter-btn" type="button" data-filter="negotiate" title="需要向中介谈起租日"><i data-lucide="calendar-clock"></i>起租日需谈</button>
-        <button class="filter-btn" type="button" data-filter="verify" title="户型或 gym 标注需要二次确认"><i data-lucide="circle-alert"></i>需确认</button>
-        <button class="filter-btn" type="button" data-filter="mascot" title="只看 Mascot 同楼或附近备选"><i data-lucide="train-front"></i>Mascot 备选</button>
-      </div>
-      <label class="sort-wrap">
-        排序
-        <select class="sort-select" id="sortSelect" aria-label="排序方式">
-          <option value="rank">综合推荐</option>
-          <option value="rent">租金从低到高</option>
-          <option value="commute">通勤从短到长</option>
-          <option value="available">可入住日期</option>
-        </select>
-      </label>
-    </section>
-
-    <section class="layout">
-      <div class="list" id="propertyList" aria-label="房源列表"></div>
-
-      <aside class="map-panel">
-        <div class="map-shell">
-          <div id="map" role="application" aria-label="USYD 与候选房源交通地图"></div>
+    <ul class="site-list">
+      <li class="site-card">
+        <div>
+          <h2>USYD rental shortlist</h2>
+          <p>2B2B + gym 租房候选、图片列表、USYD 和轨道交通地图。</p>
         </div>
-        <div class="map-note" aria-label="地图图例">
-          <span class="legend-item"><span class="dot-swatch" style="--swatch: #b94632"></span>房源</span>
-          <span class="legend-item"><span class="dot-swatch" style="--swatch: #181410"></span>USYD</span>
-          <span class="legend-item"><span class="line-swatch" style="--swatch: #00843d"></span>T8 Airport/South</span>
-          <span class="legend-item"><span class="line-swatch" style="--swatch: #005eb8"></span>T4 Illawarra</span>
-          <span class="legend-item"><span class="line-swatch" style="--swatch: #168388"></span>M1 Metro</span>
-          <span class="legend-item"><span class="dot-swatch" style="--swatch: #a4761d"></span>相关站点</span>
-          <span class="legend-item"><span class="line-swatch" style="--swatch: #b94632"></span>房源到近站</span>
-          <span class="legend-item"><span class="line-swatch" style="--swatch: #26231e"></span>USYD 接驳</span>
-        </div>
-      </aside>
-    </section>
+        <a class="open-link" href="usyd-rental-shortlist.html">打开页面</a>
+      </li>
+    </ul>
 
-    <section class="source-panel">
-      <p><strong>说明：</strong>房源条件来自 Domain / realestate.com.au 当前公开 listing，图片为对应 listing 的公开首图或同楼官方首图，保存于本地仅用于个人筛选。地图线路是面向租房决策的简化示意，精确班次和实时耗时仍以出发当天的 Transport NSW trip planner 为准。</p>
-      <p><strong>下一步：</strong>优先联系强匹配和 Redfern，问题只问三件事：能否 2026-07-21 后起租、gym 是否包含在租户设施内、房型是否确认为 2B2B。</p>
-    </section>
+    <p class="meta">Published with GitHub Pages.</p>
   </main>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script>
-    const usyd = {
-      name: "University of Sydney",
-      label: "USYD",
-      lat: -33.88864,
-      lng: 151.18735
-    };
-
-    const properties = [
-      {
-        id: "harbour",
-        rank: 1,
-        categories: ["strong"],
-        address: "1503/28 Harbour Street, Sydney",
-        suburb: "Sydney / Haymarket",
-        rent: 1100,
-        availableSort: 20260728,
-        available: "2026-07-28",
-        beds: "2B2B + 1 car",
-        gym: "Gym, rooftop pool, concierge",
-        commute: 30,
-        station: "Town Hall / Gadigal / Central",
-        lat: -33.87614,
-        lng: 151.20286,
-        stationLat: -33.87337,
-        stationLng: 151.20605,
-        image: "assets/rentals/1503-28-harbour-street.jpg",
-        source: "realestate.com.au",
-        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-sydney-444434624",
-        status: "强匹配",
-        accent: "#b94632",
-        good: "日期、价格、2B2B、gym 和通勤都贴合；CBD/Haymarket 生活便利。",
-        risk: "市中心楼体要实地看噪音、电梯等待和采光；车位是否需要另签也要确认。"
-      },
-      {
-        id: "bonar",
-        rank: 2,
-        categories: ["strong", "verify"],
-        address: "L4B/12-40 Bonar Street, Arncliffe",
-        suburb: "Arncliffe",
-        rent: 1060,
-        availableSort: 20260724,
-        available: "2026-07-24",
-        beds: "2B + study / 2 bath",
-        gym: "Indoor pool + gym",
-        commute: 42,
-        station: "Arncliffe Station",
-        lat: -33.9382,
-        lng: 151.1495,
-        stationLat: -33.93675,
-        stationLng: 151.14692,
-        image: "assets/rentals/12-40-bonar-st-arncliffe.jpg",
-        source: "realestate.com.au",
-        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-arncliffe-441865828",
-        status: "户型需确认",
-        accent: "#2d7f44",
-        good: "入住日期非常合适，价格低于上限；Arncliffe 到 Redfern/Central 轨道通勤稳定。",
-        risk: "标题/图标可能按 3 bed 或 2B+study 展示，申请前要让中介书面确认可用卧室数。"
-      },
-      {
-        id: "gibbons",
-        rank: 3,
-        categories: ["negotiate"],
-        address: "41/39-61 Gibbons Street, Redfern",
-        suburb: "Redfern",
-        rent: 1000,
-        availableSort: 20260713,
-        available: "2026-07-13",
-        beds: "2B2B + 1 car",
-        gym: "Pool, spa, sauna, gym",
-        commute: 14,
-        station: "Redfern Station",
-        lat: -33.8916,
-        lng: 151.19918,
-        stationLat: -33.89227,
-        stationLng: 151.19885,
-        image: "assets/rentals/41-39-61-gibbons-st-redfern.jpg",
-        source: "realestate.com.au",
-        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-redfern-444473912",
-        status: "起租日需谈",
-        accent: "#2f5f9b",
-        good: "到 USYD 最省心，价格也最低；Redfern Station 覆盖多条线。",
-        risk: "可入住日期早于你的 7 月 21 日目标，必须确认能否晚一周起租。"
-      },
-      {
-        id: "defries",
-        rank: 4,
-        categories: ["negotiate", "verify"],
-        address: "629/5 Defries Avenue, Zetland",
-        suburb: "Zetland",
-        rent: 1150,
-        availableSort: 20260715,
-        available: "2026-07-15",
-        beds: "2B2B + 1 car",
-        gym: "Gym listed by Domain",
-        commute: 36,
-        station: "Green Square / Waterloo",
-        lat: -33.90578,
-        lng: 151.21237,
-        stationLat: -33.90672,
-        stationLng: 151.20183,
-        image: "assets/rentals/629-5-defries-ave-zetland.webp",
-        source: "Domain",
-        sourceUrl: "https://www.domain.com.au/18187429",
-        status: "gym/date 需确认",
-        accent: "#127d75",
-        good: "Zetland 生活配套好，Green Square 与 Waterloo 都可用，通勤弹性强。",
-        risk: "Domain 的 gym 标注需向中介确认；起租日也早于 7 月 21 日。"
-      },
-      {
-        id: "coward-1020",
-        rank: 5,
-        categories: ["negotiate", "mascot"],
-        address: "1020/256A Coward Street, Mascot",
-        suburb: "Mascot",
-        rent: 1200,
-        availableSort: 20260703,
-        available: "2026-07-03",
-        beds: "2B2B + 1 car",
-        gym: "Gym, pool, spa",
-        commute: 43,
-        station: "Mascot Station",
-        lat: -33.92318,
-        lng: 151.18605,
-        stationLat: -33.92312,
-        stationLng: 151.18701,
-        image: "assets/rentals/256a-coward-st-mascot.webp",
-        source: "Domain",
-        sourceUrl: "https://www.domain.com.au/1020-256a-coward-street-mascot-nsw-2020-18161000",
-        status: "卡预算上限",
-        accent: "#a4761d",
-        good: "Mascot Station 到 Central/Green Square 很方便，楼内设施强。",
-        risk: "周租刚好 $1200，且空置较早；若中介要立即起租，性价比会下降。"
-      },
-      {
-        id: "coward-1021",
-        rank: 6,
-        categories: ["negotiate", "mascot"],
-        address: "1021/256A Coward Street, Mascot",
-        suburb: "Mascot",
-        rent: 1180,
-        availableSort: 20260626,
-        available: "Available now",
-        beds: "2B2B + 1 car",
-        gym: "Gym, pool, spa",
-        commute: 43,
-        station: "Mascot Station",
-        lat: -33.92326,
-        lng: 151.18612,
-        stationLat: -33.92312,
-        stationLng: 151.18701,
-        image: "assets/rentals/256a-coward-st-mascot.webp",
-        source: "Domain",
-        sourceUrl: "https://www.domain.com.au/1021-256a-coward-street-mascot-nsw-2020-18173120",
-        status: "同楼备选",
-        accent: "#a4761d",
-        good: "比 1020 低 $20/w，同楼设施与交通条件相似。",
-        risk: "Available now，能否等到 7 月 21 日后起租是最大变量。"
-      },
-      {
-        id: "coward-2b",
-        rank: 7,
-        categories: ["negotiate", "mascot"],
-        address: "2B/256B Coward Street, Mascot",
-        suburb: "Mascot",
-        rent: 1130,
-        availableSort: 20260626,
-        available: "Available now",
-        beds: "2B2B + 1 car",
-        gym: "Gym, pool, spa",
-        commute: 43,
-        station: "Mascot Station",
-        lat: -33.9235,
-        lng: 151.18585,
-        stationLat: -33.92312,
-        stationLng: 151.18701,
-        image: "assets/rentals/256a-coward-st-mascot.webp",
-        source: "Domain",
-        sourceUrl: "https://www.domain.com.au/2b-256b-coward-street-mascot-nsw-2020-16977030",
-        status: "同楼低价",
-        accent: "#a4761d",
-        good: "同一 Meriton/ Mascot 设施圈里价格更低，预算余量更舒服。",
-        risk: "楼层和采光可能不如高层；Available now 仍要谈起租日。"
-      },
-      {
-        id: "gardeners",
-        rank: 8,
-        categories: ["negotiate", "verify", "mascot"],
-        address: "S903/661-669 Gardeners Road, Mascot",
-        suburb: "Mascot",
-        rent: 1100,
-        availableSort: 20260626,
-        available: "Available now",
-        beds: "2B2B + 1 car",
-        gym: "Gym listed by Domain",
-        commute: 44,
-        station: "Mascot Station",
-        lat: -33.9207,
-        lng: 151.18681,
-        stationLat: -33.92312,
-        stationLng: 151.18701,
-        image: "assets/rentals/s903-661-669-gardeners-rd-mascot.webp",
-        source: "Domain",
-        sourceUrl: "https://www.domain.com.au/s903-661-669-gardeners-road-mascot-nsw-2020-17388673",
-        status: "设施需确认",
-        accent: "#a4761d",
-        good: "Mascot 里价格更低，离 station 也近；可作为谈判备选。",
-        risk: "Domain gym 标注需二次确认，且 Gardeners Road 一侧车流噪音要现场感受。"
-      }
-    ];
-
-    const stations = [
-      { name: "Arncliffe", lat: -33.93675, lng: 151.14692, lines: ["T4"] },
-      { name: "Wolli Creek", lat: -33.92842, lng: 151.15419, lines: ["T4", "T8"] },
-      { name: "Sydenham", lat: -33.91478, lng: 151.16697, lines: ["T4", "M1"] },
-      { name: "Mascot", lat: -33.92312, lng: 151.18701, lines: ["T8"] },
-      { name: "Green Square", lat: -33.90672, lng: 151.20183, lines: ["T8"] },
-      { name: "Waterloo", lat: -33.89544, lng: 151.20732, lines: ["M1"] },
-      { name: "Redfern", lat: -33.89227, lng: 151.19885, lines: ["T4", "T8"] },
-      { name: "Central", lat: -33.88303, lng: 151.2066, lines: ["T4", "T8", "M1"] },
-      { name: "Town Hall", lat: -33.87337, lng: 151.20605, lines: ["T8"] },
-      { name: "Gadigal", lat: -33.8771, lng: 151.20876, lines: ["M1"] }
-    ];
-
-    const transitLines = [
-      {
-        name: "T8 Airport & South Line",
-        color: "#00843d",
-        points: [
-          [-33.93675, 151.14692],
-          [-33.92842, 151.15419],
-          [-33.92312, 151.18701],
-          [-33.90672, 151.20183],
-          [-33.88303, 151.2066],
-          [-33.87337, 151.20605]
-        ]
-      },
-      {
-        name: "T4 Eastern Suburbs & Illawarra Line",
-        color: "#005eb8",
-        points: [
-          [-33.93675, 151.14692],
-          [-33.92842, 151.15419],
-          [-33.91478, 151.16697],
-          [-33.89227, 151.19885],
-          [-33.88303, 151.2066]
-        ]
-      },
-      {
-        name: "M1 Metro City",
-        color: "#168388",
-        points: [
-          [-33.91478, 151.16697],
-          [-33.89544, 151.20732],
-          [-33.88303, 151.2066],
-          [-33.8771, 151.20876]
-        ]
-      }
-    ];
-
-    const map = L.map("map", {
-      scrollWheelZoom: false,
-      zoomControl: true
-    }).setView([-33.904, 151.185], 12);
-
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: "&copy; OpenStreetMap contributors"
-    }).addTo(map);
-
-    const stationGroup = L.layerGroup().addTo(map);
-    const connectorGroup = L.layerGroup().addTo(map);
-    const propertyGroup = L.layerGroup().addTo(map);
-    const markers = new Map();
-
-    transitLines.forEach((line) => {
-      L.polyline(line.points, {
-        color: line.color,
-        weight: 5,
-        opacity: 0.76,
-        lineCap: "round",
-        lineJoin: "round"
-      }).bindTooltip(line.name, { sticky: true }).addTo(map);
-    });
-
-    stations.forEach((station) => {
-      const color = station.lines.includes("M1") ? "#168388" : station.lines.includes("T8") ? "#00843d" : "#005eb8";
-      const icon = L.divIcon({
-        className: "",
-        html: `<span class="station-label" style="--station:${color}"></span>`,
-        iconSize: [12, 12],
-        iconAnchor: [6, 6]
-      });
-      L.marker([station.lat, station.lng], { icon })
-        .bindTooltip(`${station.name} · ${station.lines.join("/")}`, { direction: "top", offset: [0, -8] })
-        .addTo(stationGroup);
-    });
-
-    const usydIcon = L.divIcon({
-      className: "",
-      html: `<span class="usyd-marker">USYD</span>`,
-      iconSize: [38, 38],
-      iconAnchor: [19, 19]
-    });
-
-    L.marker([usyd.lat, usyd.lng], { icon: usydIcon })
-      .bindPopup(`<p class="popup-title">${usyd.name}</p><p class="popup-meta">Camperdown/Darlington 主校区参考点</p>`)
-      .addTo(map);
-
-    L.polyline([
-      [usyd.lat, usyd.lng],
-      [-33.89227, 151.19885],
-      [-33.88303, 151.2066]
-    ], {
-      color: "#26231e",
-      weight: 3,
-      opacity: 0.52,
-      dashArray: "8 8"
-    }).bindTooltip("USYD 接驳：步行/公交至 Redfern 或 Central", { sticky: true }).addTo(map);
-
-    function buildCard(property) {
-      const el = document.createElement("article");
-      el.className = "property-card";
-      el.dataset.id = property.id;
-      el.dataset.categories = property.categories.join(" ");
-      el.style.setProperty("--accent", property.accent);
-
-      el.innerHTML = `
-        <div class="photo-wrap">
-          <img src="${property.image}" alt="${property.address} 房源图片" loading="eager" decoding="async">
-          <span class="rank">${property.rank}</span>
-          <span class="status-ribbon">${property.status}</span>
-        </div>
-        <div class="card-main">
-          <div class="card-topline">
-            <h2 class="address">${property.address}</h2>
-            <span class="price">$${property.rent}/w</span>
-          </div>
-          <p class="meta-row">${property.suburb} · ${property.available} · ${property.commute} min to USYD</p>
-          <div class="badges">
-            <span class="badge" style="--badge: #2f5f9b"><i data-lucide="bed-double"></i>${property.beds}</span>
-            <span class="badge" style="--badge: #127d75"><i data-lucide="dumbbell"></i>${property.gym}</span>
-            <span class="badge" style="--badge: #a4761d"><i data-lucide="train-front"></i>${property.station}</span>
-          </div>
-          <div class="notes">
-            <div class="note" style="--note-color: #2d7f44">${property.good}</div>
-            <div class="note" style="--note-color: #b94632">${property.risk}</div>
-          </div>
-          <div class="actions">
-            <button class="map-action" type="button" data-map="${property.id}" title="在地图上定位这套房"><i data-lucide="map-pin"></i>定位</button>
-            <a class="source-link" href="${property.sourceUrl}" target="_blank" rel="noopener noreferrer" title="打开官方房源"><i data-lucide="external-link"></i>${property.source}</a>
-          </div>
-        </div>
-      `;
-
-      return el;
-    }
-
-    function renderList(items) {
-      const list = document.getElementById("propertyList");
-      list.replaceChildren(...items.map(buildCard));
-      if (window.lucide) {
-        window.lucide.createIcons();
-      }
-    }
-
-    function addPropertiesToMap(items) {
-      propertyGroup.clearLayers();
-      connectorGroup.clearLayers();
-      markers.clear();
-
-      items.forEach((property) => {
-        const icon = L.divIcon({
-          className: "",
-          html: `<span class="property-marker" style="--marker:${property.accent}">${property.rank}</span>`,
-          iconSize: [32, 32],
-          iconAnchor: [16, 16]
-        });
-
-        const marker = L.marker([property.lat, property.lng], { icon })
-          .bindPopup(`
-            <p class="popup-title">${property.address}</p>
-            <p class="popup-meta">$${property.rent}/w · ${property.available}<br>${property.beds}<br>${property.commute} min estimate · ${property.station}</p>
-          `)
-          .addTo(propertyGroup);
-
-        L.polyline([
-          [property.lat, property.lng],
-          [property.stationLat, property.stationLng]
-        ], {
-          color: property.accent,
-          weight: 2,
-          opacity: 0.62,
-          dashArray: "5 7"
-        }).addTo(connectorGroup);
-
-        markers.set(property.id, marker);
-      });
-    }
-
-    function sortItems(items, mode) {
-      return [...items].sort((a, b) => {
-        if (mode === "rent") return a.rent - b.rent || a.rank - b.rank;
-        if (mode === "commute") return a.commute - b.commute || a.rank - b.rank;
-        if (mode === "available") return a.availableSort - b.availableSort || a.rank - b.rank;
-        return a.rank - b.rank;
-      });
-    }
-
-    let activeFilter = "all";
-
-    function getVisibleItems() {
-      const sortMode = document.getElementById("sortSelect").value;
-      const filtered = properties.filter((property) => activeFilter === "all" || property.categories.includes(activeFilter));
-      return sortItems(filtered, sortMode);
-    }
-
-    function updateView() {
-      const visible = getVisibleItems();
-      renderList(visible);
-      addPropertiesToMap(visible);
-
-      if (visible.length > 0) {
-        const bounds = L.latLngBounds([
-          [usyd.lat, usyd.lng],
-          ...visible.map((property) => [property.lat, property.lng]),
-          ...stations.map((station) => [station.lat, station.lng])
-        ]);
-        map.fitBounds(bounds, { padding: [34, 34] });
-      }
-    }
-
-    document.querySelector(".filters").addEventListener("click", (event) => {
-      const button = event.target.closest(".filter-btn");
-      if (!button) return;
-      document.querySelectorAll(".filter-btn").forEach((item) => item.classList.remove("active"));
-      button.classList.add("active");
-      activeFilter = button.dataset.filter;
-      updateView();
-    });
-
-    document.getElementById("sortSelect").addEventListener("change", updateView);
-
-    document.getElementById("propertyList").addEventListener("click", (event) => {
-      const mapButton = event.target.closest("[data-map]");
-      const card = event.target.closest(".property-card");
-      if (!mapButton && !card) return;
-
-      const id = mapButton ? mapButton.dataset.map : card.dataset.id;
-      const property = properties.find((item) => item.id === id);
-      const marker = markers.get(id);
-      if (!property || !marker) return;
-
-      document.querySelectorAll(".property-card").forEach((item) => item.classList.toggle("selected", item.dataset.id === id));
-      map.setView([property.lat, property.lng], 15, { animate: true });
-      marker.openPopup();
-    });
-
-    updateView();
-
-    if (window.lucide) {
-      window.lucide.createIcons();
-    }
-  </script>
 </body>
 </html>

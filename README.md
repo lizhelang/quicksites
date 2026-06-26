@@ -1,5 +1,9 @@
 # quicksites
 
-Static GitHub Pages site for the USYD rental shortlist.
+Static GitHub Pages collection for small publishable pages.
 
-Open `index.html` locally, or use the GitHub Pages URL once the repository is published.
+Current pages:
+
+- `usyd-rental-shortlist.html` - USYD 2B2B rental shortlist with listing cards and a transport map.
+
+The root `index.html` is only a directory page so more standalone pages can be added later.
