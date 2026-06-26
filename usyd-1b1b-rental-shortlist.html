@@ -299,6 +299,22 @@
       text-overflow: ellipsis;
     }
 
+    .image-note {
+      position: absolute;
+      left: 8px;
+      bottom: 8px;
+      max-width: calc(100% - 118px);
+      border: 1px solid rgba(255, 255, 255, 0.62);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--ink);
+      padding: 5px 8px;
+      font-size: 0.72rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .card-main {
       min-width: 0;
     }
@@ -582,18 +598,18 @@
     <section class="hero">
       <div>
         <p class="eyebrow">USYD rental shortlist · captured 2026-06-26</p>
-        <h1>1B1B + Gym，$700 内的轨道通勤租房候选</h1>
-        <p class="lede">筛选口径：1 卧 1 卫、公寓楼内有健身房、火车/地铁到 University of Sydney Camperdown/Darlington 主校区约 50 分钟内；包 bill 最高 $700/w，不包 bill 最高 $675/w；目标入住时间为 2026-07-21 或之后。</p>
+        <h1>1B1B + AC，$700 内的轨道通勤租房候选</h1>
+        <p class="lede">筛选口径：1 卧 1 卫、必须有空调，楼内 gym 可选；火车/地铁到 University of Sydney Camperdown/Darlington 主校区约 50 分钟内；包 bill 最高 $700/w，不包 bill 最高 $675/w；目标入住时间为 2026-07-21 或之后。</p>
       </div>
       <aside class="verdict">
         <h2>优先行动</h2>
-        <p><strong>先问 Crows Nest。</strong>126/402-420 Pacific Highway 是这轮里唯一同时满足价格、1B1B、gym、2026-07-21 起租和 50 分钟内通勤的强匹配。</p>
-        <p><strong>第二梯队：</strong>Ashfield、Croydon、Lidcombe 的硬条件不错，但都要向中介谈能否从 7 月 21 日后起租。</p>
+        <p><strong>先问 Crows Nest。</strong>126/402-420 Pacific Highway 是这轮里唯一同时满足价格、1B1B、空调、2026-07-21 起租和 50 分钟内通勤的强匹配。</p>
+        <p><strong>第二梯队：</strong>Homebush 两套更便宜且有空调，但没有 gym；Ashfield 和 Lidcombe 有 gym，也要谈能否从 7 月 21 日后起租。</p>
       </aside>
     </section>
 
     <section class="stats" aria-label="筛选摘要">
-      <div class="stat"><strong>4</strong><span>当前候选，其中 1 套是严格强匹配</span></div>
+      <div class="stat"><strong>5</strong><span>当前候选，其中 1 套是严格强匹配</span></div>
       <div class="stat"><strong>$520-$675</strong><span>不包 bill 房源均在 $675/w 内</span></div>
       <div class="stat"><strong>34-48 min</strong><span>估算轨道+步行/公交通勤</span></div>
       <div class="stat"><strong>2026-07-21</strong><span>目标起租日，早于此日的单独标风险</span></div>
@@ -603,8 +619,11 @@
       <div class="filters">
         <button class="filter-btn active" type="button" data-filter="all" title="显示全部候选"><i data-lucide="list-filter"></i>全部</button>
         <button class="filter-btn" type="button" data-filter="strong" title="显示严格强匹配"><i data-lucide="check-circle-2"></i>强匹配</button>
+        <button class="filter-btn" type="button" data-filter="gym" title="显示有 gym 的候选"><i data-lucide="dumbbell"></i>有 gym</button>
+        <button class="filter-btn" type="button" data-filter="no-gym" title="显示无 gym 但有空调的候选"><i data-lucide="wind"></i>无 gym</button>
         <button class="filter-btn" type="button" data-filter="negotiate" title="显示需要谈起租日的候选"><i data-lucide="calendar-clock"></i>起租日需谈</button>
         <button class="filter-btn" type="button" data-filter="edge" title="显示通勤接近 50 分钟的候选"><i data-lucide="timer"></i>通勤边缘</button>
+        <button class="filter-btn" type="button" data-filter="verify" title="显示状态或图片来源需要额外确认的候选"><i data-lucide="circle-alert"></i>需确认</button>
       </div>
       <label class="sort-wrap">
         排序
@@ -638,8 +657,8 @@
     </section>
 
     <section class="source-panel">
-      <p><strong>说明：</strong>房源条件来自 Domain / realestate.com.au 当前公开 listing，图片为对应 listing 的公开首图，保存于本地仅用于个人筛选。地图线路是租房决策用的简化示意，精确班次、换乘和实时耗时仍以出发当天的 Transport NSW trip planner 为准。</p>
-      <p><strong>联系中介时优先确认：</strong>能否 2026-07-21 后起租、gym 是否属于住户楼内设施、房型是否为独立 1 bedroom 而非 studio，以及 bills 是否包含在 advertised rent 里。</p>
+      <p><strong>说明：</strong>房源条件来自 Domain / realestate.com.au 当前公开 listing；Crows Nest、Ashfield、Lidcombe 使用对应 listing 首图，Homebush 使用同地址/同楼公开图片作参考图。地图线路是租房决策用的简化示意，精确班次、换乘和实时耗时仍以出发当天的 Transport NSW trip planner 为准。</p>
+      <p><strong>联系中介时优先确认：</strong>能否 2026-07-21 后起租、空调是否覆盖卧室/客厅、房型是否为独立 1 bedroom 而非 studio、bills 是否包含在 advertised rent 里；有 gym 的房源再确认 gym 是否属于住户楼内设施。</p>
     </section>
   </main>
 
@@ -657,7 +676,7 @@
       {
         id: "crows-nest-pacific",
         rank: 1,
-        categories: ["strong"],
+        categories: ["strong", "gym"],
         address: "126/402-420 Pacific Highway, Crows Nest",
         suburb: "Crows Nest",
         rent: 520,
@@ -666,7 +685,7 @@
         availableSort: 20260721,
         available: "2026-07-21",
         beds: "1B1B",
-        gym: "Gym listed",
+        amenity: "AC + gym",
         commute: 38,
         station: "Crows Nest Metro / St Leonards",
         lat: -33.8227,
@@ -679,12 +698,68 @@
         status: "严格强匹配",
         accent: "#ba4b3b",
         good: "价格远低于 $675，不包 bill 也留出预算；起租日正好是 2026-07-21，Crows Nest Metro 到 Central 后接驳 USYD。",
-        risk: "需要确认 advertised rent 是否另收设施/水电网络费用，以及 Pacific Highway 一侧噪音。"
+        risk: "需要确认空调覆盖范围、advertised rent 是否另收设施/水电网络费用，以及 Pacific Highway 一侧噪音。"
+      },
+      {
+        id: "homebush-parramatta-107",
+        rank: 2,
+        categories: ["negotiate", "no-gym", "verify"],
+        address: "107/218 Parramatta Road, Homebush",
+        suburb: "Homebush",
+        rent: 620,
+        rentNote: "$620/w",
+        bills: "未标明包 bill",
+        availableSort: 20260626,
+        available: "Available now",
+        beds: "1B1B",
+        amenity: "Ducted AC · no gym",
+        commute: 41,
+        station: "Homebush Station",
+        lat: -33.8644,
+        lng: 151.0798,
+        stationLat: -33.8666,
+        stationLng: 151.0852,
+        image: "assets/rentals-1b/107-218-parramatta-rd-homebush.jpg",
+        imageNote: "同地址参考图",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-homebush-443531888",
+        status: "无 gym / 有空调",
+        accent: "#2763a8",
+        good: "$620/w 明显低于上限，listing 写 ducted air conditioning；Homebush 到 Redfern/Central 轨道通勤稳定。",
+        risk: "没有 gym，且 Available now 需要谈晚起租；图片为同地址参考图，实际内装以 inspection 为准。"
+      },
+      {
+        id: "homebush-park-506",
+        rank: 3,
+        categories: ["negotiate", "no-gym", "verify"],
+        address: "506/75-81 Park Road, Homebush",
+        suburb: "Homebush",
+        rent: 630,
+        rentNote: "$630/w",
+        bills: "未标明包 bill",
+        availableSort: 20260629,
+        available: "2026-06-29",
+        beds: "1B1B",
+        amenity: "Split-system AC · no gym",
+        commute: 40,
+        station: "Homebush Station",
+        lat: -33.8651,
+        lng: 151.0847,
+        stationLat: -33.8666,
+        stationLng: 151.0852,
+        image: "assets/rentals-1b/506-75-81-park-rd-homebush.webp",
+        imageNote: "同楼参考图",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-homebush-444460376",
+        status: "无 gym / 有空调",
+        accent: "#0d827b",
+        good: "$630/w，靠近 Homebush Station，listing 写 split-system air conditioning；无 gym 但交通和价格比较均衡。",
+        risk: "起租日早于目标约三周；图片为同楼参考图，实际户型朝向和采光要现场确认。"
       },
       {
         id: "ashfield-brown",
-        rank: 2,
-        categories: ["negotiate"],
+        rank: 4,
+        categories: ["negotiate", "gym", "verify"],
         address: "83/1 Brown Street, Ashfield",
         suburb: "Ashfield",
         rent: 675,
@@ -693,7 +768,7 @@
         availableSort: 20260630,
         available: "2026-06-30",
         beds: "1B1B",
-        gym: "Gym listed",
+        amenity: "AC + gym",
         commute: 34,
         station: "Ashfield Station",
         lat: -33.8886,
@@ -703,42 +778,15 @@
         image: "assets/rentals-1b/83-1-brown-st-ashfield.webp",
         source: "Domain",
         sourceUrl: "https://www.domain.com.au/83-1-brown-street-ashfield-nsw-2131-18171430",
-        status: "起租日需谈",
+        status: "状态需确认",
         accent: "#2f7d45",
-        good: "卡在 $675 上限内，Ashfield 到 Redfern/Central 的轨道通勤稳定，离站很近。",
-        risk: "listing 起租日早于目标 21 天；要让中介确认是否愿意 2026-07-21 后起租。"
-      },
-      {
-        id: "croydon-webb",
-        rank: 3,
-        categories: ["negotiate"],
-        address: "30/10 Webb Street, Croydon",
-        suburb: "Croydon",
-        rent: 650,
-        rentNote: "$650/w",
-        bills: "未标明包 bill",
-        availableSort: 20260707,
-        available: "2026-07-07",
-        beds: "1B1B + 1 car",
-        gym: "Gym listed",
-        commute: 37,
-        station: "Croydon Station",
-        lat: -33.8845,
-        lng: 151.1157,
-        stationLat: -33.8833,
-        stationLng: 151.1159,
-        image: "assets/rentals-1b/30-10-webb-st-croydon.jpg",
-        source: "realestate.com.au",
-        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-croydon-444470324",
-        status: "起租日需谈",
-        accent: "#2763a8",
-        good: "比 Ashfield 低 $25/w，同在 Inner West 轨道线上；带车位，租金仍满足不包 bill 上限。",
-        risk: "起租日早于目标两周；如果中介坚持 7 月 7 日起租，空租成本会吞掉优势。"
+        good: "卡在 $675 上限内，Ashfield 到 Redfern/Central 的轨道通勤稳定，离站很近，且有空调和 gym。",
+        risk: "起租日早于目标 21 天；状态需向中介确认，能否 2026-07-21 后起租是关键。"
       },
       {
         id: "lidcombe-uhrig",
-        rank: 4,
-        categories: ["negotiate", "edge"],
+        rank: 5,
+        categories: ["negotiate", "edge", "gym"],
         address: "1B/2 Uhrig Road, Lidcombe",
         suburb: "Lidcombe",
         rent: 650,
@@ -747,7 +795,7 @@
         availableSort: 20260626,
         available: "Available now",
         beds: "1B1B + 1 car",
-        gym: "Gym listed",
+        amenity: "AC + gym",
         commute: 48,
         station: "Lidcombe Station",
         lat: -33.8590,
@@ -759,13 +807,15 @@
         sourceUrl: "https://www.domain.com.au/1b-2-uhrig-road-lidcombe-nsw-2141-15846853",
         status: "通勤边缘",
         accent: "#a86f1c",
-        good: "$650/w 且带车位，楼内 gym 明确；Lidcombe 轨道选择多，可作为价格/空间备选。",
+        good: "$650/w 且带车位，楼内 gym 和空调条件完整；Lidcombe 轨道选择多，可作为价格/空间备选。",
         risk: "通勤接近 50 分钟上限，Available now 也需要谈晚起租；最好按真实上课时间查一遍班次。"
       }
     ];
 
     const stations = [
       { name: "Lidcombe", lat: -33.8646, lng: 151.0435, lines: ["T2", "T3"] },
+      { name: "Homebush", lat: -33.8666, lng: 151.0852, lines: ["T2"] },
+      { name: "Strathfield", lat: -33.8718, lng: 151.0941, lines: ["T1", "T2", "T9"] },
       { name: "Croydon", lat: -33.8833, lng: 151.1159, lines: ["T2"] },
       { name: "Ashfield", lat: -33.8881, lng: 151.1253, lines: ["T2"] },
       { name: "Newtown", lat: -33.8977, lng: 151.1797, lines: ["T2"] },
@@ -785,6 +835,8 @@
         color: "#f99d1c",
         points: [
           [-33.8646, 151.0435],
+          [-33.8666, 151.0852],
+          [-33.8718, 151.0941],
           [-33.8833, 151.1159],
           [-33.8881, 151.1253],
           [-33.8977, 151.1797],
@@ -897,6 +949,7 @@
           <img src="${property.image}" alt="${property.address} 房源图片" loading="eager" decoding="async">
           <span class="rank">${property.rank}</span>
           <span class="status-ribbon">${property.status}</span>
+          ${property.imageNote ? `<span class="image-note">${property.imageNote}</span>` : ""}
         </div>
         <div class="card-main">
           <div class="card-topline">
@@ -906,7 +959,7 @@
           <p class="meta-row">${property.suburb} · ${property.available} · ${property.commute} min to USYD · ${property.bills}</p>
           <div class="badges">
             <span class="badge" style="--badge: #2763a8"><i data-lucide="bed-double"></i>${property.beds}</span>
-            <span class="badge" style="--badge: #0d827b"><i data-lucide="dumbbell"></i>${property.gym}</span>
+            <span class="badge" style="--badge: #0d827b"><i data-lucide="wind"></i>${property.amenity}</span>
             <span class="badge" style="--badge: #a86f1c"><i data-lucide="train-front"></i>${property.station}</span>
           </div>
           <div class="notes">
@@ -947,7 +1000,7 @@
         const marker = L.marker([property.lat, property.lng], { icon })
           .bindPopup(`
             <p class="popup-title">${property.address}</p>
-            <p class="popup-meta">${property.rentNote} · ${property.available}<br>${property.beds}<br>${property.commute} min estimate · ${property.station}</p>
+            <p class="popup-meta">${property.rentNote} · ${property.available}<br>${property.beds} · ${property.amenity}<br>${property.commute} min estimate · ${property.station}</p>
           `)
           .addTo(propertyGroup);
 
