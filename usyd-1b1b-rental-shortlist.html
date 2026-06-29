@@ -597,19 +597,19 @@
   <main class="page">
     <section class="hero">
       <div>
-        <p class="eyebrow">USYD rental shortlist · refreshed 2026-06-28</p>
+        <p class="eyebrow">USYD rental shortlist · refreshed 2026-06-29</p>
         <h1>1B1B + AC，$700 内的轨道通勤租房候选</h1>
         <p class="lede">筛选口径：1 卧 1 卫、必须有空调，楼内 gym 可选；火车/地铁到 University of Sydney Camperdown/Darlington 主校区约 50 分钟内；包 bill 最高 $700/w，不包 bill 最高 $675/w；目标入住时间为 2026-07-21 或之后。</p>
       </div>
       <aside class="verdict">
         <h2>优先行动</h2>
-        <p><strong>今日新增 1 套需确认候选。</strong>Stanmore 的 8/112-116 Parramatta Road 价格低且包 bill，但描述有 studio 风险。</p>
-        <p><strong>Crows Nest 仍是日期最干净的强匹配。</strong>Camperdown 和 Lewisham 仍是优先看房的第二梯队。</p>
+        <p><strong>今天没有新增可直接加入主列表的房源。</strong>Ashfield 有一套条件合适但显示 Deposit taken，不纳入候选。</p>
+        <p><strong>Crows Nest 仍是日期最干净的强匹配。</strong>Camperdown、Lewisham 和 Stanmore 仍是优先跟进的第二梯队。</p>
       </aside>
     </section>
 
     <section class="stats" aria-label="筛选摘要">
-      <div class="stat"><strong>8</strong><span>当前候选，今日新增 1 套需确认候选</span></div>
+      <div class="stat"><strong>8</strong><span>当前候选，今天没有新增可用主候选</span></div>
       <div class="stat"><strong>$520-$675</strong><span>不包 bill 房源均在 $675/w 内</span></div>
       <div class="stat"><strong>10-48 min</strong><span>估算轨道+步行/公交通勤</span></div>
       <div class="stat"><strong>2026-07-21</strong><span>目标起租日，早于此日的单独标风险</span></div>
@@ -618,7 +618,7 @@
     <section class="toolbar" aria-label="筛选和排序">
       <div class="filters">
         <button class="filter-btn active" type="button" data-filter="all" title="显示全部候选"><i data-lucide="list-filter"></i>全部</button>
-        <button class="filter-btn" type="button" data-filter="new" title="显示本次刷新新增的候选"><i data-lucide="sparkles"></i>今日新增</button>
+        <button class="filter-btn" type="button" data-filter="recent" title="显示最近新增和仍需确认的候选"><i data-lucide="sparkles"></i>新增观察</button>
         <button class="filter-btn" type="button" data-filter="strong" title="显示严格强匹配"><i data-lucide="check-circle-2"></i>强匹配</button>
         <button class="filter-btn" type="button" data-filter="gym" title="显示有 gym 的候选"><i data-lucide="dumbbell"></i>有 gym</button>
         <button class="filter-btn" type="button" data-filter="no-gym" title="显示无 gym 但有空调的候选"><i data-lucide="wind"></i>无 gym</button>
@@ -659,7 +659,7 @@
 
     <section class="source-panel">
       <p><strong>说明：</strong>房源条件来自 Domain / realestate.com.au 当前公开 listing；Crows Nest、Camperdown、Lewisham、Stanmore、Ashfield、Lidcombe 使用对应 listing 首图，Homebush 使用同地址/同楼公开图片作参考图。地图线路是租房决策用的简化示意，精确班次、换乘和实时耗时仍以出发当天的 Transport NSW trip planner 为准。</p>
-      <p><strong>本次刷新：</strong>新增 8/112-116 Parramatta Road Stanmore，价格和 bill 条件好，但 listing 描述有 studio 风险；Greenwich 的新候选显示 Deposit taken，没有放进主列表。</p>
+      <p><strong>本次刷新：</strong>未发现新的可用主候选；211/380-382 Liverpool Road Ashfield 符合价格、1B1B、空调条件，但 listing 显示 Deposit taken，没有放进主列表。</p>
       <p><strong>联系中介时优先确认：</strong>能否 2026-07-21 后起租、空调是否覆盖卧室/客厅、房型是否为独立 1 bedroom 而非 studio、bills 是否包含在 advertised rent 里；有 gym 的房源再确认 gym 是否属于住户楼内设施。</p>
     </section>
   </main>
@@ -705,7 +705,7 @@
       {
         id: "camperdown-purkis",
         rank: 2,
-        categories: ["negotiate", "no-gym"],
+        categories: ["recent", "negotiate", "no-gym"],
         address: "6/6-10 Purkis Street, Camperdown",
         suburb: "Camperdown",
         rent: 675,
@@ -732,7 +732,7 @@
       {
         id: "lewisham-gould",
         rank: 3,
-        categories: ["negotiate", "no-gym"],
+        categories: ["recent", "negotiate", "no-gym"],
         address: "9/34-36 Gould Avenue, Lewisham",
         suburb: "Lewisham",
         rent: 545,
@@ -759,7 +759,7 @@
       {
         id: "stanmore-parramatta-8",
         rank: 4,
-        categories: ["new", "verify", "no-gym"],
+        categories: ["recent", "verify", "no-gym"],
         address: "8/112-116 Parramatta Road, Stanmore",
         suburb: "Stanmore",
         rent: 600,
@@ -778,7 +778,7 @@
         image: "assets/rentals-1b/8-112-116-parramatta-rd-stanmore.webp",
         source: "Domain",
         sourceUrl: "https://www.domain.com.au/8-112-116-parramatta-road-stanmore-nsw-2048-17387072",
-        status: "今日新增 / 户型需确认",
+        status: "近期新增 / 户型需确认",
         accent: "#ba4b3b",
         good: "$600/w 且 all bills included，Domain 标 1 Bed 1 Bath 并写 air conditioning；到 USYD 可步行。",
         risk: "listing 描述写 designer studios / studio balcony，必须确认是否有独立卧室；若是 studio，则不符合严格 1B1B。"
