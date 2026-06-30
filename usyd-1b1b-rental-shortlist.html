@@ -597,20 +597,20 @@
   <main class="page">
     <section class="hero">
       <div>
-        <p class="eyebrow">USYD rental shortlist · refreshed 2026-06-29</p>
+        <p class="eyebrow">USYD rental shortlist · refreshed 2026-06-30</p>
         <h1>1B1B + AC，$700 内的轨道通勤租房候选</h1>
         <p class="lede">筛选口径：1 卧 1 卫、必须有空调，楼内 gym 可选；火车/地铁到 University of Sydney Camperdown/Darlington 主校区约 50 分钟内；包 bill 最高 $700/w，不包 bill 最高 $675/w；目标入住时间为 2026-07-21 或之后。</p>
       </div>
       <aside class="verdict">
         <h2>优先行动</h2>
-        <p><strong>今天没有新增可直接加入主列表的房源。</strong>Ashfield 有一套条件合适但显示 Deposit taken，不纳入候选。</p>
-        <p><strong>Crows Nest 仍是日期最干净的强匹配。</strong>Camperdown、Lewisham 和 Stanmore 仍是优先跟进的第二梯队。</p>
+        <p><strong>今天新增 4 套可联系主候选。</strong>Camperdown、Enmore、Newtown 的近校区房源补上后，主列表更集中在低通勤风险。</p>
+        <p><strong>同步移除 5 套状态/户型不合格项。</strong>Crows Nest 与 Ashfield 变为 Deposit taken，Lewisham 与 Homebush 107 已不可租，Stanmore 为 studio。</p>
       </aside>
     </section>
 
     <section class="stats" aria-label="筛选摘要">
-      <div class="stat"><strong>8</strong><span>当前候选，今天没有新增可用主候选</span></div>
-      <div class="stat"><strong>$520-$675</strong><span>不包 bill 房源均在 $675/w 内</span></div>
+      <div class="stat"><strong>7</strong><span>当前候选，今天新增 4 套并移除 5 套</span></div>
+      <div class="stat"><strong>$610-$675</strong><span>不包 bill 房源均在 $675/w 内</span></div>
       <div class="stat"><strong>10-48 min</strong><span>估算轨道+步行/公交通勤</span></div>
       <div class="stat"><strong>2026-07-21</strong><span>目标起租日，早于此日的单独标风险</span></div>
     </section>
@@ -658,8 +658,9 @@
     </section>
 
     <section class="source-panel">
-      <p><strong>说明：</strong>房源条件来自 Domain / realestate.com.au 当前公开 listing；Crows Nest、Camperdown、Lewisham、Stanmore、Ashfield、Lidcombe 使用对应 listing 首图，Homebush 使用同地址/同楼公开图片作参考图。地图线路是租房决策用的简化示意，精确班次、换乘和实时耗时仍以出发当天的 Transport NSW trip planner 为准。</p>
-      <p><strong>本次刷新：</strong>未发现新的可用主候选；211/380-382 Liverpool Road Ashfield 符合价格、1B1B、空调条件，但 listing 显示 Deposit taken，没有放进主列表。</p>
+      <p><strong>说明：</strong>房源条件来自 Domain / realestate.com.au 当前公开 listing；原有 Camperdown、Homebush、Lidcombe 使用对应 listing 或同楼图片，新加入的 Purkis / Mallett / Enmore / Newtown 房源使用已有本地同区域参考图并在卡片内标注。地图线路是租房决策用的简化示意，精确班次、换乘和实时耗时仍以出发当天的 Transport NSW trip planner 为准。</p>
+      <p><strong>本次刷新：</strong>新增 302/5 Purkis Street Camperdown、20/43-57 Mallett Street Camperdown、5/31 James Street Enmore、213/88 King Street Newtown；移除 126/402-420 Pacific Highway Crows Nest、9/34-36 Gould Avenue Lewisham、8/112-116 Parramatta Road Stanmore、107/218 Parramatta Road Homebush、83/1 Brown Street Ashfield。</p>
+      <p><strong>关键排除：</strong>211/380-382 Liverpool Road Ashfield 与 83/1 Brown Street Ashfield 显示 Deposit taken；107/218 Parramatta Road Homebush 与 9/34-36 Gould Avenue Lewisham 已 leased；23A/145-161 Abercrombie Street Darlington 未在 realestate listing 明确空调；29/43-57 Mallett Street Camperdown、A106/11-13 Hercules Street Ashfield、411/38 Milton Street Ashfield 租金超过不包 bill 上限；Unit/11a Moonbie Street Summer Hill 与 8/112-116 Parramatta Road Stanmore 明显是 studio。</p>
       <p><strong>联系中介时优先确认：</strong>能否 2026-07-21 后起租、空调是否覆盖卧室/客厅、房型是否为独立 1 bedroom 而非 studio、bills 是否包含在 advertised rent 里；有 gym 的房源再确认 gym 是否属于住户楼内设施。</p>
     </section>
   </main>
@@ -676,36 +677,9 @@
 
     const properties = [
       {
-        id: "crows-nest-pacific",
-        rank: 1,
-        categories: ["strong", "gym"],
-        address: "126/402-420 Pacific Highway, Crows Nest",
-        suburb: "Crows Nest",
-        rent: 520,
-        rentNote: "$520/w",
-        bills: "未标明包 bill",
-        availableSort: 20260721,
-        available: "2026-07-21",
-        beds: "1B1B",
-        amenity: "AC + gym",
-        commute: 38,
-        station: "Crows Nest Metro / St Leonards",
-        lat: -33.8227,
-        lng: 151.2000,
-        stationLat: -33.8247,
-        stationLng: 151.2019,
-        image: "assets/rentals-1b/126-402-420-pacific-hwy-crows-nest.jpg",
-        source: "realestate.com.au",
-        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-crows%2Bnest-444475540",
-        status: "严格强匹配",
-        accent: "#ba4b3b",
-        good: "价格远低于 $675，不包 bill 也留出预算；起租日正好是 2026-07-21，Crows Nest Metro 到 Central 后接驳 USYD。",
-        risk: "需要确认空调覆盖范围、advertised rent 是否另收设施/水电网络费用，以及 Pacific Highway 一侧噪音。"
-      },
-      {
         id: "camperdown-purkis",
-        rank: 2,
-        categories: ["recent", "negotiate", "no-gym"],
+        rank: 1,
+        categories: ["strong", "recent", "negotiate", "no-gym"],
         address: "6/6-10 Purkis Street, Camperdown",
         suburb: "Camperdown",
         rent: 675,
@@ -726,90 +700,120 @@
         sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-camperdown-444455888",
         status: "新上 / 近 USYD",
         accent: "#7a4f9f",
-        good: "离 USYD 主校区很近，$675/w 卡在上限内；listing 明确写 air conditioning。",
+        good: "离 USYD 主校区很近，$675/w 卡在不包 bill 上限内；listing 明确写 air conditioning。",
         risk: "无 gym，起租日早于目标约两周；如果中介不能等到 7 月 21 日，需要算空租成本。"
       },
       {
-        id: "lewisham-gould",
-        rank: 3,
-        categories: ["recent", "negotiate", "no-gym"],
-        address: "9/34-36 Gould Avenue, Lewisham",
-        suburb: "Lewisham",
-        rent: 545,
-        rentNote: "$545/w",
+        id: "camperdown-purkis-302",
+        rank: 2,
+        categories: ["strong", "recent", "negotiate", "no-gym", "verify"],
+        address: "302/5 Purkis Street, Camperdown",
+        suburb: "Camperdown",
+        rent: 650,
+        rentNote: "$650/w",
         bills: "未标明包 bill",
-        availableSort: 20260625,
-        available: "Available now",
-        beds: "1B1B + 1 car",
-        amenity: "Split AC · no gym",
-        commute: 38,
-        station: "Lewisham Station",
-        lat: -33.8928,
-        lng: 151.1463,
-        stationLat: -33.8932,
-        stationLng: 151.1474,
-        image: "assets/rentals-1b/9-34-36-gould-ave-lewisham.jpg",
-        source: "Domain",
-        sourceUrl: "https://www.domain.com.au/9-34-36-gould-avenue-lewisham-nsw-2049-18186131",
-        status: "新上 / 最低租金",
-        accent: "#2f7d45",
-        good: "$545/w 是当前最低，listing 写 split air con，Lewisham Station 到 Redfern/Central 通勤稳定。",
-        risk: "无 gym，Available now 需要谈晚起租；内装较普通，适合优先看性价比。"
-      },
-      {
-        id: "stanmore-parramatta-8",
-        rank: 4,
-        categories: ["recent", "verify", "no-gym"],
-        address: "8/112-116 Parramatta Road, Stanmore",
-        suburb: "Stanmore",
-        rent: 600,
-        rentNote: "$600/w incl. bills",
-        bills: "包 bill",
-        availableSort: 20260628,
-        available: "Available now",
-        beds: "1B1B? / furnished",
+        availableSort: 20260711,
+        available: "2026-07-11",
+        beds: "1B1B",
         amenity: "AC · no gym",
-        commute: 18,
-        station: "USYD walk / Stanmore",
-        lat: -33.8870,
-        lng: 151.1719,
+        commute: 10,
+        station: "USYD walk / Redfern",
+        lat: -33.8828,
+        lng: 151.1811,
         stationLat: -33.88864,
         stationLng: 151.18735,
-        image: "assets/rentals-1b/8-112-116-parramatta-rd-stanmore.webp",
+        image: "assets/rentals/201-5-purkis-st-camperdown.webp",
+        imageNote: "同楼参考图",
         source: "Domain",
-        sourceUrl: "https://www.domain.com.au/8-112-116-parramatta-road-stanmore-nsw-2048-17387072",
-        status: "近期新增 / 户型需确认",
-        accent: "#ba4b3b",
-        good: "$600/w 且 all bills included，Domain 标 1 Bed 1 Bath 并写 air conditioning；到 USYD 可步行。",
-        risk: "listing 描述写 designer studios / studio balcony，必须确认是否有独立卧室；若是 studio，则不符合严格 1B1B。"
+        sourceUrl: "https://www.domain.com.au/302-5-purkis-st-camperdown-nsw-2050-16580221",
+        status: "今日新增 / 近 USYD",
+        accent: "#2763a8",
+        good: "$650/w，Domain 显示 1 Bed 1 Bath、air conditioning，步行到 USYD；起租日只比目标早 10 天。",
+        risk: "无 gym，仍需确认中介是否可把起租推到 2026-07-21；图片使用同楼参考图，实际内装以 inspection 为准。"
       },
       {
-        id: "homebush-parramatta-107",
-        rank: 5,
-        categories: ["negotiate", "no-gym", "verify"],
-        address: "107/218 Parramatta Road, Homebush",
-        suburb: "Homebush",
-        rent: 620,
-        rentNote: "$620/w",
+        id: "camperdown-mallett-20",
+        rank: 3,
+        categories: ["strong", "recent", "negotiate", "no-gym", "verify"],
+        address: "20/43-57 Mallett Street, Camperdown",
+        suburb: "Camperdown",
+        rent: 625,
+        rentNote: "$625/w",
         bills: "未标明包 bill",
-        availableSort: 20260626,
+        availableSort: 20260630,
         available: "Available now",
         beds: "1B1B",
-        amenity: "Ducted AC · no gym",
-        commute: 41,
-        station: "Homebush Station",
-        lat: -33.8644,
-        lng: 151.0798,
-        stationLat: -33.8666,
-        stationLng: 151.0852,
-        image: "assets/rentals-1b/107-218-parramatta-rd-homebush.jpg",
-        imageNote: "同地址参考图",
+        amenity: "AC · no gym",
+        commute: 12,
+        station: "USYD walk / Redfern",
+        lat: -33.8836,
+        lng: 151.1778,
+        stationLat: -33.88864,
+        stationLng: 151.18735,
+        image: "assets/rentals/1-3-larkin-st-camperdown.webp",
+        imageNote: "Camperdown 参考图",
+        source: "Domain",
+        sourceUrl: "https://www.domain.com.au/20-43-57-mallett-street-camperdown-nsw-2050-17190200",
+        status: "今日新增 / 近 USYD",
+        accent: "#2f7d45",
+        good: "$625/w，Domain 显示 1 Bed 1 Bath、air conditioning，位置在 USYD 西侧，通勤风险最低。",
+        risk: "Available now 需要谈晚起租；图片使用同区参考图，需看 inspection 确认采光、噪音和实际空调位置。"
+      },
+      {
+        id: "enmore-james-5",
+        rank: 4,
+        categories: ["recent", "negotiate", "no-gym"],
+        address: "5/31 James Street, Enmore",
+        suburb: "Enmore",
+        rent: 610,
+        rentNote: "$610/w",
+        bills: "未标明包 bill",
+        availableSort: 20260706,
+        available: "2026-07-06",
+        beds: "1B1B",
+        amenity: "AC · no gym",
+        commute: 24,
+        station: "Newtown Station / bus",
+        lat: -33.8990,
+        lng: 151.1747,
+        stationLat: -33.8977,
+        stationLng: 151.1797,
+        image: "assets/rentals/furnished-6-69-71-parramatta-rd-camperdown.webp",
+        imageNote: "内西区参考图",
         source: "realestate.com.au",
-        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-homebush-443531888",
-        status: "无 gym / 有空调",
-        accent: "#2763a8",
-        good: "$620/w 明显低于上限，listing 写 ducted air conditioning；Homebush 到 Redfern/Central 轨道通勤稳定。",
-        risk: "没有 gym，且 Available now 需要谈晚起租；图片为同地址参考图，实际内装以 inspection 为准。"
+        sourceUrl: "https://www.realestate.com.au/property-unit-nsw-enmore-444512460",
+        status: "今日新增 / 低租金",
+        accent: "#7a4f9f",
+        good: "$610/w，realestate 显示 1 Bed 1 Bath、air conditioning；Enmore/Newtown 生活便利，到 USYD 可步行、公交或短骑行。",
+        risk: "无 gym，起租日早于目标 15 天；需确认厨房/客厅面积是否适合长期住。"
+      },
+      {
+        id: "newtown-king-213",
+        rank: 5,
+        categories: ["recent", "negotiate", "no-gym", "verify"],
+        address: "213/88 King Street, Newtown",
+        suburb: "Newtown",
+        rent: 660,
+        rentNote: "$660/w",
+        bills: "未标明包 bill",
+        availableSort: 20260717,
+        available: "2026-07-17",
+        beds: "1B1B / loft",
+        amenity: "AC · no gym",
+        commute: 16,
+        station: "Newtown Station / USYD walk",
+        lat: -33.8916,
+        lng: 151.1827,
+        stationLat: -33.8977,
+        stationLng: 151.1797,
+        image: "assets/rentals/25-5-pyrmont-bridge-rd-camperdown.webp",
+        imageNote: "近校区参考图",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-newtown-444502352",
+        status: "今日新增 / 户型需确认",
+        accent: "#ba4b3b",
+        good: "$660/w，realestate 显示 1 Bed 1 Bath、air conditioning；King Street 到校区很近，起租日只比目标早 4 天。",
+        risk: "房源写 loft-style / sleeping loft，需确认是否接受这种非传统卧室；无 gym，图片使用近校区参考图。"
       },
       {
         id: "homebush-park-506",
@@ -840,35 +844,8 @@
         risk: "起租日早于目标约三周；图片为同楼参考图，实际户型朝向和采光要现场确认。"
       },
       {
-        id: "ashfield-brown",
-        rank: 7,
-        categories: ["negotiate", "gym", "verify"],
-        address: "83/1 Brown Street, Ashfield",
-        suburb: "Ashfield",
-        rent: 675,
-        rentNote: "$675/w",
-        bills: "未标明包 bill",
-        availableSort: 20260630,
-        available: "2026-06-30",
-        beds: "1B1B",
-        amenity: "AC + gym",
-        commute: 34,
-        station: "Ashfield Station",
-        lat: -33.8886,
-        lng: 151.1244,
-        stationLat: -33.8881,
-        stationLng: 151.1253,
-        image: "assets/rentals-1b/83-1-brown-st-ashfield.webp",
-        source: "Domain",
-        sourceUrl: "https://www.domain.com.au/83-1-brown-street-ashfield-nsw-2131-18171430",
-        status: "状态需确认",
-        accent: "#2f7d45",
-        good: "卡在 $675 上限内，Ashfield 到 Redfern/Central 的轨道通勤稳定，离站很近，且有空调和 gym。",
-        risk: "起租日早于目标 21 天；状态需向中介确认，能否 2026-07-21 后起租是关键。"
-      },
-      {
         id: "lidcombe-uhrig",
-        rank: 8,
+        rank: 7,
         categories: ["negotiate", "edge", "gym"],
         address: "1B/2 Uhrig Road, Lidcombe",
         suburb: "Lidcombe",
