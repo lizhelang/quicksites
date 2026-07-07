@@ -599,6 +599,7 @@
         <button class="filter-btn active" type="button" data-filter="all" title="显示全部候选"><i data-lucide="list-filter"></i>全部</button>
         <button class="filter-btn" type="button" data-filter="strong" title="日期和条件最稳"><i data-lucide="check-circle-2"></i>强匹配</button>
         <button class="filter-btn" type="button" data-filter="fresh" title="显示本轮新补入的候选"><i data-lucide="sparkles"></i>本轮新增</button>
+        <button class="filter-btn" type="button" data-filter="emailed" title="显示已经发过询问信的候选"><i data-lucide="mail-check"></i>已发邮件</button>
         <button class="filter-btn" type="button" data-filter="budget" title="显示每周租金低于 $1000 的候选"><i data-lucide="badge-dollar-sign"></i>低于$1000</button>
         <button class="filter-btn" type="button" data-filter="negotiate" title="需要确认起租日或提前付租成本"><i data-lucide="calendar-clock"></i>起租日需谈</button>
         <button class="filter-btn" type="button" data-filter="verify" title="户型或来源细节需要二次确认"><i data-lucide="circle-alert"></i>需确认</button>
@@ -1660,8 +1661,8 @@
         address: "79/1 Shirley Street, Alexandria",
         suburb: "Alexandria",
         rent: 965,
-        availableSort: 20260629,
-        available: "Available now",
+        availableSort: 20260714,
+        available: "2026-07-14",
         beds: "2B2B + 1 car",
         amenity: "AC + pool/gym",
         commute: 32,
@@ -1671,12 +1672,12 @@
         stationLat: -33.90672,
         stationLng: 151.20183,
         image: "assets/rentals/79-1-shirley-st-alexandria.webp",
-        source: "Domain",
-        sourceUrl: "https://www.domain.com.au/79-1-shirley-street-alexandria-nsw-2015-18168012",
+        source: "realestate.com.au",
+        sourceUrl: "https://www.realestate.com.au/property-apartment-nsw-alexandria-444410024",
         status: "低价备选",
         accent: "#2f5f9b",
-        good: "价格很强，Domain 写有 air conditioning、pool/gym 和车位；预算余量最大。",
-        risk: "Alexandria 到 USYD 的实际路线要按上课时间查；Available now 可接受，但要问清提前付租成本。"
+        good: "REA 当前写 $965/w、2B2B、1 car、2026-07-14 可入住，并列有 air conditioning、pool/gym 和车位；预算余量最大。",
+        risk: "Alexandria 到 USYD 的实际路线要按上课时间查；7 月 14 日早于 7 月 20 日，需问清能否贴近到达日起租或提前付租成本。"
       },
       {
         id: "george-julius-308",
@@ -2894,6 +2895,7 @@
           </div>
           <p class="meta-row">${property.suburb} · ${property.available} · ${property.commute} min to USYD</p>
           <div class="badges">
+            ${property.categories.includes("emailed") ? '<span class="badge" style="--badge: #6d5bd0"><i data-lucide="mail-check"></i>已发邮件</span>' : ""}
             <span class="badge" style="--badge: #2f5f9b"><i data-lucide="bed-double"></i>${property.beds}</span>
             <span class="badge" style="--badge: #127d75"><i data-lucide="wind"></i>${property.amenity}</span>
             <span class="badge" style="--badge: #a4761d"><i data-lucide="train-front"></i>${property.station}</span>
