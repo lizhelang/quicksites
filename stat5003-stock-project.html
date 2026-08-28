@@ -24,6 +24,8 @@
       --teal: #087f77;
       --teal-dark: #05645f;
       --teal-soft: #dceeea;
+      --blue: #3d739e;
+      --blue-soft: #e2edf5;
       --amber: #b8681b;
       --amber-soft: #f5e5cf;
       --red: #a8483e;
@@ -721,6 +723,11 @@
       background: linear-gradient(150deg, var(--paper-bright), var(--teal-soft));
     }
 
+    .criterion-card.available {
+      border-color: rgba(61, 115, 158, 0.38);
+      background: linear-gradient(150deg, var(--paper-bright), var(--blue-soft));
+    }
+
     .criterion-card.open {
       border-style: dashed;
     }
@@ -740,6 +747,61 @@
     .criterion-card.pass .criterion-state {
       background: var(--teal);
       color: #ffffff;
+    }
+
+    .criterion-card.available .criterion-state {
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    #dataset .hero {
+      margin-bottom: 42px;
+    }
+
+    #dataset .section-block {
+      margin-top: 58px;
+    }
+
+    #dataset .course-fit {
+      margin-top: 32px;
+    }
+
+    #dataset .course-fit .section-heading {
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+    }
+
+    #dataset .course-fit .criterion-grid {
+      gap: 8px;
+    }
+
+    #dataset .course-fit .criterion-card {
+      min-height: 142px;
+      padding: 16px;
+    }
+
+    #dataset .course-fit .criterion-state {
+      margin-bottom: 20px;
+    }
+
+    #dataset .course-fit .criterion-card h4 {
+      font-size: 1.2rem;
+    }
+
+    #dataset .course-fit .criterion-card p {
+      font-size: 0.73rem;
+    }
+
+    #dataset .feature-map .section-heading {
+      margin-bottom: 18px;
+    }
+
+    #dataset .feature-map .field-grid {
+      gap: 10px;
+    }
+
+    #dataset .feature-map .field-card {
+      padding: 18px;
     }
 
     .criterion-card h4 {
@@ -1613,7 +1675,21 @@
               <div class="fact-card"><span class="fact-label">Stock time span</span><span class="fact-value">2010→2024</span><span class="fact-detail">04 Jan 2010 · 20 Dec 2024</span></div>
             </div>
 
-            <section class="section-block">
+            <section class="section-block course-fit">
+              <div class="section-heading">
+                <h3>STAT5003 requirement fit</h3>
+                <p>Put the course test first: this is already a valid dataset choice through Large, Messy, and Integrated. Multi-class is available if the group selects a three-regime label.</p>
+              </div>
+              <div class="criterion-grid">
+                <article class="criterion-card pass"><span class="criterion-state">Met</span><h4>Large</h4><p>Nearly 1.9M raw stock-day rows; the audit will report the exact eligible month-end count after filtering.</p></article>
+                <article class="criterion-card pass"><span class="criterion-state">Met</span><h4>Messy</h4><p>Material missing history and market outliers require explicit visualisation and preprocessing.</p></article>
+                <article class="criterion-card pass"><span class="criterion-state">Met</span><h4>Integrated</h4><p>Stock and index data join by Date; company metadata joins by Symbol.</p></article>
+                <article class="criterion-card"><span class="criterion-state">Not claimed</span><h4>Complex</h4><p>Only 26 raw columns. We will not manufacture 100+ weak features just to claim complexity.</p></article>
+                <article class="criterion-card available"><span class="criterion-state">Available</span><h4>Multi-class</h4><p>Can be met by choosing Low / Medium / High volatility after the distribution audit.</p></article>
+              </div>
+            </section>
+
+            <section class="section-block archive-detail">
               <div class="section-heading">
                 <h3>Inside the archive</h3>
                 <p>The files have different observation units. They should be linked by keys, not stacked into one misleading total row count.</p>
@@ -1630,30 +1706,14 @@
               </div>
             </section>
 
-            <section class="section-block">
+            <section class="section-block feature-map">
               <div class="section-heading">
-                <h3>What the 26 columns contain</h3>
-                <p>“26 columns” is the sum across three files. Keys repeat, and several company fields are identifiers or current snapshots rather than safe historical predictors.</p>
+                <h3>What this dataset is</h3>
+                <p>It is a daily market panel for current S&amp;P 500 constituents, paired with a market benchmark and company reference table — not a single-stock price file.</p>
               </div>
               <div class="field-grid">
-                <article class="field-card"><h4>Market history</h4><p><code>Date</code>, <code>Symbol</code>, <code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Adj Close</code>, <code>Volume</code>.</p></article>
-                <article class="field-card"><h4>Market benchmark</h4><p><code>Date</code> and <code>S&amp;P500</code>. These support benchmark return, market volatility, drawdown, and regime features.</p></article>
-                <article class="field-card"><h4>Company context</h4><p><code>Exchange</code>, names, <code>Sector</code>, <code>Industry</code>, city, state, country, and business summary.</p></article>
-                <article class="field-card"><h4>Current snapshot fields</h4><p><code>Currentprice</code>, <code>Marketcap</code>, <code>Ebitda</code>, <code>Revenuegrowth</code>, employees, and index <code>Weight</code>. Do not backfill these into earlier years.</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
-              <div class="section-heading">
-                <h3>STAT5003 requirement fit</h3>
-                <p>The course asks for at least three of five criteria. This dataset naturally supports three; a multi-class target could add a fourth.</p>
-              </div>
-              <div class="criterion-grid">
-                <article class="criterion-card pass"><span class="criterion-state">Pass</span><h4>Large</h4><p>Nearly 1.9M raw stock-day rows. The audit will report the exact eligible month-end count after all filters.</p></article>
-                <article class="criterion-card pass"><span class="criterion-state">Pass</span><h4>Messy</h4><p>Material missing history and potential market outliers require explicit visualisation and preprocessing.</p></article>
-                <article class="criterion-card pass"><span class="criterion-state">Pass</span><h4>Integrated</h4><p>Stock and index data join by Date; company metadata joins by Symbol.</p></article>
-                <article class="criterion-card"><span class="criterion-state">Not claimed</span><h4>Complex</h4><p>Only 26 raw columns. We should not manufacture 100+ weak features just to claim complexity.</p></article>
-                <article class="criterion-card open"><span class="criterion-state">Target choice</span><h4>Multi-class</h4><p>Not met by the proposed binary target; available if Low / Medium / High volatility is selected.</p></article>
+                <article class="field-card"><h4>Use for modelling</h4><p><code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Adj Close</code>, <code>Volume</code>, <code>S&amp;P500</code>, <code>Sector</code>, and <code>Industry</code>. These create returns, volatility, range, drawdown, volume, and market-regime features.</p></article>
+                <article class="field-card"><h4>Keep as context or exclude</h4><p><code>Date</code> and <code>Symbol</code> define the panel. Names, exchange, and location help describe coverage. Current-price and current-fundamental fields must not be backfilled into historical predictions.</p></article>
               </div>
             </section>
 
@@ -1724,7 +1784,18 @@
               <div class="fact-card"><span class="fact-label">股票时间范围</span><span class="fact-value">2010→2024</span><span class="fact-detail">2010-01-04 · 2024-12-20</span></div>
             </div>
 
-            <section class="section-block">
+            <section class="section-block course-fit">
+              <div class="section-heading"><h3>STAT5003要求匹配</h3><p>先明确课程要求：这个数据集已通过 Large、Messy、Integrated 三项成为有效候选；若小组最终采用三种波动状态，还可额外满足 Multi-class。</p></div>
+              <div class="criterion-grid">
+                <article class="criterion-card pass"><span class="criterion-state">满足</span><h4>Large</h4><p>原始股票日记录接近190万；审计将在筛选后报告精确可用月末样本数。</p></article>
+                <article class="criterion-card pass"><span class="criterion-state">满足</span><h4>Messy</h4><p>大量缺失历史和市场异常值需要明确可视化与预处理。</p></article>
+                <article class="criterion-card pass"><span class="criterion-state">满足</span><h4>Integrated</h4><p>股票和指数表按Date关联；公司元数据按Symbol关联。</p></article>
+                <article class="criterion-card"><span class="criterion-state">不主张</span><h4>Complex</h4><p>只有26个原始列，不为凑复杂度制造100多个弱特征。</p></article>
+                <article class="criterion-card available"><span class="criterion-state">可选满足</span><h4>Multi-class</h4><p>分布审计后若采用低/中/高三种波动状态，即可满足这一项。</p></article>
+              </div>
+            </section>
+
+            <section class="section-block archive-detail">
               <div class="section-heading"><h3>压缩包里的三张表</h3><p>三张表的 observation unit 不同，应通过键值关联，而不能把行数直接相加成同一种样本。</p></div>
               <div class="table-wrap"><table class="data-table"><thead><tr><th>文件与作用</th><th>行数</th><th>列数</th><th>大小</th><th>覆盖范围</th></tr></thead><tbody>
                 <tr><td><span class="file-name">sp500_stocks.csv</span><span class="file-purpose">股票每日 OHLC、复权收盘价和成交量。</span></td><td class="file-meta">1,891,536</td><td class="file-meta">8</td><td class="file-meta">96.32 MB</td><td class="file-meta">2010-01-04 → 2024-12-20</td></tr>
@@ -1733,24 +1804,11 @@
               </tbody></table></div>
             </section>
 
-            <section class="section-block">
-              <div class="section-heading"><h3>26个原始列包含什么</h3><p>“26列”是三张表列数之和。键值会重复，一些公司字段只是标识或当前快照，不能直接作为安全的历史预测特征。</p></div>
+            <section class="section-block feature-map">
+              <div class="section-heading"><h3>这个数据集到底是什么</h3><p>它是当前S&amp;P 500成分股的日度市场面板，配合大盘基准和公司参考表；并不是单只股票的价格文件。</p></div>
               <div class="field-grid">
-                <article class="field-card"><h4>市场历史</h4><p><code>Date</code>、<code>Symbol</code>、<code>Open</code>、<code>High</code>、<code>Low</code>、<code>Close</code>、<code>Adj Close</code>、<code>Volume</code>。</p></article>
-                <article class="field-card"><h4>市场基准</h4><p><code>Date</code> 与 <code>S&amp;P500</code>，可生成大盘收益率、市场波动率、回撤和市场状态特征。</p></article>
-                <article class="field-card"><h4>公司背景</h4><p><code>Exchange</code>、公司名称、<code>Sector</code>、<code>Industry</code>、城市、州、国家和公司业务简介。</p></article>
-                <article class="field-card"><h4>当前快照字段</h4><p><code>Currentprice</code>、<code>Marketcap</code>、<code>Ebitda</code>、<code>Revenuegrowth</code>、员工数与指数 <code>Weight</code>。不能把它们倒填进早期年份。</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
-              <div class="section-heading"><h3>STAT5003要求匹配</h3><p>课程要求五项中至少满足三项。本数据集自然满足三项；如果选择多分类标签，则可增加第四项。</p></div>
-              <div class="criterion-grid">
-                <article class="criterion-card pass"><span class="criterion-state">满足</span><h4>Large</h4><p>原始股票日记录接近190万；审计将在全部筛选后报告精确可用月末样本数。</p></article>
-                <article class="criterion-card pass"><span class="criterion-state">满足</span><h4>Messy</h4><p>大量缺失历史和潜在市场异常值需要明确可视化与预处理。</p></article>
-                <article class="criterion-card pass"><span class="criterion-state">满足</span><h4>Integrated</h4><p>股票表和指数表按Date关联；公司信息表按Symbol关联。</p></article>
-                <article class="criterion-card"><span class="criterion-state">不主张</span><h4>Complex</h4><p>只有26个原始列，不应为了凑100多个特征而制造大量弱变量。</p></article>
-                <article class="criterion-card open"><span class="criterion-state">取决于标签</span><h4>Multi-class</h4><p>当前二分类不满足；如果选择低/中/高波动三分类则可以满足。</p></article>
+                <article class="field-card"><h4>可用于建模的特征来源</h4><p><code>Open</code>、<code>High</code>、<code>Low</code>、<code>Close</code>、<code>Adj Close</code>、<code>Volume</code>、<code>S&amp;P500</code>、<code>Sector</code> 与 <code>Industry</code>。可生成收益率、波动率、振幅、回撤、成交量和市场状态特征。</p></article>
+                <article class="field-card"><h4>只作背景或必须排除</h4><p><code>Date</code> 与 <code>Symbol</code>定义面板；名称、交易所和地点用于描述覆盖范围。当前价格和当前财务快照不能倒填到历史预测中。</p></article>
               </div>
             </section>
 
@@ -1805,7 +1863,18 @@
               <div class="fact-card"><span class="fact-label">주가 기간</span><span class="fact-value">2010→2024</span><span class="fact-detail">2010-01-04 · 2024-12-20</span></div>
             </div>
 
-            <section class="section-block">
+            <section class="section-block course-fit">
+              <div class="section-heading"><h3>STAT5003 요구사항 적합성</h3><p>과제 조건을 먼저 확인합니다. 이 데이터셋은 Large, Messy, Integrated 세 가지로 이미 유효한 후보이며, 세 가지 변동성 regime을 선택하면 Multi-class도 추가로 충족합니다.</p></div>
+              <div class="criterion-grid">
+                <article class="criterion-card pass"><span class="criterion-state">충족</span><h4>Large</h4><p>원시 주식-일 행이 약 190만 개입니다. 필터 적용 후 정확한 월말 관측치 수는 검토 단계에서 보고합니다.</p></article>
+                <article class="criterion-card pass"><span class="criterion-state">충족</span><h4>Messy</h4><p>많은 결측 이력과 시장 이상치를 명시적으로 시각화하고 전처리해야 합니다.</p></article>
+                <article class="criterion-card pass"><span class="criterion-state">충족</span><h4>Integrated</h4><p>주가와 지수는 Date로, 회사 메타데이터는 Symbol로 조인합니다.</p></article>
+                <article class="criterion-card"><span class="criterion-state">주장하지 않음</span><h4>Complex</h4><p>원시 열은 26개입니다. Complex를 위해 100개 이상의 약한 feature를 억지로 만들지 않습니다.</p></article>
+                <article class="criterion-card available"><span class="criterion-state">선택 가능</span><h4>Multi-class</h4><p>분포 검토 후 Low / Medium / High 변동성을 채택하면 이 조건을 충족합니다.</p></article>
+              </div>
+            </section>
+
+            <section class="section-block archive-detail">
               <div class="section-heading"><h3>아카이브의 세 테이블</h3><p>파일마다 관측 단위가 다릅니다. 행 수를 단순 합산하지 말고 key로 연결해야 합니다.</p></div>
               <div class="table-wrap"><table class="data-table"><thead><tr><th>파일과 역할</th><th>행</th><th>열</th><th>크기</th><th>범위</th></tr></thead><tbody>
                 <tr><td><span class="file-name">sp500_stocks.csv</span><span class="file-purpose">일별 주식 OHLC, 수정 종가, 거래량.</span></td><td class="file-meta">1,891,536</td><td class="file-meta">8</td><td class="file-meta">96.32 MB</td><td class="file-meta">2010-01-04 → 2024-12-20</td></tr>
@@ -1814,24 +1883,11 @@
               </tbody></table></div>
             </section>
 
-            <section class="section-block">
-              <div class="section-heading"><h3>26개 원시 열의 구성</h3><p>“26개 열”은 세 파일의 합계입니다. key가 중복되고 일부 회사 변수는 과거 예측에 안전한 feature가 아니라 현재 스냅샷입니다.</p></div>
+            <section class="section-block feature-map">
+              <div class="section-heading"><h3>이 데이터셋은 무엇인가?</h3><p>현재 S&amp;P 500 구성 종목의 일별 시장 패널에 시장 벤치마크와 회사 참조 테이블을 연결한 데이터입니다. 한 종목의 주가 파일이 아닙니다.</p></div>
               <div class="field-grid">
-                <article class="field-card"><h4>시장 이력</h4><p><code>Date</code>, <code>Symbol</code>, <code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Adj Close</code>, <code>Volume</code>.</p></article>
-                <article class="field-card"><h4>시장 벤치마크</h4><p><code>Date</code>와 <code>S&amp;P500</code>. 시장 수익률, 변동성, drawdown, regime feature를 만들 수 있습니다.</p></article>
-                <article class="field-card"><h4>회사 맥락</h4><p><code>Exchange</code>, 회사명, <code>Sector</code>, <code>Industry</code>, 도시, 주, 국가, 사업 설명.</p></article>
-                <article class="field-card"><h4>현재 스냅샷 변수</h4><p><code>Currentprice</code>, <code>Marketcap</code>, <code>Ebitda</code>, <code>Revenuegrowth</code>, 직원 수, 지수 <code>Weight</code>. 과거 연도에 소급 적용하면 안 됩니다.</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
-              <div class="section-heading"><h3>STAT5003 요구사항 적합성</h3><p>과제는 다섯 조건 중 최소 세 가지를 요구합니다. 이 데이터셋은 자연스럽게 세 가지를 충족하며, 다중 분류 target을 선택하면 네 번째 조건을 추가할 수 있습니다.</p></div>
-              <div class="criterion-grid">
-                <article class="criterion-card pass"><span class="criterion-state">충족</span><h4>Large</h4><p>원시 주식-일 행이 약 190만 개입니다. 모든 필터 적용 후 정확한 월말 관측치 수는 검토 단계에서 보고합니다.</p></article>
-                <article class="criterion-card pass"><span class="criterion-state">충족</span><h4>Messy</h4><p>많은 결측 이력과 잠재적 시장 이상치를 시각화하고 전처리해야 합니다.</p></article>
-                <article class="criterion-card pass"><span class="criterion-state">충족</span><h4>Integrated</h4><p>주가와 지수는 Date로, 회사 메타데이터는 Symbol로 조인합니다.</p></article>
-                <article class="criterion-card"><span class="criterion-state">주장하지 않음</span><h4>Complex</h4><p>원시 열은 26개입니다. Complex를 위해 100개 이상의 약한 feature를 억지로 만들지 않습니다.</p></article>
-                <article class="criterion-card open"><span class="criterion-state">Target 선택</span><h4>Multi-class</h4><p>현재 이진 target에는 해당하지 않지만 Low / Medium / High 변동성을 선택하면 충족합니다.</p></article>
+                <article class="field-card"><h4>모델링에 사용할 feature 원천</h4><p><code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Adj Close</code>, <code>Volume</code>, <code>S&amp;P500</code>, <code>Sector</code>, <code>Industry</code>로 수익률, 변동성, range, drawdown, 거래량, 시장 regime feature를 만듭니다.</p></article>
+                <article class="field-card"><h4>맥락용 또는 제외할 변수</h4><p><code>Date</code>와 <code>Symbol</code>은 패널을 정의합니다. 이름, 거래소, 위치는 coverage 설명용입니다. 현재 가격과 현재 재무 스냅샷은 과거 예측에 소급 사용하면 안 됩니다.</p></article>
               </div>
             </section>
 

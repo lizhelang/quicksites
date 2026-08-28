@@ -43,6 +43,13 @@ def run_desktop(browser) -> None:
     assert is_visible(page, '[data-section-panel="dataset"]')
     assert not is_visible(page, '[data-section-panel="research"]')
     assert page.get_by_text("Version 1023", exact=True).first.is_visible()
+    dataset_english = page.locator('[data-section-panel="dataset"] .language-copy[data-copy="en"]')
+    course_fit = dataset_english.locator(".course-fit")
+    archive_detail = dataset_english.locator(".archive-detail")
+    assert course_fit.bounding_box()["y"] < archive_detail.bounding_box()["y"]
+    assert course_fit.locator(".criterion-card.pass").count() == 3
+    assert course_fit.locator(".criterion-card.available").count() == 1
+    assert course_fit.locator(".criterion-card.available").get_by_text("Multi-class", exact=True).is_visible()
     page.screenshot(path="/tmp/stat5003-microsite-en-dataset.png", full_page=True)
 
     page.get_by_role("button", name="中文").click()

@@ -60,3 +60,6 @@ Key devices:
 - Check keyboard navigation, focus visibility, reduced motion, and no horizontal overflow.
 - Serve locally and capture visual evidence before publishing.
 
+## 29 August information-density revision
+
+The dataset page now leads with the course-fit decision immediately after the verified facts. The status encoding is deliberate: green means currently met, blue means available if the target is chosen as multi-class, and an unaccented card means not claimed. The field description is condensed from four broad cards to two higher-signal blocks: model-safe feature sources and context-only or excluded fields. The archive table remains as the detailed reference.
