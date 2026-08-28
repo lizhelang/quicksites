@@ -756,6 +756,47 @@
 
     #dataset .hero {
       margin-bottom: 42px;
+      gap: clamp(28px, 4vw, 56px);
+    }
+
+    #dataset .hero h2 {
+      max-width: 700px;
+      font-size: clamp(2.7rem, 4.7vw, 4.8rem);
+      line-height: 0.92;
+    }
+
+    #dataset .hero .lede {
+      max-width: 640px;
+      margin-top: 18px;
+      font-size: 1rem;
+    }
+
+    #dataset .hero-note {
+      padding: 20px;
+    }
+
+    #dataset .fact-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    #dataset .fact-card {
+      min-height: 108px;
+      padding: 16px;
+    }
+
+    #dataset .fact-label {
+      min-height: 28px;
+      margin-bottom: 12px;
+      font-size: 0.59rem;
+    }
+
+    #dataset .fact-value {
+      font-size: clamp(1.12rem, 1.9vw, 1.65rem);
+    }
+
+    #dataset .fact-detail {
+      margin-top: 6px;
+      font-size: 0.66rem;
     }
 
     #dataset .section-block {
@@ -1368,6 +1409,10 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
+      #dataset .fact-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
       .prediction-flow {
         grid-template-columns: 1fr;
       }
@@ -1434,6 +1479,10 @@
 
       .fact-grid,
       .benchmark-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #dataset .fact-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
@@ -1656,8 +1705,8 @@
             <div class="hero">
               <div class="hero-copy">
                 <p class="eyebrow">01 · Dataset profile</p>
-                <h2>One market.<br>Three linked tables.</h2>
-                <p class="lede">A verified profile of Kaggle's S&amp;P 500 Stocks dataset — what is inside, what makes it useful for STAT5003, and which limitations must remain visible in every result.</p>
+                <h2>A daily S&amp;P 500<br>market panel.</h2>
+                <p class="lede">Daily price and volume histories for current S&amp;P 500 constituents, linked to the market benchmark and company context needed for a time-aware classification study.</p>
               </div>
               <div class="hero-note">
                 <p class="label">Verified snapshot</p>
@@ -1686,6 +1735,16 @@
                 <article class="criterion-card pass"><span class="criterion-state">Met</span><h4>Integrated</h4><p>Stock and index data join by Date; company metadata joins by Symbol.</p></article>
                 <article class="criterion-card"><span class="criterion-state">Not claimed</span><h4>Complex</h4><p>Only 26 raw columns. We will not manufacture 100+ weak features just to claim complexity.</p></article>
                 <article class="criterion-card available"><span class="criterion-state">Available</span><h4>Multi-class</h4><p>Can be met by choosing Low / Medium / High volatility after the distribution audit.</p></article>
+              </div>
+            </section>
+
+            <section class="section-block why-fit">
+              <div class="section-heading"><h3>Why this dataset works</h3><p>Its value is not just size. It gives us a realistic, linked, time-aware classification setting with an interpretable decision use case.</p></div>
+              <div class="benefit-grid">
+                <article class="benefit-card"><h4>Enough raw scale</h4><p>Monthly sampling can reduce overlapping outcomes; the audit will confirm whether the final eligible panel remains above 10,000 rows.</p></article>
+                <article class="benefit-card"><h4>Natural feature families</h4><p>Returns, volatility, range, drawdown, relative volume, market regime, sector, and industry all have clear interpretations.</p></article>
+                <article class="benefit-card"><h4>Multiple valid baselines</h4><p>Majority class, recent-volatility persistence, and simple logistic regression provide honest benchmarks for more flexible models.</p></article>
+                <article class="benefit-card"><h4>Strong EDA story</h4><p>Coverage, missingness, sector differences, class balance, outliers, volatility clustering, and time variation are all substantive analyses.</p></article>
               </div>
             </section>
 
@@ -1738,16 +1797,6 @@
             </section>
 
             <section class="section-block">
-              <div class="section-heading"><h3>Why this dataset works</h3><p>Its value is not just size. It gives us a realistic, linked, time-aware classification setting with an interpretable decision use case.</p></div>
-              <div class="benefit-grid">
-                <article class="benefit-card"><h4>Enough raw scale</h4><p>Monthly sampling can reduce overlapping outcomes; the audit will confirm whether the final eligible panel remains above 10,000 rows.</p></article>
-                <article class="benefit-card"><h4>Natural feature families</h4><p>Returns, volatility, range, drawdown, relative volume, market regime, sector, and industry all have clear interpretations.</p></article>
-                <article class="benefit-card"><h4>Multiple valid baselines</h4><p>Majority class, recent-volatility persistence, and simple logistic regression provide honest benchmarks for more flexible models.</p></article>
-                <article class="benefit-card"><h4>Strong EDA story</h4><p>Coverage, missingness, sector differences, class balance, outliers, volatility clustering, and time variation are all substantive analyses.</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
               <div class="section-heading"><h3>Limits to carry into every result</h3><p>A good report names what the data cannot establish as clearly as what it can.</p></div>
               <ul class="clean-list">
                 <li><strong>Survivorship bias:</strong> the universe reflects current constituents, not the historical membership of the S&amp;P 500.</li>
@@ -1771,7 +1820,7 @@
 
           <div class="language-copy" data-copy="zh">
             <div class="hero">
-              <div class="hero-copy"><p class="eyebrow">01 · 数据集档案</p><h2>一个市场，<br>三张关联数据表。</h2><p class="lede">这是对 Kaggle S&amp;P 500 Stocks 数据集的核验说明：它包含什么、为什么适合 STAT5003，以及哪些限制必须贯穿所有分析结论。</p></div>
+              <div class="hero-copy"><p class="eyebrow">01 · 数据集档案</p><h2>S&amp;P 500的<br>日度市场面板。</h2><p class="lede">它记录当前S&amp;P 500成分股的日度价格与成交量，并关联大盘基准和公司背景，适合构建具有时间边界的分类研究。</p></div>
               <div class="hero-note"><p class="label">已核验快照</p><strong>Version 1023</strong><p>最后更新于 2024-12-23。名称虽然写着“每日更新”，但当前数据实际截止到 2024-12-20。</p></div>
             </div>
 
@@ -1792,6 +1841,16 @@
                 <article class="criterion-card pass"><span class="criterion-state">满足</span><h4>Integrated</h4><p>股票和指数表按Date关联；公司元数据按Symbol关联。</p></article>
                 <article class="criterion-card"><span class="criterion-state">不主张</span><h4>Complex</h4><p>只有26个原始列，不为凑复杂度制造100多个弱特征。</p></article>
                 <article class="criterion-card available"><span class="criterion-state">可选满足</span><h4>Multi-class</h4><p>分布审计后若采用低/中/高三种波动状态，即可满足这一项。</p></article>
+              </div>
+            </section>
+
+            <section class="section-block why-fit">
+              <div class="section-heading"><h3>为什么这个数据集适合</h3><p>它的价值不只在于规模，还在于它提供了真实、可关联、具有时间结构且容易解释的分类问题。</p></div>
+              <div class="benefit-grid">
+                <article class="benefit-card"><h4>原始规模充足</h4><p>按月抽样可以减少未来窗口重叠；审计将确认最终可用面板是否仍超过10,000条。</p></article>
+                <article class="benefit-card"><h4>特征组自然清晰</h4><p>收益率、波动率、振幅、回撤、相对成交量、市场状态、Sector与Industry都具有明确含义。</p></article>
+                <article class="benefit-card"><h4>有多个可靠基线</h4><p>多数类、近期波动率持续性和简单Logistic Regression都能为复杂模型提供诚实比较。</p></article>
+                <article class="benefit-card"><h4>EDA内容丰富</h4><p>覆盖率、缺失模式、行业差异、类别平衡、异常值、波动聚集和时间变化都可形成实质分析。</p></article>
               </div>
             </section>
 
@@ -1821,16 +1880,6 @@
             </section>
 
             <section class="section-block">
-              <div class="section-heading"><h3>为什么这个数据集适合</h3><p>它的价值不只在于规模，还在于它提供了真实、可关联、具有时间结构且容易解释的分类问题。</p></div>
-              <div class="benefit-grid">
-                <article class="benefit-card"><h4>原始规模充足</h4><p>按月抽样可以减少未来窗口重叠；审计将确认最终可用面板是否仍超过10,000条。</p></article>
-                <article class="benefit-card"><h4>特征组自然清晰</h4><p>收益率、波动率、振幅、回撤、相对成交量、市场状态、Sector与Industry都具有明确含义。</p></article>
-                <article class="benefit-card"><h4>有多个可靠基线</h4><p>多数类、近期波动率持续性和简单Logistic Regression都能为复杂模型提供诚实比较。</p></article>
-                <article class="benefit-card"><h4>EDA内容丰富</h4><p>覆盖率、缺失模式、行业差异、类别平衡、异常值、波动聚集和时间变化都可形成实质分析。</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
               <div class="section-heading"><h3>所有结论都要保留的限制</h3><p>好的报告不仅说明数据能证明什么，也清楚说明它不能证明什么。</p></div>
               <ul class="clean-list">
                 <li><strong>幸存者偏差：</strong>股票范围反映当前成分股，而不是每个历史时点的真实S&amp;P 500成员。</li>
@@ -1850,7 +1899,7 @@
 
           <div class="language-copy" data-copy="ko">
             <div class="hero">
-              <div class="hero-copy"><p class="eyebrow">01 · 데이터셋 프로필</p><h2>하나의 시장,<br>세 개의 연결된 테이블.</h2><p class="lede">Kaggle S&amp;P 500 Stocks 데이터셋의 검증된 개요입니다. 데이터 구성, STAT5003에 적합한 이유, 그리고 모든 결과에서 명시해야 할 한계를 설명합니다.</p></div>
+              <div class="hero-copy"><p class="eyebrow">01 · 데이터셋 프로필</p><h2>S&amp;P 500의<br>일별 시장 패널.</h2><p class="lede">현재 S&amp;P 500 구성 종목의 일별 가격과 거래량을 시장 벤치마크 및 회사 맥락과 연결한 데이터로, 시간 경계를 지키는 분류 연구에 적합합니다.</p></div>
               <div class="hero-note"><p class="label">검증된 스냅샷</p><strong>Version 1023</strong><p>마지막 업데이트는 2024-12-23입니다. 제목은 “daily updated”이지만 현재 데이터는 2024-12-20에 끝납니다.</p></div>
             </div>
 
@@ -1871,6 +1920,16 @@
                 <article class="criterion-card pass"><span class="criterion-state">충족</span><h4>Integrated</h4><p>주가와 지수는 Date로, 회사 메타데이터는 Symbol로 조인합니다.</p></article>
                 <article class="criterion-card"><span class="criterion-state">주장하지 않음</span><h4>Complex</h4><p>원시 열은 26개입니다. Complex를 위해 100개 이상의 약한 feature를 억지로 만들지 않습니다.</p></article>
                 <article class="criterion-card available"><span class="criterion-state">선택 가능</span><h4>Multi-class</h4><p>분포 검토 후 Low / Medium / High 변동성을 채택하면 이 조건을 충족합니다.</p></article>
+              </div>
+            </section>
+
+            <section class="section-block why-fit">
+              <div class="section-heading"><h3>이 데이터셋의 장점</h3><p>가치는 크기뿐만이 아닙니다. 현실적이고 연결 가능하며 시간 구조가 있고 해석 가능한 분류 문제를 제공합니다.</p></div>
+              <div class="benefit-grid">
+                <article class="benefit-card"><h4>충분한 원시 규모</h4><p>월별 샘플링으로 outcome window 중첩을 줄이고, 최종 eligible panel이 10,000행을 넘는지는 검토 단계에서 확인합니다.</p></article>
+                <article class="benefit-card"><h4>자연스러운 feature 그룹</h4><p>수익률, 변동성, 일중 범위, drawdown, 상대 거래량, 시장 regime, Sector와 Industry 모두 명확하게 해석할 수 있습니다.</p></article>
+                <article class="benefit-card"><h4>정직한 baseline 비교</h4><p>다수 클래스, 최근 변동성 지속성, 단순 Logistic Regression을 유연한 모델과 비교할 수 있습니다.</p></article>
+                <article class="benefit-card"><h4>풍부한 EDA</h4><p>커버리지, 결측 패턴, 섹터 차이, class balance, 이상치, volatility clustering, 시간 변화가 모두 실질적인 분석 주제입니다.</p></article>
               </div>
             </section>
 
@@ -1896,16 +1955,6 @@
               <div class="quality-layout">
                 <article class="missingness-card"><h4>그리드 행의 67.3%에 OHLCV가 없습니다</h4><p>여섯 개 시장 수치 열마다 1,273,705개의 결측값이 있습니다. 완전한 시장 값이 있는 주식-일 행은 약 617,831개입니다.</p><div class="missing-bar" role="img" aria-label="결측 67.3%, 완전 32.7%"><span></span><span></span></div><div class="bar-legend"><span>결측 · 67.3%</span><span>완전 · 32.7%</span></div></article>
                 <article class="warning-card"><p class="warning-label">숨기면 안 되는 점</p><h4>결측이 반드시 무작위는 아닙니다.</h4><p>IPO 날짜, ticker 이력, 데이터 소스 가용성이 구조적 결측을 만들 수 있습니다. 필터링 규칙을 보이지 않는 정리 단계로 처리하지 말고 보고해야 합니다.</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
-              <div class="section-heading"><h3>이 데이터셋의 장점</h3><p>가치는 크기뿐만이 아닙니다. 현실적이고 연결 가능하며 시간 구조가 있고 해석 가능한 분류 문제를 제공합니다.</p></div>
-              <div class="benefit-grid">
-                <article class="benefit-card"><h4>충분한 원시 규모</h4><p>월별 샘플링으로 outcome window 중첩을 줄이고, 최종 eligible panel이 10,000행을 넘는지는 검토 단계에서 확인합니다.</p></article>
-                <article class="benefit-card"><h4>자연스러운 feature 그룹</h4><p>수익률, 변동성, 일중 범위, drawdown, 상대 거래량, 시장 regime, Sector와 Industry 모두 명확하게 해석할 수 있습니다.</p></article>
-                <article class="benefit-card"><h4>정직한 baseline 비교</h4><p>다수 클래스, 최근 변동성 지속성, 단순 Logistic Regression을 유연한 모델과 비교할 수 있습니다.</p></article>
-                <article class="benefit-card"><h4>풍부한 EDA</h4><p>커버리지, 결측 패턴, 섹터 차이, class balance, 이상치, volatility clustering, 시간 변화가 모두 실질적인 분석 주제입니다.</p></article>
               </div>
             </section>
 

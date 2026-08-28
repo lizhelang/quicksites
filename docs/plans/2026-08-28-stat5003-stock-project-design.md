@@ -63,3 +63,5 @@ Key devices:
 ## 29 August information-density revision
 
 The dataset page now leads with the course-fit decision immediately after the verified facts. The status encoding is deliberate: green means currently met, blue means available if the target is chosen as multi-class, and an unaccented card means not claimed. The field description is condensed from four broad cards to two higher-signal blocks: model-safe feature sources and context-only or excluded fields. The archive table remains as the detailed reference.
+
+The hero is intentionally compact: a direct one-line explanation of the dataset plus a six-item, one-row summary at desktop widths. “Why this dataset works” follows the course-fit section immediately, before archive-level details, so a group member sees the decision rationale before the schema.

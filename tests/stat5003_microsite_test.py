@@ -45,8 +45,10 @@ def run_desktop(browser) -> None:
     assert page.get_by_text("Version 1023", exact=True).first.is_visible()
     dataset_english = page.locator('[data-section-panel="dataset"] .language-copy[data-copy="en"]')
     course_fit = dataset_english.locator(".course-fit")
+    why_fit = dataset_english.locator(".why-fit")
     archive_detail = dataset_english.locator(".archive-detail")
-    assert course_fit.bounding_box()["y"] < archive_detail.bounding_box()["y"]
+    assert course_fit.bounding_box()["y"] < why_fit.bounding_box()["y"] < archive_detail.bounding_box()["y"]
+    assert dataset_english.locator(".fact-grid .fact-card").count() == 6
     assert course_fit.locator(".criterion-card.pass").count() == 3
     assert course_fit.locator(".criterion-card.available").count() == 1
     assert course_fit.locator(".criterion-card.available").get_by_text("Multi-class", exact=True).is_visible()
@@ -56,7 +58,7 @@ def run_desktop(browser) -> None:
     assert page.locator("html").get_attribute("lang") == "zh-CN"
     chinese_heading = page.locator('[data-section-panel="dataset"] .language-copy[data-copy="zh"] .hero h2')
     assert chinese_heading.is_visible()
-    assert "一个市场" in chinese_heading.inner_text()
+    assert "S&P 500的" in chinese_heading.inner_text()
     assert page.get_by_role("button", name="中文").get_attribute("aria-pressed") == "true"
 
     page.reload(wait_until="networkidle")
