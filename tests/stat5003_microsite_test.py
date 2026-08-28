@@ -52,6 +52,8 @@ def run_desktop(browser) -> None:
     assert course_fit.locator(".criterion-card.pass").count() == 3
     assert course_fit.locator(".criterion-card.available").count() == 1
     assert course_fit.locator(".criterion-card.available").get_by_text("Multi-class", exact=True).is_visible()
+    assert dataset_english.locator(".caveat-strip").count() == 1
+    assert dataset_english.locator(".caveat-item").count() == 3
     page.screenshot(path="/tmp/stat5003-microsite-en-dataset.png", full_page=True)
 
     page.get_by_role("button", name="中文").click()
