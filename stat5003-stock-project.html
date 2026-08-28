@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STAT5003 S&amp;P 500 Volatility Project Brief</title>
+  <meta name="description" content="A multilingual STAT5003 project brief for the Kaggle S&P 500 Stocks dataset and a 20-trading-day high-volatility classification question.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23152128'/%3E%3Cpath d='M6 22h20v3H6v-3Zm1-4 4-5 4 3 5-8 5 10h-4l-2-4-3 5-4-3-2 2H7Z' fill='%23d7b46a'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --paper: #f5efe3;
+      --paper-deep: #e6dac6;
+      --ink: #1d2528;
+      --muted: #65706f;
+      --line: #c9bca7;
+      --nav: #152128;
+      --nav-soft: #1f3037;
+      --teal: #0d7c77;
+      --teal-dark: #075854;
+      --amber: #b7892f;
+      --rust: #a94531;
+      --white: #fffaf0;
+      --shadow: 0 22px 58px rgba(21, 33, 40, 0.14);
+      --radius: 8px;
+      --serif: "Iowan Old Style", "Songti SC", "Noto Serif CJK SC", "Apple SD Gothic Neo", Georgia, serif;
+      --ui: "Avenir Next Condensed", "DIN Condensed", "PingFang SC", "Apple SD Gothic Neo", sans-serif;
+      --mono: "SF Mono", "Menlo", "Consolas", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(21, 33, 40, 0.08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(21, 33, 40, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 86% 10%, rgba(183, 137, 47, 0.16), transparent 24rem),
+        radial-gradient(circle at 4% 92%, rgba(13, 124, 119, 0.13), transparent 28rem),
+        var(--paper);
+      background-size: 44px 44px, 44px 44px, auto, auto, auto;
+      color: var(--ink);
+      font-family: var(--serif);
+      letter-spacing: 0;
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--amber);
+      outline-offset: 3px;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 292px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      padding: 28px 22px;
+      background:
+        linear-gradient(180deg, rgba(13, 124, 119, 0.15), transparent 45%),
+        var(--nav);
+      color: var(--white);
+      box-shadow: 18px 0 44px rgba(21, 33, 40, 0.18);
+    }
+
+    .brand {
+      display: grid;
+      gap: 10px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 250, 240, 0.16);
+    }
+
+    .brand-kicker,
+    .eyebrow,
+    .panel-label,
+    .metric-label,
+    .nav-index,
+    .language-label {
+      font-family: var(--ui);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-kicker {
+      color: #9fd0c8;
+    }
+
+    .brand-title {
+      margin: 0;
+      max-width: 12ch;
+      font-size: 2.45rem;
+      line-height: 0.96;
+      font-weight: 900;
+    }
+
+    .brand-note {
+      margin: 0;
+      color: rgba(255, 250, 240, 0.72);
+      line-height: 1.45;
+    }
+
+    .nav-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-button {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      border: 1px solid rgba(255, 250, 240, 0.14);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 240, 0.04);
+      color: var(--white);
+      padding: 13px;
+      text-align: left;
+      cursor: pointer;
+      transition: background 180ms ease, transform 180ms ease, border-color 180ms ease;
+    }
+
+    .nav-button:hover,
+    .nav-button[aria-selected="true"] {
+      border-color: rgba(215, 180, 106, 0.72);
+      background: rgba(255, 250, 240, 0.1);
+      transform: translateX(3px);
+    }
+
+    .nav-index {
+      color: var(--amber);
+      font-size: 1.05rem;
+    }
+
+    .nav-text {
+      display: block;
+      overflow-wrap: anywhere;
+      font-size: 1.03rem;
+      line-height: 1.16;
+      font-weight: 800;
+    }
+
+    .nav-hint {
+      display: block;
+      margin-top: 3px;
+      color: rgba(255, 250, 240, 0.58);
+      font-size: 0.86rem;
+      line-height: 1.25;
+    }
+
+    .source-card {
+      margin-top: auto;
+      border: 1px solid rgba(255, 250, 240, 0.13);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 240, 0.05);
+      padding: 14px;
+    }
+
+    .source-card p {
+      margin: 0 0 10px;
+      color: rgba(255, 250, 240, 0.72);
+      line-height: 1.45;
+    }
+
+    .source-card a {
+      color: #d7b46a;
+      font-family: var(--ui);
+      font-weight: 800;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .main {
+      min-width: 0;
+      padding: 28px clamp(18px, 4vw, 58px) 54px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0 20px;
+      background: linear-gradient(180deg, var(--paper) 74%, rgba(245, 239, 227, 0));
+    }
+
+    .language-label {
+      color: var(--muted);
+    }
+
+    .language-switch {
+      display: inline-flex;
+      gap: 4px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 240, 0.82);
+      padding: 4px;
+      box-shadow: 0 10px 28px rgba(21, 33, 40, 0.08);
+    }
+
+    .language-switch button {
+      min-width: 44px;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--muted);
+      padding: 7px 10px;
+      font-family: var(--ui);
+      font-weight: 900;
+      cursor: pointer;
+      transition: background 160ms ease, color 160ms ease;
+    }
+
+    .language-switch button:hover,
+    .language-switch button[aria-pressed="true"] {
+      background: var(--nav);
+      color: var(--white);
+    }
+
+    .panel {
+      max-width: 1120px;
+      animation: rise-in 420ms ease both;
+    }
+
+    .panel[hidden] {
+      display: none;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: clamp(16px, 3vw, 32px);
+      align-items: end;
+      margin: 22px 0 28px;
+    }
+
+    .section-number {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(21, 33, 40, 0.46);
+      font-family: var(--ui);
+      font-size: clamp(4.8rem, 13vw, 10.5rem);
+      line-height: 0.78;
+      font-weight: 900;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--teal);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 880px;
+      font-size: clamp(2.35rem, 5vw, 5.4rem);
+      line-height: 0.96;
+      font-weight: 900;
+    }
+
+    .lede {
+      margin: 16px 0 0;
+      max-width: 860px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.64;
+    }
+
+    .evidence-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 26px 0;
+    }
+
+    .metric {
+      min-height: 112px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 240, 0.84);
+      padding: 15px;
+      box-shadow: 0 12px 30px rgba(21, 33, 40, 0.08);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 8px;
+      font-family: var(--ui);
+      font-size: 1.48rem;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
+      gap: 18px;
+      align-items: start;
+      margin: 18px 0;
+    }
+
+    .band,
+    .callout,
+    .table-wrap,
+    .mini-lab {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 240, 0.78);
+      box-shadow: 0 12px 28px rgba(21, 33, 40, 0.07);
+    }
+
+    .band {
+      padding: 20px;
+    }
+
+    h2,
+    h3 {
+      margin: 0 0 12px;
+      line-height: 1.14;
+      font-weight: 900;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+    }
+
+    h3 {
+      font-size: 1.16rem;
+    }
+
+    p {
+      margin: 0 0 12px;
+      line-height: 1.58;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 20px;
+      line-height: 1.52;
+    }
+
+    .list li::before {
+      position: absolute;
+      left: 0;
+      top: 0.64em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      content: "";
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 660px;
+      font-size: 0.98rem;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid rgba(201, 188, 167, 0.76);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.46;
+    }
+
+    th {
+      color: var(--teal-dark);
+      font-family: var(--ui);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      border: 1px solid rgba(13, 124, 119, 0.26);
+      border-radius: 999px;
+      background: rgba(13, 124, 119, 0.08);
+      color: var(--teal-dark);
+      padding: 5px 10px;
+      font-family: var(--ui);
+      font-weight: 900;
+    }
+
+    .tag.warn {
+      border-color: rgba(183, 137, 47, 0.4);
+      background: rgba(183, 137, 47, 0.13);
+      color: #7e5b18;
+    }
+
+    .callout {
+      border-color: rgba(183, 137, 47, 0.62);
+      background: rgba(255, 250, 240, 0.9);
+      padding: 16px;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #7d5311;
+      font-family: var(--ui);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .fit-grid,
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .fit-card,
+    .step-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(245, 239, 227, 0.72);
+      padding: 15px;
+    }
+
+    .fit-card b,
+    .step-card b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--teal-dark);
+      font-family: var(--ui);
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .mini-lab {
+      padding: 16px;
+      background:
+        repeating-linear-gradient(90deg, rgba(21, 33, 40, 0.04) 0 1px, transparent 1px 36px),
+        rgba(255, 250, 240, 0.8);
+    }
+
+    .vol-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: end;
+      min-height: 184px;
+    }
+
+    .formula {
+      display: inline-block;
+      border: 1px solid rgba(13, 124, 119, 0.26);
+      border-radius: 6px;
+      background: rgba(13, 124, 119, 0.08);
+      padding: 8px 10px;
+      color: var(--teal-dark);
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+
+    .bars {
+      display: grid;
+      grid-template-columns: repeat(20, 7px);
+      gap: 4px;
+      align-items: end;
+      height: 120px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--nav);
+    }
+
+    .bars span {
+      display: block;
+      width: 7px;
+      min-height: 8px;
+      border-radius: 4px 4px 0 0;
+      background: var(--teal);
+      animation: bar-in 620ms ease both;
+    }
+
+    .bars span:nth-child(4n),
+    .bars span:nth-child(9n) {
+      background: var(--amber);
+    }
+
+    .bars span:nth-child(1) { height: 34px; animation-delay: 20ms; }
+    .bars span:nth-child(2) { height: 42px; animation-delay: 40ms; }
+    .bars span:nth-child(3) { height: 26px; animation-delay: 60ms; }
+    .bars span:nth-child(4) { height: 68px; animation-delay: 80ms; }
+    .bars span:nth-child(5) { height: 48px; animation-delay: 100ms; }
+    .bars span:nth-child(6) { height: 36px; animation-delay: 120ms; }
+    .bars span:nth-child(7) { height: 72px; animation-delay: 140ms; }
+    .bars span:nth-child(8) { height: 54px; animation-delay: 160ms; }
+    .bars span:nth-child(9) { height: 92px; animation-delay: 180ms; }
+    .bars span:nth-child(10) { height: 63px; animation-delay: 200ms; }
+    .bars span:nth-child(11) { height: 46px; animation-delay: 220ms; }
+    .bars span:nth-child(12) { height: 80px; animation-delay: 240ms; }
+    .bars span:nth-child(13) { height: 58px; animation-delay: 260ms; }
+    .bars span:nth-child(14) { height: 38px; animation-delay: 280ms; }
+    .bars span:nth-child(15) { height: 50px; animation-delay: 300ms; }
+    .bars span:nth-child(16) { height: 76px; animation-delay: 320ms; }
+    .bars span:nth-child(17) { height: 45px; animation-delay: 340ms; }
+    .bars span:nth-child(18) { height: 57px; animation-delay: 360ms; }
+    .bars span:nth-child(19) { height: 88px; animation-delay: 380ms; }
+    .bars span:nth-child(20) { height: 66px; animation-delay: 400ms; }
+
+    .decision-flow {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .flow-row {
+      display: grid;
+      grid-template-columns: 110px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .flow-row span:first-child {
+      color: var(--rust);
+      font-family: var(--ui);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      color: var(--muted);
+      font-family: var(--ui);
+      font-size: 0.9rem;
+    }
+
+    @keyframes rise-in {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bar-in {
+      from {
+        transform: scaleY(0.18);
+        opacity: 0.2;
+      }
+      to {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: sticky;
+        z-index: 40;
+        top: 0;
+        height: auto;
+        padding: 16px;
+      }
+
+      .brand {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 6px;
+        padding-bottom: 12px;
+      }
+
+      .brand-title {
+        max-width: none;
+        font-size: 1.8rem;
+      }
+
+      .brand-note,
+      .source-card {
+        display: none;
+      }
+
+      .nav-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-button {
+        grid-template-columns: auto minmax(0, 1fr);
+        min-height: 74px;
+      }
+
+      .main {
+        padding-top: 12px;
+      }
+
+      .topbar {
+        top: 111px;
+      }
+
+      .section-head,
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
+
+      .section-number {
+        font-size: 5rem;
+      }
+
+      .evidence-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .fit-grid,
+      .step-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .main {
+        padding-inline: 14px;
+      }
+
+      .nav-list,
+      .evidence-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        position: static;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .language-switch {
+        width: 100%;
+      }
+
+      .language-switch button {
+        flex: 1;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .vol-card {
+        grid-template-columns: 1fr;
+      }
+
+      .bars {
+        grid-template-columns: repeat(20, minmax(4px, 1fr));
+      }
+
+      .bars span {
+        width: 100%;
+      }
+
+      .flow-row {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Project sections">
+      <div class="brand">
+        <span class="brand-kicker" data-i18n="brandKicker">STAT5003 dossier</span>
+        <p class="brand-title" data-i18n="brandTitle">S&amp;P 500 Volatility Brief</p>
+        <p class="brand-note" data-i18n="brandNote">A compact multilingual brief for dataset selection and the proposed modelling question.</p>
+      </div>
+
+      <nav aria-label="Brief navigation">
+        <ul class="nav-list" role="tablist" aria-orientation="vertical">
+          <li>
+            <button class="nav-button" type="button" role="tab" id="tab-dataset" aria-controls="dataset" data-target="dataset" aria-selected="true">
+              <span class="nav-index">01</span>
+              <span>
+                <span class="nav-text" data-i18n="navDataset">Dataset Overview</span>
+                <span class="nav-hint" data-i18n="navDatasetHint">files, features, size, course fit</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-button" type="button" role="tab" id="tab-research" aria-controls="research" data-target="research" aria-selected="false">
+              <span class="nav-index">02</span>
+              <span>
+                <span class="nav-text" data-i18n="navResearch">Research Question</span>
+                <span class="nav-hint" data-i18n="navResearchHint">20-day high-volatility prediction</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="source-card">
+        <p data-i18n="sourceNote">Public source for the proposed dataset.</p>
+        <a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks" target="_blank" rel="noreferrer" data-i18n="sourceLink">Open Kaggle dataset</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <span class="language-label" data-i18n="languageLabel">Language</span>
+        <div class="language-switch" role="group" aria-label="Language switcher">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+          <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+        </div>
+      </div>
+
+      <section class="panel" id="dataset" role="tabpanel" aria-labelledby="tab-dataset">
+        <header class="section-head">
+          <div class="section-number" aria-hidden="true">01</div>
+          <div>
+            <p class="eyebrow" data-i18n="datasetEyebrow">Dataset assessment</p>
+            <h1 data-i18n="datasetTitle">Kaggle S&amp;P 500 Stocks is large, messy, and easy to model.</h1>
+            <p class="lede" data-i18n="datasetLede">The dataset combines daily stock prices, an S&amp;P 500 index series, and company-level descriptors. It is big enough for robust machine-learning splits, imperfect enough to require cleaning, and structured enough to produce a clear classification target.</p>
+          </div>
+        </header>
+
+        <div class="evidence-strip" aria-label="Dataset headline facts">
+          <div class="metric">
+            <strong>3 CSV</strong>
+            <span class="metric-label" data-i18n="mFiles">stocks, index, companies</span>
+          </div>
+          <div class="metric">
+            <strong>26</strong>
+            <span class="metric-label" data-i18n="mFeatures">raw columns across files</span>
+          </div>
+          <div class="metric">
+            <strong>97.17 MB</strong>
+            <span class="metric-label" data-i18n="mSize">uncompressed dataset size</span>
+          </div>
+          <div class="metric">
+            <strong>2010-2024</strong>
+            <span class="metric-label" data-i18n="mRange">daily stock history range</span>
+          </div>
+        </div>
+
+        <div class="grid-two">
+          <article class="band">
+            <h2 data-i18n="structureTitle">What is inside</h2>
+            <p class="muted" data-i18n="structureText">Version 1023 contains 1,891,536 stock-date rows, 2,517 index rows, and 502 company rows. The stock file runs from 2010-01-04 to 2024-12-20; the index file runs from 2014-12-22 to 2024-12-20.</p>
+            <div class="tag-row" aria-label="Course-fit tags">
+              <span class="tag" data-i18n="tagLarge">Large</span>
+              <span class="tag" data-i18n="tagMessy">Messy</span>
+              <span class="tag" data-i18n="tagIntegrated">Integrated</span>
+              <span class="tag warn" data-i18n="tagNotComplex">Not claiming Complex</span>
+            </div>
+          </article>
+
+          <aside class="callout">
+            <strong data-i18n="verdictTitle">Short verdict</strong>
+            <p data-i18n="verdictText">This is a good STAT5003 choice because it has enough rows for stable testing, several natural preprocessing issues, and a prediction problem that can be evaluated with familiar classifiers.</p>
+          </aside>
+        </div>
+
+        <div class="table-wrap" aria-label="Dataset file table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="thFile">File</th>
+                <th data-i18n="thRows">Rows</th>
+                <th data-i18n="thColumns">Columns</th>
+                <th data-i18n="thRole">Role in the project</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>sp500_stocks.csv</code></td>
+                <td>1,891,536</td>
+                <td>8</td>
+                <td data-i18n="stocksRole">Main modelling table: Date, Symbol, adjusted/regular OHLC prices, and Volume.</td>
+              </tr>
+              <tr>
+                <td><code>sp500_index.csv</code></td>
+                <td>2,517</td>
+                <td>2</td>
+                <td data-i18n="indexRole">Market context table: Date and S&amp;P 500 index level.</td>
+              </tr>
+              <tr>
+                <td><code>sp500_companies.csv</code></td>
+                <td>502</td>
+                <td>16</td>
+                <td data-i18n="companiesRole">Company descriptors: sector, industry, exchange, location, employees, market value, and fundamentals.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <article class="band" style="margin-top: 18px;">
+          <h2 data-i18n="courseTitle">Course-requirement fit</h2>
+          <div class="fit-grid">
+            <section class="fit-card">
+              <b data-i18n="fitLargeTitle">Large</b>
+              <p data-i18n="fitLargeText">Nearly 1.9 million stock-date rows support time splits, validation sets, and enough training examples for tree-based models.</p>
+            </section>
+            <section class="fit-card">
+              <b data-i18n="fitMessyTitle">Messy</b>
+              <p data-i18n="fitMessyText">Stocks enter and leave the effective history, many symbol-date combinations are absent, and leakage risk appears when current company information is joined to old prices.</p>
+            </section>
+            <section class="fit-card">
+              <b data-i18n="fitIntegratedTitle">Integrated</b>
+              <p data-i18n="fitIntegratedText">The final modelling table can merge price behaviour, market movement, and company or sector descriptors.</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="band" style="margin-top: 18px;">
+          <h2 data-i18n="limitsTitle">Limits to state honestly</h2>
+          <ul class="list">
+            <li data-i18n="limitOne">It should not be presented as fully Complex unless the group adds more difficult feature engineering or modelling structure.</li>
+            <li data-i18n="limitTwo">Using today&apos;s S&amp;P 500 company list for older years introduces survivorship bias.</li>
+            <li data-i18n="limitThree">Company-level fields are current snapshots, so historical modelling must avoid leaking future information.</li>
+            <li data-i18n="limitFour">The high-volatility threshold still needs a local class-balance calculation before it becomes final.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="panel" id="research" role="tabpanel" aria-labelledby="tab-research">
+        <header class="section-head">
+          <div class="section-number" aria-hidden="true">02</div>
+          <div>
+            <p class="eyebrow" data-i18n="researchEyebrow">Research question</p>
+            <h1 data-i18n="researchTitle">Can recent stock behaviour predict high volatility 20 trading days ahead?</h1>
+            <p class="lede" data-i18n="researchLede">For each stock on each date, we can build lagged features from past returns, volume, market movement, and sector information, then predict whether the next 20 trading days become a high-volatility period.</p>
+          </div>
+        </header>
+
+        <div class="grid-two">
+          <article class="mini-lab" aria-label="Volatility target diagram">
+            <div class="vol-card">
+              <div>
+                <p class="panel-label" data-i18n="targetLabel">Target construction</p>
+                <h2 data-i18n="targetTitle">Forward 20-day realised volatility</h2>
+                <p class="muted" data-i18n="targetText">Compute daily log returns after date t, take the standard deviation over the next 20 trading days, annualise it, then compare it with a threshold.</p>
+                <span class="formula">vol20(t) = sd(r[t+1:t+20]) x sqrt(252)</span>
+              </div>
+              <div class="bars" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="callout">
+            <strong data-i18n="thresholdTitle">Threshold status</strong>
+            <p data-i18n="thresholdText">30% annualised volatility is only a provisional working threshold. The next data step is to count positives at several candidate thresholds and choose a level with a usable class balance.</p>
+          </aside>
+        </div>
+
+        <article class="band">
+          <h2 data-i18n="whyTitle">Why this question is likely to produce usable model results</h2>
+          <ul class="list">
+            <li data-i18n="whyOne">Volatility has persistence: recent volatility is often informative about near-future volatility.</li>
+            <li data-i18n="whyTwo">Tree models can capture nonlinear relationships between lagged returns, volume changes, market movement, and sector.</li>
+            <li data-i18n="whyThree">The target is naturally generated from the dataset, so the task does not require a separate labelled source.</li>
+            <li data-i18n="whyFour">The group can tune the threshold to avoid an extremely rare positive class.</li>
+          </ul>
+        </article>
+
+        <div class="grid-two">
+          <article class="band">
+            <h2 data-i18n="featuresTitle">Candidate feature set</h2>
+            <div class="decision-flow">
+              <div class="flow-row">
+                <span data-i18n="featurePrice">Price</span>
+                <p data-i18n="featurePriceText">Lagged returns, rolling mean returns, rolling volatility, drawdown, high-low range, open-close range.</p>
+              </div>
+              <div class="flow-row">
+                <span data-i18n="featureVolume">Volume</span>
+                <p data-i18n="featureVolumeText">Log volume, rolling volume change, abnormal volume versus the last 20 or 60 trading days.</p>
+              </div>
+              <div class="flow-row">
+                <span data-i18n="featureMarket">Market</span>
+                <p data-i18n="featureMarketText">Lagged S&amp;P 500 returns and market volatility as broad risk context.</p>
+              </div>
+              <div class="flow-row">
+                <span data-i18n="featureSector">Sector</span>
+                <p data-i18n="featureSectorText">Sector and industry indicators, used carefully to avoid leaking current-only information.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="band">
+            <h2 data-i18n="modelsTitle">Models and evaluation</h2>
+            <ul class="list">
+              <li data-i18n="modelOne">Start with Logistic Regression as the interpretable baseline.</li>
+              <li data-i18n="modelTwo">Use Decision Tree and Random Forest for stronger nonlinear performance.</li>
+              <li data-i18n="modelThree">Use KNN or SVM on a sampled/standardised subset if runtime is high.</li>
+              <li data-i18n="modelFour">Evaluate with a time-based split, a 20-day purge gap, ROC-AUC, F1, recall, and confusion matrices.</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="band" style="margin-top: 18px;">
+          <h2 data-i18n="nextTitle">Next preprocessing decisions</h2>
+          <div class="step-grid">
+            <section class="step-card">
+              <b data-i18n="nextOneTitle">Calibrate labels</b>
+              <p data-i18n="nextOneText">Calculate positive counts for candidate annualised thresholds such as 20%, 25%, 30%, 35%, and percentile cutoffs such as top 20% or top 30%.</p>
+            </section>
+            <section class="step-card">
+              <b data-i18n="nextTwoTitle">Decide class count</b>
+              <p data-i18n="nextTwoText">If the assignment requires at least three classes, define low / medium / high volatility by quantiles, for example bottom 30%, middle 40%, top 30%.</p>
+            </section>
+            <section class="step-card">
+              <b data-i18n="nextThreeTitle">Prevent leakage</b>
+              <p data-i18n="nextThreeText">Only use features available at date t; remove rows whose 20-day forward window crosses the train/test boundary.</p>
+            </section>
+          </div>
+        </article>
+
+        <p class="footer-note" data-i18n="footerNote">Prepared as a discussion brief for STAT5003 group planning. Numerical thresholds should be finalised after the local class-balance check.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const copy = {
+      en: {
+        brandKicker: "STAT5003 dossier",
+        brandTitle: "S&P 500 Volatility Brief",
+        brandNote: "A compact multilingual brief for dataset selection and the proposed modelling question.",
+        navDataset: "Dataset Overview",
+        navDatasetHint: "files, features, size, course fit",
+        navResearch: "Research Question",
+        navResearchHint: "20-day high-volatility prediction",
+        sourceNote: "Public source for the proposed dataset.",
+        sourceLink: "Open Kaggle dataset",
+        languageLabel: "Language",
+        datasetEyebrow: "Dataset assessment",
+        datasetTitle: "Kaggle S&P 500 Stocks is large, messy, and easy to model.",
+        datasetLede: "The dataset combines daily stock prices, an S&P 500 index series, and company-level descriptors. It is big enough for robust machine-learning splits, imperfect enough to require cleaning, and structured enough to produce a clear classification target.",
+        mFiles: "stocks, index, companies",
+        mFeatures: "raw columns across files",
+        mSize: "uncompressed dataset size",
+        mRange: "daily stock history range",
+        structureTitle: "What is inside",
+        structureText: "Version 1023 contains 1,891,536 stock-date rows, 2,517 index rows, and 502 company rows. The stock file runs from 2010-01-04 to 2024-12-20; the index file runs from 2014-12-22 to 2024-12-20.",
+        tagLarge: "Large",
+        tagMessy: "Messy",
+        tagIntegrated: "Integrated",
+        tagNotComplex: "Not claiming Complex",
+        verdictTitle: "Short verdict",
+        verdictText: "This is a good STAT5003 choice because it has enough rows for stable testing, several natural preprocessing issues, and a prediction problem that can be evaluated with familiar classifiers.",
+        thFile: "File",
+        thRows: "Rows",
+        thColumns: "Columns",
+        thRole: "Role in the project",
+        stocksRole: "Main modelling table: Date, Symbol, adjusted/regular OHLC prices, and Volume.",
+        indexRole: "Market context table: Date and S&P 500 index level.",
+        companiesRole: "Company descriptors: sector, industry, exchange, location, employees, market value, and fundamentals.",
+        courseTitle: "Course-requirement fit",
+        fitLargeTitle: "Large",
+        fitLargeText: "Nearly 1.9 million stock-date rows support time splits, validation sets, and enough training examples for tree-based models.",
+        fitMessyTitle: "Messy",
+        fitMessyText: "Stocks enter and leave the effective history, many symbol-date combinations are absent, and leakage risk appears when current company information is joined to old prices.",
+        fitIntegratedTitle: "Integrated",
+        fitIntegratedText: "The final modelling table can merge price behaviour, market movement, and company or sector descriptors.",
+        limitsTitle: "Limits to state honestly",
+        limitOne: "It should not be presented as fully Complex unless the group adds more difficult feature engineering or modelling structure.",
+        limitTwo: "Using today's S&P 500 company list for older years introduces survivorship bias.",
+        limitThree: "Company-level fields are current snapshots, so historical modelling must avoid leaking future information.",
+        limitFour: "The high-volatility threshold still needs a local class-balance calculation before it becomes final.",
+        researchEyebrow: "Research question",
+        researchTitle: "Can recent stock behaviour predict high volatility 20 trading days ahead?",
+        researchLede: "For each stock on each date, we can build lagged features from past returns, volume, market movement, and sector information, then predict whether the next 20 trading days become a high-volatility period.",
+        targetLabel: "Target construction",
+        targetTitle: "Forward 20-day realised volatility",
+        targetText: "Compute daily log returns after date t, take the standard deviation over the next 20 trading days, annualise it, then compare it with a threshold.",
+        thresholdTitle: "Threshold status",
+        thresholdText: "30% annualised volatility is only a provisional working threshold. The next data step is to count positives at several candidate thresholds and choose a level with a usable class balance.",
+        whyTitle: "Why this question is likely to produce usable model results",
+        whyOne: "Volatility has persistence: recent volatility is often informative about near-future volatility.",
+        whyTwo: "Tree models can capture nonlinear relationships between lagged returns, volume changes, market movement, and sector.",
+        whyThree: "The target is naturally generated from the dataset, so the task does not require a separate labelled source.",
+        whyFour: "The group can tune the threshold to avoid an extremely rare positive class.",
+        featuresTitle: "Candidate feature set",
+        featurePrice: "Price",
+        featurePriceText: "Lagged returns, rolling mean returns, rolling volatility, drawdown, high-low range, open-close range.",
+        featureVolume: "Volume",
+        featureVolumeText: "Log volume, rolling volume change, abnormal volume versus the last 20 or 60 trading days.",
+        featureMarket: "Market",
+        featureMarketText: "Lagged S&P 500 returns and market volatility as broad risk context.",
+        featureSector: "Sector",
+        featureSectorText: "Sector and industry indicators, used carefully to avoid leaking current-only information.",
+        modelsTitle: "Models and evaluation",
+        modelOne: "Start with Logistic Regression as the interpretable baseline.",
+        modelTwo: "Use Decision Tree and Random Forest for stronger nonlinear performance.",
+        modelThree: "Use KNN or SVM on a sampled/standardised subset if runtime is high.",
+        modelFour: "Evaluate with a time-based split, a 20-day purge gap, ROC-AUC, F1, recall, and confusion matrices.",
+        nextTitle: "Next preprocessing decisions",
+        nextOneTitle: "Calibrate labels",
+        nextOneText: "Calculate positive counts for candidate annualised thresholds such as 20%, 25%, 30%, 35%, and percentile cutoffs such as top 20% or top 30%.",
+        nextTwoTitle: "Decide class count",
+        nextTwoText: "If the assignment requires at least three classes, define low / medium / high volatility by quantiles, for example bottom 30%, middle 40%, top 30%.",
+        nextThreeTitle: "Prevent leakage",
+        nextThreeText: "Only use features available at date t; remove rows whose 20-day forward window crosses the train/test boundary.",
+        footerNote: "Prepared as a discussion brief for STAT5003 group planning. Numerical thresholds should be finalised after the local class-balance check."
+      },
+      zh: {
+        brandKicker: "STAT5003 简报",
+        brandTitle: "S&P 500 波动率项目",
+        brandNote: "给小组成员看的多语言数据集与研究问题说明。",
+        navDataset: "数据集介绍",
+        navDatasetHint: "文件、特征、大小、课程匹配",
+        navResearch: "研究问题",
+        navResearchHint: "预测 20 日后的高波动",
+        sourceNote: "拟使用数据集的公开来源。",
+        sourceLink: "打开 Kaggle 数据集",
+        languageLabel: "语言",
+        datasetEyebrow: "数据集评估",
+        datasetTitle: "Kaggle S&P 500 Stocks 足够大、足够 messy，也容易做出模型结果。",
+        datasetLede: "这个数据集把每日股票价格、S&P 500 指数序列和公司层面的描述变量放在一起。它规模足够支撑机器学习划分，也有缺失、偏差和信息泄漏等清洗问题，同时又能自然构造分类目标。",
+        mFiles: "股票、指数、公司信息",
+        mFeatures: "三个文件合计原始列",
+        mSize: "未压缩数据总大小",
+        mRange: "每日股票历史范围",
+        structureTitle: "数据里有什么",
+        structureText: "Version 1023 包含 1,891,536 行股票-日期数据、2,517 行指数数据和 502 行公司数据。股票文件日期为 2010-01-04 到 2024-12-20；指数文件日期为 2014-12-22 到 2024-12-20。",
+        tagLarge: "Large",
+        tagMessy: "Messy",
+        tagIntegrated: "Integrated",
+        tagNotComplex: "暂不声称 Complex",
+        verdictTitle: "简短结论",
+        verdictText: "它适合 STAT5003，因为行数足够多，清洗问题真实存在，而且可以用课程里常见的分类模型评估一个清晰的预测问题。",
+        thFile: "文件",
+        thRows: "行数",
+        thColumns: "列数",
+        thRole: "在项目中的作用",
+        stocksRole: "主要建模表：Date、Symbol、调整后/普通 OHLC 价格和 Volume。",
+        indexRole: "市场背景表：Date 和 S&P 500 指数水平。",
+        companiesRole: "公司描述变量：sector、industry、exchange、地区、员工数、市值和基本面字段。",
+        courseTitle: "课程要求匹配",
+        fitLargeTitle: "Large",
+        fitLargeText: "接近 190 万行股票-日期数据，可以支持时间切分、验证集，以及树模型所需的训练样本量。",
+        fitMessyTitle: "Messy",
+        fitMessyText: "股票有效历史长短不同，很多 symbol-date 组合缺失；把当前公司信息并入旧价格时也有信息泄漏风险。",
+        fitIntegratedTitle: "Integrated",
+        fitIntegratedText: "最终建模表可以合并价格行为、市场走势、公司或行业描述变量。",
+        limitsTitle: "需要诚实说明的限制",
+        limitOne: "除非小组加入更复杂的特征工程或建模结构，否则不建议把它说成完全满足 Complex。",
+        limitTwo: "用今天的 S&P 500 公司名单分析更早年份，会带来 survivorship bias。",
+        limitThree: "公司层面字段是当前快照，历史预测时必须避免泄漏未来信息。",
+        limitFour: "高波动阈值还需要先做本地 class-balance 计算，再最终确定。",
+        researchEyebrow: "研究问题",
+        researchTitle: "近期股票行为能否预测 20 个交易日后的高波动？",
+        researchLede: "对每只股票的每个日期，可以用过去收益、成交量、市场走势和行业信息构造滞后特征，然后预测未来 20 个交易日是否进入高波动区间。",
+        targetLabel: "目标变量构造",
+        targetTitle: "未来 20 日 realised volatility",
+        targetText: "从日期 t 之后的每日 log return 出发，计算未来 20 个交易日的标准差并年化，再和阈值比较。",
+        thresholdTitle: "阈值状态",
+        thresholdText: "30% 年化波动率只是暂定工作阈值。下一步要在多个候选阈值下统计 positive 数量，再选择 class balance 可用的水平。",
+        whyTitle: "为什么这个问题容易做出可用模型结果",
+        whyOne: "波动率有持续性：近期波动通常对未来短期波动有信息量。",
+        whyTwo: "树模型可以捕捉滞后收益、成交量变化、市场走势和行业之间的非线性关系。",
+        whyThree: "目标变量可以直接从数据集生成，不需要额外标签来源。",
+        whyFour: "小组可以通过调整阈值，避免 positive class 过于稀有。",
+        featuresTitle: "候选特征",
+        featurePrice: "价格",
+        featurePriceText: "滞后收益、滚动平均收益、滚动波动率、回撤、high-low range、open-close range。",
+        featureVolume: "成交量",
+        featureVolumeText: "log volume、滚动成交量变化、相对于过去 20 或 60 个交易日的异常成交量。",
+        featureMarket: "市场",
+        featureMarketText: "滞后的 S&P 500 收益率和市场波动率，作为整体风险背景。",
+        featureSector: "行业",
+        featureSectorText: "sector 和 industry 指标，但要小心当前快照字段造成的信息泄漏。",
+        modelsTitle: "模型与评估",
+        modelOne: "先用 Logistic Regression 做可解释 baseline。",
+        modelTwo: "用 Decision Tree 和 Random Forest 争取更好的非线性表现。",
+        modelThree: "KNN 或 SVM 如果运行慢，可以在抽样且标准化后的子集上做。",
+        modelFour: "用时间切分、20 日 purge gap、ROC-AUC、F1、recall 和 confusion matrix 评估。",
+        nextTitle: "下一步预处理决策",
+        nextOneTitle: "校准标签",
+        nextOneText: "统计 20%、25%、30%、35% 等年化阈值，以及 top 20% / top 30% 分位阈值下的 positive 数量。",
+        nextTwoTitle: "决定类别数量",
+        nextTwoText: "如果作业至少需要三分类，可以用分位数定义 low / medium / high，例如 bottom 30%、middle 40%、top 30%。",
+        nextThreeTitle: "防止泄漏",
+        nextThreeText: "只使用日期 t 当时可获得的特征；删除 forward 20 日窗口跨过 train/test 边界的行。",
+        footerNote: "这是给 STAT5003 小组讨论用的简报。数值阈值需要在本地 class-balance 检查后最终确定。"
+      },
+      ko: {
+        brandKicker: "STAT5003 문서",
+        brandTitle: "S&P 500 변동성 브리프",
+        brandNote: "데이터셋 선택과 모델링 질문을 공유하기 위한 다국어 요약입니다.",
+        navDataset: "데이터셋 개요",
+        navDatasetHint: "파일, 특성, 크기, 과목 적합성",
+        navResearch: "연구 질문",
+        navResearchHint: "20거래일 고변동성 예측",
+        sourceNote: "제안 데이터셋의 공개 출처입니다.",
+        sourceLink: "Kaggle 데이터셋 열기",
+        languageLabel: "언어",
+        datasetEyebrow: "데이터셋 평가",
+        datasetTitle: "Kaggle S&P 500 Stocks는 크고, 정리가 필요하며, 모델링하기 좋습니다.",
+        datasetLede: "이 데이터셋은 일별 주가, S&P 500 지수 시계열, 기업 수준 설명 변수를 함께 제공합니다. 충분히 큰 규모와 실제적인 결측/편향 문제가 있으며, 명확한 분류 타깃을 만들 수 있습니다.",
+        mFiles: "주가, 지수, 기업 정보",
+        mFeatures: "세 파일 전체 원시 컬럼",
+        mSize: "압축 해제 후 데이터 크기",
+        mRange: "일별 주가 기록 범위",
+        structureTitle: "구성 내용",
+        structureText: "Version 1023에는 1,891,536개의 주식-날짜 행, 2,517개의 지수 행, 502개의 기업 행이 있습니다. 주가 파일은 2010-01-04부터 2024-12-20까지이고, 지수 파일은 2014-12-22부터 2024-12-20까지입니다.",
+        tagLarge: "Large",
+        tagMessy: "Messy",
+        tagIntegrated: "Integrated",
+        tagNotComplex: "Complex는 아직 주장하지 않음",
+        verdictTitle: "간단한 결론",
+        verdictText: "이 데이터셋은 안정적인 테스트를 위한 행 수가 충분하고, 자연스러운 전처리 문제가 있으며, 익숙한 분류기로 평가 가능한 예측 문제를 만들 수 있어 STAT5003에 적합합니다.",
+        thFile: "파일",
+        thRows: "행 수",
+        thColumns: "컬럼 수",
+        thRole: "프로젝트에서의 역할",
+        stocksRole: "주요 모델링 테이블: Date, Symbol, 조정/일반 OHLC 가격, Volume.",
+        indexRole: "시장 맥락 테이블: Date와 S&P 500 지수 수준.",
+        companiesRole: "기업 설명 변수: 섹터, 산업, 거래소, 지역, 직원 수, 시장가치, 펀더멘털.",
+        courseTitle: "과목 요구사항 적합성",
+        fitLargeTitle: "Large",
+        fitLargeText: "약 190만 개의 주식-날짜 행은 시간 기반 분할, 검증 세트, 트리 기반 모델 학습에 충분합니다.",
+        fitMessyTitle: "Messy",
+        fitMessyText: "종목별 기록 기간이 다르고, 많은 symbol-date 조합이 비어 있으며, 현재 기업 정보를 과거 가격에 결합하면 누수 위험이 있습니다.",
+        fitIntegratedTitle: "Integrated",
+        fitIntegratedText: "최종 모델링 테이블은 가격 움직임, 시장 움직임, 기업 또는 섹터 설명 변수를 결합할 수 있습니다.",
+        limitsTitle: "솔직히 밝혀야 할 한계",
+        limitOne: "더 어려운 특성 공학이나 모델 구조를 추가하지 않는 한 완전히 Complex하다고 주장하지 않는 편이 좋습니다.",
+        limitTwo: "현재 S&P 500 기업 목록을 과거 연도에 적용하면 생존 편향이 생깁니다.",
+        limitThree: "기업 수준 필드는 현재 스냅샷이므로 과거 예측에서는 미래 정보 누수를 피해야 합니다.",
+        limitFour: "고변동성 임계값은 최종 확정 전에 로컬 class-balance 계산이 필요합니다.",
+        researchEyebrow: "연구 질문",
+        researchTitle: "최근 주식 움직임으로 20거래일 후 고변동성을 예측할 수 있을까?",
+        researchLede: "각 주식과 각 날짜에 대해 과거 수익률, 거래량, 시장 움직임, 섹터 정보를 이용해 지연 특성을 만들고, 다음 20거래일이 고변동성 구간인지 예측합니다.",
+        targetLabel: "타깃 생성",
+        targetTitle: "미래 20일 실현 변동성",
+        targetText: "날짜 t 이후의 일별 로그수익률을 사용해 다음 20거래일 표준편차를 계산하고 연율화한 뒤 임계값과 비교합니다.",
+        thresholdTitle: "임계값 상태",
+        thresholdText: "연율화 변동성 30%는 임시 작업 기준일 뿐입니다. 다음 단계는 여러 후보 임계값에서 양성 개수를 세고, 사용할 수 있는 클래스 균형을 가진 수준을 선택하는 것입니다.",
+        whyTitle: "이 질문이 사용 가능한 모델 결과를 내기 쉬운 이유",
+        whyOne: "변동성에는 지속성이 있어 최근 변동성이 가까운 미래 변동성에 정보를 줄 수 있습니다.",
+        whyTwo: "트리 모델은 지연 수익률, 거래량 변화, 시장 움직임, 섹터 사이의 비선형 관계를 포착할 수 있습니다.",
+        whyThree: "타깃은 데이터셋 자체에서 생성되므로 별도 라벨 소스가 필요하지 않습니다.",
+        whyFour: "임계값을 조정해 양성 클래스가 지나치게 희귀해지는 것을 피할 수 있습니다.",
+        featuresTitle: "후보 특성",
+        featurePrice: "가격",
+        featurePriceText: "지연 수익률, 이동 평균 수익률, 이동 변동성, 낙폭, 고가-저가 범위, 시가-종가 범위.",
+        featureVolume: "거래량",
+        featureVolumeText: "로그 거래량, 이동 거래량 변화, 지난 20일 또는 60일 대비 비정상 거래량.",
+        featureMarket: "시장",
+        featureMarketText: "전체 위험 맥락으로 지연 S&P 500 수익률과 시장 변동성을 사용합니다.",
+        featureSector: "섹터",
+        featureSectorText: "섹터와 산업 지표를 사용하되 현재 스냅샷 정보 누수를 조심합니다.",
+        modelsTitle: "모델과 평가",
+        modelOne: "해석 가능한 기준선으로 Logistic Regression부터 시작합니다.",
+        modelTwo: "더 강한 비선형 성능을 위해 Decision Tree와 Random Forest를 사용합니다.",
+        modelThree: "KNN 또는 SVM은 실행 시간이 길면 표준화된 샘플 하위집합에서 사용합니다.",
+        modelFour: "시간 기반 분할, 20일 purge gap, ROC-AUC, F1, recall, confusion matrix로 평가합니다.",
+        nextTitle: "다음 전처리 결정",
+        nextOneTitle: "라벨 보정",
+        nextOneText: "20%, 25%, 30%, 35% 같은 연율화 임계값과 상위 20%, 상위 30% 같은 분위수 기준에서 양성 개수를 계산합니다.",
+        nextTwoTitle: "클래스 수 결정",
+        nextTwoText: "과제가 최소 3개 클래스를 요구한다면 분위수로 low / medium / high를 정의할 수 있습니다. 예: 하위 30%, 중간 40%, 상위 30%.",
+        nextThreeTitle: "누수 방지",
+        nextThreeText: "날짜 t에 사용 가능했던 특성만 사용하고, 미래 20일 창이 train/test 경계를 넘는 행은 제거합니다.",
+        footerNote: "STAT5003 그룹 논의를 위한 브리프입니다. 수치 임계값은 로컬 class-balance 확인 후 확정해야 합니다."
+      }
+    };
+
+    const supportedLanguages = ["en", "zh", "ko"];
+    const panels = Array.from(document.querySelectorAll(".panel"));
+    const navButtons = Array.from(document.querySelectorAll(".nav-button"));
+    const languageButtons = Array.from(document.querySelectorAll("[data-lang]"));
+
+    function setLanguage(lang) {
+      const nextLang = supportedLanguages.includes(lang) ? lang : "en";
+      document.documentElement.lang = nextLang === "zh" ? "zh-CN" : nextLang === "ko" ? "ko" : "en";
+      document.querySelectorAll("[data-i18n]").forEach((node) => {
+        const key = node.getAttribute("data-i18n");
+        if (copy[nextLang][key]) {
+          node.textContent = copy[nextLang][key];
+        }
+      });
+      languageButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.lang === nextLang));
+      });
+      localStorage.setItem("stat5003-brief-language", nextLang);
+    }
+
+    function setSection(sectionId, updateHash = true) {
+      const targetId = sectionId === "research" ? "research" : "dataset";
+      panels.forEach((panel) => {
+        panel.hidden = panel.id !== targetId;
+      });
+      navButtons.forEach((button) => {
+        button.setAttribute("aria-selected", String(button.dataset.target === targetId));
+      });
+      if (updateHash && window.location.hash.slice(1) !== targetId) {
+        history.pushState(null, "", `#${targetId}`);
+      }
+    }
+
+    navButtons.forEach((button) => {
+      button.addEventListener("click", () => setSection(button.dataset.target));
+    });
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.lang));
+    });
+
+    window.addEventListener("hashchange", () => setSection(window.location.hash.slice(1), false));
+
+    setLanguage(localStorage.getItem("stat5003-brief-language") || "en");
+    setSection(window.location.hash.slice(1), false);
+  </script>
+</body>
+</html>
