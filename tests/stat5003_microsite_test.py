@@ -42,6 +42,7 @@ def run_desktop(browser) -> None:
     assert page.locator("body").get_attribute("data-language") == "en"
     assert is_visible(page, '[data-section-panel="dataset"]')
     assert not is_visible(page, '[data-section-panel="research"]')
+    assert page.locator(".sidebar, [data-section-link]").count() == 0
     assert page.get_by_text("Version 1023", exact=True).first.is_visible()
     dataset_english = page.locator('[data-section-panel="dataset"] .language-copy[data-copy="en"]')
     dataset_link = dataset_english.locator(".hero-source a")
@@ -56,6 +57,9 @@ def run_desktop(browser) -> None:
     assert course_fit.locator(".criterion-card.available").count() == 1
     assert course_fit.locator(".criterion-card.available").get_by_text("Multi-class", exact=True).is_visible()
     assert dataset_english.locator(".why-fit, .feature-map, .quality-layout, .caveat-strip").count() == 0
+    question_brief = dataset_english.locator(".project-question")
+    assert question_brief.is_visible()
+    assert "high volatility over the next 20 trading days" in question_brief.inner_text()
     page.screenshot(path="/tmp/stat5003-microsite-en-dataset.png", full_page=True)
 
     page.get_by_role("button", name="中文").click()
@@ -68,24 +72,15 @@ def run_desktop(browser) -> None:
     page.reload(wait_until="networkidle")
     assert page.locator("body").get_attribute("data-language") == "zh"
     assert page.url.endswith("#dataset")
-
-    page.locator('[data-section-link="research"]').click()
-    page.wait_for_url("**#research")
-    assert is_visible(page, '[data-section-panel="research"]')
-    assert not is_visible(page, '[data-section-panel="dataset"]')
-    assert page.get_by_text("计划进行的可行性检查", exact=True).is_visible()
-    page.screenshot(path="/tmp/stat5003-microsite-zh-research.png", full_page=True)
+    assert page.locator('[data-section-panel="dataset"] .language-copy[data-copy="zh"] .project-question').is_visible()
 
     page.get_by_role("button", name="한국어").click()
     assert page.locator("html").get_attribute("lang") == "ko"
-    assert page.get_by_text("계획된 실행 가능성 점검", exact=True).is_visible()
-    assert page.locator('[data-section-panel="research"] .language-copy[data-copy="ko"] .metric-value').first.is_visible()
-    assert page.locator('[data-section-panel="research"] .language-copy[data-copy="ko"] .metric-value').first.inner_text() == "검토 대기"
+    assert page.locator('[data-section-panel="dataset"] .language-copy[data-copy="ko"] .project-question').is_visible()
 
     page.reload(wait_until="networkidle")
     assert page.locator("body").get_attribute("data-language") == "ko"
-    assert page.url.endswith("#research")
-    assert page.locator('[data-section-link="research"]').get_attribute("aria-current") == "page"
+    assert page.url.endswith("#dataset")
 
     page.screenshot(path="/tmp/stat5003-microsite-desktop.png", full_page=True)
     assert console_errors == [], console_errors
@@ -110,13 +105,13 @@ def run_mobile(browser) -> None:
 
     page.goto(f"{BASE_URL}#dataset", wait_until="networkidle")
     assert page.get_by_role("button", name="EN").is_visible()
-    assert page.locator('[data-section-link="dataset"]').is_visible()
-    assert page.locator('[data-section-link="research"]').is_visible()
-    assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth")
-
-    page.locator('[data-section-link="research"]').click()
-    page.wait_for_url("**#research")
-    assert page.locator('[data-section-panel="research"] .language-copy[data-copy="en"] .hero h2').is_visible()
+    assert page.locator(".sidebar, [data-section-link]").count() == 0
+    mobile_hero = page.locator('[data-section-panel="dataset"] .language-copy[data-copy="en"] .hero')
+    hero_copy = mobile_hero.locator(".hero-copy")
+    hero_note = mobile_hero.locator(".hero-note")
+    assert mobile_hero.bounding_box()["width"] <= 358
+    assert hero_note.bounding_box()["y"] > hero_copy.bounding_box()["y"]
+    assert page.locator('[data-section-panel="dataset"] .language-copy[data-copy="en"] .project-question').is_visible()
     assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth")
     page.screenshot(path="/tmp/stat5003-microsite-mobile.png", full_page=True)
 

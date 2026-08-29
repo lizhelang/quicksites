@@ -1,6 +1,6 @@
 # Microsite interaction test
 
-The test covers the two hash routes, English/Chinese/Korean switching, language persistence, mobile overflow, browser-console errors, and representative screenshots.
+The test covers the single dataset route, stale-hash fallback, English/Chinese/Korean switching, language persistence, mobile overflow, browser-console errors, and representative screenshots.
 
 ## Setup
 

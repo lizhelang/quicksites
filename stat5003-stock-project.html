@@ -112,7 +112,7 @@
 
     .app-shell {
       display: grid;
-      grid-template-columns: 286px minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr);
       min-height: 100vh;
     }
 
@@ -912,6 +912,54 @@
       line-height: 1.45;
     }
 
+    .project-question {
+      display: grid;
+      grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.7fr);
+      gap: 24px;
+      align-items: center;
+      border: 1px solid rgba(8, 127, 119, 0.32);
+      border-left: 5px solid var(--teal);
+      border-radius: var(--radius-md);
+      background: linear-gradient(145deg, #f9fbf8, var(--teal-soft));
+      padding: 20px 24px;
+    }
+
+    .project-question-label {
+      display: grid;
+      gap: 7px;
+    }
+
+    .project-question-label span {
+      color: var(--teal-dark);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .project-question-label strong {
+      font-family: "Newsreader", "Noto Serif KR", "Songti SC", Georgia, serif;
+      font-size: 1.45rem;
+      line-height: 1.05;
+    }
+
+    .project-question-copy p {
+      margin: 0;
+      color: #264750;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .project-question-copy small {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+
     .quality-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
@@ -1510,11 +1558,7 @@
 
     @media (max-width: 1080px) {
       .app-shell {
-        grid-template-columns: 248px minmax(0, 1fr);
-      }
-
-      .sidebar {
-        padding-inline: 18px;
+        grid-template-columns: minmax(0, 1fr);
       }
 
       .criterion-grid {
@@ -1527,6 +1571,11 @@
 
       .prediction-flow {
         grid-template-columns: 1fr;
+      }
+
+      .project-question {
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
 
       .caveat-strip {
@@ -1584,6 +1633,14 @@
       .page-panel {
         width: min(100% - 32px, var(--content));
         padding-top: 52px;
+      }
+
+      #dataset .hero {
+        grid-template-columns: 1fr;
+      }
+
+      #dataset .hero-note {
+        max-width: none;
       }
 
       .hero,
@@ -1731,8 +1788,8 @@
   </style>
   <noscript>
     <style>
-      .page-panel { display: block !important; }
-      .page-panel + .page-panel { border-top: 4px solid #0d2433; }
+      #dataset { display: block !important; }
+      .page-panel:not(#dataset) { display: none !important; }
     </style>
   </noscript>
 </head>
@@ -1744,74 +1801,6 @@
   </a>
 
   <div class="app-shell">
-    <aside class="sidebar" aria-label="Project navigation" data-project-nav>
-      <a class="brand" href="index.html" aria-label="Back to QuickSites directory" data-brand-link>
-        <span class="brand-mark">Q</span>
-        <span class="brand-copy">
-          <strong>quicksites</strong>
-          <span>
-            <span class="inline-copy" data-copy="en">research note · 01</span>
-            <span class="inline-copy" data-copy="zh">研究简报 · 01</span>
-            <span class="inline-copy" data-copy="ko">연구 노트 · 01</span>
-          </span>
-        </span>
-      </a>
-
-      <div class="project-stamp">
-        <p>STAT5003 · S2 2026</p>
-        <h1>
-          <span class="inline-copy" data-copy="en">S&amp;P 500 volatility study</span>
-          <span class="inline-copy" data-copy="zh">S&amp;P 500波动率研究</span>
-          <span class="inline-copy" data-copy="ko">S&amp;P 500 변동성 연구</span>
-        </h1>
-      </div>
-
-      <nav class="section-nav" aria-label="Sections" data-section-nav>
-        <a class="section-link" href="#dataset" data-section-link="dataset" aria-current="page">
-          <span class="nav-index">01</span>
-          <span class="nav-text">
-            <span class="nav-kicker">
-              <span class="inline-copy" data-copy="en">Evidence</span>
-              <span class="inline-copy" data-copy="zh">数据证据</span>
-              <span class="inline-copy" data-copy="ko">데이터 근거</span>
-            </span>
-            <span class="nav-title">
-              <span class="inline-copy" data-copy="en">Dataset overview</span>
-              <span class="inline-copy" data-copy="zh">数据集介绍</span>
-              <span class="inline-copy" data-copy="ko">데이터셋 개요</span>
-            </span>
-          </span>
-        </a>
-
-        <a class="section-link" href="#research" data-section-link="research">
-          <span class="nav-index">02</span>
-          <span class="nav-text">
-            <span class="nav-kicker">
-              <span class="inline-copy" data-copy="en">Proposal</span>
-              <span class="inline-copy" data-copy="zh">研究方案</span>
-              <span class="inline-copy" data-copy="ko">연구 제안</span>
-            </span>
-            <span class="nav-title">
-              <span class="inline-copy" data-copy="en">Research question</span>
-              <span class="inline-copy" data-copy="zh">研究问题</span>
-              <span class="inline-copy" data-copy="ko">연구 질문</span>
-            </span>
-          </span>
-        </a>
-      </nav>
-
-      <div class="sidebar-note">
-        <strong>
-          <span class="inline-copy" data-copy="en">WORKING BRIEF · 28 AUG 2026</span>
-          <span class="inline-copy" data-copy="zh">工作简报 · 2026年8月28日</span>
-          <span class="inline-copy" data-copy="ko">작업 초안 · 2026년 8월 28일</span>
-        </strong>
-        <span class="inline-copy" data-copy="en">Shared for group discussion. Analytical definitions remain open until the distribution audit.</span>
-        <span class="inline-copy" data-copy="zh">供小组讨论使用。分析定义将在分布审计后最终确定。</span>
-        <span class="inline-copy" data-copy="ko">그룹 논의를 위한 초안입니다. 분석 정의는 분포 검토 후 확정됩니다.</span>
-      </div>
-    </aside>
-
     <div class="workspace">
       <header class="topbar">
         <div class="breadcrumb" aria-live="polite">
@@ -1866,6 +1855,11 @@
                 <article class="criterion-card"><span class="criterion-state">Not claimed</span><h4>Complex</h4><p>Only 26 raw columns. We will not manufacture 100+ weak features just to claim complexity.</p></article>
                 <article class="criterion-card available"><span class="criterion-state">Available</span><h4>Multi-class</h4><p>Can be met by choosing Low / Medium / High volatility after the distribution audit.</p></article>
               </div>
+            </section>
+
+            <section class="section-block project-question" role="note" aria-label="Proposed research question">
+              <div class="project-question-label"><span>Proposed research question</span><strong>High-volatility classification</strong></div>
+              <div class="project-question-copy"><p>Can historical price, return, volume, market, and sector information classify whether an S&amp;P 500 stock will experience high volatility over the next 20 trading days?</p><small>Working target: future 20-day annualised realised volatility above 30%; the threshold remains provisional until the distribution audit.</small></div>
             </section>
 
             <section class="section-block archive-detail">
@@ -1923,6 +1917,11 @@
               </div>
             </section>
 
+            <section class="section-block project-question" role="note" aria-label="拟定研究问题">
+              <div class="project-question-label"><span>拟定研究问题</span><strong>高波动分类</strong></div>
+              <div class="project-question-copy"><p>能否利用历史价格、收益率、成交量、大盘环境和行业信息，预测一只S&amp;P 500股票在未来20个交易日是否会出现高波动？</p><small>暂定目标：未来20日年化实现波动率超过30%；阈值仍需通过分布审计最终确认。</small></div>
+            </section>
+
             <section class="section-block archive-detail">
               <div class="section-heading"><h3>压缩包里的三张表</h3><p>三张表的 observation unit 不同，应通过键值关联，而不能把行数直接相加成同一种样本。</p></div>
               <div class="table-wrap"><table class="data-table"><thead><tr><th>文件与作用</th><th>行数</th><th>列数</th><th>大小</th><th>覆盖范围</th></tr></thead><tbody>
@@ -1964,6 +1963,11 @@
                 <article class="criterion-card"><span class="criterion-state">주장하지 않음</span><h4>Complex</h4><p>원시 열은 26개입니다. Complex를 위해 100개 이상의 약한 feature를 억지로 만들지 않습니다.</p></article>
                 <article class="criterion-card available"><span class="criterion-state">선택 가능</span><h4>Multi-class</h4><p>분포 검토 후 Low / Medium / High 변동성을 채택하면 이 조건을 충족합니다.</p></article>
               </div>
+            </section>
+
+            <section class="section-block project-question" role="note" aria-label="제안 연구 질문">
+              <div class="project-question-label"><span>제안 연구 질문</span><strong>고변동성 분류</strong></div>
+              <div class="project-question-copy"><p>과거 가격, 수익률, 거래량, 시장, 섹터 정보로 S&amp;P 500 종목이 향후 20거래일 동안 고변동성을 보일지 분류할 수 있는가?</p><small>임시 target: 향후 20일 연율화 realised volatility가 30%를 초과하는 경우. threshold는 분포 검토 후 확정합니다.</small></div>
             </section>
 
             <section class="section-block archive-detail">
@@ -2226,30 +2230,26 @@
     (() => {
       const languageKey = "quicksites.stat5003.language";
       const languages = ["en", "zh", "ko"];
-      const sections = ["dataset", "research"];
+      const sections = ["dataset"];
       const titles = {
-        en: "STAT5003 · S&P 500 Volatility Study",
-        zh: "STAT5003 · S&P 500高波动研究",
-        ko: "STAT5003 · S&P 500 고변동성 연구"
+        en: "STAT5003 · S&P 500 Stock Project",
+        zh: "STAT5003 · S&P 500股票项目",
+        ko: "STAT5003 · S&P 500 주식 프로젝트"
       };
       const sectionNames = {
-        en: { dataset: "Dataset overview", research: "Research question" },
-        zh: { dataset: "数据集介绍", research: "研究问题" },
-        ko: { dataset: "데이터셋 개요", research: "연구 질문" }
+        en: { dataset: "Project brief" },
+        zh: { dataset: "项目简报" },
+        ko: { dataset: "프로젝트 브리프" }
       };
       const accessibilityLabels = {
-        en: { project: "Project navigation", sections: "Sections", directory: "Back to QuickSites directory", language: "Language", status: "Language changed to English" },
-        zh: { project: "项目导航", sections: "页面栏目", directory: "返回 QuickSites 目录", language: "语言", status: "语言已切换为简体中文" },
-        ko: { project: "프로젝트 탐색", sections: "페이지 섹션", directory: "QuickSites 목록으로 돌아가기", language: "언어", status: "언어가 한국어로 변경되었습니다" }
+        en: { language: "Language", status: "Language changed to English" },
+        zh: { language: "语言", status: "语言已切换为简体中文" },
+        ko: { language: "언어", status: "언어가 한국어로 변경되었습니다" }
       };
       const languageButtons = [...document.querySelectorAll("[data-language-button]")];
-      const sectionLinks = [...document.querySelectorAll("[data-section-link]")];
       const sectionPanels = [...document.querySelectorAll("[data-section-panel]")];
       const breadcrumb = document.querySelector("[data-breadcrumb-current]");
       const languageStatus = document.getElementById("language-status");
-      const projectNav = document.querySelector("[data-project-nav]");
-      const sectionNav = document.querySelector("[data-section-nav]");
-      const brandLink = document.querySelector("[data-brand-link]");
       const languageControl = document.querySelector("[data-language-control]");
       let currentLanguage = "en";
 
@@ -2280,13 +2280,6 @@
         sectionPanels.forEach((panel) => {
           panel.classList.toggle("is-active", panel.dataset.sectionPanel === safeSection);
         });
-        sectionLinks.forEach((link) => {
-          if (link.dataset.sectionLink === safeSection) {
-            link.setAttribute("aria-current", "page");
-          } else {
-            link.removeAttribute("aria-current");
-          }
-        });
         breadcrumb.textContent = sectionNames[currentLanguage][safeSection];
         if (focusPanel) {
           const panel = document.querySelector(`[data-section-panel="${safeSection}"]`);
@@ -2304,9 +2297,6 @@
           button.setAttribute("aria-pressed", String(button.dataset.languageButton === safeLanguage));
         });
         breadcrumb.textContent = sectionNames[safeLanguage][currentSection()];
-        projectNav.setAttribute("aria-label", accessibilityLabels[safeLanguage].project);
-        sectionNav.setAttribute("aria-label", accessibilityLabels[safeLanguage].sections);
-        brandLink.setAttribute("aria-label", accessibilityLabels[safeLanguage].directory);
         languageControl.setAttribute("aria-label", accessibilityLabels[safeLanguage].language);
         languageStatus.textContent = accessibilityLabels[safeLanguage].status;
         if (persist) storeLanguage(safeLanguage);
@@ -2316,7 +2306,13 @@
         button.addEventListener("click", () => setLanguage(button.dataset.languageButton));
       });
 
-      window.addEventListener("hashchange", () => setSection(currentSection(), true));
+      window.addEventListener("hashchange", () => {
+        const changedHash = window.location.hash.replace("#", "");
+        if (!sections.includes(changedHash)) {
+          window.history.replaceState(null, "", "#dataset");
+        }
+        setSection(currentSection(), true);
+      });
 
       const initialHash = window.location.hash.replace("#", "");
       if (!sections.includes(initialHash)) {
