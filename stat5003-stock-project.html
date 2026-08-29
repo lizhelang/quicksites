@@ -771,6 +771,47 @@
       font-size: 1rem;
     }
 
+    .hero-source {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.68rem;
+    }
+
+    .hero-source span {
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .hero-source a {
+      border: 1px solid rgba(8, 127, 119, 0.35);
+      border-radius: 999px;
+      background: rgba(220, 238, 234, 0.62);
+      color: var(--teal-dark);
+      padding: 6px 10px;
+      font-family: "IBM Plex Sans", "Apple SD Gothic Neo", "PingFang SC", sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-decoration: none;
+      transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+    }
+
+    .hero-source a:hover {
+      border-color: var(--teal);
+      background: var(--teal-soft);
+      transform: translateY(-1px);
+    }
+
+    .hero-source a:focus-visible {
+      outline: 3px solid #e6a44f;
+      outline-offset: 3px;
+    }
+
     #dataset .hero-note {
       padding: 20px;
     }
@@ -1782,6 +1823,7 @@
                 <p class="eyebrow">01 · Dataset profile</p>
                 <h2>A daily S&amp;P 500<br>market panel.</h2>
                 <p class="lede">Daily price and volume histories for current S&amp;P 500 constituents, linked to the market benchmark and company context needed for a time-aware classification study.</p>
+                <p class="hero-source"><span>Source dataset</span><a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data" target="_blank" rel="noreferrer">S&amp;P 500 Stocks (daily updated) ↗</a></p>
               </div>
               <div class="hero-note">
                 <p class="label">Verified snapshot</p>
@@ -1894,7 +1936,7 @@
 
           <div class="language-copy" data-copy="zh">
             <div class="hero">
-              <div class="hero-copy"><p class="eyebrow">01 · 数据集档案</p><h2>S&amp;P 500的<br>日度市场面板。</h2><p class="lede">它记录当前S&amp;P 500成分股的日度价格与成交量，并关联大盘基准和公司背景，适合构建具有时间边界的分类研究。</p></div>
+              <div class="hero-copy"><p class="eyebrow">01 · 数据集档案</p><h2>S&amp;P 500的<br>日度市场面板。</h2><p class="lede">它记录当前S&amp;P 500成分股的日度价格与成交量，并关联大盘基准和公司背景，适合构建具有时间边界的分类研究。</p><p class="hero-source"><span>Kaggle 数据集</span><a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data" target="_blank" rel="noreferrer">S&amp;P 500 Stocks (daily updated) ↗</a></p></div>
               <div class="hero-note"><p class="label">已核验快照</p><strong>Version 1023</strong><p>最后更新于 2024-12-23。名称虽然写着“每日更新”，但当前数据实际截止到 2024-12-20。</p></div>
             </div>
 
@@ -1972,7 +2014,7 @@
 
           <div class="language-copy" data-copy="ko">
             <div class="hero">
-              <div class="hero-copy"><p class="eyebrow">01 · 데이터셋 프로필</p><h2>S&amp;P 500의<br>일별 시장 패널.</h2><p class="lede">현재 S&amp;P 500 구성 종목의 일별 가격과 거래량을 시장 벤치마크 및 회사 맥락과 연결한 데이터로, 시간 경계를 지키는 분류 연구에 적합합니다.</p></div>
+              <div class="hero-copy"><p class="eyebrow">01 · 데이터셋 프로필</p><h2>S&amp;P 500의<br>일별 시장 패널.</h2><p class="lede">현재 S&amp;P 500 구성 종목의 일별 가격과 거래량을 시장 벤치마크 및 회사 맥락과 연결한 데이터로, 시간 경계를 지키는 분류 연구에 적합합니다.</p><p class="hero-source"><span>Kaggle 데이터셋</span><a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data" target="_blank" rel="noreferrer">S&amp;P 500 Stocks (daily updated) ↗</a></p></div>
               <div class="hero-note"><p class="label">검증된 스냅샷</p><strong>Version 1023</strong><p>마지막 업데이트는 2024-12-23입니다. 제목은 “daily updated”이지만 현재 데이터는 2024-12-20에 끝납니다.</p></div>
             </div>
 

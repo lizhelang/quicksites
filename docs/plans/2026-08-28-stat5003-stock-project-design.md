@@ -67,3 +67,5 @@ The dataset page now leads with the course-fit decision immediately after the ve
 The hero is intentionally compact: a direct one-line explanation of the dataset plus a six-item, one-row summary at desktop widths. “Why this dataset works” follows the course-fit section immediately, before archive-level details, so a group member sees the decision rationale before the schema.
 
 Detailed limitations are condensed into one three-item caveat strip: missingness, survivorship bias, and snapshot leakage. The strip preserves the methodological guardrails without competing visually with the dataset overview.
+
+The hero also exposes the official dataset name and direct Kaggle link in all three languages, so source identification does not depend on the footer links.

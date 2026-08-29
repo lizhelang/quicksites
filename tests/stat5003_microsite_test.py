@@ -44,6 +44,10 @@ def run_desktop(browser) -> None:
     assert not is_visible(page, '[data-section-panel="research"]')
     assert page.get_by_text("Version 1023", exact=True).first.is_visible()
     dataset_english = page.locator('[data-section-panel="dataset"] .language-copy[data-copy="en"]')
+    dataset_link = dataset_english.locator(".hero-source a")
+    assert dataset_link.is_visible()
+    assert dataset_link.get_attribute("href") == "https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data"
+    assert "S&P 500 Stocks" in dataset_link.inner_text()
     course_fit = dataset_english.locator(".course-fit")
     why_fit = dataset_english.locator(".why-fit")
     archive_detail = dataset_english.locator(".archive-detail")
