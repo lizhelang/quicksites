@@ -755,20 +755,21 @@
     }
 
     #dataset .hero {
-      margin-bottom: 42px;
-      gap: clamp(28px, 4vw, 56px);
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 290px);
+      gap: clamp(22px, 3vw, 40px);
+      margin-bottom: 24px;
     }
 
     #dataset .hero h2 {
-      max-width: 700px;
-      font-size: clamp(2.7rem, 4.7vw, 4.8rem);
+      max-width: 760px;
+      font-size: clamp(2.45rem, 3.8vw, 3.85rem);
       line-height: 0.92;
     }
 
     #dataset .hero .lede {
       max-width: 640px;
-      margin-top: 18px;
-      font-size: 1rem;
+      margin-top: 10px;
+      font-size: 0.9rem;
     }
 
     .hero-source {
@@ -776,7 +777,7 @@
       flex-wrap: wrap;
       gap: 7px;
       align-items: center;
-      margin: 14px 0 0;
+      margin: 8px 0 0;
       color: var(--muted);
       font-family: "IBM Plex Mono", monospace;
       font-size: 0.68rem;
@@ -813,7 +814,19 @@
     }
 
     #dataset .hero-note {
-      padding: 20px;
+      padding: 16px;
+    }
+
+    #dataset .hero-note .label {
+      margin-bottom: 7px;
+    }
+
+    #dataset .hero-note strong {
+      font-size: 1.3rem;
+    }
+
+    #dataset .hero-note p:last-child {
+      font-size: 0.77rem;
     }
 
     #dataset .fact-grid {
@@ -1820,8 +1833,8 @@
           <div class="language-copy" data-copy="en">
             <div class="hero">
               <div class="hero-copy">
-                <p class="eyebrow">01 · Dataset profile</p>
-                <h2>Dataset:<br>S&amp;P 500 Stocks</h2>
+                <p class="eyebrow">01 · Kaggle dataset</p>
+                <h2>S&amp;P 500 Stocks</h2>
                 <p class="lede">Source: Kaggle. Daily OHLCV for 502 current S&amp;P 500 symbols, plus the S&amp;P 500 index and company metadata (2010–2024).</p>
                 <p class="hero-source"><span>Official dataset link</span><a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data" target="_blank" rel="noreferrer">S&amp;P 500 Stocks (daily updated) ↗</a></p>
               </div>
@@ -1855,16 +1868,6 @@
               </div>
             </section>
 
-            <section class="section-block why-fit">
-              <div class="section-heading"><h3>Why this dataset works</h3><p>Its value is not just size. It gives us a realistic, linked, time-aware classification setting with an interpretable decision use case.</p></div>
-              <div class="benefit-grid">
-                <article class="benefit-card"><h4>Enough raw scale</h4><p>Monthly sampling can reduce overlapping outcomes; the audit will confirm whether the final eligible panel remains above 10,000 rows.</p></article>
-                <article class="benefit-card"><h4>Natural feature families</h4><p>Returns, volatility, range, drawdown, relative volume, market regime, sector, and industry all have clear interpretations.</p></article>
-                <article class="benefit-card"><h4>Multiple valid baselines</h4><p>Majority class, recent-volatility persistence, and simple logistic regression provide honest benchmarks for more flexible models.</p></article>
-                <article class="benefit-card"><h4>Strong EDA story</h4><p>Coverage, missingness, sector differences, class balance, outliers, volatility clustering, and time variation are all substantive analyses.</p></article>
-              </div>
-            </section>
-
             <section class="section-block archive-detail">
               <div class="section-heading">
                 <h3>Inside the archive</h3>
@@ -1882,46 +1885,6 @@
               </div>
             </section>
 
-            <section class="section-block feature-map">
-              <div class="section-heading">
-                <h3>What this dataset is</h3>
-                <p>It is a daily market panel for current S&amp;P 500 constituents, paired with a market benchmark and company reference table — not a single-stock price file.</p>
-              </div>
-              <div class="field-grid">
-                <article class="field-card"><h4>Use for modelling</h4><p><code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Adj Close</code>, <code>Volume</code>, <code>S&amp;P500</code>, <code>Sector</code>, and <code>Industry</code>. These create returns, volatility, range, drawdown, volume, and market-regime features.</p></article>
-                <article class="field-card"><h4>Keep as context or exclude</h4><p><code>Date</code> and <code>Symbol</code> define the panel. Names, exchange, and location help describe coverage. Current-price and current-fundamental fields must not be backfilled into historical predictions.</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
-              <div class="section-heading">
-                <h3>Data quality is part of the research</h3>
-                <p>The stock table is a complete Date × Symbol grid. Many cells represent periods where reliable prices are unavailable.</p>
-              </div>
-              <div class="quality-layout">
-                <article class="missingness-card">
-                  <h4>67.3% of grid rows lack OHLCV</h4>
-                  <p>Each of the six market-value columns has 1,273,705 missing cells. About 617,831 stock-day rows contain complete market values.</p>
-                  <div class="missing-bar" role="img" aria-label="67.3 percent missing and 32.7 percent complete"><span></span><span></span></div>
-                  <div class="bar-legend"><span>Missing · 67.3%</span><span>Complete · 32.7%</span></div>
-                </article>
-                <article class="warning-card">
-                  <p class="warning-label">Do not hide this</p>
-                  <h4>Missing does not automatically mean random.</h4>
-                  <p>IPO dates, ticker histories, and source availability can create structured missingness. Filtering rules must be reported, not treated as an invisible cleanup step.</p>
-                </article>
-              </div>
-            </section>
-
-            <section class="section-block caveat-section">
-              <div class="caveat-strip" role="note" aria-label="Dataset caveats">
-                <div class="caveat-lead"><p>Caveats</p><strong>Three rules for the analysis.</strong></div>
-                <div class="caveat-item"><span>01 · Missingness</span><p><strong>Filter complete history windows.</strong> Do not silently impute unavailable OHLCV rows.</p></div>
-                <div class="caveat-item"><span>02 · Survivorship</span><p><strong>Current constituents are not historical membership.</strong> State this sample bias in every conclusion.</p></div>
-                <div class="caveat-item"><span>03 · Snapshot leakage</span><p><strong>Do not backfill current company values.</strong> Use only information available at the prediction date.</p></div>
-              </div>
-            </section>
-
             <section class="section-block">
               <div class="section-heading"><h3>Sources</h3><p>The downloadable archive was independently profiled; links below identify the public source and live metadata record.</p></div>
               <div class="source-row">
@@ -1936,7 +1899,7 @@
 
           <div class="language-copy" data-copy="zh">
             <div class="hero">
-              <div class="hero-copy"><p class="eyebrow">01 · 数据集档案</p><h2>数据集：<br>S&amp;P 500 Stocks</h2><p class="lede">来源：Kaggle。覆盖502只当前S&amp;P 500股票的日度OHLCV，以及S&amp;P 500指数和公司元数据（2010–2024）。</p><p class="hero-source"><span>官方数据集链接</span><a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data" target="_blank" rel="noreferrer">S&amp;P 500 Stocks (daily updated) ↗</a></p></div>
+              <div class="hero-copy"><p class="eyebrow">01 · Kaggle 数据集</p><h2>S&amp;P 500 Stocks</h2><p class="lede">来源：Kaggle。覆盖502只当前S&amp;P 500股票的日度OHLCV，以及S&amp;P 500指数和公司元数据（2010–2024）。</p><p class="hero-source"><span>官方数据集链接</span><a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data" target="_blank" rel="noreferrer">S&amp;P 500 Stocks (daily updated) ↗</a></p></div>
               <div class="hero-note"><p class="label">已核验快照</p><strong>Version 1023</strong><p>最后更新于 2024-12-23。名称虽然写着“每日更新”，但当前数据实际截止到 2024-12-20。</p></div>
             </div>
 
@@ -1960,16 +1923,6 @@
               </div>
             </section>
 
-            <section class="section-block why-fit">
-              <div class="section-heading"><h3>为什么这个数据集适合</h3><p>它的价值不只在于规模，还在于它提供了真实、可关联、具有时间结构且容易解释的分类问题。</p></div>
-              <div class="benefit-grid">
-                <article class="benefit-card"><h4>原始规模充足</h4><p>按月抽样可以减少未来窗口重叠；审计将确认最终可用面板是否仍超过10,000条。</p></article>
-                <article class="benefit-card"><h4>特征组自然清晰</h4><p>收益率、波动率、振幅、回撤、相对成交量、市场状态、Sector与Industry都具有明确含义。</p></article>
-                <article class="benefit-card"><h4>有多个可靠基线</h4><p>多数类、近期波动率持续性和简单Logistic Regression都能为复杂模型提供诚实比较。</p></article>
-                <article class="benefit-card"><h4>EDA内容丰富</h4><p>覆盖率、缺失模式、行业差异、类别平衡、异常值、波动聚集和时间变化都可形成实质分析。</p></article>
-              </div>
-            </section>
-
             <section class="section-block archive-detail">
               <div class="section-heading"><h3>压缩包里的三张表</h3><p>三张表的 observation unit 不同，应通过键值关联，而不能把行数直接相加成同一种样本。</p></div>
               <div class="table-wrap"><table class="data-table"><thead><tr><th>文件与作用</th><th>行数</th><th>列数</th><th>大小</th><th>覆盖范围</th></tr></thead><tbody>
@@ -1977,31 +1930,6 @@
                 <tr><td><span class="file-name">sp500_index.csv</span><span class="file-purpose">S&amp;P 500每日基准指数。</span></td><td class="file-meta">2,517</td><td class="file-meta">2</td><td class="file-meta">47.6 KB</td><td class="file-meta">2014-12-22 → 2024-12-20</td></tr>
                 <tr><td><span class="file-name">sp500_companies.csv</span><span class="file-purpose">当前公司、Sector、Industry、地点和财务快照。</span></td><td class="file-meta">502</td><td class="file-meta">16</td><td class="file-meta">0.80 MB</td><td class="file-meta">当前快照 · 没有历史序列</td></tr>
               </tbody></table></div>
-            </section>
-
-            <section class="section-block feature-map">
-              <div class="section-heading"><h3>这个数据集到底是什么</h3><p>它是当前S&amp;P 500成分股的日度市场面板，配合大盘基准和公司参考表；并不是单只股票的价格文件。</p></div>
-              <div class="field-grid">
-                <article class="field-card"><h4>可用于建模的特征来源</h4><p><code>Open</code>、<code>High</code>、<code>Low</code>、<code>Close</code>、<code>Adj Close</code>、<code>Volume</code>、<code>S&amp;P500</code>、<code>Sector</code> 与 <code>Industry</code>。可生成收益率、波动率、振幅、回撤、成交量和市场状态特征。</p></article>
-                <article class="field-card"><h4>只作背景或必须排除</h4><p><code>Date</code> 与 <code>Symbol</code>定义面板；名称、交易所和地点用于描述覆盖范围。当前价格和当前财务快照不能倒填到历史预测中。</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
-              <div class="section-heading"><h3>数据质量本身就是研究问题</h3><p>股票表是完整的“日期 × 股票代码”网格，很多单元格代表无法取得可靠价格的时期。</p></div>
-              <div class="quality-layout">
-                <article class="missingness-card"><h4>67.3%的网格行缺少OHLCV</h4><p>六个市场数值列分别都有1,273,705个缺失单元格，约617,831条股票日记录包含完整市场数值。</p><div class="missing-bar" role="img" aria-label="67.3%缺失，32.7%完整"><span></span><span></span></div><div class="bar-legend"><span>缺失 · 67.3%</span><span>完整 · 32.7%</span></div></article>
-                <article class="warning-card"><p class="warning-label">不能隐藏的问题</p><h4>缺失值不一定是随机缺失。</h4><p>IPO日期、股票代码历史和数据源可用性都可能形成结构性缺失。筛选规则必须在报告中呈现，不能作为不可见的清洗步骤。</p></article>
-              </div>
-            </section>
-
-            <section class="section-block caveat-section">
-              <div class="caveat-strip" role="note" aria-label="数据注意事项">
-                <div class="caveat-lead"><p>重要提示</p><strong>分析时必须遵守的三条规则。</strong></div>
-                <div class="caveat-item"><span>01 · 缺失值</span><p><strong>只保留完整历史窗口。</strong>不能把无法取得的OHLCV静默补齐。</p></div>
-                <div class="caveat-item"><span>02 · 幸存者偏差</span><p><strong>当前成分股不等于历史成员。</strong>每项结论都要说明这一样本偏差。</p></div>
-                <div class="caveat-item"><span>03 · 快照泄漏</span><p><strong>不能倒填当前公司数值。</strong>只使用预测日期当时已知的信息。</p></div>
-              </div>
             </section>
 
             <section class="section-block">
@@ -2014,7 +1942,7 @@
 
           <div class="language-copy" data-copy="ko">
             <div class="hero">
-              <div class="hero-copy"><p class="eyebrow">01 · 데이터셋 프로필</p><h2>데이터셋:<br>S&amp;P 500 Stocks</h2><p class="lede">출처: Kaggle. 현재 S&amp;P 500 종목 502개의 일별 OHLCV, S&amp;P 500 지수, 회사 메타데이터를 포함합니다(2010–2024).</p><p class="hero-source"><span>공식 데이터셋 링크</span><a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data" target="_blank" rel="noreferrer">S&amp;P 500 Stocks (daily updated) ↗</a></p></div>
+              <div class="hero-copy"><p class="eyebrow">01 · Kaggle 데이터셋</p><h2>S&amp;P 500 Stocks</h2><p class="lede">출처: Kaggle. 현재 S&amp;P 500 종목 502개의 일별 OHLCV, S&amp;P 500 지수, 회사 메타데이터를 포함합니다(2010–2024).</p><p class="hero-source"><span>공식 데이터셋 링크</span><a href="https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data" target="_blank" rel="noreferrer">S&amp;P 500 Stocks (daily updated) ↗</a></p></div>
               <div class="hero-note"><p class="label">검증된 스냅샷</p><strong>Version 1023</strong><p>마지막 업데이트는 2024-12-23입니다. 제목은 “daily updated”이지만 현재 데이터는 2024-12-20에 끝납니다.</p></div>
             </div>
 
@@ -2038,16 +1966,6 @@
               </div>
             </section>
 
-            <section class="section-block why-fit">
-              <div class="section-heading"><h3>이 데이터셋의 장점</h3><p>가치는 크기뿐만이 아닙니다. 현실적이고 연결 가능하며 시간 구조가 있고 해석 가능한 분류 문제를 제공합니다.</p></div>
-              <div class="benefit-grid">
-                <article class="benefit-card"><h4>충분한 원시 규모</h4><p>월별 샘플링으로 outcome window 중첩을 줄이고, 최종 eligible panel이 10,000행을 넘는지는 검토 단계에서 확인합니다.</p></article>
-                <article class="benefit-card"><h4>자연스러운 feature 그룹</h4><p>수익률, 변동성, 일중 범위, drawdown, 상대 거래량, 시장 regime, Sector와 Industry 모두 명확하게 해석할 수 있습니다.</p></article>
-                <article class="benefit-card"><h4>정직한 baseline 비교</h4><p>다수 클래스, 최근 변동성 지속성, 단순 Logistic Regression을 유연한 모델과 비교할 수 있습니다.</p></article>
-                <article class="benefit-card"><h4>풍부한 EDA</h4><p>커버리지, 결측 패턴, 섹터 차이, class balance, 이상치, volatility clustering, 시간 변화가 모두 실질적인 분석 주제입니다.</p></article>
-              </div>
-            </section>
-
             <section class="section-block archive-detail">
               <div class="section-heading"><h3>아카이브의 세 테이블</h3><p>파일마다 관측 단위가 다릅니다. 행 수를 단순 합산하지 말고 key로 연결해야 합니다.</p></div>
               <div class="table-wrap"><table class="data-table"><thead><tr><th>파일과 역할</th><th>행</th><th>열</th><th>크기</th><th>범위</th></tr></thead><tbody>
@@ -2055,31 +1973,6 @@
                 <tr><td><span class="file-name">sp500_index.csv</span><span class="file-purpose">일별 S&amp;P 500 벤치마크 수준.</span></td><td class="file-meta">2,517</td><td class="file-meta">2</td><td class="file-meta">47.6 KB</td><td class="file-meta">2014-12-22 → 2024-12-20</td></tr>
                 <tr><td><span class="file-name">sp500_companies.csv</span><span class="file-purpose">현재 회사, 섹터, 산업, 위치 및 재무 스냅샷.</span></td><td class="file-meta">502</td><td class="file-meta">16</td><td class="file-meta">0.80 MB</td><td class="file-meta">현재 스냅샷 · 과거 이력 없음</td></tr>
               </tbody></table></div>
-            </section>
-
-            <section class="section-block feature-map">
-              <div class="section-heading"><h3>이 데이터셋은 무엇인가?</h3><p>현재 S&amp;P 500 구성 종목의 일별 시장 패널에 시장 벤치마크와 회사 참조 테이블을 연결한 데이터입니다. 한 종목의 주가 파일이 아닙니다.</p></div>
-              <div class="field-grid">
-                <article class="field-card"><h4>모델링에 사용할 feature 원천</h4><p><code>Open</code>, <code>High</code>, <code>Low</code>, <code>Close</code>, <code>Adj Close</code>, <code>Volume</code>, <code>S&amp;P500</code>, <code>Sector</code>, <code>Industry</code>로 수익률, 변동성, range, drawdown, 거래량, 시장 regime feature를 만듭니다.</p></article>
-                <article class="field-card"><h4>맥락용 또는 제외할 변수</h4><p><code>Date</code>와 <code>Symbol</code>은 패널을 정의합니다. 이름, 거래소, 위치는 coverage 설명용입니다. 현재 가격과 현재 재무 스냅샷은 과거 예측에 소급 사용하면 안 됩니다.</p></article>
-              </div>
-            </section>
-
-            <section class="section-block">
-              <div class="section-heading"><h3>데이터 품질도 연구의 일부입니다</h3><p>주가 테이블은 완전한 “날짜 × 종목” 그리드이며, 신뢰할 수 있는 가격이 없는 기간이 많이 포함됩니다.</p></div>
-              <div class="quality-layout">
-                <article class="missingness-card"><h4>그리드 행의 67.3%에 OHLCV가 없습니다</h4><p>여섯 개 시장 수치 열마다 1,273,705개의 결측값이 있습니다. 완전한 시장 값이 있는 주식-일 행은 약 617,831개입니다.</p><div class="missing-bar" role="img" aria-label="결측 67.3%, 완전 32.7%"><span></span><span></span></div><div class="bar-legend"><span>결측 · 67.3%</span><span>완전 · 32.7%</span></div></article>
-                <article class="warning-card"><p class="warning-label">숨기면 안 되는 점</p><h4>결측이 반드시 무작위는 아닙니다.</h4><p>IPO 날짜, ticker 이력, 데이터 소스 가용성이 구조적 결측을 만들 수 있습니다. 필터링 규칙을 보이지 않는 정리 단계로 처리하지 말고 보고해야 합니다.</p></article>
-              </div>
-            </section>
-
-            <section class="section-block caveat-section">
-              <div class="caveat-strip" role="note" aria-label="데이터 주의사항">
-                <div class="caveat-lead"><p>Caveats</p><strong>분석에서 지켜야 할 세 가지 규칙.</strong></div>
-                <div class="caveat-item"><span>01 · 결측값</span><p><strong>완전한 이력 window만 사용합니다.</strong> 이용할 수 없는 OHLCV를 조용히 보간하지 않습니다.</p></div>
-                <div class="caveat-item"><span>02 · Survivorship</span><p><strong>현재 구성 종목은 과거 구성 종목과 다릅니다.</strong> 모든 결론에서 이 표본 편향을 명시합니다.</p></div>
-                <div class="caveat-item"><span>03 · 스냅샷 누출</span><p><strong>현재 회사 수치를 과거에 소급하지 않습니다.</strong> 예측일에 이미 알려진 정보만 사용합니다.</p></div>
-              </div>
             </section>
 
             <section class="section-block">

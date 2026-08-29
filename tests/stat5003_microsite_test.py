@@ -49,22 +49,20 @@ def run_desktop(browser) -> None:
     assert dataset_link.get_attribute("href") == "https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks/data"
     assert "S&P 500 Stocks" in dataset_link.inner_text()
     course_fit = dataset_english.locator(".course-fit")
-    why_fit = dataset_english.locator(".why-fit")
     archive_detail = dataset_english.locator(".archive-detail")
-    assert course_fit.bounding_box()["y"] < why_fit.bounding_box()["y"] < archive_detail.bounding_box()["y"]
+    assert course_fit.bounding_box()["y"] < archive_detail.bounding_box()["y"]
     assert dataset_english.locator(".fact-grid .fact-card").count() == 6
     assert course_fit.locator(".criterion-card.pass").count() == 3
     assert course_fit.locator(".criterion-card.available").count() == 1
     assert course_fit.locator(".criterion-card.available").get_by_text("Multi-class", exact=True).is_visible()
-    assert dataset_english.locator(".caveat-strip").count() == 1
-    assert dataset_english.locator(".caveat-item").count() == 3
+    assert dataset_english.locator(".why-fit, .feature-map, .quality-layout, .caveat-strip").count() == 0
     page.screenshot(path="/tmp/stat5003-microsite-en-dataset.png", full_page=True)
 
     page.get_by_role("button", name="中文").click()
     assert page.locator("html").get_attribute("lang") == "zh-CN"
     chinese_heading = page.locator('[data-section-panel="dataset"] .language-copy[data-copy="zh"] .hero h2')
     assert chinese_heading.is_visible()
-    assert "数据集" in chinese_heading.inner_text()
+    assert chinese_heading.inner_text() == "S&P 500 Stocks"
     assert page.get_by_role("button", name="中文").get_attribute("aria-pressed") == "true"
 
     page.reload(wait_until="networkidle")
