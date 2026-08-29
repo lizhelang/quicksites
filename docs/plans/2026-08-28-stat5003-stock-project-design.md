@@ -69,3 +69,5 @@ The hero is intentionally compact: a direct one-line explanation of the dataset 
 Detailed limitations are condensed into one three-item caveat strip: missingness, survivorship bias, and snapshot leakage. The strip preserves the methodological guardrails without competing visually with the dataset overview.
 
 The hero also exposes the official dataset name and direct Kaggle link in all three languages, so source identification does not depend on the footer links.
+
+The dataset hero uses an explicit `Dataset: S&P 500 Stocks` title rather than a conceptual marketing headline. Its one-line description states the source, coverage, fields, and date range for immediate group comprehension.

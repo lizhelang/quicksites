@@ -64,7 +64,7 @@ def run_desktop(browser) -> None:
     assert page.locator("html").get_attribute("lang") == "zh-CN"
     chinese_heading = page.locator('[data-section-panel="dataset"] .language-copy[data-copy="zh"] .hero h2')
     assert chinese_heading.is_visible()
-    assert "S&P 500的" in chinese_heading.inner_text()
+    assert "数据集" in chinese_heading.inner_text()
     assert page.get_by_role("button", name="中文").get_attribute("aria-pressed") == "true"
 
     page.reload(wait_until="networkidle")
