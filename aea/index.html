@@ -23,18 +23,28 @@
 .breakpoint-banner{display:flex;gap:18px;align-items:center;border-left:4px solid var(--amber);background:#fff6e8;padding:18px 20px;margin:20px 0}.breakpoint-banner p{margin:5px 0 0;font-size:13px;color:#73522e}.breakpoint-banner .btn{margin-left:auto;flex-shrink:0}.breakpoint-label{font:600 12px var(--mono);color:var(--amber);white-space:nowrap}
 .process-summary{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line);margin:22px 0}.process-stat{padding:15px 18px;border-right:1px solid var(--line)}.process-stat:last-child{border:0}.process-stat strong{font:600 26px var(--mono);margin-right:8px}.process-stat p{margin:4px 0 0;color:var(--muted);font-size:12px}
 .process-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.process-switch{display:flex;padding:3px;background:#e7e5e4;border:1px solid var(--line)}.process-switch button{padding:9px 18px;border:0;background:transparent;color:var(--muted);font-size:14px}.process-switch button.active{background:#fff;color:var(--ink);font-weight:650}.process-mode-note{font-size:13px;color:var(--muted);margin:12px 0}
-.process-scroll{overflow:auto;padding:5px 3px 12px}.process-board{min-width:1000px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:38px 28px;padding:6px 0}.process-node{position:relative;text-align:left;width:100%;border:1px solid #b9b4ad;border-top:3px solid var(--node-color,#78716c);border-radius:4px;background:white;padding:15px 13px;color:var(--ink);min-height:224px;display:flex;flex-direction:column;gap:9px}.process-node:hover{background:#f8faf9;border-color:var(--accent)}.process-node[aria-pressed=true]{outline:2px solid var(--accent);outline-offset:2px;background:#f0fdfa}.process-node:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.process-node::after{content:'→';position:absolute;right:-25px;top:46%;font-size:23px;font-weight:400;color:#78716c;pointer-events:none}.process-node:nth-child(5)::after{content:'↓';right:auto;left:46%;top:auto;bottom:-34px}.process-node:nth-child(n+6)::after{content:'←';right:auto;left:-25px}.process-node:nth-child(10)::after{content:none}.process-node:nth-child(6){grid-column:5;grid-row:2}.process-node:nth-child(7){grid-column:4;grid-row:2}.process-node:nth-child(8){grid-column:3;grid-row:2}.process-node:nth-child(9){grid-column:2;grid-row:2}.process-node:nth-child(10){grid-column:1;grid-row:2}.node-top{display:flex;align-items:center;justify-content:space-between;gap:5px}.node-index{font:600 12px var(--mono);color:var(--muted)}.node-state{font-size:11px;font-weight:600;color:var(--node-color);white-space:nowrap}.node-title{font-size:17px;font-weight:650;line-height:1.4}.node-summary{font-size:12px;line-height:1.7;color:var(--muted);flex:1}.node-count{font-size:12px;color:var(--ink);border-top:1px solid #e7e5e4;padding-top:9px}.node-verification{font-size:11px;color:var(--amber)}.state-discuss{--node-color:#8b4789}.state-planning{--node-color:#73562b}.state-planned{--node-color:#345e9c}.state-partial{--node-color:#a06116}.state-building{--node-color:#176b80}.state-testing{--node-color:#8c660e}.state-verified{--node-color:#167454}
+.process-scroll{overflow:auto;padding:5px 3px 12px}.process-board{min-width:1000px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:38px 28px;padding:6px 0}.process-node{position:relative;text-align:left;width:100%;border:1px solid #b9b4ad;border-top:3px solid var(--node-color,#78716c);border-radius:4px;background:white;padding:15px 13px;color:var(--ink);min-height:224px;display:flex;flex-direction:column;gap:9px}.process-node:hover{background:#f8faf9;border-color:var(--accent)}.process-node[aria-pressed=true]{outline:2px solid var(--accent);outline-offset:2px;background:#f0fdfa}.process-node:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.process-node::after{content:'→';position:absolute;right:-25px;top:46%;font-size:23px;font-weight:400;color:#78716c;pointer-events:none}.process-node:nth-child(5)::after{content:'↓';right:auto;left:46%;top:auto;bottom:-34px}.process-node:nth-child(n+6)::after{content:'←';right:auto;left:-25px}.process-node:nth-child(10)::after{content:none}.process-node:nth-child(6){grid-column:5;grid-row:2}.process-node:nth-child(7){grid-column:4;grid-row:2}.process-node:nth-child(8){grid-column:3;grid-row:2}.process-node:nth-child(9){grid-column:2;grid-row:2}.process-node:nth-child(10){grid-column:1;grid-row:2}.node-top{display:flex;align-items:center;justify-content:space-between;gap:5px}.node-index{font:600 12px var(--mono);color:var(--muted)}.node-state{font-size:11px;font-weight:600;color:var(--node-color);white-space:nowrap}.node-title{font-size:17px;font-weight:650;line-height:1.4}.node-summary{font-size:12px;line-height:1.7;color:var(--muted);flex:1}.node-count{font-size:12px;color:var(--ink);border-top:1px solid #e7e5e4;padding-top:9px}.node-verification{font-size:11px;color:var(--amber)}
 .process-return{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}.process-legend{display:flex;gap:15px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:18px 0 24px}.legend-dot{display:inline-block;width:7px;height:7px;background:var(--node-color);border-radius:50%;margin-right:5px}
-.node-inspector{border:1px solid #a8b8b1;background:#fff;padding:24px;margin:0 0 28px}.inspector-heading{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}.inspector-heading h3{margin:0;font-size:22px}.inspector-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.capability-list{list-style:none;padding:0;margin:0}.capability-list li{display:flex;align-items:baseline;gap:9px;padding:7px 0;border-bottom:1px solid #efeeec;font-size:13px}.capability-list .cap-state{font-size:11px;white-space:nowrap;border:1px solid #d6d3d1;padding:1px 6px}.cap-state.exists{color:var(--accent);border-color:#9dbbb2}.cap-state.discuss{color:#8b4789}.node-action{border-left:3px solid var(--accent);padding-left:15px;margin-bottom:18px;font-size:14px}.node-warning{background:#faf6ee;padding:12px 14px;color:#73522e;font-size:13px}.node-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.node-links a{font:12px/1.8 var(--mono);border:1px solid var(--line);padding:3px 7px;text-decoration:none}.release-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px}.release-heading h3{font-size:22px}.milestone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);background:white}.milestone{padding:22px;border-right:1px solid var(--line)}.milestone:last-child{border:0}.milestone:first-child{border-top:4px solid var(--accent);padding-top:18px}.milestone .mid{font:600 12px var(--mono);color:var(--accent)}.milestone h4{font-size:18px;margin:9px 0}.milestone p{font-size:13px}.milestone .exit{border-top:1px dashed var(--line);padding-top:12px}.execution-drawer{border-top:1px solid var(--line);margin:28px 0 15px;padding-top:18px}.execution-drawer>summary{cursor:pointer;font-weight:600;margin-bottom:18px}.execution-drawer>summary span{font-weight:400;margin-left:15px}
+.node-inspector{border:1px solid #a8b8b1;background:#fff;padding:24px;margin:0 0 28px}.inspector-heading{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}.inspector-heading h3{margin:0;font-size:22px}.inspector-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.capability-list{list-style:none;padding:0;margin:0}.capability-list li{display:flex;align-items:baseline;gap:9px;padding:7px 0;border-bottom:1px solid #efeeec;font-size:13px}.capability-list .cap-state{font-size:11px;white-space:nowrap;border:1px solid #d6d3d1;padding:1px 6px}.cap-state.exists{color:var(--muted);border-color:var(--line)}.cap-state.discuss{color:#8b4789}.node-action{border-left:3px solid var(--accent);padding-left:15px;margin-bottom:18px;font-size:14px}.node-warning{background:#faf6ee;padding:12px 14px;color:#73522e;font-size:13px}.node-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.node-links a{font:12px/1.8 var(--mono);border:1px solid var(--line);padding:3px 7px;text-decoration:none}.release-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px}.release-heading h3{font-size:22px}.milestone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);background:white}.milestone{padding:22px;border-right:1px solid var(--line)}.milestone:last-child{border:0}.milestone:first-child{border-top:4px solid var(--accent);padding-top:18px}.milestone .mid{font:600 12px var(--mono);color:var(--accent)}.milestone h4{font-size:18px;margin:9px 0}.milestone p{font-size:13px}.milestone .exit{border-top:1px dashed var(--line);padding-top:12px}.execution-drawer{border-top:1px solid var(--line);margin:28px 0 15px;padding-top:18px}.execution-drawer>summary{cursor:pointer;font-weight:600;margin-bottom:18px}.execution-drawer>summary span{font-weight:400;margin-left:15px}
 @media(max-width:1100px){.layout{grid-template-columns:154px minmax(0,1fr)}main{padding-inline:22px}.process-heading{display:block}.process-stamp{display:block;text-align:left}.breakpoint-banner{flex-wrap:wrap}.breakpoint-banner .btn{margin-left:0}.inspector-grid{grid-template-columns:1fr;gap:18px}.milestone-grid{grid-template-columns:1fr}.milestone{border-right:0;border-bottom:1px solid var(--line)}.release-heading{display:block}}
 @media(max-width:720px){.layout{display:block}main{padding-inline:16px}.process-summary{grid-template-columns:1fr}.process-stat{border-right:0;border-bottom:1px solid var(--line)}.process-heading h2{font-size:25px}.process-toolbar{align-items:flex-start}.node-inspector{padding:18px}.process-return{display:block}.process-return span{display:block}.process-stamp{overflow-wrap:anywhere}.breakpoint-label{width:100%}}
 @media print{.process-scroll{overflow:visible}.process-board{min-width:0;gap:24px 14px}.process-node{min-height:180px;padding:8px;font-size:10px;break-inside:avoid}.node-title{font-size:13px}.node-state,.node-summary,.node-count{font-size:9px}.process-toolbar,.breakpoint-banner button{display:none}.process-node::after{right:-15px;font-size:15px}.process-node:nth-child(n+6)::after{left:-15px}.milestone-grid{grid-template-columns:repeat(3,1fr)}.node-inspector{break-inside:avoid}}
 
+
+.action-badges{display:inline-flex;gap:5px;flex-wrap:wrap;align-items:flex-start}.action-badge{display:inline-flex;gap:5px;align-items:baseline;border:1px solid currentColor;border-radius:3px;padding:2px 7px;font-size:12px;font-weight:600;line-height:1.65;color:var(--action-color);background:#fff;white-space:normal}.process-node .action-badges{width:100%;margin-top:2px}.process-node .action-badge{font-size:11px;padding:2px 5px}.process-node .node-top{flex-wrap:wrap}.process-node{min-height:254px;border-top-color:var(--action-color)}.progress-dimensions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 18px;margin:0 0 20px;padding:14px 0;border-bottom:1px solid var(--line)}.progress-dimensions>div{min-width:0}.progress-dimensions dt{font-size:11px;color:var(--muted);margin-bottom:4px}.progress-dimensions dd{margin:0;font-size:13px;overflow-wrap:anywhere}.progress-dimensions dd a+a{margin-left:8px}.milestone>.action-badges{display:flex;margin-top:10px}.stage>summary .action-badges{margin-left:auto;max-width:48%}.node-inspector .action-badges{margin-left:auto}.process-legend{align-items:flex-start}.process-node .node-verification{color:var(--muted)}
+.action-needs_decision{--action-color:#b7791f;--node-color:#b7791f}
+.action-agent_ready{--action-color:#2563eb;--node-color:#2563eb}
+.action-agent_active{--action-color:#4f46e5;--node-color:#4f46e5}
+.action-waiting_dependency{--action-color:#6b7280;--node-color:#6b7280}
+.action-needs_acceptance{--action-color:#0d9488;--node-color:#0d9488}
+.action-blocked{--action-color:#dc2626;--node-color:#dc2626}
+.action-done{--action-color:#15803d;--node-color:#15803d}
+@media(max-width:720px){.progress-dimensions{grid-template-columns:repeat(2,minmax(0,1fr))}.stage>summary .action-badges{max-width:100%;margin-left:0}.process-node{min-height:254px}}
 </style>
-<meta name="aea-source-commit" content="1cbd7444e82fc8659d5252d27ade37df78bf3aaa">
+<meta name="aea-source-commit" content="18c8e89f68c81158e76217e9890cd931c2a3c507">
 <meta name="aea-source-branch" content="feat/aea-agent-bridge">
-<meta name="aea-source-checked-at" content="2026-09-16T14:53:13+00:00">
-<meta name="aea-page-generated-at" content="2026-09-16T14:53:13+00:00">
+<meta name="aea-source-checked-at" content="2026-09-16T15:13:47+00:00">
+<meta name="aea-page-generated-at" content="2026-09-16T15:13:47+00:00">
 </head>
 <body>
 <style>
@@ -44,8 +54,8 @@
 @media(max-width:720px){#aea-public-banner{padding:10px 12px}}
 </style>
 <aside id="aea-public-banner" aria-label="公开需求页版本">
-<p><strong>当前页面源版本</strong> · 分支 <code>feat/aea-agent-bridge</code> · 提交 <code>1cbd7444e82fc8659d5252d27ade37df78bf3aaa</code></p>
-<p>远端核对时间：<time>2026-09-16T14:53:13+00:00</time>。批注仍是当前浏览器的本地草稿，不会自动写入 Git；请使用页面的导出批注功能留存。</p>
+<p><strong>当前页面源版本</strong> · 分支 <code>feat/aea-agent-bridge</code> · 提交 <code>18c8e89f68c81158e76217e9890cd931c2a3c507</code></p>
+<p>远端核对时间：<time>2026-09-16T15:13:47+00:00</time>。批注仍是当前浏览器的本地草稿，不会自动写入 Git；请使用页面的导出批注功能留存。</p>
 <p id="aea-public-update" role="status" hidden><span id="aea-public-update-text"></span><button type="button" id="aea-public-refresh" hidden>刷新查看</button></p>
 </aside>
 <script>
@@ -96,7 +106,7 @@
         const latest = status && status.source && status.source.commit;
         const latestChecked = Date.parse(status?.source?.checkedAt);
         const latestGenerated = Date.parse(status?.publication?.generatedAt);
-        if (status?.schemaVersion !== 1 || status?.source?.remoteVerified !== true
+        if (status?.schemaVersion !== 2 || status?.source?.remoteVerified !== true
             || typeof latest !== 'string' || !/^[0-9a-f]{40}$/.test(latest)
             || ![checkedAt, generatedAt, latestChecked, latestGenerated].every(Number.isFinite)
             || latestChecked < checkedAt || latestGenerated < generatedAt) { showUncertain(); return; }
@@ -121,13 +131,13 @@
 <main>
 <div class="eyebrow">外尺寸蒙皮 → 完整加工图 → 可解释的计价数据</div>
 <h1>系统走到哪里，<br>下一步一眼看清。</h1>
-<p class="lead">这是项目需求与验收进度的唯一主表。与 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/1cbd7444e82fc8659d5252d27ade37df78bf3aaa/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 配套维护：这里定义做什么、差什么、怎样验收；状态入口记录谁在做、在哪个分支、何时集成。以你提供的<strong>外尺寸蒙皮模型</strong>为输入，核对计价参数、工程配置、展开搜索、制造补偿、出图与统计之间的关系。</p>
+<p class="lead">这是项目需求与验收进度的唯一主表。与 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/18c8e89f68c81158e76217e9890cd931c2a3c507/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 配套维护：这里定义做什么、差什么、怎样验收；状态入口记录谁在做、在哪个分支、何时集成。以你提供的<strong>外尺寸蒙皮模型</strong>为输入，核对计价参数、工程配置、展开搜索、制造补偿、出图与统计之间的关系。</p>
 <div class="scope"><div><strong>本次明确的产品入口</strong><p>用户已经提供所有面均为零厚度的成品外尺寸蒙皮。板厚、材料、数量从 DSH 插件独立设置；模型的外尺寸与最终激光切割尺寸需要通过制造处理建立关系。</p></div><div><strong>这份页面的边界</strong><p>二维识图、行业案例 RAG 暂不进入这条主流程。页面中的参数面板是设计示意；本次同步批注、需求和开发顺序；未运行 Rhino 或完成任何新制造能力验收。</p></div></div>
-<div class="legend"><span class="pill aligned">已有对应代码</span><span class="pill partial">部分对应 / 口径待核</span><span class="pill different">明确差异 / 缺项</span><span class="pill proposal">建议设计 · 未实现承诺</span></div>
+<p class="small">进度主标签表示行动责任；实现程度和验证等级在详情中独立查看，不互相代替。</p>
 
 <section class="section" id="progress">
-<div class="process-heading"><div><div class="eyebrow">SYSTEM FLOW / 从输入到复核</div><h2>先让系统流通，再优化每个关键节点。</h2></div><span class="process-stamp">更新 2026-09-17<br>同步批次 <code>AEA-REQ-20260917-03</code></span></div>
-<p class="small">多端规范：开工先核对 Git 远端，收工提交推送。<a href="https://lizhelang.github.io/quicksites/aea/">公开完整需求表</a>正在发布验证；网页只展示已推送快照。</p><p class="section-intro">按系统经过的顺序看现状。点击节点展开“已有多少、还缺什么、卡在哪里、下一步做什么”；开发任务放在节点下面。</p>
+<div class="process-heading"><div><div class="eyebrow">SYSTEM FLOW / 从输入到复核</div><h2>先让系统流通，再优化每个关键节点。</h2></div><span class="process-stamp">更新 2026-09-17<br>同步批次 <code>AEA-REQ-20260917-04</code></span></div>
+<p class="small">多端规范：开工先核对 Git 远端，收工提交推送。<a href="https://lizhelang.github.io/quicksites/aea/">公开完整需求表</a>正在发布验证；网页只展示已推送快照。</p><p class="section-intro">按系统顺序先看“现在该谁行动”。点击节点分别查看阶段、实现程度、验证等级、负责人、依赖和未决问题。多个责任可以并存。</p>
 <div class="breakpoint-banner"><span class="breakpoint-label">首要断点</span><div><strong>缺当前环境的全链路验证证据，不是核心算法全部没写。</strong><p>2026-09-09 有历史贯通记录；当前 DSH 与当前源码组合尚待联测。先完成一个代表模型的工程闭环，再补用户产品能力。</p></div><button class="btn" id="focusFirstBreak">看 S05 验证节点 ↗</button></div>
 <div class="process-summary" id="processSummary"></div>
 <div class="process-toolbar"><div class="process-switch" role="group" aria-label="流程查看范围"><button type="button" class="active" data-process-mode="product" aria-pressed="true">完整产品现状</button><button type="button" data-process-mode="first" aria-pressed="false">先跑通工程链</button></div><span class="small">箭头是处理顺序，不是完成程度；横向可滚动</span></div>
@@ -138,8 +148,8 @@
 <section class="node-inspector" id="nodeInspector" aria-label="当前流程节点详情"></section>
 <div class="release-heading"><h3>怎么最快形成能用的系统</h3><p class="small">先跑通是有限工程试运行；补齐之后才是完整用户产品。制造门禁始终保留。</p></div>
 <div class="milestone-grid" id="milestoneList"></div>
-<details class="execution-drawer" id="execution"><summary>展开开发任务台账与分工 <span class="small">P 编号负责执行，S 编号代表系统节点</span></summary><p>负责人、分支与证据由 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/1cbd7444e82fc8659d5252d27ade37df78bf3aaa/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 管理。任务不会因为这个图更新就变成已完成。</p><div id="taskList"></div></details>
-<p class="small">当前台账没有已认领进行中的产品实现任务；H0/H1 属于开发环境与需求视图治理，不计入系统产品完成度。<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/1cbd7444e82fc8659d5252d27ade37df78bf3aaa/docs/harness-audit/2026-09-16-astra-audit.md">查看 Harness 审计</a></p>
+<details class="execution-drawer" id="execution"><summary>展开开发任务台账与分工 <span class="small">P 编号负责执行，S 编号代表系统节点</span></summary><p>负责人、分支与证据由 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/18c8e89f68c81158e76217e9890cd931c2a3c507/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 管理。任务不会因为这个图更新就变成已完成。</p><div id="taskList"></div></details>
+<p class="small">当前产品任务的责任与前置条件已分别登记；H0/H1/H2 为治理与发布任务，它们完成不代表制造节点已验收。<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/18c8e89f68c81158e76217e9890cd931c2a3c507/docs/harness-audit/2026-09-16-astra-audit.md">查看 Harness 审计</a></p>
 </section>
 <section class="section" id="decisions"><h2>批注处理记录 / 原文保留</h2><p>来源：2026-09-16 从原 Safari 页导出的 6 条已保存批注。方向采纳 5 条，S03 保留讨论；全部已写入文件。下方原文独立于可编辑批注草稿。</p><div id="decisionList"></div></section><section class="section" id="cost"><h2>综合成本函数 / 建议 v1，尚未实现</h2><p>S04 已确认需要综合成本。建议从可解释的金额模型开始；归一化加权分只作备选，因为权重不易对应工时。完整工厂报价模型留待业务数据齐备后扩展。</p><div class="quote"><strong>利用率 η = A<sub>use</sub> / A<sub>rect</sub></strong><br><strong>C = q × [p<sub>m</sub> A<sub>rect</sub> + r / 60 × (t<sub>b</sub> N<sub>b</sub> + t<sub>w</sub> L<sub>w</sub>)]</strong><br>材料成本 + 人工分钟单价 × 总秒数 / 60；成本越低越优。A<sub>rect</sub> = A<sub>use</sub> / η，因此材料利用率已计入材料成本，不再额外重复惩罚 η。</div><div class="definitions"><div class="definition"><h3>四个可调参数</h3><ul><li>p<sub>m</sub>：材料单价，货币 / m²；随材料和厚度配置。</li><li>r：人工综合单价，货币 / 分钟。</li><li>t<sub>b</sub>：每刀平均时间，秒 / 刀。</li><li>t<sub>w</sub>：每米焊接平均时间，秒 / m。</li></ul><p>四项无生产默认承诺。集中配置并冻结到案件；以实际工时调整 t，以真实价格调整 p/r。避免同时任意调所有项。</p></div><div class="definition"><h3>固定的计算口径</h3><p>N 是业务折弯刀数，L 是去重后的适用焊接长度。q 是该工件数量；不同工件逐项求和。面积先换 m²、长度换 m；数量为正整数，成本参数有限且非负，面积为正且利用率满足 0 &lt; η ≤ 1，异常数据不能参与正式排名。利用率为“面积之和的比”，不平均各件百分比。</p><p>同一候选和阶段计算 A<sub>use</sub>、A<sub>rect</sub>。矩形为每件独立矩形面积之和，不是摆图后的整体 bbox。Q-02 的白线/绿线与扣孔口径未定前不进入正式排序。</p></div></div><p><strong>手算示例，仅为公式演示：</strong>设 p=80、r=1.5、t<sub>b</sub>=12、t<sub>w</sub>=90、q=1。方案 A 使用面积 1 m²、矩形 1.25 m²、8 刀、焊 0.6 m：利用率 80%，材料 100，人工 3.75，总计 103.75。方案 B 使用面积 1 m²、矩形 1.15 m²、12 刀、焊 1 m：利用率约 87.0%，材料 92，人工 5.85，总计 97.85。材料节省可抵消更多人工，是否合适由实际参数决定。</p><p><strong>排序前置：</strong>必须通过适用几何/制造检查；缺值、无效面积或尚未制造复算的值明确标记估计/未知，不能用 0 获胜。理论阶段用于搜索预估，最终候选用同一冻结配置复算再排名；失败或没有改善保留原基线。</p><p><strong>边界：</strong>v1 是搜索成本代理，尚不计刨槽额外工时、换刀/装夹、激光切割、机器费、整板取整与组合套料，也不是客户报价。刨槽较多的方案可能因此低估；先报告未计项，在工厂数据齐备后按同样单位扩展，不能称为“工厂真实总成本最优”。</p></section>
 <section id="overview">
@@ -178,7 +188,7 @@
 
 <section class="section" id="steps"><h2>02 / 每一步具体做什么</h2><p class="section-intro">每步都写出我的理解、现有实现与需要补齐的部分。默认展开前两步，点击流程节点或标题可以展开其他步骤。</p><div class="reading-tools"><button id="expandSteps" class="btn">展开全部步骤</button><button id="collapseSteps" class="btn">收起全部步骤</button><span class="small">点击「批注」可记录你希望修改的内容。</span></div><div id="stageList"></div></section>
 
-<section class="section" id="comparison"><h2>03 / 你的输入与输出，逐项对照</h2><p class="section-intro">「已有」只说明代码中存在对应路径；「未见」限定于本次核对的 AEA 核心、Agent 接口、统计模型与出图器。不同业务名称不能因为数值相似就直接互换。</p><div class="reading-tools"><button class="btn filter active" data-filter="all">全部</button><button class="btn filter" data-filter="gap">差异与待补齐</button><button class="btn filter" data-filter="unclear">口径待确认</button><span class="spacer"></span><input id="reqSearch" type="search" aria-label="搜索需求对照" placeholder="搜索：开料 / 系数 / 焊接…"></div><div id="reqTables"></div><div class="no-results" id="noResults">没有匹配项，试试其他词或切回「全部」。</div></section>
+<section class="section" id="comparison"><h2>03 / 你的输入与输出，逐项对照</h2><p class="section-intro">「已有」只说明代码中存在对应路径；「未见」限定于本次核对的 AEA 核心、Agent 接口、统计模型与出图器。不同业务名称不能因为数值相似就直接互换。</p><div class="reading-tools"><button class="btn filter active" data-filter="all">全部</button><button class="btn filter" data-filter="agent_ready">Agent 可处理</button><button class="btn filter" data-filter="waiting_dependency">等待依赖</button><button class="btn filter" data-filter="needs_decision">需要你决定</button><span class="spacer"></span><input id="reqSearch" type="search" aria-label="搜索需求对照" placeholder="搜索：开料 / 系数 / 焊接…"></div><div id="reqTables"></div><div class="no-results" id="noResults">没有匹配项，试试其他词或切回「全部」。</div></section>
 
 <section class="section" id="definitions"><h2>04 / 最容易混淆的面积和次数</h2><p class="section-intro">以下是建议拆开的数据口径，不替你确定行业定义。只有确认计算对象、阶段、单位和汇总方式后，数值才适合用于计价。</p><div class="definitions">
 <div class="definition"><h3>实际展开面积</h3><p>我的候选理解：最终制造切割轮廓围成的净板料面积，孔洞是否扣除须确认。当前 <code>UsableArea</code> 取折焊轮廓外环面积减内环面积，不是直接从最终白色净轮廓计算。</p><div class="formula">候选口径：Σ（最终外轮廓面积 − 孔洞面积）</div><p class="mini">源蒙皮面积、理论展开面积、制造净面积、计价面积分别存储；不预设它们相等。</p></div>
@@ -202,10 +212,10 @@
 
 <section class="section" id="gaps"><h2>06 / 当前实现与你要求的主要差异</h2><p class="section-intro">按需要优先纠正的理解与工程缺口排序。以下不是已经开始执行的改造任务。</p><div id="findings"></div></section>
 <section class="section" id="questions"><h2>07 / 这些地方请你直接纠正</h2><p class="section-intro">已处理 Q-04/Q-05 的既有疑问，Q-09 部分已处理。Q-01/Q-02/Q-03/Q-06/Q-07/Q-08/Q-10 仍未决；只阻塞依赖它们的任务。</p><div id="questionList"></div><div class="review-foot"><strong>最省事的反馈方式</strong><p>直接告诉我：「Q-02 的开料面积是……」「IN-06 的刀具其实用于……」「第 08 步顺序不对……」。也可在页面填写批注后点击「导出批注」。新批注先保存在当前浏览器，不会自动写入 Git。完成审阅后导出，再由集成人把决定、影响条目和剩余疑问写入本表，并同步 PROJECT_STATUS。此次 6 条原文已内嵌归档，换浏览器也能看到。</p></div></section>
-<section class="section" id="evidence"><h2>08 / 本次核对的源码依据</h2><p class="section-intro">以下摘录绑定检查时的本地源码 <code>adfc9e0</code>。它们用于证明当前数据与控制路径；不等价于新一轮运行验收。引用以 E 编号关联上方条目。</p><div id="evidenceList"></div><details style="margin-top:24px"><summary>查看本次用户需求原文</summary><div class="quote" id="originalRequest"></div></details><footer>需求基线 v2 · 2026-09-16 · 需求来源：本次用户消息；当前实现来源：AEA 项目源码与最新 PROJECT_STATUS。<br>本页未引入二维识图 / RAG 前置流程；未定义尚不明确的计价规则；批注已确认的方向与本次建议方案分别标示；完成状态需有验证证据。同步批次 AEA-REQ-20260917-03。</footer></section>
+<section class="section" id="evidence"><h2>08 / 本次核对的源码依据</h2><p class="section-intro">以下摘录绑定检查时的本地源码 <code>adfc9e0</code>。它们用于证明当前数据与控制路径；不等价于新一轮运行验收。引用以 E 编号关联上方条目。</p><div id="evidenceList"></div><details style="margin-top:24px"><summary>查看本次用户需求原文</summary><div class="quote" id="originalRequest"></div></details><footer>需求基线 v2 · 2026-09-16 · 需求来源：本次用户消息；当前实现来源：AEA 项目源码与最新 PROJECT_STATUS。<br>本页未引入二维识图 / RAG 前置流程；未定义尚不明确的计价规则；批注已确认的方向与本次建议方案分别标示；完成状态需有验证证据。同步批次 AEA-REQ-20260917-04。</footer></section>
 </main></div><div class="toast" id="toast" role="status"></div>
 <script type="application/json" id="project-tracking">{
-  "revision": "AEA-REQ-20260917-03",
+  "revision": "AEA-REQ-20260917-04",
   "date": "2026-09-17",
   "sourceCommit": "adfc9e0",
   "integrationBranch": "feat/aea-agent-bridge",
@@ -214,36 +224,57 @@
       "id": "P0",
       "title": "当前工程链首次贯通",
       "lane": "验证 / 集成",
-      "phase": "现在",
       "depends": [],
       "requirements": [
         "QA-01",
         "IN-08",
         "IN-09"
       ],
-      "state": "可开始 · 未认领",
       "scope": "代表模型的现有 DSH/AEA 联测、独立测试与证据；runner/总表变更由集成人维护",
-      "accept": "先核对当前源码和加载代次，选定一个代表模型及输入副本；使用冻结默认与当前单刀具，完成建案→基线→自动验证→一次改进→验证→比较→原制造补偿/出图→文件回读→受控打开复核。必过检查保留，改进无收益可保留基线；记录统计未知、单刀具及未验实机限制。完整 witness 回归放在受影响修复或 P4，不作为首次工程贯通前置。"
+      "accept": "先核对当前源码和加载代次，选定一个代表模型及输入副本；使用冻结默认与当前单刀具，完成建案→基线→自动验证→一次改进→验证→比较→原制造补偿/出图→文件回读→受控打开复核。必过检查保留，改进无收益可保留基线；记录统计未知、单刀具及未验实机限制。完整 witness 回归放在受影响修复或 P4，不作为首次工程贯通前置。",
+      "wave": "现在",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "ready",
+      "implementation": "not_applicable",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     {
       "id": "P0-U",
       "title": "DSH 插件扩展点与参数入口方案",
       "lane": "DSH 界面 / 契约",
-      "phase": "与首次贯通并行",
       "depends": [],
       "requirements": [
         "IN-08",
         "IN-09"
       ],
-      "state": "可开始 · 未认领",
       "scope": "DSH 持久控件、资源输入与案件适配的独立能力验证；不阻塞现有工程回放",
-      "accept": "取得当前 DSH 持久控件/资源输入最小证据；与 P1 固定参数入口契约。缺扩展点时明确最小宿主改动，不静默改成独立网页。"
+      "accept": "取得当前 DSH 持久控件/资源输入最小证据；与 P1 固定参数入口契约。缺扩展点时明确最小宿主改动，不静默改成独立网页。",
+      "wave": "与首次贯通并行",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "ready",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     {
       "id": "P1",
       "title": "固定输入、配置与指标接口",
       "lane": "契约 / 集成",
-      "phase": "现在",
       "depends": [],
       "requirements": [
         "IN-01",
@@ -258,15 +289,33 @@
         "COST-01",
         "TOOL-01"
       ],
-      "state": "可开始 · 未认领",
       "scope": "由集成负责人认领：共享 DTO/schema、参数 JSON、RuntimeAssets.cs、接口文档；唯一写入人",
-      "accept": "外皮/板厚/材料/数量/覆盖优先级、工厂刀具 ID/哈希、计价单位与 unknown 状态形成版本化契约。未知业务定义单列；不能为了凑齐接口发明公式。"
+      "accept": "外皮/板厚/材料/数量/覆盖优先级、工厂刀具 ID/哈希、计价单位与 unknown 状态形成版本化契约。未知业务定义单列；不能为了凑齐接口发明公式。",
+      "wave": "现在",
+      "actionStates": [
+        "needs_decision"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [
+        "Q-01",
+        "Q-02",
+        "Q-03",
+        "Q-06",
+        "Q-07",
+        "Q-09"
+      ],
+      "verificationEvidence": []
     },
     {
       "id": "P2-E",
       "title": "工程配置标准化，保持原算法",
       "lane": "工程配置",
-      "phase": "第二批",
       "depends": [
         "P0",
         "P1"
@@ -275,15 +324,26 @@
         "IN-05",
         "IN-07"
       ],
-      "state": "待前置",
       "scope": "AeaManufacturingCompensationResolver 及独立回归；参数加载/冻结的共享文件变更交集成人串行落地，P1 先交付接口",
-      "accept": "旧默认与新默认同输入几何等价；1.0 刨槽值可配置且进入哈希/快照；旧案件可回放；角度、正反折、2×位移和回退不变。"
+      "accept": "旧默认与新默认同输入几何等价；1.0 刨槽值可配置且进入哈希/快照；旧案件可回放；角度、正反折、2×位移和回退不变。",
+      "wave": "第二批",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     {
       "id": "P2-T",
       "title": "全部刀具参与直接折弯判断",
       "lane": "刀具与工艺",
-      "phase": "第二批",
       "depends": [
         "P0",
         "P1"
@@ -292,15 +352,26 @@
         "IN-06",
         "TOOL-01"
       ],
-      "state": "待前置",
       "scope": "AeaKnifeLoader / GroovePass / 对应 witness；不并行改补偿器",
-      "accept": "成功优先：第一把失败或无效、第二把成功均为直接折弯；无成功且有未解决无效/未知项则 unknown；非空适用集合全部明确失败才进入刨槽路径。换序分类一致，记录成功刀具与完整版本。"
+      "accept": "成功优先：第一把失败或无效、第二把成功均为直接折弯；无成功且有未解决无效/未知项则 unknown；非空适用集合全部明确失败才进入刨槽路径。换序分类一致，记录成功刀具与完整版本。",
+      "wave": "第二批",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     {
       "id": "P2-U",
       "title": "DSH 插件参数与资源入口",
       "lane": "DSH 界面",
-      "phase": "第二批",
       "depends": [
         "P0-U",
         "P1"
@@ -310,15 +381,26 @@
         "IN-08",
         "IN-09"
       ],
-      "state": "待前置",
       "scope": "DSH 插件界面与案件适配器；宿主扩展如需要须单列仓库/负责人",
-      "accept": "常驻独立控件、默认/本次覆盖、表与刀具资源、重启后保存、案件冻结均可操作验证。已冻结案件不随后来改默认而改变。"
+      "accept": "常驻独立控件、默认/本次覆盖、表与刀具资源、重启后保存、案件冻结均可操作验证。已冻结案件不随后来改默认而改变。",
+      "wave": "第二批",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     {
       "id": "P2-M",
       "title": "统一制造指标与成本输入",
       "lane": "统计与计价",
-      "phase": "第二批",
       "depends": [
         "P0",
         "P1"
@@ -341,15 +423,33 @@
         "MET-12",
         "MET-13"
       ],
-      "state": "待口径 + 前置",
       "scope": "AeaManufacturingStatsCalculator / ManufacturingStatsModels、统计导出适配；共享接口单独集成",
-      "accept": "Q-01/02/03/06/07 按项解决后推进对应字段；同候选下单位/来源/范围清楚，焊缝跨件去重、数量汇总、利用率分母检查有手算样例；缺失保持 unknown，未确认开料公式不实现。"
+      "accept": "Q-01/02/03/06/07 按项解决后推进对应字段；同候选下单位/来源/范围清楚，焊缝跨件去重、数量汇总、利用率分母检查有手算样例；缺失保持 unknown，未确认开料公式不实现。",
+      "wave": "第二批",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [
+        "Q-01",
+        "Q-02",
+        "Q-03",
+        "Q-06",
+        "Q-07"
+      ],
+      "verificationEvidence": []
     },
     {
       "id": "P2-D",
       "title": "用户加工图与必要尺寸",
       "lane": "出图",
-      "phase": "第二批",
       "depends": [
         "P0",
         "P1"
@@ -362,15 +462,29 @@
         "OUT-05",
         "OUT-06"
       ],
-      "state": "待图纸规则 + 前置",
       "scope": "Rhino制造 writer / 标注策略 / 用户图层；不更改制造几何",
-      "accept": "Q-08 确认必要尺寸与格式后完成四种线色、v 槽标记、关键尺寸/避让；激光子集无参考线，真实 .3dm 视觉核验。几何联调等待 P2-E/P2-T。"
+      "accept": "Q-08 确认必要尺寸与格式后完成四种线色、v 槽标记、关键尺寸/避让；激光子集无参考线，真实 .3dm 视觉核验。几何联调等待 P2-E/P2-T。",
+      "wave": "第二批",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [
+        "Q-08"
+      ],
+      "verificationEvidence": []
     },
     {
       "id": "P3",
       "title": "接入综合成本与候选比较",
       "lane": "Agent 搜索",
-      "phase": "第三批",
       "depends": [
         "P2-E",
         "P2-T",
@@ -380,15 +494,26 @@
       "requirements": [
         "COST-01"
       ],
-      "state": "待前置",
       "scope": "AgentGeometry 评价报告 / AgentHarness 比较策略；参数由集中配置提供",
-      "accept": "同输入与配置可解释比较材料/折弯/焊接成本；更差或失败不覆盖基线；未知值不能按 0 获胜；参数敏感性样例、理论估计与制造复算偏差被记录。"
+      "accept": "同输入与配置可解释比较材料/折弯/焊接成本；更差或失败不覆盖基线；未知值不能按 0 获胜；参数敏感性样例、理论估计与制造复算偏差被记录。",
+      "wave": "第三批",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     {
       "id": "P4",
       "title": "完整产品回归与专家验收",
       "lane": "验证 / 集成",
-      "phase": "第四批",
       "depends": [
         "P3",
         "P2-D"
@@ -403,50 +528,102 @@
         "OUT-06",
         "COST-01"
       ],
-      "state": "待前置",
       "scope": "完整 witness / 新版 DSH / 专家样板证据；跨模块修复重新归属",
-      "accept": "同一候选绑定图纸、统计、成本、参数版本与报告；具体几何问题形成并执行 repo-local witness；涉及 ASMU parity 时同 .3dm 对照。通过自动检查仍单列人工业务与实机验收。"
+      "accept": "同一候选绑定图纸、统计、成本、参数版本与报告；具体几何问题形成并执行 repo-local witness；涉及 ASMU parity 时同 .3dm 对照。通过自动检查仍单列人工业务与实机验收。",
+      "wave": "第四批",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_applicable",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     {
       "id": "H0",
       "title": "Astra Harness 审计与精简",
       "lane": "开发环境 / 集成",
-      "phase": "当前治理",
       "depends": [],
       "requirements": [
         "OPS-02",
         "OPS-01"
       ],
-      "state": "已完成 · 本地验证",
       "scope": "全局个人指令/技能/角色、项目指令与校验脚本、Harness 提示来源审计；不改权限/模型路由/几何",
-      "accept": "审计先于修改；备份可回退；按需路由与独立任务fixture通过；提示身份/双入口校验通过；记录未部署和非生产验证边界"
+      "accept": "审计先于修改；备份可回退；按需路由与独立任务fixture通过；提示身份/双入口校验通过；记录未部署和非生产验证边界",
+      "wave": "当前治理",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "openQuestions": [],
+      "verificationEvidence": [
+        "已完成个人配置审计与代表性本地fixture；不代表制造验收。"
+      ]
     },
     {
       "id": "H1",
       "title": "流程节点进度图与先贯通路线",
       "lane": "需求视图 / 集成",
-      "phase": "当前治理",
       "depends": [],
       "requirements": [
         "OPS-01"
       ],
-      "state": "已完成 · 本地验证",
       "scope": "需求 HTML、PROJECT_STATUS 与对应文档证据；不修改制造实现",
-      "accept": "10 个系统节点可点击查看已有能力、未决/待开发项、验证状态和下一步；清晰展示 M1 先贯通、M2 补产品、M3 优化。任务/需求映射和原批注保留，节点切换与页面显示通过验证。"
+      "accept": "10 个系统节点可点击查看已有能力、未决/待开发项、验证状态和下一步；清晰展示 M1 先贯通、M2 补产品、M3 优化。任务/需求映射和原批注保留，节点切换与页面显示通过验证。",
+      "wave": "当前治理",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "openQuestions": [],
+      "verificationEvidence": [
+        "Safari 流程节点、双视图与任务锚点已验证；未运行制造联测。"
+      ]
     },
     {
       "id": "H2",
       "title": "多端同步规范与在线项目状态页",
       "lane": "Git 协作 / 网站",
-      "phase": "当前治理",
       "depends": [],
       "requirements": [
         "OPS-01",
-        "OPS-03"
+        "OPS-03",
+        "OPS-04"
       ],
-      "state": "发布验证中",
-      "scope": "源项目同步规范、完整需求HTML/版本清单导出、专用发布密钥与Actions；quicksites隔离工作区部署",
-      "accept": "普通Git同步及发布回归通过；完整需求表与清单来自同一核验SHA；用户已授权全文公开和仅quicksite写入密钥，实际Actions与公网页面须核验，不改变源仓库私有属性或其它用户工作。"
+      "scope": "Git同步、全文公开发布、行动责任标签与独立进度字段；含HTML/状态登记/JSON schema/公开状态页和测试",
+      "accept": "主标签仅使用七类行动责任；阶段/实现/验证/负责人/依赖/未决独立存储和展示；P2-M/P2-D保留双标签，P2-T明确P0/P1；schema与两入口一致，全文公开和专用key已授权，Actions与公网SHA需实际验证。",
+      "wave": "当前治理",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "offline",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "openQuestions": [],
+      "verificationEvidence": [
+        "schema v2：21 项登记校验、20 项导出与发布、14 项公开摘要 fixture 通过；公网链路正在验证。"
+      ]
     }
   ],
   "progress": {
@@ -455,56 +632,170 @@
         "P1",
         "P2-U"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "S01 已确认；补显式模型类型、单位/法向检查与 DSH 独立参数。"
+      "acceptance": "S01 已确认；补显式模型类型、单位/法向检查与 DSH 独立参数。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0-U",
+        "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "IN-02": {
       "tasks": [
         "P1",
         "P2-M"
       ],
-      "state": "待业务口径",
-      "acceptance": "一个业务概念如何对应两个阈值？面积按整个面还是豁免带？"
+      "acceptance": "一个业务概念如何对应两个阈值？面积按整个面还是豁免带？",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-03"
+      ],
+      "verificationEvidence": []
     },
     "IN-03": {
       "tasks": [
         "P1",
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "需补参数、单位、默认值、旋转规则；是否硬约束待确认。"
+      "acceptance": "需补参数、单位、默认值、旋转规则；是否硬约束待确认。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-07"
+      ],
+      "verificationEvidence": []
     },
     "IN-04": {
       "tasks": [
         "P1",
         "P2-M"
       ],
-      "state": "待业务口径",
-      "acceptance": "弦高、曲率、半径还是角度？不能从名称擅自映射。"
+      "acceptance": "弦高、曲率、半径还是角度？不能从名称擅自映射。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-01"
+      ],
+      "verificationEvidence": []
     },
     "IN-05": {
       "tasks": [
         "P1",
         "P2-E"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "S07 要求保持现行角度、正反折、每侧缩进与回退行为；默认迁移需同模型前后对比。"
+      "acceptance": "S07 要求保持现行角度、正反折、每侧缩进与回退行为；默认迁移需同模型前后对比。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "IN-06": {
       "tasks": [
         "P1",
         "P2-T"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "S06 已确认用途；补资源 ID/版本、导入校验、多刀具判定与原因记录，见 TOOL-01。"
+      "acceptance": "S06 已确认用途；补资源 ID/版本、导入校验、多刀具判定与原因记录，见 TOOL-01。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "IN-07": {
       "tasks": [
         "P1",
         "P2-E"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "S07 要求配置标准化，保留当前 1.0 默认与每侧缩进逻辑；集中参数、覆盖、冻结、回放一致性待实现。"
+      "acceptance": "S07 要求配置标准化，保留当前 1.0 默认与每侧缩进逻辑；集中参数、覆盖、冻结、回放一致性待实现。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "IN-08": {
       "tasks": [
@@ -513,8 +804,23 @@
         "P1",
         "P2-U"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "S02 已指定入口；先验证 DSH 扩展点，再实现常驻控件、资源管理和冻结。"
+      "acceptance": "S02 已指定入口；先验证 DSH 扩展点，再实现常驻控件、资源管理和冻结。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0-U",
+        "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "IN-09": {
       "tasks": [
@@ -523,147 +829,510 @@
         "P1",
         "P2-U"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "入口已确认；数量与工件映射、默认来源/覆盖优先级在 P1 固定。材料或数量不能从模型中猜测。"
+      "acceptance": "入口已确认；数量与工件映射、默认来源/覆盖优先级在 P1 固定。材料或数量不能从模型中猜测。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0-U",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-09"
+      ],
+      "verificationEvidence": []
     },
     "OUT-01": {
       "tasks": [
         "P2-D",
         "P4"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "需确认内孔与专用导出子集，避免其他参考线误进入切割层。"
+      "acceptance": "需确认内孔与专用导出子集，避免其他参考线误进入切割层。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1",
+        "P3",
+        "P2-D"
+      ],
+      "openQuestions": [
+        "Q-08"
+      ],
+      "verificationEvidence": []
     },
     "OUT-02": {
       "tasks": [
         "P2-D",
         "P4"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "逐面尺寸保真及用户需要的内孔 / 边界表达仍需实例核对。"
+      "acceptance": "逐面尺寸保真及用户需要的内孔 / 边界表达仍需实例核对。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1",
+        "P3",
+        "P2-D"
+      ],
+      "openQuestions": [
+        "Q-08"
+      ],
+      "verificationEvidence": []
     },
     "OUT-03": {
       "tasks": [
         "P2-D",
         "P4"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "需以真实模型验收位置；源码存在不等同位置已获业务认可。"
+      "acceptance": "需以真实模型验收位置；源码存在不等同位置已获业务认可。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1",
+        "P3",
+        "P2-D"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "OUT-04": {
       "tasks": [
         "P2-D",
         "P4"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "改成明确文案，并确认字高、方向、引线与放置规则。"
+      "acceptance": "改成明确文案，并确认字高、方向、引线与放置规则。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1",
+        "P3",
+        "P2-D"
+      ],
+      "openQuestions": [
+        "Q-08"
+      ],
+      "verificationEvidence": []
     },
     "OUT-05": {
       "tasks": [
         "P2-D",
         "P4"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "红线含义与焊长计算口径分别确认，不能用红线数量代表焊接次数。"
+      "acceptance": "红线含义与焊长计算口径分别确认，不能用红线数量代表焊接次数。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1",
+        "P3",
+        "P2-D"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "OUT-06": {
       "tasks": [
         "P2-D",
         "P4"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "需建立总体、折边、孔位、角度 / 半径等必要标注规则与人工调整入口。"
+      "acceptance": "需建立总体、折边、孔位、角度 / 半径等必要标注规则与人工调整入口。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1",
+        "P3",
+        "P2-D"
+      ],
+      "openQuestions": [
+        "Q-08"
+      ],
+      "verificationEvidence": []
     },
     "MET-01": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待业务口径",
-      "acceptance": "需确认是否以最终白色净轮廓为准，避免把不同阶段面积混用。"
+      "acceptance": "需确认是否以最终白色净轮廓为准，避免把不同阶段面积混用。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-02"
+      ],
+      "verificationEvidence": []
     },
     "MET-02": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "需固定为成本模型同一阶段、同一单件范围的矩形；当前白绿并集口径待 Q-02，不能用摆图后的整组 bbox。"
+      "acceptance": "需固定为成本模型同一阶段、同一单件范围的矩形；当前白绿并集口径待 Q-02，不能用摆图后的整组 bbox。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-02"
+      ],
+      "verificationEvidence": []
     },
     "MET-03": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待业务口径",
-      "acceptance": "矩形毛料、标准整板耗用、规格取整还是排板分摊？"
+      "acceptance": "矩形毛料、标准整板耗用、规格取整还是排板分摊？",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-02"
+      ],
+      "verificationEvidence": []
     },
     "MET-04": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待业务口径",
-      "acceptance": "豁免带面积与整个折边面面积是否一致，需要你定义。"
+      "acceptance": "豁免带面积与整个折边面面积是否一致，需要你定义。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-03"
+      ],
+      "verificationEvidence": []
     },
     "MET-05": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "是否按实际装夹 / 多刀 / 分段动作计数？不直接等同机器真实动作次数。"
+      "acceptance": "是否按实际装夹 / 多刀 / 分段动作计数？不直接等同机器真实动作次数。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-06"
+      ],
+      "verificationEvidence": []
     },
     "MET-06": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "需明确线的几何来源、去重、单 / 双面焊及数量汇总规则。"
+      "acceptance": "需明确线的几何来源、去重、单 / 双面焊及数量汇总规则。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-06"
+      ],
+      "verificationEvidence": []
     },
     "MET-07": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "当前记录条数不能直接认定为焊接次数。"
+      "acceptance": "当前记录条数不能直接认定为焊接次数。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-06"
+      ],
+      "verificationEvidence": []
     },
     "MET-08": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "是否采用加工路径长度、是否计超出端部与重复走刀，待确认。"
+      "acceptance": "是否采用加工路径长度、是否计超出端部与重复走刀，待确认。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-06"
+      ],
+      "verificationEvidence": []
     },
     "MET-09": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "需要确认一条槽是否可能多次加工及如何归并。"
+      "acceptance": "需要确认一条槽是否可能多次加工及如何归并。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-06"
+      ],
+      "verificationEvidence": []
     },
     "MET-10": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "先作为输出分类；是否禁止交付或触发分件由你决定。"
+      "acceptance": "先作为输出分类；是否禁止交付或触发分件由你决定。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-07"
+      ],
+      "verificationEvidence": []
     },
     "MET-11": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "业务规则未确定前，只能说已有近似分类，不能说定义已吻合。"
+      "acceptance": "业务规则未确定前，只能说已有近似分类，不能说定义已吻合。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-01"
+      ],
+      "verificationEvidence": []
     },
     "MET-12": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "「存在孔洞」不自动等于「多孔板」，阈值需确认。"
+      "acceptance": "「存在孔洞」不自动等于「多孔板」，阈值需确认。",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [
+        "Q-07"
+      ],
+      "verificationEvidence": []
     },
     "MET-13": {
       "tasks": [
         "P2-M"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "已新增 COST-01 综合成本与利用率要求；其他输出仍按单位、范围和来源逐项确认。"
+      "acceptance": "已新增 COST-01 综合成本与利用率要求；其他输出仍按单位、范围和来源逐项确认。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "COST-01": {
       "tasks": [
@@ -671,24 +1340,73 @@
         "P3",
         "P4"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "S04 已确认目标；公式为建议 v1。先统一指标与配置版本，再接入排名；不等于完整报价。"
+      "acceptance": "S04 已确认目标；公式为建议 v1。先统一指标与配置版本，再接入排名；不等于完整报价。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P2-E",
+        "P2-T",
+        "P2-M",
+        "P2-U",
+        "P3",
+        "P2-D"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "TOOL-01": {
       "tasks": [
         "P1",
         "P2-T"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "已证明成功的有效刀具优先；无成功时空库/坏刀/检查超时保持未知；完整非空适用集合均失败才进入刨槽路径。记录逐刀结果。整件折弯顺序可达性另行验收。"
+      "acceptance": "已证明成功的有效刀具优先；无成功时空库/坏刀/检查超时保持未知；完整非空适用集合均失败才进入刨槽路径。记录逐刀结果。整件折弯顺序可达性另行验收。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P0",
+        "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "QA-01": {
       "tasks": [
         "P0",
         "P4"
       ],
-      "state": "待开发 / 验证",
-      "acceptance": "P0 复验运行基线，P4 做变更后集成与专家对照；历史通过不能冒充本次实测。"
+      "acceptance": "P0 复验运行基线，P4 做变更后集成与专家对照；历史通过不能冒充本次实测。",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [
+        "P3",
+        "P2-D"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "OPS-01": {
       "tasks": [
@@ -696,22 +1414,77 @@
         "H1",
         "H2"
       ],
-      "state": "本次已落地",
-      "acceptance": "每个任务绑定需求 ID、负责人、唯一写入边界和验证证据；两个入口由集成人维护。"
+      "acceptance": "每个任务绑定需求 ID、负责人、唯一写入边界和验证证据；两个入口由集成人维护。",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "implementation",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "OPS-02": {
       "tasks": [
         "H0"
       ],
-      "state": "本地验证通过；在线制造未验",
-      "acceptance": "审计先于修改；备份可回退；按需路由与独立任务fixture通过；提示身份/双入口校验通过；记录未部署和非生产验证边界"
+      "acceptance": "审计先于修改；备份可回退；按需路由与独立任务fixture通过；提示身份/双入口校验通过；记录未部署和非生产验证边界",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": []
     },
     "OPS-03": {
       "tasks": [
         "H2"
       ],
-      "state": "发布验证中",
-      "acceptance": "普通Git同步及发布回归通过；完整需求表与清单来自同一核验SHA；用户已授权全文公开和仅quicksite写入密钥，实际Actions与公网页面须核验，不改变源仓库私有属性或其它用户工作。"
+      "acceptance": "普通Git同步及发布回归通过；完整需求表与清单来自同一核验SHA；用户已授权全文公开和仅quicksite写入密钥，实际Actions与公网页面须核验，不改变源仓库私有属性或其它用户工作。",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "offline",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": []
+    },
+    "OPS-04": {
+      "tasks": [
+        "H2"
+      ],
+      "acceptance": "七类行动责任与六个独立进度维度一致；颜色同时有文字和符号。",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "offline",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": []
     }
   },
   "process": {
@@ -719,7 +1492,6 @@
       {
         "id": "S01",
         "title": "模型输入与建案",
-        "state": "partial",
         "summary": "文件链已有；DSH 独立控件待补。",
         "checks": [
           {
@@ -755,13 +1527,25 @@
           "E02",
           "E03"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S02",
         "title": "配置与资源冻结",
-        "state": "planning",
         "summary": "默认值可用；管理界面方案待细化。",
         "checks": [
           {
@@ -809,13 +1593,25 @@
           "E14",
           "E15"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "planning",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S03",
         "title": "源图与单面展平",
-        "state": "discuss",
         "summary": "已有算法；你的讨论项仍未明确。",
         "checks": [
           {
@@ -846,13 +1642,27 @@
           "E02",
           "E12"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "needs_decision"
+        ],
+        "stage": "planning",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [
+          "Q-10"
+        ],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S04",
         "title": "加工方案与搜索",
-        "state": "planned",
         "summary": "一次改进已有；综合成本待接入。",
         "checks": [
           {
@@ -891,13 +1701,27 @@
           "E16",
           "E18"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "waiting_dependency"
+        ],
+        "stage": "planned",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P2-M"
+        ],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S05",
         "title": "真实几何与门禁",
-        "state": "testing",
         "summary": "实现已有；等待当前全链路验证。",
         "checks": [
           {
@@ -927,13 +1751,25 @@
           "E01",
           "E16"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S06",
         "title": "刀具与刨槽判定",
-        "state": "planned",
         "summary": "单刀具已有；全厂多刀具待开发。",
         "checks": [
           {
@@ -969,13 +1805,28 @@
           "E05",
           "E06"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "waiting_dependency"
+        ],
+        "stage": "planned",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P0",
+          "P1"
+        ],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S07",
         "title": "制造补偿与净轮廓",
-        "state": "testing",
         "summary": "主链已有；保持逻辑，等待实测。",
         "checks": [
           {
@@ -1016,13 +1867,25 @@
           "E07",
           "E08"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S08",
         "title": "面积、工序与板型",
-        "state": "discuss",
         "summary": "基础统计已有；业务口径是主要断点。",
         "checks": [
           {
@@ -1076,13 +1939,35 @@
           "E13",
           "E18"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "needs_decision",
+          "waiting_dependency"
+        ],
+        "stage": "planning",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P0",
+          "P1"
+        ],
+        "openQuestions": [
+          "Q-01",
+          "Q-02",
+          "Q-03",
+          "Q-06",
+          "Q-07"
+        ],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S09",
         "title": "制造图与关键尺寸",
-        "state": "partial",
         "summary": "基础图已有；完整交付图还缺关键项。",
         "checks": [
           {
@@ -1128,13 +2013,31 @@
           "E09",
           "E19"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "needs_decision",
+          "waiting_dependency"
+        ],
+        "stage": "planning",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P0",
+          "P1"
+        ],
+        "openQuestions": [
+          "Q-08"
+        ],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       },
       {
         "id": "S10",
         "title": "复核、反馈与续算",
-        "state": "partial",
         "summary": "受控打开已有；产品反馈闭环待补。",
         "checks": [
           {
@@ -1168,8 +2071,21 @@
           "E15",
           "E16"
         ],
-        "verification": "本轮端到端未验证",
-        "verified": false
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ]
       }
     ],
     "updated": "2026-09-16",
@@ -1179,18 +2095,29 @@
       {
         "id": "M1",
         "title": "先贯通 · 现有工程闭环",
-        "state": "现在可开始，尚未执行",
         "tasks": [
           "P0"
         ],
         "goal": "一个代表模型 + 冻结默认 + 当前单刀具，完成基线、一次改进比较、制造出图、回读与复核。",
         "exit": "同一案件/候选/配置/报告贯通；必过检查通过；其余限制如实列出。",
-        "defer": "不等待完整参数前端、多刀具、全部计价口径或成本优化；不降低制造门禁。"
+        "defer": "不等待完整参数前端、多刀具、全部计价口径或成本优化；不降低制造门禁。",
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": []
       },
       {
         "id": "M2",
         "title": "再补齐 · 最小用户产品",
-        "state": "按节点并行补齐",
         "tasks": [
           "P0-U",
           "P1",
@@ -1202,27 +2129,124 @@
         ],
         "goal": "补 DSH 独立控件、工程配置、多刀具，以及必要统计和尺寸。",
         "exit": "用户能配置→运行→读懂图纸和有来源的数据；本阶段相关未定口径已落实。",
-        "defer": "各未决项只阻塞相关字段，不把整个项目锁住。"
+        "defer": "各未决项只阻塞相关字段，不把整个项目锁住。",
+        "actionStates": [
+          "waiting_dependency"
+        ],
+        "stage": "planned",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P0-U",
+          "P1"
+        ],
+        "openQuestions": [],
+        "verificationEvidence": []
       },
       {
         "id": "M3",
         "title": "再优化 · 成本与方案质量",
-        "state": "可靠指标就绪后开始",
         "tasks": [
           "P3",
           "P4"
         ],
         "goal": "用可解释成本做候选比较，以专家样板、真实工时逐步校准。",
         "exit": "比较可复现，不丢更好的基线；完整产品回归与专家验收分开记载。",
-        "defer": "组合套料与任意多轮搜索另列后续需求，不冒充当前支持。"
+        "defer": "组合套料与任意多轮搜索另列后续需求，不冒充当前支持。",
+        "actionStates": [
+          "waiting_dependency"
+        ],
+        "stage": "planned",
+        "implementation": "not_started",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P2-E",
+          "P2-T",
+          "P2-M",
+          "P2-U"
+        ],
+        "openQuestions": [],
+        "verificationEvidence": []
       }
     ]
+  },
+  "schemaVersion": 2,
+  "taxonomy": {
+    "actions": {
+      "needs_decision": {
+        "label": "需要你决定",
+        "color": "#b7791f",
+        "symbol": "?"
+      },
+      "agent_ready": {
+        "label": "Agent 可处理",
+        "color": "#2563eb",
+        "symbol": "→"
+      },
+      "agent_active": {
+        "label": "Agent 处理中",
+        "color": "#4f46e5",
+        "symbol": "↻"
+      },
+      "waiting_dependency": {
+        "label": "等待依赖",
+        "color": "#6b7280",
+        "symbol": "⌛"
+      },
+      "needs_acceptance": {
+        "label": "需要你验收",
+        "color": "#0d9488",
+        "symbol": "◇"
+      },
+      "blocked": {
+        "label": "阻塞",
+        "color": "#dc2626",
+        "symbol": "!"
+      },
+      "done": {
+        "label": "完成",
+        "color": "#15803d",
+        "symbol": "✓"
+      }
+    },
+    "stages": {
+      "planning": "规划中",
+      "planned": "已规划",
+      "ready": "待执行",
+      "implementation": "实施中",
+      "verification": "验证中",
+      "acceptance": "验收中",
+      "complete": "已结束"
+    },
+    "implementation": {
+      "not_started": "未开始",
+      "partial": "部分实现",
+      "implemented": "已实现",
+      "not_applicable": "不适用"
+    },
+    "verificationLevels": {
+      "none": "未验证",
+      "static": "静态检查",
+      "offline": "离线测试",
+      "local": "本地验证",
+      "end_to_end": "端到端验证",
+      "expert": "专家验收",
+      "production": "生产验收"
+    }
   }
 }</script>
 <script>
 'use strict';
 
-const statusText={aligned:'已有对应代码',partial:'部分对应',missing:'当前缺项',different:'明确差异',unclear:'口径待确认',proposal:'建议设计'};
+const statusText={aligned:'已有对应代码',partial:'部分对应',missing:'当前缺项',different:'明确差异',unclear:'需要你决定',proposal:'建议设计'};
 const ev=[
 ['E01','当前开发状态','PROJECT_STATUS.md',17,'AEA 核心与 Agent Bridge 均按内部工程验证版管理。\n完整回折、实机折弯/焊接可达性、组合套料、复杂曲线/非平面分割及多案例泛化仍未系统性验收。'],
 ['E02','案件可覆盖的参数','AEA/AgentHarness/tools.mjs',20,'parameters: thickness, foldHeightMin, foldHeightMax, minArcSagitta, minArcLength\nBend compensation uses the frozen original AEA tables/groove rules.\nK, R, R_inner and bend radius are NOT supported overrides.'],
@@ -1846,6 +2870,18 @@ const requirements=[
       "E01"
     ],
     "Git 为依据，网页为发布快照；不能把页面刷新当作私有远端实时核验。普通推送已获持续授权，凭据/生产/破坏性操作不包含在内。"
+  ],
+  [
+    "system",
+    "OPS-04",
+    "行动责任与独立进度维度",
+    "主标签回答现在谁行动；执行阶段、实现程度、验证等级、负责人、依赖和未决问题独立。",
+    "正在统一源HTML、状态登记、导出schema v2、公开状态页及相关测试。",
+    "partial",
+    [
+      "E01"
+    ],
+    "已有代码不推导为已验收；需要你决定和等待依赖可以并存。"
   ]
 ];
 const findingData=[
@@ -2010,38 +3046,41 @@ saved={...archivedNotes,...saved};
 function note(id,title){noteTitles[id]=title;const raw=saved[id];const v=raw&&typeof raw==='object'?raw:{};return `<details class="notes"><summary>批注 ${id}${v.text||v.status?' · 已记录':''}</summary><div class="note-head"><span class="small">${esc(id)}</span><select aria-label="${id} 审阅状态" data-note-status="${id}"><option value="">未评阅</option><option value="agree" ${v.status==='agree'?'selected':''}>理解正确</option><option value="change" ${v.status==='change'?'selected':''}>需要修改</option><option value="discuss" ${v.status==='discuss'?'selected':''}>需要讨论</option></select></div><label for="note-${id}">你的补充或纠正</label><textarea id="note-${id}" data-note-text="${id}" placeholder="例如：这里应按……计算，因为……">${esc(v.text||'')}</textarea></details>`;}
 const tracking=JSON.parse(document.getElementById('project-tracking').textContent);
 
-const processStates={discuss:'讨论中',planning:'方案待细化',planned:'已规划 · 待开发',partial:'部分已开发',building:'开发中',testing:'已有实现 · 待测试',verified:'已验证'};
-const capabilityStates={exists:'已有代码',planned:'待开发',discuss:'待讨论'};
+const taxonomy=tracking.taxonomy;
+const capabilityStates={exists:'已有代码',planned:'未实现',discuss:'需要你决定'};
 let processMode='product';
 let selectedProcessNode='S05';
 const processNodes=tracking.process.nodes;
 const doneCapabilities=n=>n.checks.filter(c=>c.state==='exists').length;
+const ownerLabel=o=>o.name||(o.type==='user'?'你':o.type==='agent'?'Agent':'未分配');
+function actionLabel(a,record){return taxonomy.actions[a].label+(a==='waiting_dependency'&&record.depends.length?'：'+record.depends.join('、'):'');}
+function actionBadges(record){return `<span class="action-badges">${record.actionStates.map(a=>`<span class="action-badge action-${a}"><span aria-hidden="true">${esc(taxonomy.actions[a].symbol)}</span> ${esc(actionLabel(a,record))}</span>`).join('')}</span>`;}
 function processLinks(ids){return ids.map(id=>`<a href="#${id}">${esc(id)}</a>`).join('');}
+function dimensionDetails(record){return `<dl class="progress-dimensions"><div><dt>执行阶段</dt><dd>${esc(taxonomy.stages[record.stage])}</dd></div><div><dt>实现程度</dt><dd>${esc(taxonomy.implementation[record.implementation])}</dd></div><div><dt>验证等级</dt><dd>${esc(taxonomy.verificationLevels[record.verificationLevel])}</dd></div><div><dt>负责人</dt><dd>${esc(ownerLabel(record.owner))}</dd></div><div><dt>依赖</dt><dd>${record.depends.length?processLinks(record.depends):'无'}</dd></div><div><dt>未决问题</dt><dd>${record.openQuestions.length?processLinks(record.openQuestions):'无已登记问题'}</dd></div></dl>`;}
 function renderNodeInspector(){
  const n=processNodes.find(n=>n.id===selectedProcessNode);
- document.getElementById('nodeInspector').innerHTML=`<div class="inspector-heading"><span class="eyebrow" style="margin:0">${esc(n.id)} / NODE DETAIL</span><h3>${esc(n.title)}</h3><span class="pill partial">${esc(processStates[n.state])}</span></div><div class="inspector-grid"><div><h4>已有实现 ${doneCapabilities(n)} / ${n.checks.length} 项</h4><p class="small">逐项按代码存在性统计，不代表测试完成或开发工时百分比。</p><ul class="capability-list">${n.checks.map(c=>`<li><span class="cap-state ${c.state}">${capabilityStates[c.state]}</span><span>${esc(c.label)}</span></li>`).join('')}</ul><p class="small" style="margin-top:12px">验证：${esc(n.verification)}。本页更新没有运行制造测试。</p><div class="node-links">${processLinks(n.requirements)}</div>${refs(n.evidence)}</div><div><div class="node-action"><h4>下一步</h4><p>${esc(n.next)}</p></div><h4>先贯通时，这一步做到哪里</h4><p>${esc(n.minimum)}</p><div class="node-warning"><strong>断点 / 依赖</strong><br>${esc(n.blocked)}</div><div class="node-links">${processLinks(n.tasks)}<a href="#${n.id}">完整步骤与批注 ↗</a></div></div></div>`;
+ document.getElementById('nodeInspector').innerHTML=`<div class="inspector-heading"><span class="eyebrow" style="margin:0">${esc(n.id)} / NODE DETAIL</span><h3>${esc(n.title)}</h3>${actionBadges(n)}</div>${dimensionDetails(n)}<div class="inspector-grid"><div><h4>已有代码条目 ${doneCapabilities(n)} / ${n.checks.length} 项</h4><p class="small">仅表示实现信息，不表示已测试或已验收。</p><ul class="capability-list">${n.checks.map(c=>`<li><span class="cap-state ${c.state}">${capabilityStates[c.state]}</span><span>${esc(c.label)}</span></li>`).join('')}</ul><p class="small" style="margin-top:12px">验证证据：${n.verificationEvidence.length?n.verificationEvidence.map(esc).join('；'):'未登记'}。本页更新不等于制造测试。</p><div class="node-links">${processLinks(n.requirements)}</div>${refs(n.evidence)}</div><div><div class="node-action"><h4>下一步</h4><p>${esc(n.next)}</p></div><h4>先贯通时，这一步做到哪里</h4><p>${esc(n.minimum)}</p><div class="node-warning"><strong>断点说明</strong><br>${esc(n.blocked)}</div><div class="node-links">${processLinks(n.tasks)}<a href="#${n.id}">完整步骤与批注 ↗</a></div></div></div>`;
 }
 function renderProcess(){
- document.getElementById('processModeNote').textContent=processMode==='first'?'工程试运行范围：复用现有代码、冻结默认与单刀具，十步仍全部走完。这里显示“待联测”不表示完整产品已开发完成。':'节点主标签标出当前主要工作阶段，未决子项保留在详情；“已有实现 x/y”描述代码基础，验证状态独立显示。节点顺序为上排从左到右，再沿箭头从右到左。';
- document.getElementById('processBoard').innerHTML=processNodes.map((n,i)=>{const state=processMode==='first'?'testing':n.state;return `<button type="button" class="process-node state-${state}" data-process-node="${n.id}" aria-pressed="${n.id===selectedProcessNode}" aria-controls="nodeInspector" aria-label="${esc(n.id+' '+n.title+' '+(processMode==='first'?'现有链待联测':processStates[state]))}"><span class="node-top"><span class="node-index">${String(i+1).padStart(2,'0')} / ${n.id}</span><span class="node-state">${processMode==='first'?'现有链 · 待联测':processStates[state]}</span></span><span class="node-title">${esc(n.title)}</span><span class="node-summary">${esc(processMode==='first'?n.minimum:n.summary)}</span><span class="node-count">已有实现 <strong>${doneCapabilities(n)} / ${n.checks.length}</strong> 项</span><span class="node-verification">${esc(n.verification)} ↘</span></button>`}).join('');
+ document.getElementById('processModeNote').textContent=processMode==='first'?'这里说明复用现有代码的工程试运行范围；行动责任标签保持不变，未决的产品增量不会被隐藏。十步仍全部走完，制造门禁不降低。':'主标签只回答现在该谁行动；阶段、实现、验证、负责人、依赖和未决问题在节点详情独立展示。上排从左向右，再沿箭头从右向左。';
+ document.getElementById('processBoard').innerHTML=processNodes.map((n,i)=>`<button type="button" class="process-node action-${n.actionStates[0]}" data-process-node="${n.id}" aria-pressed="${n.id===selectedProcessNode}" aria-controls="nodeInspector" aria-label="${esc(n.id+' '+n.title+' '+n.actionStates.map(a=>actionLabel(a,n)).join('；'))}"><span class="node-top"><span class="node-index">${String(i+1).padStart(2,'0')} / ${n.id}</span>${actionBadges(n)}</span><span class="node-title">${esc(n.title)}</span><span class="node-summary">${esc(processMode==='first'?n.minimum:n.summary)}</span><span class="node-count">代码条目 <strong>${doneCapabilities(n)} / ${n.checks.length}</strong> · 非验收数量</span><span class="node-verification">查看阶段、验证与责任详情 ↘</span></button>`).join('');
  document.querySelectorAll('[data-process-mode]').forEach(b=>{const active=b.dataset.processMode===processMode;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
  renderNodeInspector();
 }
 function selectProcessNode(id,scroll=false){if(!processNodes.some(n=>n.id===id))return;selectedProcessNode=id;renderProcess();if(scroll)document.getElementById('nodeInspector').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}
-document.getElementById('processSummary').innerHTML=`<div class="process-stat"><strong>${processNodes.filter(n=>doneCapabilities(n)>0).length}/10</strong>节点有代码基础<p>不等于完整需求完成；逐项缺口在图中</p></div><div class="process-stat"><strong>${processNodes.filter(n=>n.verified).length}/10</strong>节点获本轮端到端验收<p>这是验证缺口，不是代码完成率</p></div><div class="process-stat"><strong>M1</strong>现在先贯通工程链<p>参数前端与完整成本模型不作首次联测前置</p></div>`;
-document.getElementById('processLegend').innerHTML=Object.entries(processStates).map(([key,label])=>`<span class="state-${key}"><i class="legend-dot"></i>${label}</span>`).join('');
-document.getElementById('milestoneList').innerHTML=tracking.process.milestones.map(m=>`<section class="milestone"><span class="mid">${m.id} · ${esc(m.state)}</span><h4>${esc(m.title)}</h4><p>${esc(m.goal)}</p><p class="exit"><strong>完成判据</strong><br>${esc(m.exit)}</p><p class="small">${esc(m.defer)}</p><div class="node-links">${processLinks(m.tasks)}</div></section>`).join('');
+document.getElementById('processSummary').innerHTML=`<div class="process-stat"><strong>${processNodes.filter(n=>n.actionStates.includes('needs_decision')).length}</strong>节点需要你决定<p>先处理已登记的具体问题，不把全部工作停住</p></div><div class="process-stat"><strong>${processNodes.filter(n=>n.actionStates.includes('agent_ready')||n.actionStates.includes('agent_active')).length}</strong>节点可由 Agent 推进<p>这是行动责任，不是验收完成率</p></div><div class="process-stat"><strong>M1</strong>先贯通现有工程链<p>代码存在、测试通过、需要你验收分别记载</p></div>`;
+document.getElementById('processLegend').innerHTML=Object.entries(taxonomy.actions).map(([key,a])=>`<span class="action-badge action-${key}"><span aria-hidden="true">${esc(a.symbol)}</span> ${esc(a.label)}</span>`).join('');
+document.getElementById('milestoneList').innerHTML=tracking.process.milestones.map(m=>`<section class="milestone"><span class="mid">${m.id}</span>${actionBadges(m)}<h4>${esc(m.title)}</h4><p>${esc(m.goal)}</p><p class="exit"><strong>完成判据</strong><br>${esc(m.exit)}</p><p class="small">${esc(m.defer)}</p><details><summary>阶段与验证详情</summary>${dimensionDetails(m)}</details><div class="node-links">${processLinks(m.tasks)}</div></section>`).join('');
 document.getElementById('processBoard').addEventListener('click',e=>{const button=e.target.closest('[data-process-node]');if(button){const focused=document.activeElement===button;const id=button.dataset.processNode;selectProcessNode(id);if(focused)document.querySelector('[data-process-node="'+id+'"]').focus({preventScroll:true});}});
 document.querySelectorAll('[data-process-mode]').forEach(b=>b.addEventListener('click',()=>{processMode=b.dataset.processMode;renderProcess();}));
 document.getElementById('focusFirstBreak').onclick=()=>selectProcessNode('S05',true);
 renderProcess();
-
-document.getElementById('taskList').innerHTML=tracking.tasks.map(t=>`<details class="stage" id="${t.id}"><summary><span class="stage-no">${t.id}</span><h3>${esc(t.title)}</h3><span class="pill partial">${esc(t.state)}</span></summary><div class="stage-body"><p><strong>${esc(t.phase)} · ${esc(t.lane)}</strong> · 前置：${t.depends.map(x=>`<a href="#${x}">${x}</a>`).join(' / ')||'无，可并行开始'}</p><p>需求：${t.requirements.map(x=>`<a href="#${x}">${x}</a>`).join(' · ')}</p><p>写入边界：${esc(t.scope)}</p><p><strong>完成条件：</strong>${esc(t.accept)}</p><p class="small">负责人 / 分支 / 最新证据见 PROJECT_STATUS 对应任务；未认领不代表已启动。</p></div></details>`).join('');
+document.getElementById('taskList').innerHTML=tracking.tasks.map(t=>`<details class="stage" id="${t.id}"><summary><span class="stage-no">${t.id}</span><h3>${esc(t.title)}</h3>${actionBadges(t)}</summary><div class="stage-body">${dimensionDetails(t)}<p class="small">开发批次：${esc(t.wave)} · 工作范围：${esc(t.lane)}</p><p>需求：${processLinks(t.requirements)}</p><p>写入边界：${esc(t.scope)}</p><p><strong>完成条件：</strong>${esc(t.accept)}</p><p class="small">验证证据：${t.verificationEvidence.length?t.verificationEvidence.map(esc).join('；'):'未登记'}。分支与工作区见 PROJECT_STATUS 对应任务。</p></div></details>`).join('');
 const dispositions={S01:'已采纳 → IN-01/IN-09、P1/P2-U：零厚度外皮，DSH 独立设置。',S02:'已采纳 → IN-05～IN-08、P0-U/P1/P2-U：前端入口使用 DSH 插件。',S03:'保留未决 → Q-10：仅有讨论标记，无补充文字；不改算法。',S04:'目标已采纳 → COST-01、P2-M/P3；四参数金额函数为本次建议。',S06:'已采纳 → IN-06/TOOL-01、P2-T：存在任一可用刀具则不刨槽。',S07:'已采纳 → IN-05/IN-07、P2-E：保持算法，规范配置；实测未验收。'};
 document.getElementById('decisionList').innerHTML=Object.entries(archivedNotes).map(([id,v])=>`<div class="question"><h3><a href="#${id}">${id}</a> · ${{change:'需要修改',discuss:'需要讨论',agree:'理解正确'}[v.status]}</h3><p>${esc(dispositions[id])}</p><details><summary>查看用户原始批注</summary><pre>${esc(v.text||'（无补充文字）')}</pre></details></div>`).join('');
-document.getElementById('stageList').innerHTML=stages.map((s,i)=>`<details class="stage" id="${s.id}" ${i<2?'open':''}><summary><span class="stage-no">${s.n}</span><h3>${s.title}</h3>${badge(s.status)}</summary><div class="stage-body"><div class="triplet"><div><h4>目标 / 当前需求</h4><p>${s.goal}</p></div><div><h4>当前代码</h4><p>${s.current}</p></div><div><h4>差异 / 待明确</h4><p>${s.gap}</p></div></div><p class="output">${s.out}</p><p class="mini">需要核对：${s.question}</p>${refs(s.refs)}${note(s.id,s.title)}</div></details>`).join('');
+document.getElementById('stageList').innerHTML=stages.map((s,i)=>`<details class="stage" id="${s.id}" ${i<2?'open':''}><summary><span class="stage-no">${s.n}</span><h3>${s.title}</h3>${actionBadges(processNodes.find(n=>n.id===s.id))}</summary><div class="stage-body"><div class="triplet"><div><h4>目标 / 当前需求</h4><p>${s.goal}</p></div><div><h4>当前代码</h4><p>${s.current}</p></div><div><h4>差异 / 待明确</h4><p>${s.gap}</p></div></div><p class="output">${s.out}</p><p class="mini">需要核对：${s.question}</p>${refs(s.refs)}${note(s.id,s.title)}</div></details>`).join('');
 const groups=[['input','A · 输入与默认配置'],['drawing','B · 用户图纸'],['metric','C · 输出数值'],['system','D · 搜索、验证与项目协作']];
-document.getElementById('reqTables').innerHTML=groups.map(([group,title])=>`<div class="req-group" data-group="${group}"><div class="table-title"><h3>${title}</h3><span class="small">${requirements.filter(r=>r[0]===group).length} 项</span></div><div class="table-wrap"><table><thead><tr><th>需求项</th><th>你的要求 / 我的理解</th><th>当前实现</th><th>差异、任务与验收</th></tr></thead><tbody>${requirements.filter(r=>r[0]===group).map(r=>`<tr id="${r[1]}" data-status="${r[5]}" data-search="${esc(r.slice(1).join(' '))}"><td><span class="rid">${r[1]}</span><span class="req-name">${r[2]}</span><div style="margin-top:8px">${badge(r[5])}</div></td><td>${r[3]}</td><td>${r[4]}${refs(r[6])}</td><td>${r[7]}<p class="small">进度：${esc(tracking.progress[r[1]].state)}<br>任务：${tracking.progress[r[1]].tasks.map(id=>`<a href="#${id}">${id}</a>`).join(" / ")||"本次治理更新"}<br>验收依据：以任务完成条件与后续实测证据为准。</p>${note(r[1],r[2])}</td></tr>`).join('')}</tbody></table></div></div>`).join('');
+document.getElementById('reqTables').innerHTML=groups.map(([group,title])=>`<div class="req-group" data-group="${group}"><div class="table-title"><h3>${title}</h3><span class="small">${requirements.filter(r=>r[0]===group).length} 项</span></div><div class="table-wrap"><table><thead><tr><th>需求项</th><th>你的要求 / 我的理解</th><th>当前实现</th><th>差异、任务与验收</th></tr></thead><tbody>${requirements.filter(r=>r[0]===group).map(r=>`<tr id="${r[1]}" data-status="${r[5]}" data-actions="${tracking.progress[r[1]].actionStates.join(' ')}" data-search="${esc(r.slice(1).join(' '))}"><td><span class="rid">${r[1]}</span><span class="req-name">${r[2]}</span><div style="margin-top:8px">${actionBadges(tracking.progress[r[1]])}</div></td><td>${r[3]}</td><td><p class="small">实现程度：${esc(taxonomy.implementation[tracking.progress[r[1]].implementation])}</p>${r[4]}${refs(r[6])}</td><td>${r[7]}<details><summary>阶段、验证与责任详情</summary>${dimensionDetails(tracking.progress[r[1]])}</details><p class="small">任务：${processLinks(tracking.progress[r[1]].tasks)||"本次治理更新"}；验收依据以任务条件与实测证据为准。</p>${note(r[1],r[2])}</td></tr>`).join('')}</tbody></table></div></div>`).join('');
 document.getElementById('areaNotes').innerHTML=note('DEF','面积 / 次数定义');document.getElementById('settingsNotes').innerHTML=note('UI','参数管理与前端形态');
 document.getElementById('findings').innerHTML=findingData.map((f,i)=>`<div class="finding"><div class="finding-number">${String(i+1).padStart(2,'0')}</div><div><h3>${f[0]}</h3><p>${f[1]}</p>${refs(f[2])}</div></div>`).join('');
 document.getElementById('questionList').innerHTML=questions.map(q=>`<div class="question" id="${q[0]}"><span class="rid">${q[0]}</span><h3>${q[1]}</h3><p>${q[2]}</p>${note(q[0],q[1])}</div>`).join('');
@@ -2055,10 +3094,10 @@ document.querySelectorAll('.flow a[data-stage]').forEach(a=>a.addEventListener('
 function revealHash(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const el=document.getElementById(id);if(!el)return;for(let p=el;p;p=p.parentElement){if(p instanceof HTMLDetailsElement)p.open=true;}}
 window.addEventListener('hashchange',revealHash);document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#E"]');if(a){const el=document.querySelector(a.getAttribute('href'));if(el)el.open=true;}});revealHash();
 document.getElementById('expandSteps').onclick=()=>document.querySelectorAll('.stage').forEach(d=>d.open=true);document.getElementById('collapseSteps').onclick=()=>document.querySelectorAll('.stage').forEach(d=>d.open=false);
-let activeFilter='all';function filterRows(){const q=document.getElementById('reqSearch').value.trim().toLowerCase();let total=0;document.querySelectorAll('.req-group').forEach(g=>{let n=0;g.querySelectorAll('tbody tr').forEach(r=>{const s=r.dataset.status;const matches=activeFilter==='all'||(activeFilter==='gap'&&s!=='aligned'&&s!=='proposal')||(activeFilter==='unclear'&&s==='unclear');const show=matches&&r.dataset.search.toLowerCase().includes(q);r.hidden=!show;if(show)n++;});g.hidden=!n;total+=n;});document.getElementById('noResults').style.display=total?'none':'block';}
+let activeFilter='all';function filterRows(){const q=document.getElementById('reqSearch').value.trim().toLowerCase();let total=0;document.querySelectorAll('.req-group').forEach(g=>{let n=0;g.querySelectorAll('tbody tr').forEach(r=>{const actions=r.dataset.actions.split(' ');const matches=activeFilter==='all'||actions.includes(activeFilter);const show=matches&&r.dataset.search.toLowerCase().includes(q);r.hidden=!show;if(show)n++;});g.hidden=!n;total+=n;});document.getElementById('noResults').style.display=total?'none':'block';}
 document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{activeFilter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));filterRows();});document.getElementById('reqSearch').addEventListener('input',filterRows);
 document.querySelectorAll('[data-panel]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-panel]').forEach(t=>t.setAttribute('aria-selected',t===b?'true':'false'));document.querySelectorAll('[role="tabpanel"]').forEach(p=>p.hidden=p.id!=='panel-'+b.dataset.panel);});
-document.getElementById('exportNotes').onclick=()=>{const labels={agree:'理解正确',change:'需要修改',discuss:'需要讨论','':'未评阅'};const rows=Object.entries(saved).filter(([,v])=>v&&typeof v==='object'&&(v.text||v.status));if(!rows.length){toast('先在步骤、需求或问题下写一条批注，再导出。');return;}const txt='# AEA 系统逻辑与需求对照 · 批注\n\n页面版本：2026-09-16 v2 · AEA-REQ-20260917-03\n源码检查版本：adfc9e0\n\n'+rows.map(([id,v])=>`## ${id} · ${noteTitles[id]||id}\n\n状态：${labels[v.status||'']||v.status}\n\n${v.text||'（无补充文字）'}\n`).join('\n');const url=URL.createObjectURL(new Blob([txt],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='AEA-需求审阅批注.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);toast('批注已导出；请把文件或内容发回对话。');};
+document.getElementById('exportNotes').onclick=()=>{const labels={agree:'理解正确',change:'需要修改',discuss:'需要讨论','':'未评阅'};const rows=Object.entries(saved).filter(([,v])=>v&&typeof v==='object'&&(v.text||v.status));if(!rows.length){toast('先在步骤、需求或问题下写一条批注，再导出。');return;}const txt='# AEA 系统逻辑与需求对照 · 批注\n\n页面版本：2026-09-16 v2 · AEA-REQ-20260917-04\n源码检查版本：adfc9e0\n\n'+rows.map(([id,v])=>`## ${id} · ${noteTitles[id]||id}\n\n状态：${labels[v.status||'']||v.status}\n\n${v.text||'（无补充文字）'}\n`).join('\n');const url=URL.createObjectURL(new Blob([txt],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='AEA-需求审阅批注.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);toast('批注已导出；请把文件或内容发回对话。');};
 let printState=[];function beforePrint(){printState=Array.from(document.querySelectorAll('.stage')).map(d=>[d,d.open]);printState.forEach(([d])=>d.open=true);}function afterPrint(){printState.forEach(([d,v])=>d.open=v);printState=[];}window.addEventListener('beforeprint',beforePrint);window.addEventListener('afterprint',afterPrint);document.getElementById('printPage').onclick=()=>window.print();updateNoteCount();
 </script>
 </body>

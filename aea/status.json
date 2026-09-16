@@ -1,110 +1,338 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "project": {
     "name": "AEA · agent-expand-anything",
     "repository": "lizhelang/SheetMetalUnroll"
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "1cbd7444e82fc8659d5252d27ade37df78bf3aaa",
-    "committedAt": "2026-09-17T00:52:45+10:00",
-    "checkedAt": "2026-09-16T14:53:13+00:00",
-    "trackerRevision": "AEA-REQ-20260917-03",
+    "commit": "18c8e89f68c81158e76217e9890cd931c2a3c507",
+    "committedAt": "2026-09-17T01:13:16+10:00",
+    "checkedAt": "2026-09-16T15:13:47+00:00",
+    "trackerRevision": "AEA-REQ-20260917-04",
     "remoteVerified": true
   },
   "publication": {
     "mode": "handoff-script",
-    "generatedAt": "2026-09-16T14:53:13+00:00",
+    "generatedAt": "2026-09-16T15:13:47+00:00",
     "content": "full-requirements"
+  },
+  "taxonomy": {
+    "actions": {
+      "needs_decision": {
+        "label": "需要你决定",
+        "color": "#b7791f",
+        "symbol": "?"
+      },
+      "agent_ready": {
+        "label": "Agent 可处理",
+        "color": "#2563eb",
+        "symbol": "→"
+      },
+      "agent_active": {
+        "label": "Agent 处理中",
+        "color": "#4f46e5",
+        "symbol": "↻"
+      },
+      "waiting_dependency": {
+        "label": "等待依赖",
+        "color": "#6b7280",
+        "symbol": "⌛"
+      },
+      "needs_acceptance": {
+        "label": "需要你验收",
+        "color": "#0d9488",
+        "symbol": "◇"
+      },
+      "blocked": {
+        "label": "阻塞",
+        "color": "#dc2626",
+        "symbol": "!"
+      },
+      "done": {
+        "label": "完成",
+        "color": "#15803d",
+        "symbol": "✓"
+      }
+    },
+    "stages": {
+      "planning": "规划中",
+      "planned": "已规划",
+      "ready": "待执行",
+      "implementation": "实施中",
+      "verification": "验证中",
+      "acceptance": "验收中",
+      "complete": "已结束"
+    },
+    "implementation": {
+      "not_started": "未开始",
+      "partial": "部分实现",
+      "implemented": "已实现",
+      "not_applicable": "不适用"
+    },
+    "verificationLevels": {
+      "none": "未验证",
+      "static": "静态检查",
+      "offline": "离线测试",
+      "local": "本地验证",
+      "end_to_end": "端到端验证",
+      "expert": "专家验收",
+      "production": "生产验收"
+    }
   },
   "process": {
     "nodes": [
       {
         "id": "S01",
         "title": "模型输入与建案",
-        "state": "partial",
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 4,
-        "verification": "本轮端到端未验证"
+        "total": 4
       },
       {
         "id": "S02",
         "title": "配置与资源冻结",
-        "state": "planning",
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "planning",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 5,
-        "verification": "本轮端到端未验证"
+        "total": 5
       },
       {
         "id": "S03",
         "title": "源图与单面展平",
-        "state": "discuss",
+        "actionStates": [
+          "needs_decision"
+        ],
+        "stage": "planning",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [
+          "Q-10"
+        ],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 3,
-        "verification": "本轮端到端未验证"
+        "total": 3
       },
       {
         "id": "S04",
         "title": "加工方案与搜索",
-        "state": "planned",
+        "actionStates": [
+          "waiting_dependency"
+        ],
+        "stage": "planned",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P2-M"
+        ],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 4,
-        "verification": "本轮端到端未验证"
+        "total": 4
       },
       {
         "id": "S05",
         "title": "真实几何与门禁",
-        "state": "testing",
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 3,
-        "verification": "本轮端到端未验证"
+        "total": 3
       },
       {
         "id": "S06",
         "title": "刀具与刨槽判定",
-        "state": "planned",
+        "actionStates": [
+          "waiting_dependency"
+        ],
+        "stage": "planned",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P0",
+          "P1"
+        ],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 4,
-        "verification": "本轮端到端未验证"
+        "total": 4
       },
       {
         "id": "S07",
         "title": "制造补偿与净轮廓",
-        "state": "testing",
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 3,
-        "total": 4,
-        "verification": "本轮端到端未验证"
+        "total": 4
       },
       {
         "id": "S08",
         "title": "面积、工序与板型",
-        "state": "discuss",
+        "actionStates": [
+          "needs_decision",
+          "waiting_dependency"
+        ],
+        "stage": "planning",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P0",
+          "P1"
+        ],
+        "openQuestions": [
+          "Q-01",
+          "Q-02",
+          "Q-03",
+          "Q-06",
+          "Q-07"
+        ],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 5,
-        "verification": "本轮端到端未验证"
+        "total": 5
       },
       {
         "id": "S09",
         "title": "制造图与关键尺寸",
-        "state": "partial",
+        "actionStates": [
+          "needs_decision",
+          "waiting_dependency"
+        ],
+        "stage": "planning",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P0",
+          "P1"
+        ],
+        "openQuestions": [
+          "Q-08"
+        ],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 5,
-        "verification": "本轮端到端未验证"
+        "total": 5
       },
       {
         "id": "S10",
         "title": "复核、反馈与续算",
-        "state": "partial",
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [
+          "当前版本未执行该节点的端到端制造联测。"
+        ],
         "existing": 2,
-        "total": 3,
-        "verification": "本轮端到端未验证"
+        "total": 3
       }
     ],
     "milestones": [
       {
         "id": "M1",
         "title": "先贯通 · 现有工程闭环",
-        "state": "现在可开始，尚未执行",
+        "actionStates": [
+          "agent_ready"
+        ],
+        "stage": "ready",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [],
+        "openQuestions": [],
+        "verificationEvidence": [],
         "taskIds": [
           "P0"
         ]
@@ -112,7 +340,22 @@
       {
         "id": "M2",
         "title": "再补齐 · 最小用户产品",
-        "state": "按节点并行补齐",
+        "actionStates": [
+          "waiting_dependency"
+        ],
+        "stage": "planned",
+        "implementation": "partial",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P0-U",
+          "P1"
+        ],
+        "openQuestions": [],
+        "verificationEvidence": [],
         "taskIds": [
           "P0-U",
           "P1",
@@ -126,7 +369,24 @@
       {
         "id": "M3",
         "title": "再优化 · 成本与方案质量",
-        "state": "可靠指标就绪后开始",
+        "actionStates": [
+          "waiting_dependency"
+        ],
+        "stage": "planned",
+        "implementation": "not_started",
+        "verificationLevel": "none",
+        "owner": {
+          "type": "unassigned",
+          "name": null
+        },
+        "depends": [
+          "P2-E",
+          "P2-T",
+          "P2-M",
+          "P2-U"
+        ],
+        "openQuestions": [],
+        "verificationEvidence": [],
         "taskIds": [
           "P3",
           "P4"
@@ -138,103 +398,355 @@
     {
       "id": "P0",
       "title": "当前工程链首次贯通",
-      "state": "可开始 · 未认领",
-      "depends": []
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "ready",
+      "implementation": "not_applicable",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [],
+      "requirements": [
+        "QA-01",
+        "IN-08",
+        "IN-09"
+      ]
     },
     {
       "id": "P0-U",
       "title": "DSH 插件扩展点与参数入口方案",
-      "state": "可开始 · 未认领",
-      "depends": []
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "ready",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [],
+      "requirements": [
+        "IN-08",
+        "IN-09"
+      ]
     },
     {
       "id": "P1",
       "title": "固定输入、配置与指标接口",
-      "state": "可开始 · 未认领",
-      "depends": []
+      "actionStates": [
+        "needs_decision"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "depends": [],
+      "openQuestions": [
+        "Q-01",
+        "Q-02",
+        "Q-03",
+        "Q-06",
+        "Q-07",
+        "Q-09"
+      ],
+      "verificationEvidence": [],
+      "requirements": [
+        "IN-01",
+        "IN-02",
+        "IN-03",
+        "IN-04",
+        "IN-05",
+        "IN-06",
+        "IN-07",
+        "IN-08",
+        "IN-09",
+        "COST-01",
+        "TOOL-01"
+      ]
     },
     {
       "id": "P2-E",
       "title": "工程配置标准化，保持原算法",
-      "state": "待前置",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
       "depends": [
         "P0",
         "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [],
+      "requirements": [
+        "IN-05",
+        "IN-07"
       ]
     },
     {
       "id": "P2-T",
       "title": "全部刀具参与直接折弯判断",
-      "state": "待前置",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
       "depends": [
         "P0",
         "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [],
+      "requirements": [
+        "IN-06",
+        "TOOL-01"
       ]
     },
     {
       "id": "P2-U",
       "title": "DSH 插件参数与资源入口",
-      "state": "待前置",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
       "depends": [
         "P0-U",
         "P1"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [],
+      "requirements": [
+        "IN-01",
+        "IN-08",
+        "IN-09"
       ]
     },
     {
       "id": "P2-M",
       "title": "统一制造指标与成本输入",
-      "state": "待口径 + 前置",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
       "depends": [
         "P0",
         "P1"
+      ],
+      "openQuestions": [
+        "Q-01",
+        "Q-02",
+        "Q-03",
+        "Q-06",
+        "Q-07"
+      ],
+      "verificationEvidence": [],
+      "requirements": [
+        "IN-02",
+        "IN-03",
+        "IN-04",
+        "MET-01",
+        "MET-02",
+        "MET-03",
+        "MET-04",
+        "MET-05",
+        "MET-06",
+        "MET-07",
+        "MET-08",
+        "MET-09",
+        "MET-10",
+        "MET-11",
+        "MET-12",
+        "MET-13"
       ]
     },
     {
       "id": "P2-D",
       "title": "用户加工图与必要尺寸",
-      "state": "待图纸规则 + 前置",
+      "actionStates": [
+        "needs_decision",
+        "waiting_dependency"
+      ],
+      "stage": "planning",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
       "depends": [
         "P0",
         "P1"
+      ],
+      "openQuestions": [
+        "Q-08"
+      ],
+      "verificationEvidence": [],
+      "requirements": [
+        "OUT-01",
+        "OUT-02",
+        "OUT-03",
+        "OUT-04",
+        "OUT-05",
+        "OUT-06"
       ]
     },
     {
       "id": "P3",
       "title": "接入综合成本与候选比较",
-      "state": "待前置",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
       "depends": [
         "P2-E",
         "P2-T",
         "P2-M",
         "P2-U"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [],
+      "requirements": [
+        "COST-01"
       ]
     },
     {
       "id": "P4",
       "title": "完整产品回归与专家验收",
-      "state": "待前置",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_applicable",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
       "depends": [
         "P3",
         "P2-D"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [],
+      "requirements": [
+        "QA-01",
+        "OUT-01",
+        "OUT-02",
+        "OUT-03",
+        "OUT-04",
+        "OUT-05",
+        "OUT-06",
+        "COST-01"
       ]
     },
     {
       "id": "H0",
       "title": "Astra Harness 审计与精简",
-      "state": "已完成 · 本地验证",
-      "depends": []
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "已完成个人配置审计与代表性本地fixture；不代表制造验收。"
+      ],
+      "requirements": [
+        "OPS-02",
+        "OPS-01"
+      ]
     },
     {
       "id": "H1",
       "title": "流程节点进度图与先贯通路线",
-      "state": "已完成 · 本地验证",
-      "depends": []
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "Safari 流程节点、双视图与任务锚点已验证；未运行制造联测。"
+      ],
+      "requirements": [
+        "OPS-01"
+      ]
     },
     {
       "id": "H2",
       "title": "多端同步规范与在线项目状态页",
-      "state": "发布验证中",
-      "depends": []
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "offline",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "schema v2：21 项登记校验、20 项导出与发布、14 项公开摘要 fixture 通过；公网链路正在验证。"
+      ],
+      "requirements": [
+        "OPS-01",
+        "OPS-03",
+        "OPS-04"
+      ]
     }
   ]
 }
