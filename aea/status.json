@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "name": "AEA · agent-expand-anything",
+    "repository": "lizhelang/SheetMetalUnroll"
+  },
+  "source": {
+    "branch": "feat/aea-agent-bridge",
+    "commit": "40e05556c25d627a51b1a41a35f401a5db6ab28f",
+    "committedAt": "2026-09-17T00:39:24+10:00",
+    "checkedAt": "2026-09-16T14:39:54+00:00",
+    "trackerRevision": "AEA-REQ-20260917-02",
+    "remoteVerified": true
+  },
+  "publication": {
+    "mode": "handoff-script",
+    "generatedAt": "2026-09-16T14:39:54+00:00"
+  },
+  "process": {
+    "nodes": [
+      {
+        "id": "S01",
+        "title": "模型输入与建案",
+        "state": "partial",
+        "existing": 2,
+        "total": 4,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S02",
+        "title": "配置与资源冻结",
+        "state": "planning",
+        "existing": 2,
+        "total": 5,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S03",
+        "title": "源图与单面展平",
+        "state": "discuss",
+        "existing": 2,
+        "total": 3,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S04",
+        "title": "加工方案与搜索",
+        "state": "planned",
+        "existing": 2,
+        "total": 4,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S05",
+        "title": "真实几何与门禁",
+        "state": "testing",
+        "existing": 2,
+        "total": 3,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S06",
+        "title": "刀具与刨槽判定",
+        "state": "planned",
+        "existing": 2,
+        "total": 4,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S07",
+        "title": "制造补偿与净轮廓",
+        "state": "testing",
+        "existing": 3,
+        "total": 4,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S08",
+        "title": "面积、工序与板型",
+        "state": "discuss",
+        "existing": 2,
+        "total": 5,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S09",
+        "title": "制造图与关键尺寸",
+        "state": "partial",
+        "existing": 2,
+        "total": 5,
+        "verification": "本轮端到端未验证"
+      },
+      {
+        "id": "S10",
+        "title": "复核、反馈与续算",
+        "state": "partial",
+        "existing": 2,
+        "total": 3,
+        "verification": "本轮端到端未验证"
+      }
+    ],
+    "milestones": [
+      {
+        "id": "M1",
+        "title": "先贯通 · 现有工程闭环",
+        "state": "现在可开始，尚未执行",
+        "taskIds": [
+          "P0"
+        ]
+      },
+      {
+        "id": "M2",
+        "title": "再补齐 · 最小用户产品",
+        "state": "按节点并行补齐",
+        "taskIds": [
+          "P0-U",
+          "P1",
+          "P2-E",
+          "P2-T",
+          "P2-U",
+          "P2-M",
+          "P2-D"
+        ]
+      },
+      {
+        "id": "M3",
+        "title": "再优化 · 成本与方案质量",
+        "state": "可靠指标就绪后开始",
+        "taskIds": [
+          "P3",
+          "P4"
+        ]
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "P0",
+      "title": "当前工程链首次贯通",
+      "state": "可开始 · 未认领",
+      "depends": []
+    },
+    {
+      "id": "P0-U",
+      "title": "DSH 插件扩展点与参数入口方案",
+      "state": "可开始 · 未认领",
+      "depends": []
+    },
+    {
+      "id": "P1",
+      "title": "固定输入、配置与指标接口",
+      "state": "可开始 · 未认领",
+      "depends": []
+    },
+    {
+      "id": "P2-E",
+      "title": "工程配置标准化，保持原算法",
+      "state": "待前置",
+      "depends": [
+        "P0",
+        "P1"
+      ]
+    },
+    {
+      "id": "P2-T",
+      "title": "全部刀具参与直接折弯判断",
+      "state": "待前置",
+      "depends": [
+        "P0",
+        "P1"
+      ]
+    },
+    {
+      "id": "P2-U",
+      "title": "DSH 插件参数与资源入口",
+      "state": "待前置",
+      "depends": [
+        "P0-U",
+        "P1"
+      ]
+    },
+    {
+      "id": "P2-M",
+      "title": "统一制造指标与成本输入",
+      "state": "待口径 + 前置",
+      "depends": [
+        "P0",
+        "P1"
+      ]
+    },
+    {
+      "id": "P2-D",
+      "title": "用户加工图与必要尺寸",
+      "state": "待图纸规则 + 前置",
+      "depends": [
+        "P0",
+        "P1"
+      ]
+    },
+    {
+      "id": "P3",
+      "title": "接入综合成本与候选比较",
+      "state": "待前置",
+      "depends": [
+        "P2-E",
+        "P2-T",
+        "P2-M",
+        "P2-U"
+      ]
+    },
+    {
+      "id": "P4",
+      "title": "完整产品回归与专家验收",
+      "state": "待前置",
+      "depends": [
+        "P3",
+        "P2-D"
+      ]
+    },
+    {
+      "id": "H0",
+      "title": "Astra Harness 审计与精简",
+      "state": "已完成 · 本地验证",
+      "depends": []
+    },
+    {
+      "id": "H1",
+      "title": "流程节点进度图与先贯通路线",
+      "state": "已完成 · 本地验证",
+      "depends": []
+    },
+    {
+      "id": "H2",
+      "title": "多端同步规范与在线项目状态页",
+      "state": "本地完成 · 待发布授权",
+      "depends": []
+    }
+  ]
+}
