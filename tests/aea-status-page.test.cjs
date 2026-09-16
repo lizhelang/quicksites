@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const base = require('node:path').resolve(__dirname, '..');
-const html = fs.readFileSync(base + '/aea/index.html','utf8');
+const html = fs.readFileSync(base + '/aea/status.html','utf8');
 const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 new vm.Script(script);
 const live = JSON.parse(fs.readFileSync(base + '/aea/status.json','utf8'));

@@ -9,3 +9,5 @@ Current pages:
 - `stat5003-stock-project.html` - Multilingual STAT5003 S&P 500 dataset overview and high-volatility classification project brief.
 
 The root `index.html` is only a directory page so more standalone pages can be added later.
+
+AEA entry: `aea/index.html` is the complete requirement/progress table generated from the verified SheetMetalUnroll integration commit. `aea/status.html` is the lightweight version view and `aea/status.json` its manifest. Do not manually edit generated index/JSON; the source repository publisher owns those two files. The source repository remains private.

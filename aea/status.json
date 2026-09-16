@@ -6,15 +6,16 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "40e05556c25d627a51b1a41a35f401a5db6ab28f",
-    "committedAt": "2026-09-17T00:39:24+10:00",
-    "checkedAt": "2026-09-16T14:39:54+00:00",
-    "trackerRevision": "AEA-REQ-20260917-02",
+    "commit": "1cbd7444e82fc8659d5252d27ade37df78bf3aaa",
+    "committedAt": "2026-09-17T00:52:45+10:00",
+    "checkedAt": "2026-09-16T14:53:13+00:00",
+    "trackerRevision": "AEA-REQ-20260917-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "handoff-script",
-    "generatedAt": "2026-09-16T14:39:54+00:00"
+    "generatedAt": "2026-09-16T14:53:13+00:00",
+    "content": "full-requirements"
   },
   "process": {
     "nodes": [
@@ -232,7 +233,7 @@
     {
       "id": "H2",
       "title": "多端同步规范与在线项目状态页",
-      "state": "本地完成 · 待发布授权",
+      "state": "发布验证中",
       "depends": []
     }
   ]
