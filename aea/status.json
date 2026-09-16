@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "18c8e89f68c81158e76217e9890cd931c2a3c507",
-    "committedAt": "2026-09-17T01:13:16+10:00",
-    "checkedAt": "2026-09-16T15:14:59+00:00",
-    "trackerRevision": "AEA-REQ-20260917-04",
+    "commit": "6b4cf2281b2c975fc7359359e58204013752cea3",
+    "committedAt": "2026-09-17T01:19:31+10:00",
+    "checkedAt": "2026-09-16T15:19:47+00:00",
+    "trackerRevision": "AEA-REQ-20260917-05",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-16T15:14:59+00:00",
+    "generatedAt": "2026-09-16T15:19:47+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -728,11 +728,11 @@
       "id": "H2",
       "title": "多端同步规范与在线项目状态页",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "offline",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -740,7 +740,8 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "schema v2：21 项登记校验、20 项导出与发布、14 项公开摘要 fixture 通过；公网链路正在验证。"
+        "Actions 35113861503 attempt 2 使用专用key发布成功；公网完整HTML与JSON均核对源18c8e89，schema v2与双责任标签通过。",
+        "验证范围是需求网页与Git发布链路，不是Rhino制造或业务验收。"
       ],
       "requirements": [
         "OPS-01",
