@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "b42db4764eb357d6ab1838948d48fb9bc692586d",
-    "committedAt": "2026-09-18T16:26:38+10:00",
-    "checkedAt": "2026-09-18T06:26:57+00:00",
-    "trackerRevision": "AEA-REQ-20260918-02",
+    "commit": "aec9c39dca51f3d732bee89a4078dc82a6ec84e2",
+    "committedAt": "2026-09-19T08:24:18+10:00",
+    "checkedAt": "2026-09-18T22:24:39+00:00",
+    "trackerRevision": "AEA-REQ-20260919-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-18T06:26:57+00:00",
+    "generatedAt": "2026-09-18T22:24:39+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -86,11 +86,11 @@
         "id": "S01",
         "title": "模型输入与建案",
         "actionStates": [
-          "waiting_dependency"
+          "agent_active"
         ],
-        "stage": "planned",
+        "stage": "implementation",
         "implementation": "partial",
-        "verificationLevel": "end_to_end",
+        "verificationLevel": "none",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -101,6 +101,7 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
+          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
           "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
@@ -110,11 +111,11 @@
         "id": "S02",
         "title": "配置与资源冻结",
         "actionStates": [
-          "waiting_dependency"
+          "agent_active"
         ],
-        "stage": "planned",
+        "stage": "implementation",
         "implementation": "partial",
-        "verificationLevel": "end_to_end",
+        "verificationLevel": "none",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -125,6 +126,7 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
+          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
           "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。",
           "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
         ],
@@ -202,11 +204,11 @@
         "id": "S06",
         "title": "刀具与刨槽判定",
         "actionStates": [
-          "waiting_dependency"
+          "agent_active"
         ],
-        "stage": "planned",
+        "stage": "implementation",
         "implementation": "partial",
-        "verificationLevel": "end_to_end",
+        "verificationLevel": "none",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -217,6 +219,7 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
+          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
           "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
@@ -226,11 +229,11 @@
         "id": "S07",
         "title": "制造补偿与净轮廓",
         "actionStates": [
-          "waiting_dependency"
+          "agent_active"
         ],
-        "stage": "planned",
+        "stage": "implementation",
         "implementation": "partial",
-        "verificationLevel": "end_to_end",
+        "verificationLevel": "none",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -241,6 +244,7 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
+          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
           "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 3,
@@ -251,11 +255,11 @@
         "title": "面积、工序与板型",
         "actionStates": [
           "needs_decision",
-          "waiting_dependency"
+          "agent_active"
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "end_to_end",
+        "verificationLevel": "none",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -272,6 +276,7 @@
           "Q-07"
         ],
         "verificationEvidence": [
+          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
           "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
@@ -282,11 +287,11 @@
         "title": "制造图与关键尺寸",
         "actionStates": [
           "needs_decision",
-          "waiting_dependency"
+          "agent_active"
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "end_to_end",
+        "verificationLevel": "none",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -299,6 +304,7 @@
           "Q-08"
         ],
         "verificationEvidence": [
+          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
           "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
@@ -498,18 +504,18 @@
       "id": "P2-E",
       "title": "工程配置标准化，保持原算法",
       "actionStates": [
-        "waiting_dependency"
+        "agent_active"
       ],
-      "stage": "planned",
+      "stage": "implementation",
       "implementation": "partial",
       "verificationLevel": "none",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "agent",
+        "name": "工程配置代理"
       },
       "depends": [
         "P0",
-        "P1"
+        "P1-A"
       ],
       "openQuestions": [],
       "verificationEvidence": [],
@@ -522,18 +528,18 @@
       "id": "P2-T",
       "title": "全部刀具参与直接折弯判断",
       "actionStates": [
-        "waiting_dependency"
+        "agent_active"
       ],
-      "stage": "planned",
+      "stage": "implementation",
       "implementation": "partial",
       "verificationLevel": "none",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "agent",
+        "name": "多刀具代理"
       },
       "depends": [
         "P0",
-        "P1"
+        "P1-A"
       ],
       "openQuestions": [],
       "verificationEvidence": [],
@@ -766,6 +772,132 @@
         "OPS-01",
         "OPS-03",
         "OPS-04"
+      ]
+    },
+    {
+      "id": "P1-A",
+      "title": "已明确的工程与资源接口",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "implementation",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-09-19 已认领；完成前不升级验证等级。"
+      ],
+      "requirements": [
+        "IN-01",
+        "IN-02",
+        "IN-03",
+        "IN-04",
+        "IN-05",
+        "IN-06",
+        "IN-07",
+        "IN-08",
+        "IN-09",
+        "COST-01",
+        "TOOL-01"
+      ]
+    },
+    {
+      "id": "P2-U-A",
+      "title": "DSH 已明确参数与资源管理",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "implementation",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "agent",
+        "name": "DSH界面代理"
+      },
+      "depends": [
+        "P1-A"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-09-19 已认领；完成前不升级验证等级。"
+      ],
+      "requirements": [
+        "IN-01",
+        "IN-08",
+        "IN-09"
+      ]
+    },
+    {
+      "id": "P2-M-A",
+      "title": "工程指标来源与未知值表达",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "ready",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P1-A"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-09-19 已认领；完成前不升级验证等级。"
+      ],
+      "requirements": [
+        "IN-02",
+        "IN-03",
+        "IN-04",
+        "MET-01",
+        "MET-02",
+        "MET-03",
+        "MET-04",
+        "MET-05",
+        "MET-06",
+        "MET-07",
+        "MET-08",
+        "MET-09",
+        "MET-10",
+        "MET-11",
+        "MET-12",
+        "MET-13"
+      ]
+    },
+    {
+      "id": "P2-D-A",
+      "title": "已明确图层标记与激光子集",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "ready",
+      "implementation": "partial",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P1-A"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-09-19 已认领；完成前不升级验证等级。"
+      ],
+      "requirements": [
+        "OUT-01",
+        "OUT-02",
+        "OUT-03",
+        "OUT-04",
+        "OUT-05",
+        "OUT-06"
       ]
     }
   ]
