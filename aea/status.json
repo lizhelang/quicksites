@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "6b4cf2281b2c975fc7359359e58204013752cea3",
-    "committedAt": "2026-09-17T01:19:31+10:00",
-    "checkedAt": "2026-09-16T15:19:47+00:00",
-    "trackerRevision": "AEA-REQ-20260917-05",
+    "commit": "5762a5a12df59c1ad9e655f8da1e8eb8b7e8ddbc",
+    "committedAt": "2026-09-18T16:00:29+10:00",
+    "checkedAt": "2026-09-18T06:00:48+00:00",
+    "trackerRevision": "AEA-REQ-20260918-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-16T15:19:47+00:00",
+    "generatedAt": "2026-09-18T06:00:48+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -86,14 +86,14 @@
         "id": "S01",
         "title": "模型输入与建案",
         "actionStates": [
-          "agent_ready"
+          "agent_active"
         ],
         "stage": "ready",
         "implementation": "partial",
         "verificationLevel": "none",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "agent",
+          "name": "主代理"
         },
         "depends": [],
         "openQuestions": [],
@@ -107,14 +107,14 @@
         "id": "S02",
         "title": "配置与资源冻结",
         "actionStates": [
-          "agent_ready"
+          "agent_active"
         ],
         "stage": "planning",
         "implementation": "partial",
         "verificationLevel": "none",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "agent",
+          "name": "DSH能力验证代理"
         },
         "depends": [],
         "openQuestions": [],
@@ -321,14 +321,14 @@
         "id": "M1",
         "title": "先贯通 · 现有工程闭环",
         "actionStates": [
-          "agent_ready"
+          "agent_active"
         ],
-        "stage": "ready",
+        "stage": "verification",
         "implementation": "partial",
         "verificationLevel": "none",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "agent",
+          "name": "主代理"
         },
         "depends": [],
         "openQuestions": [],
@@ -399,18 +399,20 @@
       "id": "P0",
       "title": "当前工程链首次贯通",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
-      "stage": "ready",
+      "stage": "verification",
       "implementation": "not_applicable",
       "verificationLevel": "none",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "agent",
+        "name": "主代理"
       },
       "depends": [],
       "openQuestions": [],
-      "verificationEvidence": [],
+      "verificationEvidence": [
+        "持续目标已建立；正在核对当前环境，尚未完成本轮验收。"
+      ],
       "requirements": [
         "QA-01",
         "IN-08",
@@ -421,18 +423,20 @@
       "id": "P0-U",
       "title": "DSH 插件扩展点与参数入口方案",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
-      "stage": "ready",
+      "stage": "implementation",
       "implementation": "not_started",
       "verificationLevel": "none",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "agent",
+        "name": "DSH能力验证代理"
       },
       "depends": [],
       "openQuestions": [],
-      "verificationEvidence": [],
+      "verificationEvidence": [
+        "持续目标已建立；正在核对当前环境，尚未完成本轮验收。"
+      ],
       "requirements": [
         "IN-08",
         "IN-09"
