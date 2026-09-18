@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "5762a5a12df59c1ad9e655f8da1e8eb8b7e8ddbc",
-    "committedAt": "2026-09-18T16:00:29+10:00",
-    "checkedAt": "2026-09-18T06:00:48+00:00",
-    "trackerRevision": "AEA-REQ-20260918-01",
+    "commit": "b42db4764eb357d6ab1838948d48fb9bc692586d",
+    "committedAt": "2026-09-18T16:26:38+10:00",
+    "checkedAt": "2026-09-18T06:26:57+00:00",
+    "trackerRevision": "AEA-REQ-20260918-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-18T06:00:48+00:00",
+    "generatedAt": "2026-09-18T06:26:57+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -86,19 +86,22 @@
         "id": "S01",
         "title": "模型输入与建案",
         "actionStates": [
-          "agent_active"
+          "waiting_dependency"
         ],
-        "stage": "ready",
+        "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "agent",
-          "name": "主代理"
+          "type": "unassigned",
+          "name": null
         },
-        "depends": [],
+        "depends": [
+          "P1",
+          "P2-U"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
         "total": 4
@@ -107,19 +110,23 @@
         "id": "S02",
         "title": "配置与资源冻结",
         "actionStates": [
-          "agent_active"
+          "waiting_dependency"
         ],
-        "stage": "planning",
+        "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "agent",
-          "name": "DSH能力验证代理"
+          "type": "unassigned",
+          "name": null
         },
-        "depends": [],
+        "depends": [
+          "P1",
+          "P2-U"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。",
+          "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
         ],
         "existing": 2,
         "total": 5
@@ -132,7 +139,7 @@
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -142,7 +149,7 @@
           "Q-10"
         ],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
         "total": 3
@@ -155,7 +162,7 @@
         ],
         "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -165,7 +172,7 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
         "total": 4
@@ -174,11 +181,11 @@
         "id": "S05",
         "title": "真实几何与门禁",
         "actionStates": [
-          "agent_ready"
+          "needs_acceptance"
         ],
-        "stage": "ready",
+        "stage": "acceptance",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -186,7 +193,7 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
         "total": 3
@@ -199,7 +206,7 @@
         ],
         "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -210,7 +217,7 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
         "total": 4
@@ -219,19 +226,22 @@
         "id": "S07",
         "title": "制造补偿与净轮廓",
         "actionStates": [
-          "agent_ready"
+          "waiting_dependency"
         ],
-        "stage": "ready",
+        "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
         },
-        "depends": [],
+        "depends": [
+          "P1",
+          "P2-E"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 3,
         "total": 4
@@ -245,7 +255,7 @@
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -262,7 +272,7 @@
           "Q-07"
         ],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
         "total": 5
@@ -276,7 +286,7 @@
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -289,7 +299,7 @@
           "Q-08"
         ],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
         "total": 5
@@ -298,19 +308,22 @@
         "id": "S10",
         "title": "复核、反馈与续算",
         "actionStates": [
-          "agent_ready"
+          "needs_acceptance",
+          "waiting_dependency"
         ],
-        "stage": "ready",
+        "stage": "acceptance",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
         },
-        "depends": [],
+        "depends": [
+          "P2-U"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ],
         "existing": 2,
         "total": 3
@@ -321,18 +334,20 @@
         "id": "M1",
         "title": "先贯通 · 现有工程闭环",
         "actionStates": [
-          "agent_active"
+          "done"
         ],
-        "stage": "verification",
-        "implementation": "partial",
-        "verificationLevel": "none",
+        "stage": "complete",
+        "implementation": "implemented",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "agent",
           "name": "主代理"
         },
         "depends": [],
         "openQuestions": [],
-        "verificationEvidence": [],
+        "verificationEvidence": [
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。"
+        ],
         "taskIds": [
           "P0"
         ]
@@ -399,11 +414,11 @@
       "id": "P0",
       "title": "当前工程链首次贯通",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "not_applicable",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -411,7 +426,7 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "持续目标已建立；正在核对当前环境，尚未完成本轮验收。"
+        "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。"
       ],
       "requirements": [
         "QA-01",
@@ -423,11 +438,11 @@
       "id": "P0-U",
       "title": "DSH 插件扩展点与参数入口方案",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "implementation",
-      "implementation": "not_started",
-      "verificationLevel": "none",
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "DSH能力验证代理"
@@ -435,7 +450,7 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "持续目标已建立；正在核对当前环境，尚未完成本轮验收。"
+        "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
       ],
       "requirements": [
         "IN-08",

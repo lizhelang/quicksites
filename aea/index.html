@@ -41,10 +41,10 @@
 .action-done{--action-color:#15803d;--node-color:#15803d}
 @media(max-width:720px){.progress-dimensions{grid-template-columns:repeat(2,minmax(0,1fr))}.stage>summary .action-badges{max-width:100%;margin-left:0}.process-node{min-height:254px}}
 </style>
-<meta name="aea-source-commit" content="5762a5a12df59c1ad9e655f8da1e8eb8b7e8ddbc">
+<meta name="aea-source-commit" content="b42db4764eb357d6ab1838948d48fb9bc692586d">
 <meta name="aea-source-branch" content="feat/aea-agent-bridge">
-<meta name="aea-source-checked-at" content="2026-09-18T06:00:48+00:00">
-<meta name="aea-page-generated-at" content="2026-09-18T06:00:48+00:00">
+<meta name="aea-source-checked-at" content="2026-09-18T06:26:57+00:00">
+<meta name="aea-page-generated-at" content="2026-09-18T06:26:57+00:00">
 </head>
 <body>
 <style>
@@ -54,8 +54,8 @@
 @media(max-width:720px){#aea-public-banner{padding:10px 12px}}
 </style>
 <aside id="aea-public-banner" aria-label="公开需求页版本">
-<p><strong>当前页面源版本</strong> · 分支 <code>feat/aea-agent-bridge</code> · 提交 <code>5762a5a12df59c1ad9e655f8da1e8eb8b7e8ddbc</code></p>
-<p>远端核对时间：<time>2026-09-18T06:00:48+00:00</time>。批注仍是当前浏览器的本地草稿，不会自动写入 Git；请使用页面的导出批注功能留存。</p>
+<p><strong>当前页面源版本</strong> · 分支 <code>feat/aea-agent-bridge</code> · 提交 <code>b42db4764eb357d6ab1838948d48fb9bc692586d</code></p>
+<p>远端核对时间：<time>2026-09-18T06:26:57+00:00</time>。批注仍是当前浏览器的本地草稿，不会自动写入 Git；请使用页面的导出批注功能留存。</p>
 <p id="aea-public-update" role="status" hidden><span id="aea-public-update-text"></span><button type="button" id="aea-public-refresh" hidden>刷新查看</button></p>
 </aside>
 <script>
@@ -127,18 +127,19 @@
 
 <header class="topbar"><strong>AEA / FLOW PROGRESS · 03</strong><div class="actions"><span id="noteCount" class="small saved-label">批注 0 条</span><button class="btn" id="exportNotes">导出批注</button><button class="btn" id="printPage">打印 / PDF</button></div></header>
 <div class="layout">
-<nav class="side" aria-label="页面目录"><div class="eyebrow">项目目录</div><a href="#progress">00　系统流程进度</a><a href="#decisions">　　批注处理记录</a><a href="#cost">　　综合成本函数</a><a href="#overview">01　详细数据流图</a><a href="#steps">02　每一步做什么</a><a href="#comparison">03　输入输出对照</a><a href="#definitions">04　面积与次数口径</a><a href="#settings">05　参数怎么设置</a><a href="#gaps">06　当前主要差异</a><a href="#questions">07　等你纠正的地方</a><a href="#evidence">08　源码依据</a><div class="aside-note">依据：本次用户需求 + 当前本地源码。<br>需求更新：2026-09-18<br>源码核对：2026-09-16<br>源码版本：<code>adfc9e0</code><br><br>「已有」指存在代码路径，不代表已通过你的业务验收。<br><br>每项都有编号。可直接说「IN-04 不对」或在页面写批注。</div></nav>
+<nav class="side" aria-label="页面目录"><div class="eyebrow">项目目录</div><a href="#progress">00　系统流程进度</a><a href="#decisions">　　批注处理记录</a><a href="#cost">　　综合成本函数</a><a href="#overview">01　详细数据流图</a><a href="#steps">02　每一步做什么</a><a href="#comparison">03　输入输出对照</a><a href="#definitions">04　面积与次数口径</a><a href="#settings">05　参数怎么设置</a><a href="#gaps">06　当前主要差异</a><a href="#questions">07　等你纠正的地方</a><a href="#evidence">08　源码依据</a><div class="aside-note">依据：本次用户需求 + 当前本地源码。<br>需求更新：2026-09-18<br>初始需求源码基线：<code>adfc9e0</code><br>本轮原生联测：2026-09-18 / <code>5762a5a</code><br><br>「已有」指存在代码路径，不代表已通过你的业务验收。<br><br>每项都有编号。可直接说「IN-04 不对」或在页面写批注。</div></nav>
 <main>
 <div class="eyebrow">外尺寸蒙皮 → 完整加工图 → 可解释的计价数据</div>
 <h1>系统走到哪里，<br>下一步一眼看清。</h1>
-<p class="lead">这是项目需求与验收进度的唯一主表。与 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/5762a5a12df59c1ad9e655f8da1e8eb8b7e8ddbc/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 配套维护：这里定义做什么、差什么、怎样验收；状态入口记录谁在做、在哪个分支、何时集成。以你提供的<strong>外尺寸蒙皮模型</strong>为输入，核对计价参数、工程配置、展开搜索、制造补偿、出图与统计之间的关系。</p>
-<div class="scope"><div><strong>本次明确的产品入口</strong><p>用户已经提供所有面均为零厚度的成品外尺寸蒙皮。板厚、材料、数量从 DSH 插件独立设置；模型的外尺寸与最终激光切割尺寸需要通过制造处理建立关系。</p></div><div><strong>这份页面的边界</strong><p>二维识图、行业案例 RAG 暂不进入这条主流程。页面中的参数面板是设计示意；本次同步批注、需求和开发顺序；未运行 Rhino 或完成任何新制造能力验收。</p></div></div>
+<p class="lead">这是项目需求与验收进度的唯一主表。与 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b42db4764eb357d6ab1838948d48fb9bc692586d/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 配套维护：这里定义做什么、差什么、怎样验收；状态入口记录谁在做、在哪个分支、何时集成。以你提供的<strong>外尺寸蒙皮模型</strong>为输入，核对计价参数、工程配置、展开搜索、制造补偿、出图与统计之间的关系。</p>
+<div class="scope"><div><strong>本次明确的产品入口</strong><p>用户已经提供所有面均为零厚度的成品外尺寸蒙皮。板厚、材料、数量从 DSH 插件独立设置；模型的外尺寸与最终激光切割尺寸需要通过制造处理建立关系。</p></div><div><strong>这份页面的边界</strong><p>二维识图、行业案例 RAG 暂不进入这条主流程。页面参数面板仍是设计示意；P0 已在当前 DSH/Rhino 贯通代表模型，P0-U 已验证真实 DSH 控件与标量建案。专家/生产验收及完整产品仍未完成。</p></div></div>
 <p class="small">进度主标签表示行动责任；实现程度和验证等级在详情中独立查看，不互相代替。</p>
 
 <section class="section" id="progress">
-<div class="process-heading"><div><div class="eyebrow">SYSTEM FLOW / 从输入到复核</div><h2>先让系统流通，再优化每个关键节点。</h2></div><span class="process-stamp">更新 2026-09-18<br>同步批次 <code>AEA-REQ-20260918-01</code></span></div>
+<div class="process-heading"><div><div class="eyebrow">SYSTEM FLOW / 从输入到复核</div><h2>先让系统流通，再优化每个关键节点。</h2></div><span class="process-stamp">更新 2026-09-18<br>同步批次 <code>AEA-REQ-20260918-02</code></span></div>
 <p class="small">多端规范：开工先核对 Git 远端，收工提交推送。<a href="https://lizhelang.github.io/quicksites/aea/">公开完整需求表</a>已上线并自动发布；网页只展示已推送快照。</p><p class="section-intro">按系统顺序先看“现在该谁行动”。点击节点分别查看阶段、实现程度、验证等级、负责人、依赖和未决问题。多个责任可以并存。</p>
-<div class="breakpoint-banner"><span class="breakpoint-label">首要断点</span><div><strong>缺当前环境的全链路验证证据，不是核心算法全部没写。</strong><p>2026-09-09 有历史贯通记录；当前 DSH 与当前源码组合尚待联测。先完成一个代表模型的工程闭环，再补用户产品能力。</p></div><button class="btn" id="focusFirstBreak">看 S05 验证节点 ↗</button></div>
+<div class="breakpoint-banner"><span class="breakpoint-label">首要断点</span><div><strong>P0 工程链已贯通；下一步固定 P1 的业务与资源契约。</strong><p>2026-09-18 已完成代表模型制造、回读与受控打开；P0-U 已证明 DSH 原生参数入口。保留两项 unknown，接下来补完整参数产品、多刀具、统计与尺寸。</p></div><button class="btn" id="focusFirstBreak">看 S05 验证节点 ↗</button></div>
+<p class="small"><a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b42db4764eb357d6ab1838948d48fb9bc692586d/docs/verification/2026-09-18-p0/README.md">P0 实测报告与复核图</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b42db4764eb357d6ab1838948d48fb9bc692586d/AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md">P0-U 真实 DSH 入口证据</a></p>
 <div class="process-summary" id="processSummary"></div>
 <div class="process-toolbar"><div class="process-switch" role="group" aria-label="流程查看范围"><button type="button" class="active" data-process-mode="product" aria-pressed="true">完整产品现状</button><button type="button" data-process-mode="first" aria-pressed="false">先跑通工程链</button></div><span class="small">箭头是处理顺序，不是完成程度；横向可滚动</span></div>
 <p class="process-mode-note" id="processModeNote"></p>
@@ -148,8 +149,8 @@
 <section class="node-inspector" id="nodeInspector" aria-label="当前流程节点详情"></section>
 <div class="release-heading"><h3>怎么最快形成能用的系统</h3><p class="small">先跑通是有限工程试运行；补齐之后才是完整用户产品。制造门禁始终保留。</p></div>
 <div class="milestone-grid" id="milestoneList"></div>
-<details class="execution-drawer" id="execution"><summary>展开开发任务台账与分工 <span class="small">P 编号负责执行，S 编号代表系统节点</span></summary><p>负责人、分支与证据由 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/5762a5a12df59c1ad9e655f8da1e8eb8b7e8ddbc/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 管理。任务不会因为这个图更新就变成已完成。</p><div id="taskList"></div></details>
-<p class="small">当前产品任务的责任与前置条件已分别登记；H0/H1/H2 为治理与发布任务，它们完成不代表制造节点已验收。<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/5762a5a12df59c1ad9e655f8da1e8eb8b7e8ddbc/docs/harness-audit/2026-09-16-astra-audit.md">查看 Harness 审计</a></p>
+<details class="execution-drawer" id="execution"><summary>展开开发任务台账与分工 <span class="small">P 编号负责执行，S 编号代表系统节点</span></summary><p>负责人、分支与证据由 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b42db4764eb357d6ab1838948d48fb9bc692586d/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 管理。任务不会因为这个图更新就变成已完成。</p><div id="taskList"></div></details>
+<p class="small">当前产品任务的责任与前置条件已分别登记；H0/H1/H2 为治理与发布任务，它们完成不代表制造节点已验收。<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b42db4764eb357d6ab1838948d48fb9bc692586d/docs/harness-audit/2026-09-16-astra-audit.md">查看 Harness 审计</a></p>
 </section>
 <section class="section" id="decisions"><h2>批注处理记录 / 原文保留</h2><p>来源：2026-09-16 从原 Safari 页导出的 6 条已保存批注。方向采纳 5 条，S03 保留讨论；全部已写入文件。下方原文独立于可编辑批注草稿。</p><div id="decisionList"></div></section><section class="section" id="cost"><h2>综合成本函数 / 建议 v1，尚未实现</h2><p>S04 已确认需要综合成本。建议从可解释的金额模型开始；归一化加权分只作备选，因为权重不易对应工时。完整工厂报价模型留待业务数据齐备后扩展。</p><div class="quote"><strong>利用率 η = A<sub>use</sub> / A<sub>rect</sub></strong><br><strong>C = q × [p<sub>m</sub> A<sub>rect</sub> + r / 60 × (t<sub>b</sub> N<sub>b</sub> + t<sub>w</sub> L<sub>w</sub>)]</strong><br>材料成本 + 人工分钟单价 × 总秒数 / 60；成本越低越优。A<sub>rect</sub> = A<sub>use</sub> / η，因此材料利用率已计入材料成本，不再额外重复惩罚 η。</div><div class="definitions"><div class="definition"><h3>四个可调参数</h3><ul><li>p<sub>m</sub>：材料单价，货币 / m²；随材料和厚度配置。</li><li>r：人工综合单价，货币 / 分钟。</li><li>t<sub>b</sub>：每刀平均时间，秒 / 刀。</li><li>t<sub>w</sub>：每米焊接平均时间，秒 / m。</li></ul><p>四项无生产默认承诺。集中配置并冻结到案件；以实际工时调整 t，以真实价格调整 p/r。避免同时任意调所有项。</p></div><div class="definition"><h3>固定的计算口径</h3><p>N 是业务折弯刀数，L 是去重后的适用焊接长度。q 是该工件数量；不同工件逐项求和。面积先换 m²、长度换 m；数量为正整数，成本参数有限且非负，面积为正且利用率满足 0 &lt; η ≤ 1，异常数据不能参与正式排名。利用率为“面积之和的比”，不平均各件百分比。</p><p>同一候选和阶段计算 A<sub>use</sub>、A<sub>rect</sub>。矩形为每件独立矩形面积之和，不是摆图后的整体 bbox。Q-02 的白线/绿线与扣孔口径未定前不进入正式排序。</p></div></div><p><strong>手算示例，仅为公式演示：</strong>设 p=80、r=1.5、t<sub>b</sub>=12、t<sub>w</sub>=90、q=1。方案 A 使用面积 1 m²、矩形 1.25 m²、8 刀、焊 0.6 m：利用率 80%，材料 100，人工 3.75，总计 103.75。方案 B 使用面积 1 m²、矩形 1.15 m²、12 刀、焊 1 m：利用率约 87.0%，材料 92，人工 5.85，总计 97.85。材料节省可抵消更多人工，是否合适由实际参数决定。</p><p><strong>排序前置：</strong>必须通过适用几何/制造检查；缺值、无效面积或尚未制造复算的值明确标记估计/未知，不能用 0 获胜。理论阶段用于搜索预估，最终候选用同一冻结配置复算再排名；失败或没有改善保留原基线。</p><p><strong>边界：</strong>v1 是搜索成本代理，尚不计刨槽额外工时、换刀/装夹、激光切割、机器费、整板取整与组合套料，也不是客户报价。刨槽较多的方案可能因此低估；先报告未计项，在工厂数据齐备后按同样单位扩展，不能称为“工厂真实总成本最优”。</p></section>
 <section id="overview">
@@ -212,10 +213,11 @@
 
 <section class="section" id="gaps"><h2>06 / 当前实现与你要求的主要差异</h2><p class="section-intro">按需要优先纠正的理解与工程缺口排序。以下不是已经开始执行的改造任务。</p><div id="findings"></div></section>
 <section class="section" id="questions"><h2>07 / 这些地方请你直接纠正</h2><p class="section-intro">已处理 Q-04/Q-05 的既有疑问，Q-09 部分已处理。Q-01/Q-02/Q-03/Q-06/Q-07/Q-08/Q-10 仍未决；只阻塞依赖它们的任务。</p><div id="questionList"></div><div class="review-foot"><strong>最省事的反馈方式</strong><p>直接告诉我：「Q-02 的开料面积是……」「IN-06 的刀具其实用于……」「第 08 步顺序不对……」。也可在页面填写批注后点击「导出批注」。新批注先保存在当前浏览器，不会自动写入 Git。完成审阅后导出，再由集成人把决定、影响条目和剩余疑问写入本表，并同步 PROJECT_STATUS。此次 6 条原文已内嵌归档，换浏览器也能看到。</p></div></section>
-<section class="section" id="evidence"><h2>08 / 本次核对的源码依据</h2><p class="section-intro">以下摘录绑定检查时的本地源码 <code>adfc9e0</code>。它们用于证明当前数据与控制路径；不等价于新一轮运行验收。引用以 E 编号关联上方条目。</p><div id="evidenceList"></div><details style="margin-top:24px"><summary>查看本次用户需求原文</summary><div class="quote" id="originalRequest"></div></details><footer>需求基线 v2 · 2026-09-16 · 需求来源：本次用户消息；当前实现来源：AEA 项目源码与最新 PROJECT_STATUS。<br>本页未引入二维识图 / RAG 前置流程；未定义尚不明确的计价规则；批注已确认的方向与本次建议方案分别标示；完成状态需有验证证据。同步批次 AEA-REQ-20260918-01。</footer></section>
+<section class="section" id="evidence"><h2>08 / 本次核对的源码依据</h2><p class="section-intro">以下摘录绑定检查时的本地源码 <code>adfc9e0</code>。它们用于证明当前数据与控制路径；不等价于新一轮运行验收。引用以 E 编号关联上方条目。</p><div id="evidenceList"></div><details style="margin-top:24px"><summary>查看本次用户需求原文</summary><div class="quote" id="originalRequest"></div></details><footer>需求基线 v2 · 2026-09-16 · 需求来源：本次用户消息；当前实现来源：AEA 项目源码与最新 PROJECT_STATUS。<br>本页未引入二维识图 / RAG 前置流程；未定义尚不明确的计价规则；批注已确认的方向与本次建议方案分别标示；完成状态需有验证证据。同步批次 AEA-REQ-20260918-02。</footer></section>
 </main></div><div class="toast" id="toast" role="status"></div>
-<script type="application/json" id="project-tracking">{
-  "revision": "AEA-REQ-20260918-01",
+<script type="application/json" id="project-tracking">
+{
+  "revision": "AEA-REQ-20260918-02",
   "date": "2026-09-18",
   "sourceCommit": "adfc9e0",
   "integrationBranch": "feat/aea-agent-bridge",
@@ -234,18 +236,18 @@
       "accept": "先核对当前源码和加载代次，选定一个代表模型及输入副本；使用冻结默认与当前单刀具，完成建案→基线→自动验证→一次改进→验证→比较→原制造补偿/出图→文件回读→受控打开复核。必过检查保留，改进无收益可保留基线；记录统计未知、单刀具及未验实机限制。完整 witness 回归放在受影响修复或 P4，不作为首次工程贯通前置。",
       "wave": "现在",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "not_applicable",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
       },
       "openQuestions": [],
       "verificationEvidence": [
-        "持续目标已建立；正在核对当前环境，尚未完成本轮验收。"
+        "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。"
       ]
     },
     {
@@ -258,21 +260,21 @@
         "IN-09"
       ],
       "scope": "DSH 持久控件、资源输入与案件适配的独立能力验证；不阻塞现有工程回放",
-      "accept": "取得当前 DSH 持久控件/资源输入最小证据；与 P1 固定参数入口契约。缺扩展点时明确最小宿主改动，不静默改成独立网页。",
+      "accept": "取得当前 DSH 持久控件/资源输入最小证据，固定供 P1 采用的技术入口与案件适配边界；业务字段语义仍由 P1 决定。缺扩展点时明确最小宿主改动，不静默改成独立网页。",
       "wave": "与首次贯通并行",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "implementation",
-      "implementation": "not_started",
-      "verificationLevel": "none",
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "DSH能力验证代理"
       },
       "openQuestions": [],
       "verificationEvidence": [
-        "持续目标已建立；正在核对当前环境，尚未完成本轮验收。"
+        "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
       ]
     },
     {
@@ -809,13 +811,13 @@
         "P1",
         "P2-U"
       ],
-      "acceptance": "S02 已指定入口；先验证 DSH 扩展点，再实现常驻控件、资源管理和冻结。",
+      "acceptance": "P0-U 已证明 DSH 原生设置及标量建案；P1 固定业务/资源契约，P2-U 实现完整常驻产品。",
       "actionStates": [
         "waiting_dependency"
       ],
       "stage": "planned",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "unassigned",
         "name": null
@@ -825,7 +827,9 @@
         "P1"
       ],
       "openQuestions": [],
-      "verificationEvidence": []
+      "verificationEvidence": [
+        "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
+      ]
     },
     "IN-09": {
       "tasks": [
@@ -841,7 +845,7 @@
       ],
       "stage": "planning",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "unassigned",
         "name": null
@@ -853,7 +857,9 @@
       "openQuestions": [
         "Q-09"
       ],
-      "verificationEvidence": []
+      "verificationEvidence": [
+        "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
+      ]
     },
     "OUT-01": {
       "tasks": [
@@ -1395,13 +1401,13 @@
         "P0",
         "P4"
       ],
-      "acceptance": "P0 复验运行基线，P4 做变更后集成与专家对照；历史通过不能冒充本次实测。",
+      "acceptance": "P0 已完成当前代表模型工程贯通；P4 仍负责变更后完整集成与专家对照，不把软件门禁通过当生产验收。",
       "actionStates": [
         "waiting_dependency"
       ],
       "stage": "planned",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "unassigned",
         "name": null
@@ -1411,7 +1417,9 @@
         "P2-D"
       ],
       "openQuestions": [],
-      "verificationEvidence": []
+      "verificationEvidence": [
+        "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。"
+      ]
     },
     "OPS-01": {
       "tasks": [
@@ -1503,7 +1511,7 @@
       {
         "id": "S01",
         "title": "模型输入与建案",
-        "summary": "文件链已有；DSH 独立控件待补。",
+        "summary": "模型副本建案已实测；板厚控件到Host已证明，完整入口待补。",
         "checks": [
           {
             "label": "读取 .3dm / Brep 与对象 ID",
@@ -1532,32 +1540,35 @@
           "IN-09"
         ],
         "minimum": "用一个选定的代表模型建案；核对单位、对象和实际板厚，保留原件。",
-        "next": "先证明当前环境能创建案件并读回冻结输入。",
-        "blocked": "产品入口受 DSH 扩展点和 P1 参数契约约束；不阻塞已有 .3dm 路径联测。",
+        "next": "P1 固定材料/数量映射，P2-U 补完整常驻入口与建案交互。",
+        "blocked": "P0 已通过；剩余材料、数量与完整产品入口依赖 P1/P2-U。",
         "evidence": [
           "E02",
           "E03"
         ],
         "actionStates": [
-          "agent_active"
+          "waiting_dependency"
         ],
-        "stage": "ready",
+        "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "agent",
-          "name": "主代理"
+          "type": "unassigned",
+          "name": null
         },
-        "depends": [],
+        "depends": [
+          "P1",
+          "P2-U"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       },
       {
         "id": "S02",
         "title": "配置与资源冻结",
-        "summary": "默认值可用；管理界面方案待细化。",
+        "summary": "默认/单刀具冻结已实测；DSH 设置持久化已证明。",
         "checks": [
           {
             "label": "项目 JSON 与标量覆盖",
@@ -1597,33 +1608,37 @@
           "IN-08"
         ],
         "minimum": "沿用现有默认与当前单刀具，记录实际生效参数和哈希，不把默认值当生产规格。",
-        "next": "工程联测沿用旧默认；并行验证 DSH 控件扩展点。",
-        "blocked": "界面缺少扩展点实证；标准板 / 圆弧等参数仍需明确口径。",
+        "next": "按已验证的 settings namespace/原生设置槽位实现完整资源管理；P1 明确资源合法性与Host绑定。",
+        "blocked": "DSH 扩展点已证实可用；资源只做metadata持久化，未接入工程求解，业务/资源语义仍属P1。",
         "evidence": [
           "E03",
           "E14",
           "E15"
         ],
         "actionStates": [
-          "agent_active"
+          "waiting_dependency"
         ],
-        "stage": "planning",
+        "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "agent",
-          "name": "DSH能力验证代理"
+          "type": "unassigned",
+          "name": null
         },
-        "depends": [],
+        "depends": [
+          "P1",
+          "P2-U"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。",
+          "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
         ]
       },
       {
         "id": "S03",
         "title": "源图与单面展平",
-        "summary": "已有算法；你的讨论项仍未明确。",
+        "summary": "现有源图与展平已通过代表模型链；拟议算法讨论仍未决。",
         "checks": [
           {
             "label": "稳定源面 / 连接 ID",
@@ -1646,7 +1661,7 @@
           "QA-01"
         ],
         "minimum": "使用既有支持范围回放代表模型，验证源面身份与展平映射；不先重写算法。",
-        "next": "对照代表模型；把你对 S03 的具体疑问单列确认。",
+        "next": "保留本次12面/27连接的实测基线；仅拟议算法修改等待Q-10。",
         "blocked": "Q-10 只有“需要讨论”标记。它阻塞拟议算法修改，不阻塞既有路径复验。",
         "evidence": [
           "E01",
@@ -1658,7 +1673,7 @@
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -1668,13 +1683,13 @@
           "Q-10"
         ],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       },
       {
         "id": "S04",
         "title": "加工方案与搜索",
-        "summary": "一次改进已有；综合成本待接入。",
+        "summary": "基线/一次试验/比较已实测；自主优化稳定性与成本接入待补。",
         "checks": [
           {
             "label": "折焊与受限分割候选",
@@ -1705,8 +1720,8 @@
           "MET-06"
         ],
         "minimum": "完成现有基线→验证→一次改进→验证→比较；更差时保留基线，不要求首次贯通就达到最优。",
-        "next": "先与 S05 完成现有阶段链；指标可靠后再接综合成本。",
-        "blocked": "成本排序依赖 S08 的可比指标；任意多轮状态迁移尚未实现。",
+        "next": "保留基线和被制造门禁拒绝的改进；可靠指标就绪后接成本排序。",
+        "blocked": "首轮模型输出额度耗尽，限定局部试验后恢复；不能声称已证明完全自主优化或任意多轮。",
         "evidence": [
           "E01",
           "E16",
@@ -1717,7 +1732,7 @@
         ],
         "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -1727,13 +1742,13 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       },
       {
         "id": "S05",
         "title": "真实几何与门禁",
-        "summary": "实现已有；等待当前全链路验证。",
+        "summary": "37项软件检查通过，2项unknown；制造门禁真实拦截了一份候选。",
         "checks": [
           {
             "label": "真实物化与自动几何检查",
@@ -1756,18 +1771,18 @@
           "QA-01"
         ],
         "minimum": "执行已有必过检查；记录 pass / fail / unknown，失败候选回到 S04 修正，不能跳过门禁。",
-        "next": "核验当前候选执行、报告、恢复与比较均使用同一身份。",
-        "blocked": "当前环境端到端证据缺失；完整回折 / 实机可达性尚无系统性验收。",
+        "next": "可查看本轮制造复核图；完整回折、实机可达性与专家批量对照仍由P4承担。",
+        "blocked": "首次工程联测已通过；manufacturing_acceptance和shape_preservation仍为unknown，不能升级专家/生产验收。",
         "evidence": [
           "E01",
           "E16"
         ],
         "actionStates": [
-          "agent_ready"
+          "needs_acceptance"
         ],
-        "stage": "ready",
+        "stage": "acceptance",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -1775,13 +1790,13 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       },
       {
         "id": "S06",
         "title": "刀具与刨槽判定",
-        "summary": "单刀具已有；全厂多刀具待开发。",
+        "summary": "单刀具链已实测：6直接折弯、3刨槽、0fallback。",
         "checks": [
           {
             "label": "单刀具几何载入",
@@ -1810,7 +1825,7 @@
           "TOOL-01"
         ],
         "minimum": "用当前单刀具验证现有处理链；一次失败只能说明这把刀未证明可折，不能代表全厂全部刀具。",
-        "next": "先复验单刀具链；随后按成功优先规则接入多刀具。",
+        "next": "沿用本轮单刀具基线；P1资源契约确定后实施全厂多刀具。",
         "blocked": "多刀具依赖资源契约；受限单刀具结论不能标为全厂最优工艺。",
         "evidence": [
           "E05",
@@ -1821,7 +1836,7 @@
         ],
         "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -1832,13 +1847,13 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       },
       {
         "id": "S07",
         "title": "制造补偿与净轮廓",
-        "summary": "主链已有；保持逻辑，等待实测。",
+        "summary": "基线制造补偿与净轮廓已实测；配置标准化待开发。",
         "checks": [
           {
             "label": "按现有折弯 / 刨槽规则补偿",
@@ -1871,33 +1886,36 @@
           "OUT-05"
         ],
         "minimum": "保留现行角度、正反折、缩进与回退，完成原制造链；不能用理论草稿替代。",
-        "next": "用代表模型检查补偿来源和轮廓；具体失配复现后再修，固化 witness。",
-        "blocked": "用户只确认逻辑暂保留，实测效果尚未确认；配置标准化不必挡住旧默认回放。",
+        "next": "保留当前补偿门禁与默认；P1之后由P2-E进行配置标准化和等价回放。",
+        "blocked": "本轮基线通过。改进的首选焊缝补偿失败后虽有恢复，历史skipped=1仍被现行门禁拒绝；未放宽策略。",
         "evidence": [
           "E04",
           "E07",
           "E08"
         ],
         "actionStates": [
-          "agent_ready"
+          "waiting_dependency"
         ],
-        "stage": "ready",
+        "stage": "planned",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
         },
-        "depends": [],
+        "depends": [
+          "P1",
+          "P2-E"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       },
       {
         "id": "S08",
         "title": "面积、工序与板型",
-        "summary": "基础统计已有；业务口径是主要断点。",
+        "summary": "已有工程统计已随制造报告回读；正式计价口径仍需决定。",
         "checks": [
           {
             "label": "单件矩形与部分面积字段",
@@ -1941,7 +1959,7 @@
           "MET-13"
         ],
         "minimum": "输出已有工程字段的真实名称、单位、来源和限制；缺项保留 unknown，暂不出正式报价或成本最优结论。",
-        "next": "先把已知 / 未知分清；逐项确认最小产品需要的口径，再完成去重与缺字段。",
+        "next": "以本轮报告字段为证据，逐项确认面积、次数和长度的业务口径。",
         "blocked": "Q-01/02/03/06/07 仍未决；当前焊长可能重复，圆弧是代理判断。",
         "evidence": [
           "E10",
@@ -1956,7 +1974,7 @@
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -1973,13 +1991,13 @@
           "Q-07"
         ],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       },
       {
         "id": "S09",
         "title": "制造图与关键尺寸",
-        "summary": "基础图已有；完整交付图还缺关键项。",
+        "summary": "制造3DM已出图、回读并查看；必要尺寸和专用导出仍缺。",
         "checks": [
           {
             "label": "白 / 绿 / 蓝 / 红制造线",
@@ -2016,7 +2034,7 @@
           "OUT-06"
         ],
         "minimum": "先核验完整制造 3DM 的几何和线色，作为工程复核图；明确尺寸和专用导出尚缺，不能冒充最终生产图。",
-        "next": "工程图回读和视觉检查先做；Q-08 确认必要尺寸与格式后补正式交付图。",
+        "next": "查看本轮102对象复核图；Q-08确认尺寸和交付格式后实施P2-D。",
         "blocked": "缺尺寸策略 / 用户导出；“开槽”当前不等于所需“v 槽”。",
         "evidence": [
           "E07",
@@ -2030,7 +2048,7 @@
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
@@ -2043,13 +2061,13 @@
           "Q-08"
         ],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       },
       {
         "id": "S10",
         "title": "复核、反馈与续算",
-        "summary": "受控打开已有；产品反馈闭环待补。",
+        "summary": "同候选/报告/文件哈希受控打开已实测；反馈续算产品仍待补。",
         "checks": [
           {
             "label": "案件 / 候选 / 报告持久身份",
@@ -2075,7 +2093,7 @@
           "OPS-01"
         ],
         "minimum": "同一候选、报告与文件哈希通过后打开复核图，记录已验证与未验证项；允许人工提出下一次修改请求。",
-        "next": "先确认真实文件可打开并与报告相符；之后补图上反馈、认可记录与续算交互。",
+        "next": "复核本轮图纸与unknown项目；图上反馈/认可记录交由P2-U，任意多轮另行定义。",
         "blocked": "默认 comparison_ready 是终态，不能声称已支持任意多轮；专家和实机验收分别记录。",
         "evidence": [
           "E01",
@@ -2083,24 +2101,27 @@
           "E16"
         ],
         "actionStates": [
-          "agent_ready"
+          "needs_acceptance",
+          "waiting_dependency"
         ],
-        "stage": "ready",
+        "stage": "acceptance",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "unassigned",
           "name": null
         },
-        "depends": [],
+        "depends": [
+          "P2-U"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "当前版本未执行该节点的端到端制造联测。"
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
         ]
       }
     ],
-    "updated": "2026-09-16",
-    "currentMilestone": "M1",
+    "updated": "2026-09-18",
+    "currentMilestone": "M2",
     "policy": "数量仅统计下面列明的已有代码能力条目，不表示工时百分比或业务验收。",
     "milestones": [
       {
@@ -2113,18 +2134,20 @@
         "exit": "同一案件/候选/配置/报告贯通；必过检查通过；其余限制如实列出。",
         "defer": "不等待完整参数前端、多刀具、全部计价口径或成本优化；不降低制造门禁。",
         "actionStates": [
-          "agent_active"
+          "done"
         ],
-        "stage": "verification",
-        "implementation": "partial",
-        "verificationLevel": "none",
+        "stage": "complete",
+        "implementation": "implemented",
+        "verificationLevel": "end_to_end",
         "owner": {
           "type": "agent",
           "name": "主代理"
         },
         "depends": [],
         "openQuestions": [],
-        "verificationEvidence": []
+        "verificationEvidence": [
+          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。"
+        ]
       },
       {
         "id": "M2",
@@ -2253,7 +2276,8 @@
       "production": "生产验收"
     }
   }
-}</script>
+}
+</script>
 <script>
 'use strict';
 
@@ -2302,7 +2326,7 @@ const stages=[
     "status": "partial",
     "goal": "计价与工程值的前端统一通过 DSH 插件实现，支持长期默认、本次覆盖、折弯表、工厂刀具库与案件冻结快照。",
     "current": "已支持五个标量覆盖、项目 JSON 参数快照与单一刀具资源哈希。Rhino 中已有 AEASetting 设置窗口。",
-    "gap": "前端方向已确定为 DSH 插件；P0-U 验证当前 DSH 的持久控件、资源输入与案件接口扩展能力。标准长宽、统一刨槽缩进、多刀具资源尚未形成完整配置链。",
+    "gap": "前端方向已确定为 DSH 插件；P0-U 已验证当前 DSH 的持久控件、资源metadata输入及板厚进入真实案件的技术链路。标准长宽、统一刨槽缩进、多刀具资源尚未形成完整配置链。",
     "out": "输出：模型 + 计价配置 + 工程配置 + 各项来源 / 版本；改变工程参数后重新计算。",
     "refs": [
       "E02",
@@ -2548,7 +2572,7 @@ const requirements=[
       "E15",
       "E17"
     ],
-    "S02 已指定入口；先验证 DSH 扩展点，再实现常驻控件、资源管理和冻结。"
+    "P0-U 已证明 DSH 原生设置及标量建案；P1 固定业务/资源契约，P2-U 实现完整常驻产品。"
   ],
   [
     "input",
@@ -2838,13 +2862,13 @@ const requirements=[
     "QA-01",
     "可回放的交付验证",
     "同一输入、配置和候选下验证制造几何、图纸、统计与 Agent 链路。",
-    "已有离线测试与原生 witness；2026-09-15 状态记录指出完整回归、新版 DSH 在线验收尚未收口。",
+    "2026-09-18 新版DSH/Rhino代表模型已完成基线、恢复、局部试验、比较、制造与受控打开；37 pass、2 unknown，完整产品/专家验收仍未完成。",
     "partial",
     [
       "E01",
       "E16"
     ],
-    "P0 复验运行基线，P4 做变更后集成与专家对照；历史通过不能冒充本次实测。"
+    "P0 已完成当前代表模型工程贯通；P4 仍负责变更后完整集成与专家对照，不把软件门禁通过当生产验收。"
   ],
   [
     "system",
@@ -3079,7 +3103,7 @@ function renderProcess(){
  renderNodeInspector();
 }
 function selectProcessNode(id,scroll=false){if(!processNodes.some(n=>n.id===id))return;selectedProcessNode=id;renderProcess();if(scroll)document.getElementById('nodeInspector').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}
-document.getElementById('processSummary').innerHTML=`<div class="process-stat"><strong>${processNodes.filter(n=>n.actionStates.includes('needs_decision')).length}</strong>节点需要你决定<p>先处理已登记的具体问题，不把全部工作停住</p></div><div class="process-stat"><strong>${processNodes.filter(n=>n.actionStates.includes('agent_ready')||n.actionStates.includes('agent_active')).length}</strong>节点可由 Agent 推进<p>这是行动责任，不是验收完成率</p></div><div class="process-stat"><strong>M1</strong>先贯通现有工程链<p>代码存在、测试通过、需要你验收分别记载</p></div>`;
+document.getElementById('processSummary').innerHTML=`<div class="process-stat"><strong>${processNodes.filter(n=>n.actionStates.includes('needs_decision')).length}</strong>节点需要你决定<p>先处理已登记的具体问题，不把全部工作停住</p></div><div class="process-stat"><strong>${processNodes.filter(n=>n.actionStates.includes('agent_ready')||n.actionStates.includes('agent_active')).length}</strong>节点可由 Agent 推进<p>这是行动责任，不是验收完成率</p></div><div class="process-stat"><strong>${esc(tracking.process.currentMilestone)}</strong>补齐最小用户产品<p>M1 工程贯通已实测；专家和生产验收仍独立</p></div>`;
 document.getElementById('processLegend').innerHTML=Object.entries(taxonomy.actions).map(([key,a])=>`<span class="action-badge action-${key}"><span aria-hidden="true">${esc(a.symbol)}</span> ${esc(a.label)}</span>`).join('');
 document.getElementById('milestoneList').innerHTML=tracking.process.milestones.map(m=>`<section class="milestone"><span class="mid">${m.id}</span>${actionBadges(m)}<h4>${esc(m.title)}</h4><p>${esc(m.goal)}</p><p class="exit"><strong>完成判据</strong><br>${esc(m.exit)}</p><p class="small">${esc(m.defer)}</p><details><summary>阶段与验证详情</summary>${dimensionDetails(m)}</details><div class="node-links">${processLinks(m.tasks)}</div></section>`).join('');
 document.getElementById('processBoard').addEventListener('click',e=>{const button=e.target.closest('[data-process-node]');if(button){const focused=document.activeElement===button;const id=button.dataset.processNode;selectProcessNode(id);if(focused)document.querySelector('[data-process-node="'+id+'"]').focus({preventScroll:true});}});
@@ -3108,7 +3132,7 @@ document.getElementById('expandSteps').onclick=()=>document.querySelectorAll('.s
 let activeFilter='all';function filterRows(){const q=document.getElementById('reqSearch').value.trim().toLowerCase();let total=0;document.querySelectorAll('.req-group').forEach(g=>{let n=0;g.querySelectorAll('tbody tr').forEach(r=>{const actions=r.dataset.actions.split(' ');const matches=activeFilter==='all'||actions.includes(activeFilter);const show=matches&&r.dataset.search.toLowerCase().includes(q);r.hidden=!show;if(show)n++;});g.hidden=!n;total+=n;});document.getElementById('noResults').style.display=total?'none':'block';}
 document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{activeFilter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));filterRows();});document.getElementById('reqSearch').addEventListener('input',filterRows);
 document.querySelectorAll('[data-panel]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-panel]').forEach(t=>t.setAttribute('aria-selected',t===b?'true':'false'));document.querySelectorAll('[role="tabpanel"]').forEach(p=>p.hidden=p.id!=='panel-'+b.dataset.panel);});
-document.getElementById('exportNotes').onclick=()=>{const labels={agree:'理解正确',change:'需要修改',discuss:'需要讨论','':'未评阅'};const rows=Object.entries(saved).filter(([,v])=>v&&typeof v==='object'&&(v.text||v.status));if(!rows.length){toast('先在步骤、需求或问题下写一条批注，再导出。');return;}const txt='# AEA 系统逻辑与需求对照 · 批注\n\n页面版本：2026-09-16 v2 · AEA-REQ-20260918-01\n源码检查版本：adfc9e0\n\n'+rows.map(([id,v])=>`## ${id} · ${noteTitles[id]||id}\n\n状态：${labels[v.status||'']||v.status}\n\n${v.text||'（无补充文字）'}\n`).join('\n');const url=URL.createObjectURL(new Blob([txt],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='AEA-需求审阅批注.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);toast('批注已导出；请把文件或内容发回对话。');};
+document.getElementById('exportNotes').onclick=()=>{const labels={agree:'理解正确',change:'需要修改',discuss:'需要讨论','':'未评阅'};const rows=Object.entries(saved).filter(([,v])=>v&&typeof v==='object'&&(v.text||v.status));if(!rows.length){toast('先在步骤、需求或问题下写一条批注，再导出。');return;}const txt='# AEA 系统逻辑与需求对照 · 批注\n\n页面版本：2026-09-16 v2 · AEA-REQ-20260918-02\n源码检查版本：adfc9e0\n\n'+rows.map(([id,v])=>`## ${id} · ${noteTitles[id]||id}\n\n状态：${labels[v.status||'']||v.status}\n\n${v.text||'（无补充文字）'}\n`).join('\n');const url=URL.createObjectURL(new Blob([txt],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='AEA-需求审阅批注.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);toast('批注已导出；请把文件或内容发回对话。');};
 let printState=[];function beforePrint(){printState=Array.from(document.querySelectorAll('.stage')).map(d=>[d,d.open]);printState.forEach(([d])=>d.open=true);}function afterPrint(){printState.forEach(([d,v])=>d.open=v);printState=[];}window.addEventListener('beforeprint',beforePrint);window.addEventListener('afterprint',afterPrint);document.getElementById('printPage').onclick=()=>window.print();updateNoteCount();
 </script>
 </body>
