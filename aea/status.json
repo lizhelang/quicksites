@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "aec9c39dca51f3d732bee89a4078dc82a6ec84e2",
-    "committedAt": "2026-09-19T08:24:18+10:00",
-    "checkedAt": "2026-09-18T22:24:39+00:00",
-    "trackerRevision": "AEA-REQ-20260919-01",
+    "commit": "fc11e55f75bc12e6cb2d0dc828223890d5afdca3",
+    "committedAt": "2026-09-19T09:52:05+10:00",
+    "checkedAt": "2026-09-18T23:52:24+00:00",
+    "trackerRevision": "AEA-REQ-20260919-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-18T22:24:39+00:00",
+    "generatedAt": "2026-09-18T23:52:24+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -270,7 +270,6 @@
         ],
         "openQuestions": [
           "Q-01",
-          "Q-02",
           "Q-03",
           "Q-06",
           "Q-07"
@@ -479,11 +478,9 @@
       "depends": [],
       "openQuestions": [
         "Q-01",
-        "Q-02",
         "Q-03",
         "Q-06",
-        "Q-07",
-        "Q-09"
+        "Q-07"
       ],
       "verificationEvidence": [],
       "requirements": [
@@ -506,9 +503,9 @@
       "actionStates": [
         "agent_active"
       ],
-      "stage": "implementation",
-      "implementation": "partial",
-      "verificationLevel": "none",
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "工程配置代理"
@@ -518,7 +515,9 @@
         "P1-A"
       ],
       "openQuestions": [],
-      "verificationEvidence": [],
+      "verificationEvidence": [
+        "统一缩进已接入；9035离线补偿检查、31原生数学检查、70条默认输出曲线对照零偏差通过；最终集成复核进行中。"
+      ],
       "requirements": [
         "IN-05",
         "IN-07"
@@ -530,9 +529,9 @@
       "actionStates": [
         "agent_active"
       ],
-      "stage": "implementation",
-      "implementation": "partial",
-      "verificationLevel": "none",
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "多刀具代理"
@@ -542,7 +541,9 @@
         "P1-A"
       ],
       "openQuestions": [],
-      "verificationEvidence": [],
+      "verificationEvidence": [
+        "真实加载/碰撞九组合已通过；默认与显式刀库制造、空库及缺失资源拒绝已在Host/Rhino执行；不完整库仍采用保守未知策略。"
+      ],
       "requirements": [
         "IN-06",
         "TOOL-01"
@@ -593,7 +594,6 @@
       ],
       "openQuestions": [
         "Q-01",
-        "Q-02",
         "Q-03",
         "Q-06",
         "Q-07"
@@ -615,7 +615,9 @@
         "MET-10",
         "MET-11",
         "MET-12",
-        "MET-13"
+        "MET-13",
+        "MET-14",
+        "MET-15"
       ]
     },
     {
@@ -780,9 +782,9 @@
       "actionStates": [
         "agent_active"
       ],
-      "stage": "implementation",
-      "implementation": "partial",
-      "verificationLevel": "none",
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -790,7 +792,7 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-19 已认领；完成前不升级验证等级。"
+        "共享工程/资源冻结、编号配置版本、旧v1读回已接入；资源与编号离线测试通过，完整真实UI/制造联验进行中。"
       ],
       "requirements": [
         "IN-01",
@@ -812,9 +814,9 @@
       "actionStates": [
         "agent_active"
       ],
-      "stage": "implementation",
-      "implementation": "partial",
-      "verificationLevel": "none",
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "DSH界面代理"
@@ -824,7 +826,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-19 已认领；完成前不升级验证等级。"
+        "正式Web profile入口和Agent建案接管已实现；编号/材料/数量/整体更新、来源哈希和已知拒绝处理已离线验证；最终真实UI联验进行中。"
       ],
       "requirements": [
         "IN-01",
@@ -836,11 +838,11 @@
       "id": "P2-M-A",
       "title": "工程指标来源与未知值表达",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
-      "stage": "ready",
-      "implementation": "partial",
-      "verificationLevel": "none",
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -850,7 +852,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-19 已认领；完成前不升级验证等级。"
+        "用户确认的五项面积、白线利用率与数量总量已实现；10个原生面积/比例场景通过，正接入最终编号报告。"
       ],
       "requirements": [
         "IN-02",
@@ -868,18 +870,20 @@
         "MET-10",
         "MET-11",
         "MET-12",
-        "MET-13"
+        "MET-13",
+        "MET-14",
+        "MET-15"
       ]
     },
     {
       "id": "P2-D-A",
       "title": "已明确图层标记与激光子集",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
-      "stage": "ready",
-      "implementation": "partial",
-      "verificationLevel": "none",
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -889,7 +893,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-19 已认领；完成前不升级验证等级。"
+        "v槽标记与独立白线3DM已接入；46项原生正反例及实际制造图检查通过，编号继承元数据正在最终联验。"
       ],
       "requirements": [
         "OUT-01",
