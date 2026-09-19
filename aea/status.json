@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "fc11e55f75bc12e6cb2d0dc828223890d5afdca3",
-    "committedAt": "2026-09-19T09:52:05+10:00",
-    "checkedAt": "2026-09-18T23:52:24+00:00",
-    "trackerRevision": "AEA-REQ-20260919-03",
+    "commit": "be359ce88a70c51c48b29bb04605448b435e3c11",
+    "committedAt": "2026-09-19T10:36:16+10:00",
+    "checkedAt": "2026-09-19T00:36:38+00:00",
+    "trackerRevision": "AEA-REQ-20260919-04",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-18T23:52:24+00:00",
+    "generatedAt": "2026-09-19T00:36:38+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -86,51 +86,47 @@
         "id": "S01",
         "title": "模型输入与建案",
         "actionStates": [
-          "agent_active"
+          "needs_acceptance"
         ],
-        "stage": "implementation",
-        "implementation": "partial",
-        "verificationLevel": "none",
+        "stage": "acceptance",
+        "implementation": "implemented",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
-        "depends": [
-          "P1",
-          "P2-U"
-        ],
+        "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
-        "existing": 2,
+        "existing": 4,
         "total": 4
       },
       {
         "id": "S02",
         "title": "配置与资源冻结",
         "actionStates": [
-          "agent_active"
+          "needs_decision",
+          "needs_acceptance"
         ],
-        "stage": "implementation",
+        "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
-        "depends": [
-          "P1",
-          "P2-U"
+        "depends": [],
+        "openQuestions": [
+          "Q-01",
+          "Q-03",
+          "Q-07"
         ],
-        "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。",
-          "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
-        "existing": 2,
+        "existing": 5,
         "total": 5
       },
       {
@@ -143,15 +139,15 @@
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
         "depends": [],
         "openQuestions": [
           "Q-10"
         ],
         "verificationEvidence": [
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
         "existing": 2,
         "total": 3
@@ -174,7 +170,7 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
         "existing": 2,
         "total": 4
@@ -189,13 +185,13 @@
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
         "existing": 2,
         "total": 3
@@ -204,50 +200,42 @@
         "id": "S06",
         "title": "刀具与刨槽判定",
         "actionStates": [
-          "agent_active"
+          "needs_acceptance"
         ],
-        "stage": "implementation",
-        "implementation": "partial",
-        "verificationLevel": "none",
+        "stage": "acceptance",
+        "implementation": "implemented",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
-        "depends": [
-          "P0",
-          "P1"
-        ],
+        "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
-        "existing": 2,
+        "existing": 4,
         "total": 4
       },
       {
         "id": "S07",
         "title": "制造补偿与净轮廓",
         "actionStates": [
-          "agent_active"
+          "needs_acceptance"
         ],
-        "stage": "implementation",
-        "implementation": "partial",
-        "verificationLevel": "none",
+        "stage": "acceptance",
+        "implementation": "implemented",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
-        "depends": [
-          "P1",
-          "P2-E"
-        ],
+        "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
-        "existing": 3,
+        "existing": 4,
         "total": 4
       },
       {
@@ -255,19 +243,16 @@
         "title": "面积、工序与板型",
         "actionStates": [
           "needs_decision",
-          "agent_active"
+          "needs_acceptance"
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
-        "depends": [
-          "P0",
-          "P1"
-        ],
+        "depends": [],
         "openQuestions": [
           "Q-01",
           "Q-03",
@@ -275,38 +260,33 @@
           "Q-07"
         ],
         "verificationEvidence": [
-          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
-        "existing": 2,
-        "total": 5
+        "existing": 3,
+        "total": 6
       },
       {
         "id": "S09",
         "title": "制造图与关键尺寸",
         "actionStates": [
           "needs_decision",
-          "agent_active"
+          "needs_acceptance"
         ],
         "stage": "planning",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
-        "depends": [
-          "P0",
-          "P1"
-        ],
+        "depends": [],
         "openQuestions": [
           "Q-08"
         ],
         "verificationEvidence": [
-          "2026-09-19新实施正在进行，以下P0记录仅为此前基线，不能视为本轮新功能通过。",
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
-        "existing": 2,
+        "existing": 4,
         "total": 5
       },
       {
@@ -320,15 +300,15 @@
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
         "depends": [
-          "P2-U"
+          "P4"
         ],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。 仅验证该节点现有能力的代表模型路径，未补齐所有产品条目。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
         "existing": 2,
         "total": 3
@@ -361,21 +341,30 @@
         "id": "M2",
         "title": "再补齐 · 最小用户产品",
         "actionStates": [
-          "waiting_dependency"
+          "needs_decision",
+          "needs_acceptance"
         ],
-        "stage": "planned",
+        "stage": "acceptance",
         "implementation": "partial",
-        "verificationLevel": "none",
+        "verificationLevel": "end_to_end",
         "owner": {
-          "type": "unassigned",
-          "name": null
+          "type": "user",
+          "name": "用户"
         },
         "depends": [
           "P0-U",
           "P1"
         ],
-        "openQuestions": [],
-        "verificationEvidence": [],
+        "openQuestions": [
+          "Q-01",
+          "Q-03",
+          "Q-06",
+          "Q-07",
+          "Q-08"
+        ],
+        "verificationEvidence": [
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
+        ],
         "taskIds": [
           "P0-U",
           "P1",
@@ -470,10 +459,10 @@
       ],
       "stage": "planning",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "user",
+        "name": "用户"
       },
       "depends": [],
       "openQuestions": [
@@ -482,7 +471,9 @@
         "Q-06",
         "Q-07"
       ],
-      "verificationEvidence": [],
+      "verificationEvidence": [
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。"
+      ],
       "requirements": [
         "IN-01",
         "IN-02",
@@ -501,11 +492,11 @@
       "id": "P2-E",
       "title": "工程配置标准化，保持原算法",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "local",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "工程配置代理"
@@ -516,7 +507,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "统一缩进已接入；9035离线补偿检查、31原生数学检查、70条默认输出曲线对照零偏差通过；最终集成复核进行中。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
       ],
       "requirements": [
         "IN-05",
@@ -527,11 +518,11 @@
       "id": "P2-T",
       "title": "全部刀具参与直接折弯判断",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "local",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "多刀具代理"
@@ -542,7 +533,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "真实加载/碰撞九组合已通过；默认与显式刀库制造、空库及缺失资源拒绝已在Host/Rhino执行；不完整库仍采用保守未知策略。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
       ],
       "requirements": [
         "IN-06",
@@ -553,21 +544,23 @@
       "id": "P2-U",
       "title": "DSH 插件参数与资源入口",
       "actionStates": [
-        "waiting_dependency"
+        "done"
       ],
-      "stage": "planned",
-      "implementation": "partial",
-      "verificationLevel": "none",
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "agent",
+        "name": "DSH界面代理"
       },
       "depends": [
         "P0-U",
-        "P1"
+        "P1-A"
       ],
       "openQuestions": [],
-      "verificationEvidence": [],
+      "verificationEvidence": [
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
+      ],
       "requirements": [
         "IN-01",
         "IN-08",
@@ -583,13 +576,12 @@
       ],
       "stage": "planning",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "user",
+        "name": "用户"
       },
       "depends": [
-        "P0",
         "P1"
       ],
       "openQuestions": [
@@ -598,7 +590,9 @@
         "Q-06",
         "Q-07"
       ],
-      "verificationEvidence": [],
+      "verificationEvidence": [
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。"
+      ],
       "requirements": [
         "IN-02",
         "IN-03",
@@ -624,24 +618,22 @@
       "id": "P2-D",
       "title": "用户加工图与必要尺寸",
       "actionStates": [
-        "needs_decision",
-        "waiting_dependency"
+        "needs_decision"
       ],
       "stage": "planning",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "user",
+        "name": "用户"
       },
-      "depends": [
-        "P0",
-        "P1"
-      ],
+      "depends": [],
       "openQuestions": [
         "Q-08"
       ],
-      "verificationEvidence": [],
+      "verificationEvidence": [
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。"
+      ],
       "requirements": [
         "OUT-01",
         "OUT-02",
@@ -780,11 +772,11 @@
       "id": "P1-A",
       "title": "已明确的工程与资源接口",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "local",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -792,7 +784,7 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "共享工程/资源冻结、编号配置版本、旧v1读回已接入；资源与编号离线测试通过，完整真实UI/制造联验进行中。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
       ],
       "requirements": [
         "IN-01",
@@ -812,11 +804,11 @@
       "id": "P2-U-A",
       "title": "DSH 已明确参数与资源管理",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "local",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "DSH界面代理"
@@ -826,7 +818,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "正式Web profile入口和Agent建案接管已实现；编号/材料/数量/整体更新、来源哈希和已知拒绝处理已离线验证；最终真实UI联验进行中。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
       ],
       "requirements": [
         "IN-01",
@@ -838,11 +830,11 @@
       "id": "P2-M-A",
       "title": "工程指标来源与未知值表达",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "local",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -852,7 +844,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "用户确认的五项面积、白线利用率与数量总量已实现；10个原生面积/比例场景通过，正接入最终编号报告。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
       ],
       "requirements": [
         "IN-02",
@@ -879,11 +871,11 @@
       "id": "P2-D-A",
       "title": "已明确图层标记与激光子集",
       "actionStates": [
-        "agent_active"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "local",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -893,7 +885,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "v槽标记与独立白线3DM已接入；46项原生正反例及实际制造图检查通过，编号继承元数据正在最终联验。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
       ],
       "requirements": [
         "OUT-01",
