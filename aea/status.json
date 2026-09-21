@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "be359ce88a70c51c48b29bb04605448b435e3c11",
-    "committedAt": "2026-09-19T10:36:16+10:00",
-    "checkedAt": "2026-09-19T00:36:38+00:00",
-    "trackerRevision": "AEA-REQ-20260919-04",
+    "commit": "eac6ccb5521269665913efaf42a20e73f8e6a2d0",
+    "committedAt": "2026-09-21T23:32:53+10:00",
+    "checkedAt": "2026-09-21T13:33:22+00:00",
+    "trackerRevision": "AEA-REQ-20260921-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-19T00:36:38+00:00",
+    "generatedAt": "2026-09-21T13:33:22+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -168,7 +168,9 @@
         "depends": [
           "P2-M"
         ],
-        "openQuestions": [],
+        "openQuestions": [
+          "Q-11"
+        ],
         "verificationEvidence": [
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
         ],
@@ -256,23 +258,22 @@
         "openQuestions": [
           "Q-01",
           "Q-03",
-          "Q-06",
           "Q-07"
         ],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
+          "2026-09-21：22场景原生及共享runner通过；完整Host编号数量3联验39 pass/2 unknown；实际3DM线长与报告一致，折弯9/刨槽3/焊接18次。docs/verification/2026-09-21-operations/README.md。"
         ],
         "existing": 3,
         "total": 6
       },
       {
         "id": "S09",
-        "title": "制造图与关键尺寸",
+        "title": "当前制造图交付",
         "actionStates": [
-          "needs_decision",
-          "needs_acceptance"
+          "done"
         ],
-        "stage": "planning",
+        "stage": "complete",
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
@@ -280,11 +281,10 @@
           "name": "用户"
         },
         "depends": [],
-        "openQuestions": [
-          "Q-08"
-        ],
+        "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
+          "2026-09-21 用户认可现有输出外观；尺寸及额外格式暂缓。"
         ],
         "existing": 4,
         "total": 5
@@ -358,12 +358,11 @@
         "openQuestions": [
           "Q-01",
           "Q-03",
-          "Q-06",
-          "Q-07",
-          "Q-08"
+          "Q-07"
         ],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
+          "2026-09-21：22场景原生及共享runner通过；完整Host编号数量3联验39 pass/2 unknown；实际3DM线长与报告一致，折弯9/刨槽3/焊接18次。docs/verification/2026-09-21-operations/README.md。"
         ],
         "taskIds": [
           "P0-U",
@@ -468,7 +467,6 @@
       "openQuestions": [
         "Q-01",
         "Q-03",
-        "Q-06",
         "Q-07"
       ],
       "verificationEvidence": [
@@ -587,11 +585,11 @@
       "openQuestions": [
         "Q-01",
         "Q-03",
-        "Q-06",
         "Q-07"
       ],
       "verificationEvidence": [
-        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。",
+        "2026-09-21：22场景原生及共享runner通过；完整Host编号数量3联验39 pass/2 unknown；实际3DM线长与报告一致，折弯9/刨槽3/焊接18次。docs/verification/2026-09-21-operations/README.md。 其余分类字段仍待各自问题。"
       ],
       "requirements": [
         "IN-02",
@@ -611,16 +609,17 @@
         "MET-12",
         "MET-13",
         "MET-14",
-        "MET-15"
+        "MET-15",
+        "MET-16"
       ]
     },
     {
       "id": "P2-D",
-      "title": "用户加工图与必要尺寸",
+      "title": "当前制造图交付（尺寸与额外格式暂缓）",
       "actionStates": [
-        "needs_decision"
+        "done"
       ],
-      "stage": "planning",
+      "stage": "complete",
       "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
@@ -628,11 +627,10 @@
         "name": "用户"
       },
       "depends": [],
-      "openQuestions": [
-        "Q-08"
-      ],
+      "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。",
+        "2026-09-21 用户审阅现有截图：目前看着没有问题，尺寸与交付格式暂时不用管。"
       ],
       "requirements": [
         "OUT-01",
@@ -647,14 +645,15 @@
       "id": "P3",
       "title": "接入综合成本与候选比较",
       "actionStates": [
+        "needs_decision",
         "waiting_dependency"
       ],
       "stage": "planned",
       "implementation": "not_started",
       "verificationLevel": "none",
       "owner": {
-        "type": "unassigned",
-        "name": null
+        "type": "user",
+        "name": "用户"
       },
       "depends": [
         "P2-E",
@@ -662,7 +661,9 @@
         "P2-M",
         "P2-U"
       ],
-      "openQuestions": [],
+      "openQuestions": [
+        "Q-11"
+      ],
       "verificationEvidence": [],
       "requirements": [
         "COST-01"
@@ -894,6 +895,34 @@
         "OUT-04",
         "OUT-05",
         "OUT-06"
+      ]
+    },
+    {
+      "id": "P2-M-B",
+      "title": "已确认线长与工序次数",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
+      "owner": {
+        "type": "agent",
+        "name": "工序统计代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-09-21：22场景原生及共享runner通过；完整Host编号数量3联验39 pass/2 unknown；实际3DM线长与报告一致，折弯9/刨槽3/焊接18次。docs/verification/2026-09-21-operations/README.md。",
+        "集成主目录重新构建/完整Host制造/3DM回读通过；日常DSH实际RPC核对新参数SHA，原打开图纸保留。"
+      ],
+      "requirements": [
+        "MET-05",
+        "MET-06",
+        "MET-07",
+        "MET-08",
+        "MET-09",
+        "MET-16"
       ]
     }
   ]
