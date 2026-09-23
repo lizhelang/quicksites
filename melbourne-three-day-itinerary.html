@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="墨尔本三日行程：CBD 慢游、大洋路自驾，以及市场与 St Kilda 海边收尾。">
+  <title>墨尔本三日旅行手册</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2c44'/%3E%3Cpath d='M8 43c12-7 20-6 29-1s14 4 19 1' fill='none' stroke='%23f7c65e' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M19 37V15h25v22M27 15v22M36 15v22' fill='none' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --navy: #0b2c44;
+      --navy-2: #174a68;
+      --ink: #17242d;
+      --muted: #64727b;
+      --paper: #f6f1e7;
+      --white: #fffdf8;
+      --sun: #f7c65e;
+      --coral: #e66c51;
+      --sea: #2f8394;
+      --line: rgba(11, 44, 68, 0.16);
+      --shadow: 0 18px 55px rgba(11, 44, 68, 0.11);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(247, 198, 94, 0.2), transparent 26rem),
+        var(--paper);
+      color: var(--ink);
+      font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    button { font: inherit; }
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(11, 44, 68, 0.94);
+      color: #fff;
+      backdrop-filter: blur(16px);
+    }
+
+    .topbar-inner {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand { font-weight: 850; letter-spacing: -0.02em; }
+    .topnav { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+    .topnav a {
+      flex: 0 0 auto;
+      border-radius: 999px;
+      padding: 7px 11px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .topnav a:hover, .topnav a:focus-visible { background: #fff; color: var(--navy); outline: 0; }
+
+    header { padding: 48px 0 22px; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--sea);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      color: var(--navy);
+      font-family: "Songti SC", "Noto Serif CJK SC", ui-serif, Georgia, serif;
+      font-size: clamp(2.5rem, 7vw, 5.7rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+      gap: 26px;
+      align-items: end;
+      margin-top: 28px;
+    }
+    .intro p { max-width: 700px; margin: 0; color: var(--muted); font-size: 1.08rem; }
+    .trip-facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.55);
+    }
+    .fact { padding: 13px; text-align: center; }
+    .fact + .fact { border-left: 1px solid var(--line); }
+    .fact strong { display: block; color: var(--navy); font-size: 1.1rem; }
+    .fact span { color: var(--muted); font-size: 0.76rem; }
+
+    .day-switcher {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 22px 0 34px;
+    }
+    .day-tab {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: center;
+      min-height: 74px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 253, 248, 0.74);
+      color: var(--ink);
+      padding: 12px 15px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .day-tab:hover, .day-tab:focus-visible { border-color: var(--sea); outline: 3px solid rgba(47,131,148,0.15); }
+    .day-tab.active { border-color: var(--navy); background: var(--navy); color: #fff; box-shadow: var(--shadow); }
+    .day-number {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--sun);
+      color: var(--navy);
+      font-weight: 900;
+    }
+    .day-tab strong, .day-tab small { display: block; }
+    .day-tab small { opacity: 0.68; margin-top: 1px; }
+
+    .day-panel { display: none; animation: reveal 300ms ease-out; }
+    .day-panel.active { display: block; }
+    @keyframes reveal { from { opacity: 0; transform: translateY(8px); } }
+
+    .day-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .day-copy { padding: clamp(24px, 4vw, 46px); }
+    .day-copy h2 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-family: "Songti SC", "Noto Serif CJK SC", ui-serif, Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.7rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+    .day-copy p { margin: 0; color: var(--muted); }
+    .mini-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      padding: 6px 10px;
+      color: var(--navy);
+      font-size: 0.83rem;
+      font-weight: 750;
+    }
+    .hero-art {
+      min-height: 310px;
+      position: relative;
+      background:
+        linear-gradient(140deg, rgba(11,44,68,0.2), rgba(11,44,68,0.7)),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Twelve%20Apostles%20(Victoria).jpg?width=1600") center / cover;
+    }
+    .hero-art::after {
+      content: "Twelve Apostles · Wikimedia Commons / Bernard Gagnon";
+      position: absolute;
+      right: 12px;
+      bottom: 10px;
+      max-width: calc(100% - 24px);
+      border-radius: 6px;
+      background: rgba(11,44,68,0.78);
+      color: rgba(255,255,255,0.82);
+      padding: 4px 7px;
+      font-size: 0.68rem;
+    }
+    .city-art, .coast-art {
+      display: grid;
+      place-items: end start;
+      padding: 28px;
+      background:
+        linear-gradient(160deg, rgba(247,198,94,0.95), rgba(230,108,81,0.82)),
+        var(--coral);
+    }
+    .coast-art { background: linear-gradient(150deg, #81c3cf, #174a68); }
+    .art-word {
+      color: rgba(255,255,255,0.9);
+      font-family: ui-serif, Georgia, serif;
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 900;
+      line-height: 0.8;
+      letter-spacing: -0.08em;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+      gap: 22px;
+      margin: 22px 0 52px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,253,248,0.86);
+      padding: 22px;
+    }
+    .card h3 { margin: 0 0 14px; color: var(--navy); font-size: 1.18rem; }
+    .timeline { list-style: none; margin: 0; padding: 0; }
+    .timeline li {
+      position: relative;
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 14px;
+      padding: 0 0 22px 21px;
+      border-left: 2px solid rgba(47,131,148,0.25);
+    }
+    .timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: -6px;
+      width: 10px;
+      height: 10px;
+      border: 1px solid var(--sea);
+      border-radius: 50%;
+      background: var(--paper);
+    }
+    time { color: var(--sea); font-size: 0.83rem; font-weight: 850; }
+    .stop strong { display: block; margin-bottom: 2px; color: var(--navy); }
+    .stop p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+    .note {
+      border-left: 4px solid var(--sun);
+      border-radius: 10px;
+      background: rgba(247,198,94,0.17);
+      padding: 14px 15px;
+      color: #534a36;
+    }
+    .note strong { color: var(--navy); }
+    .stack { display: grid; gap: 14px; }
+    .checklist { margin: 0; padding: 0; list-style: none; }
+    .checklist li { position: relative; margin: 9px 0; padding-left: 24px; color: var(--muted); }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--sea); font-weight: 900; }
+    .route-line { margin: 0; color: var(--navy); font-weight: 750; }
+
+    .cost-table { width: 100%; border-collapse: collapse; }
+    .cost-table td { border-bottom: 1px solid var(--line); padding: 10px 0; }
+    .cost-table td:last-child { text-align: right; color: var(--navy); font-weight: 800; }
+    .cost-table tr:last-child td { border: 0; padding-top: 14px; font-size: 1.06rem; }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: #fff;
+      padding: 9px 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .action-link:hover, .action-link:focus-visible { background: var(--navy-2); outline: 3px solid rgba(47,131,148,0.2); }
+    .text-link { color: var(--sea); font-weight: 750; }
+
+    .sources {
+      margin: 54px 0 34px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+    .sources h2 { margin: 0 0 10px; color: var(--navy); font-size: 1.15rem; }
+    .sources ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 24px; margin: 0; padding-left: 20px; }
+    .sources a { color: var(--sea); }
+    footer { padding: 20px 0 42px; color: var(--muted); font-size: 0.86rem; }
+
+    @media (max-width: 800px) {
+      .intro, .day-hero, .content-grid { grid-template-columns: 1fr; }
+      .day-switcher { grid-template-columns: 1fr; }
+      .day-hero .hero-art { min-height: 240px; order: -1; }
+      .city-art, .coast-art { min-height: 220px; }
+      .sources ul { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 22px, 1180px); }
+      .brand { display: none; }
+      .topbar-inner { justify-content: center; }
+      header { padding-top: 32px; }
+      .intro { margin-top: 20px; }
+      .timeline li { grid-template-columns: 58px minmax(0, 1fr); padding-left: 17px; }
+      .trip-facts { grid-template-columns: 1fr; }
+      .fact + .fact { border-left: 0; border-top: 1px solid var(--line); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="行程导航">
+    <div class="shell topbar-inner">
+      <div class="brand">MEL / 3 DAYS</div>
+      <div class="topnav">
+        <a href="#day1" data-nav-day="1">第一天</a>
+        <a href="#day2" data-nav-day="2">第二天</a>
+        <a href="#day3" data-nav-day="3">第三天</a>
+        <a href="#sources">实用链接</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="shell">
+    <header>
+      <p class="eyebrow">Melbourne field guide · 三日旅行手册</p>
+      <h1>先认识城市，<br>再奔向海岸。</h1>
+      <div class="intro">
+        <p>为第一次在澳洲开车设计的三天路线：第一天不碰车，步行和电车认识墨尔本；第二天把体力留给大洋路；第三天用市场、花园和 St Kilda 的海风慢慢收尾。</p>
+        <div class="trip-facts" aria-label="行程概览">
+          <div class="fact"><strong>3 天</strong><span>城市＋海岸</span></div>
+          <div class="fact"><strong>≈600 km</strong><span>仅第二天驾驶</span></div>
+          <div class="fact"><strong>A$195–325</strong><span>租车、保险与油费</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="day-switcher" role="tablist" aria-label="选择查看哪一天">
+      <button class="day-tab active" role="tab" aria-selected="true" aria-controls="day1" id="tab1" data-day="1">
+        <span class="day-number">01</span><span><strong>CBD 慢游</strong><small>步行 · 免费电车 · 室内为主</small></span>
+      </button>
+      <button class="day-tab" role="tab" aria-selected="false" aria-controls="day2" id="tab2" data-day="2">
+        <span class="day-number">02</span><span><strong>大洋路</strong><small>自驾 · 600 km · 12–14 小时</small></span>
+      </button>
+      <button class="day-tab" role="tab" aria-selected="false" aria-controls="day3" id="tab3" data-day="3">
+        <span class="day-number">03</span><span><strong>市场与海边</strong><small>Queen Vic · 花园 · St Kilda</small></span>
+      </button>
+    </div>
+
+    <section class="day-panel active" id="day1" role="tabpanel" aria-labelledby="tab1">
+      <div class="day-hero">
+        <div class="day-copy">
+          <p class="eyebrow">Day one · 抵达日</p>
+          <h2>用一条顺路路线，认识墨尔本。</h2>
+          <p>睡过夜火车后不排需要预约的重项目。整天以步行、咖啡和免费电车为主，随时都能缩短。</p>
+          <div class="mini-stats"><span class="pill">步行约 6 km</span><span class="pill">大部分在 Free Tram Zone</span><span class="pill">预算 A$45–80</span></div>
+        </div>
+        <div class="hero-art city-art" aria-hidden="true"><div class="art-word">CITY<br>FIRST.</div></div>
+      </div>
+      <div class="content-grid">
+        <article class="card">
+          <h3>建议路线</h3>
+          <ol class="timeline">
+            <li><time>08:00</time><div class="stop"><strong>Southern Cross → 酒店寄存行李</strong><p>先洗漱、吃早餐。不要拖着行李走全天。</p></div></li>
+            <li><time>10:00</time><div class="stop"><strong>State Library Victoria</strong><p>看 La Trobe Reading Room，开放时间通常为每日 10:00–18:00。</p></div></li>
+            <li><time>11:15</time><div class="stop"><strong>Hardware Lane / Chinatown 午餐</strong><p>第一顿不必追网红店，选有空位的咖啡馆，把体力留给下午。</p></div></li>
+            <li><time>12:45</time><div class="stop"><strong>Block Arcade → Degraves Street</strong><p>沿 Collins Street 向南，经过拱廊和巷道，一路走到 Flinders Street。</p></div></li>
+            <li><time>14:00</time><div class="stop"><strong>Federation Square → NGV International</strong><p>NGV 常设展免费，每日 10:00–17:00；安排 90 分钟即可。</p></div></li>
+            <li><time>16:30</time><div class="stop"><strong>Southbank 与 Yarra River</strong><p>沿河散步，傍晚回酒店休息。第二天需要早起，不排夜生活硬任务。</p></div></li>
+          </ol>
+        </article>
+        <aside class="stack">
+          <div class="card">
+            <h3>交通提示</h3>
+            <p class="route-line">Southern Cross → State Library → Chinatown → Block Arcade → Federation Square → NGV → Southbank</p>
+            <ul class="checklist">
+              <li>Free Tram Zone 内不要刷 myki。</li>
+              <li>一旦驶出免费区，必须正常刷卡。</li>
+              <li>NGV 在免费区边缘外，步行最省心。</li>
+            </ul>
+            <a class="text-link" href="https://transport.vic.gov.au/plan-a-journey/network-maps/melbourne-public-transport-maps" target="_blank" rel="noopener">查看官方免费电车地图</a>
+          </div>
+          <div class="note"><strong>下雨也能走：</strong>删掉 Southbank，把时间留给 State Library、Block Arcade 和 NGV，整条路线仍然成立。</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="day-panel" id="day2" role="tabpanel" aria-labelledby="tab2" hidden>
+      <div class="day-hero">
+        <div class="day-copy">
+          <p class="eyebrow">Day two · 大洋路</p>
+          <h2>海岸线向西，内陆线返回。</h2>
+          <p>这是把十二门徒也放进一天的极限版本。23 岁、第一次靠左驾驶，必须选自动挡、无限公里和低／零 excess。</p>
+          <div class="mini-stats"><span class="pill">约 600 km</span><span class="pill">驾驶 7.5–9 小时</span><span class="pill">总时长 12–14 小时</span></div>
+        </div>
+        <div class="hero-art" role="img" aria-label="维州十二门徒海岸"></div>
+      </div>
+      <div class="content-grid">
+        <article class="card">
+          <h3>一日环线</h3>
+          <ol class="timeline">
+            <li><time>08:00</time><div class="stop"><strong>墨尔本 CBD 取车</strong><p>验车录像、确认油品、设置导航。若门店支持 after-hours return，可当晚还车；否则次日早晨归还。</p></div></li>
+            <li><time>09:30</time><div class="stop"><strong>Torquay / Bells Beach</strong><p>第一次休息，停 20–25 分钟，不追求每个海滩都下车。</p></div></li>
+            <li><time>10:40</time><div class="stop"><strong>Memorial Arch</strong><p>经典路牌留影，控制在 15 分钟。</p></div></li>
+            <li><time>11:20</time><div class="stop"><strong>Lorne</strong><p>咖啡、卫生间、换驾驶员；如果已经疲劳，就在这里决定改走安全短线。</p></div></li>
+            <li><time>13:00</time><div class="stop"><strong>Apollo Bay 快速午餐＋加油</strong><p>不排 Cape Otway 灯塔和瀑布支线，它们会让单日行程失控。</p></div></li>
+            <li><time>16:15</time><div class="stop"><strong>Twelve Apostles</strong><p>预留 45 分钟。随后只加一个 Loch Ard Gorge，不继续往 Warrnambool。</p></div></li>
+            <li><time>17:45</time><div class="stop"><strong>经 Colac / A1 内陆返回</strong><p>回程以安全为先，途中至少再休息一次，预计 21:00 左右抵达 CBD。</p></div></li>
+          </ol>
+        </article>
+        <aside class="stack">
+          <div class="note"><strong>我的真实建议：</strong>第一次在澳洲开车，不建议一个人完成 600 km。若没有第二名合资格司机，在 Lorne 或 Apollo Bay 掉头；短线约 350–400 km，仍然很好看。</div>
+          <div class="card">
+            <h3>租车＋用车预算</h3>
+            <table class="cost-table">
+              <tr><td>小型自动挡</td><td>A$60–100</td></tr>
+              <tr><td>23 岁附加费</td><td>A$16.50–35</td></tr>
+              <tr><td>低／零 excess</td><td>A$35–60</td></tr>
+              <tr><td>600 km 油费</td><td>A$78–95</td></tr>
+              <tr><td>其他费用</td><td>A$5–35</td></tr>
+              <tr><td><strong>总计</strong></td><td>A$195–325</td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>下单前必须确认</h3>
+            <ul class="checklist">
+              <li>Unlimited kilometres，不接受 200 km/day。</li>
+              <li>23 岁可驾驶所选车型。</li>
+              <li>主驾驶已持完整驾照至少 12 个月。</li>
+              <li>中国驾照原件＋IDP／认可英文材料＋护照。</li>
+              <li>玻璃、轮胎、车顶和底盘是否包含。</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="day-panel" id="day3" role="tabpanel" aria-labelledby="tab3" hidden>
+      <div class="day-hero">
+        <div class="day-copy">
+          <p class="eyebrow">Day three · 轻松收尾</p>
+          <h2>市场、花园，再去海边等日落。</h2>
+          <p>第二天长途驾驶后，不再安排远郊。上午逛市场，中午走绿色轴线，傍晚去 St Kilda；节奏可以随疲劳程度缩短。</p>
+          <div class="mini-stats"><span class="pill">无自驾</span><span class="pill">步行约 7 km</span><span class="pill">预算 A$55–110</span></div>
+        </div>
+        <div class="hero-art coast-art" aria-hidden="true"><div class="art-word">SLOW<br>DOWN.</div></div>
+      </div>
+      <div class="content-grid">
+        <article class="card">
+          <h3>建议路线</h3>
+          <ol class="timeline">
+            <li><time>08:00</time><div class="stop"><strong>还车</strong><p>同一门店还车，拍摄车身、油表和停车位置。保留最终收据。</p></div></li>
+            <li><time>09:00</time><div class="stop"><strong>Queen Victoria Market</strong><p>周五营业 06:00–15:00，特色店通常 09:00 后开。适合早餐和买伴手礼。</p></div></li>
+            <li><time>11:30</time><div class="stop"><strong>Royal Botanic Gardens</strong><p>从市中心向南，沿湖和草坪走 60–90 分钟，不追求全部走完。</p></div></li>
+            <li><time>13:15</time><div class="stop"><strong>Shrine of Remembrance</strong><p>登高看城市轴线；累了就把这一站改成花园附近午餐。</p></div></li>
+            <li><time>15:30</time><div class="stop"><strong>前往 St Kilda</strong><p>搭 12、16 或 96 路电车，已经超出 Free Tram Zone，记得刷 myki／可用的非接触支付。</p></div></li>
+            <li><time>17:00</time><div class="stop"><strong>St Kilda Pier＋海边日落</strong><p>沿新码头散步。若想看小企鹅，需要提前预约免费票，以票面场次为准。</p></div></li>
+            <li><time>19:30</time><div class="stop"><strong>Acland Street 晚餐</strong><p>吃完直接搭电车回 CBD，不把最后一晚变成赶场。</p></div></li>
+          </ol>
+        </article>
+        <aside class="stack">
+          <div class="card">
+            <h3>这一天为什么这样排</h3>
+            <ul class="checklist">
+              <li>和第一天 CBD 巷道路线不重复。</li>
+              <li>长途驾驶后不再租车，减少疲劳与停车成本。</li>
+              <li>上午市场、下午花园、傍晚海边，天气变化时容易删减。</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>需要提前做的一件事</h3>
+            <p>St Kilda 小企鹅观赏是免费预约制，每晚容量有限；如果没票，仍可正常走码头和看日落。</p>
+            <a class="action-link" href="https://www.penguins.org.au/attractions/st-kilda/" target="_blank" rel="noopener">查看企鹅预约</a>
+          </div>
+          <div class="note"><strong>市场开放日：</strong>Queen Victoria Market 通常周一和周三关闭。如果你的第三天不是周五，先检查当天营业时间再调整。</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="sources" id="sources">
+      <h2>出发前复核</h2>
+      <ul>
+        <li><a href="https://www.ngv.vic.gov.au/plan-your-visit/" target="_blank" rel="noopener">NGV 开放时间与展览</a></li>
+        <li><a href="https://www.slv.vic.gov.au/visit" target="_blank" rel="noopener">State Library Victoria</a></li>
+        <li><a href="https://qvm.com.au/blog/frequently-asked-questions/visit-us/" target="_blank" rel="noopener">Queen Victoria Market 营业时间</a></li>
+        <li><a href="https://www.greatoceanroadauthority.vic.gov.au/Land-We-Manage/National-Parks/Port-Campbell-National-Park/Twelve-Apostles" target="_blank" rel="noopener">Twelve Apostles 官方信息</a></li>
+        <li><a href="https://traffic.transport.vic.gov.au/" target="_blank" rel="noopener">VicTraffic 路况</a></li>
+        <li><a href="https://emergency.vic.gov.au/" target="_blank" rel="noopener">VicEmergency 天气与灾害提醒</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:The_Twelve_Apostles_(Victoria).jpg" target="_blank" rel="noopener">图片：Bernard Gagnon，CC BY-SA 4.0</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="shell">价格与开放时间按 2026 年 9 月公开信息整理；租车价格会随取还车时段、车型和库存变化。大洋路出发当天请重新检查天气、路况和租车合同。</footer>
+
+  <script>
+    const tabs = [...document.querySelectorAll('.day-tab')];
+    const panels = [...document.querySelectorAll('.day-panel')];
+
+    function showDay(day, updateHash = true) {
+      tabs.forEach((tab) => {
+        const active = tab.dataset.day === String(day);
+        tab.classList.toggle('active', active);
+        tab.setAttribute('aria-selected', String(active));
+      });
+      panels.forEach((panel) => {
+        const active = panel.id === `day${day}`;
+        panel.classList.toggle('active', active);
+        panel.hidden = !active;
+      });
+      if (updateHash) history.replaceState(null, '', `#day${day}`);
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => showDay(tab.dataset.day));
+      tab.addEventListener('keydown', (event) => {
+        if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+        event.preventDefault();
+        const direction = event.key === 'ArrowRight' ? 1 : -1;
+        const next = tabs[(index + direction + tabs.length) % tabs.length];
+        next.focus();
+        showDay(next.dataset.day);
+      });
+    });
+
+    document.querySelectorAll('[data-nav-day]').forEach((link) => {
+      link.addEventListener('click', () => showDay(link.dataset.navDay));
+    });
+
+    const initialDay = location.hash.match(/^#day([1-3])$/)?.[1] || '1';
+    showDay(initialDay, false);
+  </script>
+</body>
+</html>
