@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "eac6ccb5521269665913efaf42a20e73f8e6a2d0",
-    "committedAt": "2026-09-21T23:32:53+10:00",
-    "checkedAt": "2026-09-21T13:33:22+00:00",
-    "trackerRevision": "AEA-REQ-20260921-01",
+    "commit": "4e66ebcf3a6a6e081bb4ac18ececbe6de49583f7",
+    "committedAt": "2026-09-24T19:30:58+10:00",
+    "checkedAt": "2026-09-24T09:31:55+00:00",
+    "trackerRevision": "AEA-REQ-20260924-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-21T13:33:22+00:00",
+    "generatedAt": "2026-09-24T09:31:55+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -181,14 +181,15 @@
         "id": "S05",
         "title": "真实几何与门禁",
         "actionStates": [
+          "agent_active",
           "needs_acceptance"
         ],
-        "stage": "acceptance",
+        "stage": "verification",
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "user",
-          "name": "用户"
+          "type": "agent",
+          "name": "主代理"
         },
         "depends": [],
         "openQuestions": [],
@@ -293,15 +294,16 @@
         "id": "S10",
         "title": "复核、反馈与续算",
         "actionStates": [
+          "agent_active",
           "needs_acceptance",
           "waiting_dependency"
         ],
-        "stage": "acceptance",
+        "stage": "verification",
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "user",
-          "name": "用户"
+          "type": "agent",
+          "name": "主代理"
         },
         "depends": [
           "P4"
@@ -341,6 +343,7 @@
         "id": "M2",
         "title": "再补齐 · 最小用户产品",
         "actionStates": [
+          "agent_active",
           "needs_decision",
           "needs_acceptance"
         ],
@@ -371,7 +374,8 @@
           "P2-T",
           "P2-U",
           "P2-M",
-          "P2-D"
+          "P2-D",
+          "P4-A"
         ]
       },
       {
@@ -667,6 +671,38 @@
       "verificationEvidence": [],
       "requirements": [
         "COST-01"
+      ]
+    },
+    {
+      "id": "P4-A",
+      "title": "已明确功能独立技术验证与修复",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "verification",
+      "implementation": "partial",
+      "verificationLevel": "offline",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-09-24：AEA/Host 构建与15项 AgentBridge、阶段控制器/文档契约离线测试通过；无源连接模型合法空基线拒绝已修复。真实 Rhino MCP 当前不可用，Web 独立会话无持久事件后取消；P4-A仍处理中，未升级为端到端或人工验收。"
+      ],
+      "requirements": [
+        "QA-01",
+        "IN-01",
+        "IN-08",
+        "IN-09",
+        "MET-05",
+        "MET-06",
+        "MET-07",
+        "MET-08",
+        "MET-09",
+        "MET-16",
+        "OUT-01"
       ]
     },
     {
