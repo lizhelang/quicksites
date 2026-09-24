@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "2e2d0b6602670949c5046265551eae2759beb824",
-    "committedAt": "2026-09-24T21:24:09+10:00",
-    "checkedAt": "2026-09-24T11:24:30+00:00",
-    "trackerRevision": "AEA-REQ-20260924-03",
+    "commit": "aa5b3428ab537acc980cc40a89ac302fbea516b1",
+    "committedAt": "2026-09-24T21:31:00+10:00",
+    "checkedAt": "2026-09-24T11:31:13+00:00",
+    "trackerRevision": "AEA-REQ-20260924-04",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-24T11:24:30+00:00",
+    "generatedAt": "2026-09-24T11:31:13+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -922,7 +922,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
+        "2026-09-24：用户选择A方案；正式制造图层角度标注已绑定实际折弯线中点并加引线，正折非90°、反折90°显示，普通正折90°不重复标注。正式witness回读4个角度文字，见 docs/verification/2026-09-24-p4-independent/angle-annotation-readback.json。"
       ],
       "requirements": [
         "OUT-01",
