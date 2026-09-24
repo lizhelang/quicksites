@@ -41,10 +41,10 @@
 .action-done{--action-color:#15803d;--node-color:#15803d}
 @media(max-width:720px){.progress-dimensions{grid-template-columns:repeat(2,minmax(0,1fr))}.stage>summary .action-badges{max-width:100%;margin-left:0}.process-node{min-height:254px}}
 </style>
-<meta name="aea-source-commit" content="16c31f881b55910a804b6f7ce0fce103fc6e36e1">
+<meta name="aea-source-commit" content="efff2cf8e386f97fc8301173eecf2f7b2a339594">
 <meta name="aea-source-branch" content="feat/aea-agent-bridge">
-<meta name="aea-source-checked-at" content="2026-09-24T09:35:25+00:00">
-<meta name="aea-page-generated-at" content="2026-09-24T09:35:25+00:00">
+<meta name="aea-source-checked-at" content="2026-09-24T09:37:13+00:00">
+<meta name="aea-page-generated-at" content="2026-09-24T09:37:13+00:00">
 </head>
 <body>
 <style>
@@ -54,8 +54,8 @@
 @media(max-width:720px){#aea-public-banner{padding:10px 12px}}
 </style>
 <aside id="aea-public-banner" aria-label="公开需求页版本">
-<p><strong>当前页面源版本</strong> · 分支 <code>feat/aea-agent-bridge</code> · 提交 <code>16c31f881b55910a804b6f7ce0fce103fc6e36e1</code></p>
-<p>远端核对时间：<time>2026-09-24T09:35:25+00:00</time>。批注仍是当前浏览器的本地草稿，不会自动写入 Git；请使用页面的导出批注功能留存。</p>
+<p><strong>当前页面源版本</strong> · 分支 <code>feat/aea-agent-bridge</code> · 提交 <code>efff2cf8e386f97fc8301173eecf2f7b2a339594</code></p>
+<p>远端核对时间：<time>2026-09-24T09:37:13+00:00</time>。批注仍是当前浏览器的本地草稿，不会自动写入 Git；请使用页面的导出批注功能留存。</p>
 <p id="aea-public-update" role="status" hidden><span id="aea-public-update-text"></span><button type="button" id="aea-public-refresh" hidden>刷新查看</button></p>
 </aside>
 <script>
@@ -131,7 +131,7 @@
 <main>
 <div class="eyebrow">外尺寸蒙皮 → 完整加工图 → 可解释的计价数据</div>
 <h1>系统走到哪里，<br>下一步一眼看清。</h1>
-<p class="lead">这是项目需求与验收进度的唯一主表。与 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/16c31f881b55910a804b6f7ce0fce103fc6e36e1/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 配套维护：这里定义做什么、差什么、怎样验收；状态入口记录谁在做、在哪个分支、何时集成。以你提供的<strong>外尺寸蒙皮模型</strong>为输入，核对计价参数、工程配置、展开搜索、制造补偿、出图与统计之间的关系。</p>
+<p class="lead">这是项目需求与验收进度的唯一主表。与 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/efff2cf8e386f97fc8301173eecf2f7b2a339594/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 配套维护：这里定义做什么、差什么、怎样验收；状态入口记录谁在做、在哪个分支、何时集成。以你提供的<strong>外尺寸蒙皮模型</strong>为输入，核对计价参数、工程配置、展开搜索、制造补偿、出图与统计之间的关系。</p>
 <div class="scope"><div><strong>本次明确的产品入口</strong><p>用户已经提供所有面均为零厚度的成品外尺寸蒙皮。板厚、材料、数量从 DSH 插件独立设置；模型的外尺寸与最终激光切割尺寸需要通过制造处理建立关系。</p></div><div><strong>这份页面的边界</strong><p>二维识图、行业案例 RAG 暂不进入这条主流程。本页参数面板只是只读示意，真实 DSH 常驻编号配置与资源入口已接入；P0 的代表模型贯通保留为历史基线。本轮分项验证、最终联验及专家/生产验收分别记录，完整产品不据此标为完成。</p></div></div>
 <p class="small">进度主标签表示行动责任；实现程度和验证等级在详情中独立查看，不互相代替。</p>
 
@@ -139,7 +139,7 @@
 <div class="process-heading"><div><div class="eyebrow">SYSTEM FLOW / 从输入到复核</div><h2>先让系统流通，再优化每个关键节点。</h2></div><span class="process-stamp">更新 2026-09-24<br>同步批次 <code>AEA-REQ-20260924-01</code></span></div>
 <p class="small">多端规范：开工先核对 Git 远端，收工提交推送。<a href="https://lizhelang.github.io/quicksites/aea/">公开完整需求表</a>已上线并自动发布；网页只展示已推送快照。</p><p class="section-intro">按系统顺序先看“现在该谁行动”。点击节点分别查看阶段、实现程度、验证等级、负责人、依赖和未决问题。多个责任可以并存。</p>
 <div class="breakpoint-banner"><span class="breakpoint-label">首要断点</span><div><strong>已明确功能继续独立技术验证；人工验收与业务决定分开。</strong><p>参数入口、多刀具、面积及工序统计已实现；P4-A正在验证当前DSH自主规划全链与更多已有模型。Q-06已处理，Q-08尺寸和额外格式暂缓；只让仍未决的Q-01/03/07/10/11阻塞各自范围，不等待全部人工验收。</p></div><button class="btn" id="focusFirstBreak">看 S05 验证节点 ↗</button></div>
-<p class="small"><a href="https://github.com/lizhelang/SheetMetalUnroll/blob/16c31f881b55910a804b6f7ce0fce103fc6e36e1/docs/verification/2026-09-18-p0/README.md">P0 实测报告与复核图</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/16c31f881b55910a804b6f7ce0fce103fc6e36e1/AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md">P0-U 真实 DSH 入口证据</a></p>
+<p class="small"><a href="https://github.com/lizhelang/SheetMetalUnroll/blob/efff2cf8e386f97fc8301173eecf2f7b2a339594/docs/verification/2026-09-18-p0/README.md">P0 实测报告与复核图</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/efff2cf8e386f97fc8301173eecf2f7b2a339594/AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md">P0-U 真实 DSH 入口证据</a></p>
 <div class="process-summary" id="processSummary"></div>
 <div class="process-toolbar"><div class="process-switch" role="group" aria-label="流程查看范围"><button type="button" class="active" data-process-mode="product" aria-pressed="true">完整产品现状</button><button type="button" data-process-mode="first" aria-pressed="false">先跑通工程链</button></div><span class="small">箭头是处理顺序，不是完成程度；横向可滚动</span></div>
 <p class="process-mode-note" id="processModeNote"></p>
@@ -149,8 +149,8 @@
 <section class="node-inspector" id="nodeInspector" aria-label="当前流程节点详情"></section>
 <div class="release-heading"><h3>怎么最快形成能用的系统</h3><p class="small">先跑通是有限工程试运行；补齐之后才是完整用户产品。制造门禁始终保留。</p></div>
 <div class="milestone-grid" id="milestoneList"></div>
-<details class="execution-drawer" id="execution"><summary>展开开发任务台账与分工 <span class="small">P 编号负责执行，S 编号代表系统节点</span></summary><p>负责人、分支与证据由 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/16c31f881b55910a804b6f7ce0fce103fc6e36e1/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 管理。任务不会因为这个图更新就变成已完成。</p><div id="taskList"></div></details>
-<p class="small">当前产品任务的责任与前置条件已分别登记；H0/H1/H2 为治理与发布任务，它们完成不代表制造节点已验收。<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/16c31f881b55910a804b6f7ce0fce103fc6e36e1/docs/harness-audit/2026-09-16-astra-audit.md">查看 Harness 审计</a></p>
+<details class="execution-drawer" id="execution"><summary>展开开发任务台账与分工 <span class="small">P 编号负责执行，S 编号代表系统节点</span></summary><p>负责人、分支与证据由 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/efff2cf8e386f97fc8301173eecf2f7b2a339594/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 管理。任务不会因为这个图更新就变成已完成。</p><div id="taskList"></div></details>
+<p class="small">当前产品任务的责任与前置条件已分别登记；H0/H1/H2 为治理与发布任务，它们完成不代表制造节点已验收。<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/efff2cf8e386f97fc8301173eecf2f7b2a339594/docs/harness-audit/2026-09-16-astra-audit.md">查看 Harness 审计</a></p>
 </section>
 <section class="section" id="decisions"><h2>批注处理记录 / 原文保留</h2><p>来源：2026-09-16 从原 Safari 页导出的 6 条已保存批注。方向采纳 5 条，S03 保留讨论；全部已写入文件。下方原文独立于可编辑批注草稿。</p><div id="decisionList"></div><article class="question" id="DEC-20260919-01"><h3>2026-09-19 · 用户决定：编号级参数与面积</h3><p>需求规则已确认；不是实现完成或制造验收。Q-02/Q-09当日已处理；Q-08当日未回答，已于2026-09-21决定暂缓尺寸与额外格式。</p><ul><li><a href="#IN-09">IN-09</a>：按空间/工件编号统一材料、板厚、数量及其他参数；同编号的全部数量副本与展开拆分零件继承同一组参数，不能单独覆盖。不同编号可设不同参数，可以使用默认值。</li><li><a href="#MET-01">MET-01</a>：实际展开面积：最终白色切割轮廓内的面积，扣除孔洞。</li><li><a href="#MET-02">MET-02</a>：最小外接矩形面积：只包住白色切割线，每个展开零件独立求矩形，再相加；不包括绿线，不是摆图后整组包围框。</li><li><a href="#MET-03">MET-03</a>：开料面积与最小外接矩形面积是同一个指标、同一数值；按每个零件白色切割线矩形面积之和计算，不按标准整板或排板分摊。</li><li><a href="#MET-14">MET-14</a>：计价面积：原始外尺寸蒙皮所有面的实际面积之和（面的孔洞已扣除）；不取展开后轮廓或折边豁免带面积。</li><li><a href="#MET-15">MET-15</a>：计价面积（含孔洞）：原始外尺寸蒙皮所有面的实际面积之和，再加这些面上孔洞的面积，即补回孔洞面积。</li></ul><p>落实情况：编号继承、五项面积、白线利用率与数量总量已集成；最终真实 UI/制造联验与验收另记。其他未决项保留。</p><details><summary>用户原文（保留）</summary><pre style="white-space:pre-wrap">材料、板厚、数量怎么对应工件？按**每个原始工件**分别设置，可以有默认值，也能单独修改。
 
@@ -223,13 +223,13 @@
 
 <section class="section" id="gaps"><h2>06 / 当前实现与你要求的主要差异</h2><p class="section-intro">以下区分本轮已实现部分、仍待联验的结果与真正未决业务范围；不以源码存在推断专家验收。</p><div id="findings"></div></section>
 <section class="section" id="questions"><h2>07 / 这些地方请你直接纠正</h2><p class="section-intro">已处理 Q-02/Q-04/Q-05/Q-09。Q-01/Q-03/Q-07/Q-10/Q-11 仍未决；Q-06已确认，本阶段Q-08已处理；只阻塞依赖它们的任务。</p><div id="questionList"></div><div class="review-foot"><strong>最省事的反馈方式</strong><p>直接告诉我：「Q-03 折边面积按……」「Q-07 超限处理按……」「Q-11 成本参数是……」「S03 需要讨论……」。Q-06已完成，Q-08尺寸与额外格式已暂缓，无需重复确认。也可在页面填写批注后点击「导出批注」。新批注先保存在当前浏览器，不会自动写入 Git。完成审阅后导出，再由集成人把决定、影响条目和剩余疑问写入本表，并同步 PROJECT_STATUS。此次 6 条原文已内嵌归档，换浏览器也能看到。</p></div></section>
-<section class="section" id="evidence"><h2>08 / 本次核对的源码依据</h2><p class="section-intro">以下摘录绑定检查时的本地源码 <code>adfc9e0</code>。它们证明当时的数据与控制路径，原文保留；当前实现与本轮运行证据另见下方链接，不以历史摘录替代新一轮验收。引用以 E 编号关联上方条目。</p><p>本轮已明确功能、分项原生与最终联验证据：<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/16c31f881b55910a804b6f7ce0fce103fc6e36e1/docs/verification/2026-09-19-m2/README.md">2026-09-19 M2 验证记录</a>。专家和生产验收状态由实际记录单独说明。</p><div id="evidenceList"></div><details style="margin-top:24px"><summary>查看本次用户需求原文</summary><div class="quote" id="originalRequest"></div></details><footer>需求基线 v2 · 2026-09-16 · 需求来源：本次用户消息；当前实现来源：AEA 项目源码与最新 PROJECT_STATUS。<br>本页未引入二维识图 / RAG 前置流程；未定义尚不明确的计价规则；批注已确认的方向与本次建议方案分别标示；完成状态需有验证证据。同步批次 AEA-REQ-20260924-01。</footer></section>
+<section class="section" id="evidence"><h2>08 / 本次核对的源码依据</h2><p class="section-intro">以下摘录绑定检查时的本地源码 <code>adfc9e0</code>。它们证明当时的数据与控制路径，原文保留；当前实现与本轮运行证据另见下方链接，不以历史摘录替代新一轮验收。引用以 E 编号关联上方条目。</p><p>本轮已明确功能、分项原生与最终联验证据：<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/efff2cf8e386f97fc8301173eecf2f7b2a339594/docs/verification/2026-09-19-m2/README.md">2026-09-19 M2 验证记录</a>。专家和生产验收状态由实际记录单独说明。</p><div id="evidenceList"></div><details style="margin-top:24px"><summary>查看本次用户需求原文</summary><div class="quote" id="originalRequest"></div></details><footer>需求基线 v2 · 2026-09-16 · 需求来源：本次用户消息；当前实现来源：AEA 项目源码与最新 PROJECT_STATUS。<br>本页未引入二维识图 / RAG 前置流程；未定义尚不明确的计价规则；批注已确认的方向与本次建议方案分别标示；完成状态需有验证证据。同步批次 AEA-REQ-20260924-01。</footer></section>
 </main></div><div class="toast" id="toast" role="status"></div>
 <script type="application/json" id="project-tracking">
 {
   "revision": "AEA-REQ-20260924-01",
   "date": "2026-09-23",
-  "sourceCommit": "84a1ac6",
+  "sourceCommit": "16c31f8",
   "integrationBranch": "feat/aea-agent-bridge",
   "tasks": [
     {
