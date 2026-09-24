@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "0a21714510f16da07163798f3e1bd2d3c5f53b48",
-    "committedAt": "2026-09-24T19:51:37+10:00",
-    "checkedAt": "2026-09-24T09:52:28+00:00",
-    "trackerRevision": "AEA-REQ-20260924-02",
+    "commit": "63536f89e233dc0e36b8c3e178828faf0b6a15f1",
+    "committedAt": "2026-09-24T20:36:04+10:00",
+    "checkedAt": "2026-09-24T10:36:19+00:00",
+    "trackerRevision": "AEA-REQ-20260924-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-24T09:52:28+00:00",
+    "generatedAt": "2026-09-24T10:36:19+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -681,7 +681,7 @@
       ],
       "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "offline",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -689,7 +689,7 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-24：AEA/Host构建与AgentBridge/Harness回归通过；无源连接模型合法空基线拒绝已修复。Codex router已从不存在的0.1.3修正到实际0.3.0-wip并保留备份；新Rhino正常启动后native MCP在127.0.0.1:10501恢复，22场景原生统计见证通过，约30秒内存稳定。真实多模型Agent自主规划和Web全链仍未完成，P4-A保持处理中。"
+        "2026-09-24：构建与回归通过；native MCP恢复并完成22场景原生见证，内存监控稳定。真实Web Agent完成建案、基线、一次改进、比较和定稿，返回diagnostic_only预览；制造门禁fail，未完成生产交付。"
       ],
       "requirements": [
         "QA-01",
