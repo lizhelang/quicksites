@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "ca55e6392b08b7ae82dea90c47678bf148958a1a",
-    "committedAt": "2026-09-26T15:56:01+10:00",
-    "checkedAt": "2026-09-26T05:56:29+00:00",
-    "trackerRevision": "AEA-REQ-20260924-04",
+    "commit": "99cbea44b4bd08dcb3aa408d4f218eef4113a81c",
+    "committedAt": "2026-09-26T16:00:49+10:00",
+    "checkedAt": "2026-09-26T06:01:10+00:00",
+    "trackerRevision": "AEA-REQ-20260926-05",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-26T05:56:29+00:00",
+    "generatedAt": "2026-09-26T06:01:10+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -447,7 +447,8 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。"
+        "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。",
+        "2026-09-26：官方 DeepSeek Harness Desktop macOS arm64 0.1.7-rc.2 通过 SHA-512、codesign 与 spctl 校验；独立 desktop profile 启用 AEA bundle，模式选择器实际显示并选中“展开模式”。仅证明桌面入口可用，不升级制造或专家验收。"
       ],
       "requirements": [
         "IN-08",
@@ -561,7 +562,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。"
+        "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
+        "2026-09-26：桌面版 profile 的 AEA 参数入口已按本机 Host/workspace 配置生成并在桌面端重启后保留；本次未执行新的制造案件。"
       ],
       "requirements": [
         "IN-01",
