@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "4639c3c77a8196a3cc24914dfcef002a2b3bbb39",
-    "committedAt": "2026-09-26T18:07:38+10:00",
-    "checkedAt": "2026-09-26T08:08:05+00:00",
-    "trackerRevision": "AEA-REQ-20260926-06",
+    "commit": "b441a412fc10fc09062e6669e5c33e29a1cca0d6",
+    "committedAt": "2026-09-28T18:25:52+10:00",
+    "checkedAt": "2026-09-28T08:26:40+00:00",
+    "trackerRevision": "AEA-REQ-20260928-01",
     "remoteVerified": true
   },
   "publication": {
-    "mode": "handoff-script",
-    "generatedAt": "2026-09-26T08:08:05+00:00",
+    "mode": "github-actions",
+    "generatedAt": "2026-09-28T08:26:40+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -156,6 +156,7 @@
         "id": "S04",
         "title": "加工方案与搜索",
         "actionStates": [
+          "needs_acceptance",
           "waiting_dependency"
         ],
         "stage": "planned",
@@ -172,10 +173,12 @@
           "Q-11"
         ],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
+          "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
+          "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
         ],
-        "existing": 2,
-        "total": 4
+        "existing": 3,
+        "total": 5
       },
       {
         "id": "S05",
@@ -707,6 +710,34 @@
         "MET-09",
         "MET-16",
         "OUT-01"
+      ]
+    },
+    {
+      "id": "P4-S",
+      "title": "窄条拆分并回整件的原生设计样板",
+      "actionStates": [
+        "needs_acceptance"
+      ],
+      "stage": "acceptance",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "user",
+        "name": "用户"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
+        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+      ],
+      "requirements": [
+        "QA-01",
+        "IN-08",
+        "MET-02",
+        "MET-03",
+        "OUT-01",
+        "COST-01"
       ]
     },
     {
