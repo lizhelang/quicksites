@@ -41,10 +41,10 @@
 .action-done{--action-color:#15803d;--node-color:#15803d}
 @media(max-width:720px){.progress-dimensions{grid-template-columns:repeat(2,minmax(0,1fr))}.stage>summary .action-badges{max-width:100%;margin-left:0}.process-node{min-height:254px}}
 </style>
-<meta name="aea-source-commit" content="b441a412fc10fc09062e6669e5c33e29a1cca0d6">
+<meta name="aea-source-commit" content="c81baf9179501e8b54a1df200189cdaf54640a9c">
 <meta name="aea-source-branch" content="feat/aea-agent-bridge">
-<meta name="aea-source-checked-at" content="2026-09-28T08:26:40+00:00">
-<meta name="aea-page-generated-at" content="2026-09-28T08:26:40+00:00">
+<meta name="aea-source-checked-at" content="2026-09-28T08:52:17+00:00">
+<meta name="aea-page-generated-at" content="2026-09-28T08:52:17+00:00">
 </head>
 <body>
 <style>
@@ -54,8 +54,8 @@
 @media(max-width:720px){#aea-public-banner{padding:10px 12px}}
 </style>
 <aside id="aea-public-banner" aria-label="公开需求页版本">
-<p><strong>当前页面源版本</strong> · 分支 <code>feat/aea-agent-bridge</code> · 提交 <code>b441a412fc10fc09062e6669e5c33e29a1cca0d6</code></p>
-<p>远端核对时间：<time>2026-09-28T08:26:40+00:00</time>。批注仍是当前浏览器的本地草稿，不会自动写入 Git；请使用页面的导出批注功能留存。</p>
+<p><strong>当前页面源版本</strong> · 分支 <code>feat/aea-agent-bridge</code> · 提交 <code>c81baf9179501e8b54a1df200189cdaf54640a9c</code></p>
+<p>远端核对时间：<time>2026-09-28T08:52:17+00:00</time>。批注仍是当前浏览器的本地草稿，不会自动写入 Git；请使用页面的导出批注功能留存。</p>
 <p id="aea-public-update" role="status" hidden><span id="aea-public-update-text"></span><button type="button" id="aea-public-refresh" hidden>刷新查看</button></p>
 </aside>
 <script>
@@ -131,15 +131,15 @@
 <main>
 <div class="eyebrow">外尺寸蒙皮 → 完整加工图 → 可解释的计价数据</div>
 <h1>系统走到哪里，<br>下一步一眼看清。</h1>
-<p class="lead">这是项目需求与验收进度的唯一主表。与 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b441a412fc10fc09062e6669e5c33e29a1cca0d6/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 配套维护：这里定义做什么、差什么、怎样验收；状态入口记录谁在做、在哪个分支、何时集成。以你提供的<strong>外尺寸蒙皮模型</strong>为输入，核对计价参数、工程配置、展开搜索、制造补偿、出图与统计之间的关系。</p>
+<p class="lead">这是项目需求与验收进度的唯一主表。与 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 配套维护：这里定义做什么、差什么、怎样验收；状态入口记录谁在做、在哪个分支、何时集成。以你提供的<strong>外尺寸蒙皮模型</strong>为输入，核对计价参数、工程配置、展开搜索、制造补偿、出图与统计之间的关系。</p>
 <div class="scope"><div><strong>本次明确的产品入口</strong><p>用户已经提供所有面均为零厚度的成品外尺寸蒙皮。板厚、材料、数量从 DSH 插件独立设置；模型的外尺寸与最终激光切割尺寸需要通过制造处理建立关系。</p></div><div><strong>这份页面的边界</strong><p>二维识图、行业案例 RAG 暂不进入这条主流程。本页参数面板只是只读示意，真实 DSH 常驻编号配置与资源入口已接入；P0 的代表模型贯通保留为历史基线。本轮分项验证、最终联验及专家/生产验收分别记录，完整产品不据此标为完成。</p></div></div>
 <p class="small">进度主标签表示行动责任；实现程度和验证等级在详情中独立查看，不互相代替。</p>
 
 <section class="section" id="progress">
-<div class="process-heading"><div><div class="eyebrow">SYSTEM FLOW / 从输入到复核</div><h2>先让系统流通，再优化每个关键节点。</h2></div><span class="process-stamp">更新 2026-09-28<br>同步批次 <code>AEA-REQ-20260928-01</code></span></div>
+<div class="process-heading"><div><div class="eyebrow">SYSTEM FLOW / 从输入到复核</div><h2>先让系统流通，再优化每个关键节点。</h2></div><span class="process-stamp">更新 2026-09-28<br>同步批次 <code>AEA-REQ-20260928-02</code></span></div>
 <p class="small">多端规范：开工先核对 Git 远端，收工提交推送。<a href="https://lizhelang.github.io/quicksites/aea/">公开完整需求表</a>已上线并自动发布；网页只展示已推送快照。</p><p class="section-intro">按系统顺序先看“现在该谁行动”。点击节点分别查看阶段、实现程度、验证等级、负责人、依赖和未决问题。多个责任可以并存。</p>
-<div class="breakpoint-banner"><span class="breakpoint-label">首要断点</span><div><strong>先确认窄条全部并回一整件的Rhino样板，再按样板改算法。</strong><p>P4-S已生成无独立小件的整件方案，主板一边不变、另一边增加15.52mm；等待你确认拆拼方向。理论搜索矩形漏尖角、短边资格提示和制造补偿问题已记录，尚未修改生产算法；无需先提供价格。</p></div><button class="btn" id="focusFirstBreak">看 S05 验证节点 ↗</button></div>
-<p class="small"><a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b441a412fc10fc09062e6669e5c33e29a1cca0d6/docs/verification/2026-09-18-p0/README.md">P0 实测报告与复核图</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b441a412fc10fc09062e6669e5c33e29a1cca0d6/AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md">P0-U 真实 DSH 入口证据</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b441a412fc10fc09062e6669e5c33e29a1cca0d6/AEA/AgentHarness/preset/README.md">Web/桌面预设安装说明</a></p>
+<div class="breakpoint-banner"><span class="breakpoint-label">首要断点</span><div><strong>A/H 两份目标已确认，下一步让系统自己做出合理拆拼。</strong><p>P4-S已冻结A/H目标：A更省面积，H没有独立小件、焊缝更短。先做P4-R1可信指标和P4-R5制造修复，再接多轮搜索、自动拆拼、比较与桌面全链；设计无需再确认，尚未改生产算法。</p></div><button class="btn" id="focusFirstBreak">看 S04 搜索节点 ↗</button></div>
+<p class="small"><a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/docs/verification/2026-09-18-p0/README.md">P0 实测报告与复核图</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md">P0-U 真实 DSH 入口证据</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/AEA/AgentHarness/preset/README.md">Web/桌面预设安装说明</a></p>
 <div class="process-summary" id="processSummary"></div>
 <div class="process-toolbar"><div class="process-switch" role="group" aria-label="流程查看范围"><button type="button" class="active" data-process-mode="product" aria-pressed="true">完整产品现状</button><button type="button" data-process-mode="first" aria-pressed="false">先跑通工程链</button></div><span class="small">箭头是处理顺序，不是完成程度；横向可滚动</span></div>
 <p class="process-mode-note" id="processModeNote"></p>
@@ -149,10 +149,10 @@
 <section class="node-inspector" id="nodeInspector" aria-label="当前流程节点详情"></section>
 <div class="release-heading"><h3>怎么最快形成能用的系统</h3><p class="small">先跑通是有限工程试运行；补齐之后才是完整用户产品。制造门禁始终保留。</p></div>
 <div class="milestone-grid" id="milestoneList"></div>
-<details class="execution-drawer" id="execution"><summary>展开开发任务台账与分工 <span class="small">P 编号负责执行，S 编号代表系统节点</span></summary><p>负责人、分支与证据由 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b441a412fc10fc09062e6669e5c33e29a1cca0d6/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 管理。任务不会因为这个图更新就变成已完成。</p><div id="taskList"></div></details>
-<p class="small">当前产品任务的责任与前置条件已分别登记；H0/H1/H2 为治理与发布任务，它们完成不代表制造节点已验收。<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b441a412fc10fc09062e6669e5c33e29a1cca0d6/docs/harness-audit/2026-09-16-astra-audit.md">查看 Harness 审计</a></p>
+<details class="execution-drawer" id="execution"><summary>展开开发任务台账与分工 <span class="small">P 编号负责执行，S 编号代表系统节点</span></summary><p>负责人、分支与证据由 <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/PROJECT_STATUS.md">PROJECT_STATUS.md</a> 管理。任务不会因为这个图更新就变成已完成。</p><div id="taskList"></div></details>
+<p class="small">当前产品任务的责任与前置条件已分别登记；H0/H1/H2 为治理与发布任务，它们完成不代表制造节点已验收。<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/docs/harness-audit/2026-09-16-astra-audit.md">查看 Harness 审计</a></p>
 </section>
-<section class="section" id="decisions"><h2>批注处理记录 / 原文保留</h2><p>来源：2026-09-16 从原 Safari 页导出的 6 条已保存批注。方向采纳 5 条，S03 保留讨论；全部已写入文件。下方原文独立于可编辑批注草稿。</p><div id="decisionList"></div><article class="question" id="DEC-20260928-01"><h3>2026-09-28 · 先做真实拆拼样板，再逐步改算法</h3><p>用户要求先用Rhino尝试多种切分，把窄条并回大板；进一步要求两个小件也全部并入，不增加或只略增大板尺寸。<strong>这授权方案实验，不等于用户已认可样板，也不是生产算法改动授权。</strong></p><p>已执行的H整件方案：1件、没有独立小件、无展开重叠；主板一边1237.892mm不变，另一边较A增加15.522mm。理论矩形按所有原生顶点复算为1.799817㎡，比原方案减少9.58%。旧搜索采样漏尖角已登记；制造补偿尚未通过。</p><p><a href="#P4-S">查看P4-S行动责任与范围</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b441a412fc10fc09062e6669e5c33e29a1cca0d6/docs/verification/2026-09-28-strip-reconnect/README.md">方案、失败记录与3DM文件</a></p></article><article class="question" id="DEC-20260919-01"><h3>2026-09-19 · 用户决定：编号级参数与面积</h3><p>需求规则已确认；不是实现完成或制造验收。Q-02/Q-09当日已处理；Q-08当日未回答，已于2026-09-21决定暂缓尺寸与额外格式。</p><ul><li><a href="#IN-09">IN-09</a>：按空间/工件编号统一材料、板厚、数量及其他参数；同编号的全部数量副本与展开拆分零件继承同一组参数，不能单独覆盖。不同编号可设不同参数，可以使用默认值。</li><li><a href="#MET-01">MET-01</a>：实际展开面积：最终白色切割轮廓内的面积，扣除孔洞。</li><li><a href="#MET-02">MET-02</a>：最小外接矩形面积：只包住白色切割线，每个展开零件独立求矩形，再相加；不包括绿线，不是摆图后整组包围框。</li><li><a href="#MET-03">MET-03</a>：开料面积与最小外接矩形面积是同一个指标、同一数值；按每个零件白色切割线矩形面积之和计算，不按标准整板或排板分摊。</li><li><a href="#MET-14">MET-14</a>：计价面积：原始外尺寸蒙皮所有面的实际面积之和（面的孔洞已扣除）；不取展开后轮廓或折边豁免带面积。</li><li><a href="#MET-15">MET-15</a>：计价面积（含孔洞）：原始外尺寸蒙皮所有面的实际面积之和，再加这些面上孔洞的面积，即补回孔洞面积。</li></ul><p>落实情况：编号继承、五项面积、白线利用率与数量总量已集成；最终真实 UI/制造联验与验收另记。其他未决项保留。</p><details><summary>用户原文（保留）</summary><pre style="white-space:pre-wrap">材料、板厚、数量怎么对应工件？按**每个原始工件**分别设置，可以有默认值，也能单独修改。
+<section class="section" id="decisions"><h2>批注处理记录 / 原文保留</h2><p>来源：2026-09-16 从原 Safari 页导出的 6 条已保存批注。方向采纳 5 条，S03 保留讨论；全部已写入文件。下方原文独立于可编辑批注草稿。</p><div id="decisionList"></div><article class="question" id="DEC-20260928-02"><h3>2026-09-28 · 用户确认 A/H 双目标，冻结案例后逐步优化</h3><p><strong>A、H 都是本案例认可的拆拼设计，其他方案不采用。</strong>A：3件，理论矩形1.785700㎡；H：1件，1.799817㎡，理论焊缝更短。两种取舍并存，不把一件化或本例坐标写死为通用规则。</p><p>已固定原输入、有效参数/刀具、切分连接操作、原生3DM、完整顶点面积及制造失败。设计认可不升级制造补偿、完整回折或实机验收。下一轮无需补单价即可推进。</p><p><a href="#P4-S">冻结记录</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/AEA/tests/reference-cases/strip-reconnect-AH/README.md">完整参考案例</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/docs/codex-plans/20260928-163934-aea-a-h-reference-workflow-optimization.md">六步开发顺序</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/docs/verification/2026-09-28-strip-reconnect/deliverables/DESKTOP-TEST-001_AH_accepted-designs.3dm">A/H同尺度3DM</a></p><details><summary>用户原话（保留）</summary><p>很好，现在我们觉得方案H跟方案A是比较合理的两个方案，其他方案都不太行。现在首先你先把这个案例固定一下吧。</p></details></article><article class="question" id="DEC-20260928-01"><h3>2026-09-28 · 先做真实拆拼样板，再逐步改算法</h3><p>历史实验授权；之后的用户A/H设计确认见DEC-20260928-02。</p><p>用户要求先用Rhino尝试多种切分，把窄条并回大板；进一步要求两个小件也全部并入，不增加或只略增大板尺寸。<strong>这授权方案实验，不等于用户已认可样板，也不是生产算法改动授权。</strong></p><p>已执行的H整件方案：1件、没有独立小件、无展开重叠；主板一边1237.892mm不变，另一边较A增加15.522mm。理论矩形按所有原生顶点复算为1.799817㎡，比原方案减少9.58%。旧搜索采样漏尖角已登记；制造补偿尚未通过。</p><p><a href="#P4-S">查看P4-S行动责任与范围</a> · <a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/docs/verification/2026-09-28-strip-reconnect/README.md">方案、失败记录与3DM文件</a></p></article><article class="question" id="DEC-20260919-01"><h3>2026-09-19 · 用户决定：编号级参数与面积</h3><p>需求规则已确认；不是实现完成或制造验收。Q-02/Q-09当日已处理；Q-08当日未回答，已于2026-09-21决定暂缓尺寸与额外格式。</p><ul><li><a href="#IN-09">IN-09</a>：按空间/工件编号统一材料、板厚、数量及其他参数；同编号的全部数量副本与展开拆分零件继承同一组参数，不能单独覆盖。不同编号可设不同参数，可以使用默认值。</li><li><a href="#MET-01">MET-01</a>：实际展开面积：最终白色切割轮廓内的面积，扣除孔洞。</li><li><a href="#MET-02">MET-02</a>：最小外接矩形面积：只包住白色切割线，每个展开零件独立求矩形，再相加；不包括绿线，不是摆图后整组包围框。</li><li><a href="#MET-03">MET-03</a>：开料面积与最小外接矩形面积是同一个指标、同一数值；按每个零件白色切割线矩形面积之和计算，不按标准整板或排板分摊。</li><li><a href="#MET-14">MET-14</a>：计价面积：原始外尺寸蒙皮所有面的实际面积之和（面的孔洞已扣除）；不取展开后轮廓或折边豁免带面积。</li><li><a href="#MET-15">MET-15</a>：计价面积（含孔洞）：原始外尺寸蒙皮所有面的实际面积之和，再加这些面上孔洞的面积，即补回孔洞面积。</li></ul><p>落实情况：编号继承、五项面积、白线利用率与数量总量已集成；最终真实 UI/制造联验与验收另记。其他未决项保留。</p><details><summary>用户原文（保留）</summary><pre style="white-space:pre-wrap">材料、板厚、数量怎么对应工件？按**每个原始工件**分别设置，可以有默认值，也能单独修改。
 
 但是对于同一个空间，就是长得一模一样的空间，比如说一个空间需要十个，那这十个不可以单独修改，或者说一个空间要十个，然后每个空间又是拆成三个零件，这三个零件也不可以单独修改，这个板厚和其他所有东西。就是说这一个一种空间全都用一样的，但是每个不一样的，就是编号，空间编号就不一样的空间，就是可以，那就可以修改成不同的参数值。
 
@@ -223,13 +223,13 @@
 
 <section class="section" id="gaps"><h2>06 / 当前实现与你要求的主要差异</h2><p class="section-intro">以下区分本轮已实现部分、仍待联验的结果与真正未决业务范围；不以源码存在推断专家验收。</p><div id="findings"></div></section>
 <section class="section" id="questions"><h2>07 / 这些地方请你直接纠正</h2><p class="section-intro">已处理 Q-02/Q-04/Q-05/Q-09。Q-01/Q-03/Q-07/Q-10/Q-11 仍未决；Q-06已确认，本阶段Q-08已处理；只阻塞依赖它们的任务。</p><div id="questionList"></div><div class="review-foot"><strong>最省事的反馈方式</strong><p>直接告诉我：「Q-03 折边面积按……」「Q-07 超限处理按……」「Q-11 成本参数是……」「S03 需要讨论……」。Q-06已完成，Q-08尺寸与额外格式已暂缓，无需重复确认。也可在页面填写批注后点击「导出批注」。新批注先保存在当前浏览器，不会自动写入 Git。完成审阅后导出，再由集成人把决定、影响条目和剩余疑问写入本表，并同步 PROJECT_STATUS。此次 6 条原文已内嵌归档，换浏览器也能看到。</p></div></section>
-<section class="section" id="evidence"><h2>08 / 本次核对的源码依据</h2><p class="section-intro">以下摘录绑定检查时的本地源码 <code>adfc9e0</code>。它们证明当时的数据与控制路径，原文保留；当前实现与本轮运行证据另见下方链接，不以历史摘录替代新一轮验收。引用以 E 编号关联上方条目。</p><p>本轮已明确功能、分项原生与最终联验证据：<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/b441a412fc10fc09062e6669e5c33e29a1cca0d6/docs/verification/2026-09-19-m2/README.md">2026-09-19 M2 验证记录</a>。专家和生产验收状态由实际记录单独说明。</p><div id="evidenceList"></div><details style="margin-top:24px"><summary>查看本次用户需求原文</summary><div class="quote" id="originalRequest"></div></details><footer>需求基线 v2 · 2026-09-16 · 需求来源：本次用户消息；当前实现来源：AEA 项目源码与最新 PROJECT_STATUS。<br>本页未引入二维识图 / RAG 前置流程；未定义尚不明确的计价规则；批注已确认的方向与本次建议方案分别标示；完成状态需有验证证据。同步批次 AEA-REQ-20260928-01。</footer></section>
+<section class="section" id="evidence"><h2>08 / 本次核对的源码依据</h2><p class="section-intro">以下摘录绑定检查时的本地源码 <code>adfc9e0</code>。它们证明当时的数据与控制路径，原文保留；当前实现与本轮运行证据另见下方链接，不以历史摘录替代新一轮验收。引用以 E 编号关联上方条目。</p><p>本轮已明确功能、分项原生与最终联验证据：<a href="https://github.com/lizhelang/SheetMetalUnroll/blob/c81baf9179501e8b54a1df200189cdaf54640a9c/docs/verification/2026-09-19-m2/README.md">2026-09-19 M2 验证记录</a>。专家和生产验收状态由实际记录单独说明。</p><div id="evidenceList"></div><details style="margin-top:24px"><summary>查看本次用户需求原文</summary><div class="quote" id="originalRequest"></div></details><footer>需求基线 v2 · 2026-09-16 · 需求来源：本次用户消息；当前实现来源：AEA 项目源码与最新 PROJECT_STATUS。<br>本页未引入二维识图 / RAG 前置流程；未定义尚不明确的计价规则；批注已确认的方向与本次建议方案分别标示；完成状态需有验证证据。同步批次 AEA-REQ-20260928-02。</footer></section>
 </main></div><div class="toast" id="toast" role="status"></div>
 <script type="application/json" id="project-tracking">
 {
-  "revision": "AEA-REQ-20260928-01",
+  "revision": "AEA-REQ-20260928-02",
   "date": "2026-09-28",
-  "sourceCommit": "99cbea4",
+  "sourceCommit": "b441a412fc10fc09062e6669e5c33e29a1cca0d6",
   "integrationBranch": "feat/aea-agent-bridge",
   "tasks": [
     {
@@ -576,8 +576,8 @@
     },
     {
       "id": "P4-S",
-      "title": "窄条拆分并回整件的原生设计样板",
-      "lane": "Rhino 样板 / 方案确认",
+      "title": "A/H 双目标拆拼案例冻结",
+      "lane": "Rhino 样板 / 设计参考",
       "depends": [],
       "requirements": [
         "QA-01",
@@ -587,23 +587,25 @@
         "OUT-01",
         "COST-01"
       ],
-      "scope": "在现有测试模型副本上实际切分、重新连接并比较，展示全部并回大板且尽量不增宽的3DM样板；本轮不修改生产优化或制造补偿算法。",
-      "accept": "用户查看整件样板并确认切分与连接方向；保留原模型、同口径面积和工序对照、失败候选与制造补偿限制。方案确认后再逐步实现候选生成、可靠矩形统计、补偿及出图。",
+      "scope": "固定用户认可的A与H两种拆拼目标，保留源模型、有效配置与刀具、操作、原生理论3DM、同口径指标和制造失败证据；本轮不修改生产算法。",
+      "accept": "用户已认可A/H拆拼方向；冻结包可独立核验来源与哈希，历史其他方案保留为本案例对照；两入口登记后续P4-R1至R6。制造补偿、完整回折及实机验收不随设计认可升级。",
       "wave": "现在",
       "actionStates": [
-        "needs_acceptance"
+        "done"
       ],
-      "stage": "acceptance",
+      "stage": "complete",
       "implementation": "implemented",
       "verificationLevel": "local",
       "owner": {
-        "type": "user",
-        "name": "用户"
+        "type": "agent",
+        "name": "主代理"
       },
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
-        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
+        "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。",
+        "冻结核验：27份文件哈希和存量指标一致；整包移出仓库仍可校验，篡改切线会被拒绝。需求契约21项、导出15项通过。本轮未重跑优化器，资料检查不等于制造通过。"
       ]
     },
     {
@@ -898,6 +900,185 @@
         "2026-09-21：22场景原生及共享runner通过；完整Host编号数量3联验39 pass/2 unknown；实际3DM线长与报告一致，折弯9/刨槽3/焊接18次。docs/verification/2026-09-21-operations/README.md。",
         "集成主目录重新构建/完整Host制造/3DM回读通过；日常DSH实际RPC核对新参数SHA，原打开图纸保留。"
       ]
+    },
+    {
+      "id": "P4-R1",
+      "title": "可信矩形指标与连接兑现诊断",
+      "lane": "理论几何 / 报告",
+      "depends": [
+        "P4-S"
+      ],
+      "requirements": [
+        "QA-01",
+        "MET-02",
+        "MET-03"
+      ],
+      "scope": "完整直边顶点矩形、图框与报告同源；记录请求/资格/兑现及拒绝原因；新案件重放冻结A/H与短边失败对照，不重发旧请求。",
+      "accept": "A/H图框包含完整边界且与独立指标一致；F5至F9明确资格拒绝数值，不冒充碰撞或请求已兑现。原模型、lineage、未知项不丢失；制造白线另测，不混阶段。",
+      "wave": "A/H二次优化",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "P4-R2",
+      "title": "有限多轮搜索与断点恢复",
+      "lane": "阶段状态 / Harness",
+      "depends": [
+        "P4-R1"
+      ],
+      "requirements": [
+        "QA-01",
+        "IN-08",
+        "OPS-01"
+      ],
+      "scope": "扩展StageWorkflow、默认stage-controller与工具开放，维护候选集合/父候选/revision/预算/停止原因；保持未知执行先对账。",
+      "accept": "正常入口完成基线加至少两轮不同改进再选型；支持恢复、重复/过期拒绝及失败后续算。预算有上限；不只改兼容提示词，不宣称全局最优。",
+      "wave": "A/H二次优化",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "P4-R3",
+      "title": "自动生成窄条拆分与并回候选",
+      "lane": "候选生成 / 几何",
+      "depends": [
+        "P4-R1",
+        "P4-R2"
+      ],
+      "requirements": [
+        "QA-01",
+        "COST-01"
+      ],
+      "scope": "复用低利用率分割与邻域生成器，向Agent提供有来源的合法切线、拓扑和重新连接建议；经真实重建评估。",
+      "accept": "从源模型与通用目标自动生成A类/H类或经验证更优候选；不喂冻结答案、不写死板号/面号/坐标。平移、旋转、重新编号、局部尺寸变体及无窄条模型有回归。",
+      "wave": "A/H二次优化",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "P4-R4",
+      "title": "同阶段候选比较与双目标保留",
+      "lane": "报告比较 / 搜索",
+      "depends": [
+        "P4-R1",
+        "P4-R2"
+      ],
+      "requirements": [
+        "QA-01",
+        "COST-01",
+        "MET-02",
+        "MET-03",
+        "MET-05",
+        "MET-06"
+      ],
+      "scope": "比较绑定指定阶段/reportId与输入/参数/计算版本；解释面积、件数和工序取舍，保留互有优势候选；正式金额仍归P3。",
+      "accept": "制造报告不覆盖search比较证据；解释A/H并存及本例其他候选不采用。未知值不按零获胜，旧labor_score不冒充金额，失败/更差不覆盖基线；不等待Q-11单价。",
+      "wave": "A/H二次优化",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "P4-R5",
+      "title": "A/H 制造补偿与缺线修复",
+      "lane": "制造重建 / 原生见证",
+      "depends": [
+        "P4-S"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01",
+        "OUT-03",
+        "OUT-05"
+      ],
+      "scope": "分别复现A/H折弯端点与主/替代侧焊边修复；修H的FW_008/FW_013偏移缺失，区分失败尝试和最终覆盖；不放宽制造门槛。",
+      "accept": "两案各有已执行repo-local witness；折弯与适用焊偏移覆盖齐全，端点警告有几何处理证据，Freeze/Groove/Rebuild/出图/回读通过。完整回折与实机未验仍独立保留。",
+      "wave": "A/H二次优化",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "P4-R6",
+      "title": "桌面自主拆拼到制造交付回归",
+      "lane": "DSH 全链 / 集成",
+      "depends": [
+        "P4-R3",
+        "P4-R4",
+        "P4-R5"
+      ],
+      "requirements": [
+        "QA-01",
+        "IN-08",
+        "OUT-01",
+        "OUT-03",
+        "OUT-05",
+        "MET-05",
+        "MET-06"
+      ],
+      "scope": "从实际DSH默认展开入口读取源模型，自主生成比较、制造并受控打开；同候选绑定图纸/统计/参数/报告，验证角度标注和相关旧模型。",
+      "accept": "一条用户指令完成多候选到可回读制造输出，保留中断恢复和失败诊断；自主测试不注入A/H操作。角度文字沿对应折弯线可读；不得把设计确认或软件检查升级为生产验收。",
+      "wave": "A/H二次优化",
+      "actionStates": [
+        "waiting_dependency"
+      ],
+      "stage": "planned",
+      "implementation": "not_started",
+      "verificationLevel": "none",
+      "owner": {
+        "type": "unassigned",
+        "name": null
+      },
+      "openQuestions": [],
+      "verificationEvidence": []
     }
   ],
   "progress": {
@@ -905,9 +1086,9 @@
       "tasks": [
         "P1",
         "P2-U",
+        "P4-A",
         "P1-A",
-        "P2-U-A",
-        "P4-A"
+        "P2-U-A"
       ],
       "acceptance": "保留成品外尺寸蒙皮声明、选件及单位检查；几何不能自动推断外皮/中性层意图，专家复核另记。",
       "actionStates": [
@@ -1085,10 +1266,12 @@
         "P0-U",
         "P1",
         "P2-U",
+        "P4-A",
+        "P4-S",
         "P1-A",
         "P2-U-A",
-        "P4-A",
-        "P4-S"
+        "P4-R2",
+        "P4-R6"
       ],
       "acceptance": "保存设置、重启读回、编号整体更新和案件冻结按本轮证据核验；后续默认修改不得改变旧案件。图上反馈与任意多轮不据此视为完成。",
       "actionStates": [
@@ -1106,7 +1289,8 @@
       "verificationEvidence": [
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
         "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
-        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
+        "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
       ]
     },
     "IN-09": {
@@ -1115,9 +1299,9 @@
         "P0-U",
         "P1",
         "P2-U",
+        "P4-A",
         "P1-A",
-        "P2-U-A",
-        "P4-A"
+        "P2-U-A"
       ],
       "acceptance": "遵守 DEC-20260919-01；核验编号版本、并发锁、参数/资源身份及全部输出继承，默认值不等于客户已确认的生产规格。",
       "actionStates": [
@@ -1139,30 +1323,36 @@
     "OUT-01": {
       "tasks": [
         "P2-D",
+        "P4-A",
+        "P4-S",
         "P4",
         "P2-D-A",
-        "P4-A",
-        "P4-S"
+        "P4-R5",
+        "P4-R6"
       ],
-      "acceptance": "独立白线子集及制造门禁绑定按本轮证据核验；机器加工适用性和额外交付格式另行确认。",
+      "acceptance": "独立白线子集及制造门禁绑定按本轮证据核验；机器加工适用性和额外交付格式另行确认。 A/H新增拆拼案例须由P4-R5修补偿、P4-R6确认本案图纸；历史格式认可不覆盖新几何失败。",
       "actionStates": [
-        "done"
+        "agent_ready"
       ],
-      "stage": "complete",
-      "implementation": "implemented",
+      "stage": "planned",
+      "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
-        "type": "user",
-        "name": "用户"
+        "type": "unassigned",
+        "name": null
       },
-      "depends": [],
+      "depends": [
+        "P4-S"
+      ],
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
         "2026-09-21 用户认可现有截图外观并要求保持当前格式；尺寸与额外格式暂缓，未认定为实机验收。",
         "2026-09-24 用户选择A方案折弯角度标注；正式制造witness回读4个角度文字，均在制造级展开::角度标注图层。",
         "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
-        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
+        "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。",
+        "2026-09-28：既有图纸格式认可保留；A/H新拆拼案例制造补偿仍失败，P4-R5先修端点/偏移缺线，P4-R6再联验。该设计确认不是本案例制造出图通过。"
       ]
     },
     "OUT-02": {
@@ -1194,25 +1384,30 @@
       "tasks": [
         "P2-D",
         "P4",
-        "P2-D-A"
+        "P2-D-A",
+        "P4-R5",
+        "P4-R6"
       ],
-      "acceptance": "需以真实模型验收位置；源码存在不等同位置已获业务认可。",
+      "acceptance": "需以真实模型验收位置；源码存在不等同位置已获业务认可。 A/H新增拆拼案例须由P4-R5修补偿、P4-R6确认本案图纸；历史格式认可不覆盖新几何失败。",
       "actionStates": [
-        "done"
+        "agent_ready"
       ],
-      "stage": "complete",
-      "implementation": "implemented",
+      "stage": "planned",
+      "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
-        "type": "user",
-        "name": "用户"
+        "type": "unassigned",
+        "name": null
       },
-      "depends": [],
+      "depends": [
+        "P4-S"
+      ],
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
         "2026-09-21 用户认可现有截图外观并要求保持当前格式；尺寸与额外格式暂缓，未认定为实机验收。",
-        "2026-09-24 用户选择A方案折弯角度标注；正式制造witness回读4个角度文字，均在制造级展开::角度标注图层。"
+        "2026-09-24 用户选择A方案折弯角度标注；正式制造witness回读4个角度文字，均在制造级展开::角度标注图层。",
+        "2026-09-28：既有图纸格式认可保留；A/H新拆拼案例制造补偿仍失败，P4-R5先修端点/偏移缺线，P4-R6再联验。该设计确认不是本案例制造出图通过。"
       ]
     },
     "OUT-04": {
@@ -1244,24 +1439,29 @@
       "tasks": [
         "P2-D",
         "P4",
-        "P2-D-A"
+        "P2-D-A",
+        "P4-R5",
+        "P4-R6"
       ],
-      "acceptance": "红线含义与焊长计算口径分别确认，不能用红线数量代表焊接次数。",
+      "acceptance": "红线含义与焊长计算口径分别确认，不能用红线数量代表焊接次数。 A/H新增拆拼案例须由P4-R5修补偿、P4-R6确认本案图纸；历史格式认可不覆盖新几何失败。",
       "actionStates": [
-        "done"
+        "agent_ready"
       ],
-      "stage": "complete",
-      "implementation": "implemented",
+      "stage": "planned",
+      "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
-        "type": "user",
-        "name": "用户"
+        "type": "unassigned",
+        "name": null
       },
-      "depends": [],
+      "depends": [
+        "P4-S"
+      ],
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
-        "2026-09-21 用户认可现有截图外观并要求保持当前格式；尺寸与额外格式暂缓，未认定为实机验收。"
+        "2026-09-21 用户认可现有截图外观并要求保持当前格式；尺寸与额外格式暂缓，未认定为实机验收。",
+        "2026-09-28：既有图纸格式认可保留；A/H新拆拼案例制造补偿仍失败，P4-R5先修端点/偏移缺线，P4-R6再联验。该设计确认不是本案例制造出图通过。"
       ]
     },
     "OUT-06": {
@@ -1312,53 +1512,63 @@
     "MET-02": {
       "tasks": [
         "P2-M",
+        "P4-S",
         "P2-M-A",
-        "P4-S"
+        "P4-R1",
+        "P4-R4"
       ],
-      "acceptance": "按白线范围核验每件矩形及求和；不得混用旧 TrimmedLoops + Outlines 的矩形统计。",
+      "acceptance": "按白线范围核验每件矩形及求和；不得混用旧 TrimmedLoops + Outlines 的矩形统计。 A/H设计已确认；先由P4-R1修理论搜索漏角，保持理论与制造白线指标分离。",
       "actionStates": [
-        "needs_acceptance"
+        "agent_ready"
       ],
-      "stage": "acceptance",
-      "implementation": "implemented",
+      "stage": "planned",
+      "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
-        "type": "user",
-        "name": "用户"
+        "type": "unassigned",
+        "name": null
       },
-      "depends": [],
+      "depends": [
+        "P4-S"
+      ],
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
         "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
         "本次发现理论搜索对整条轮廓32等分采样会漏尖角；展示用全原生顶点独立重算。制造白线使用分段路径，不据此推断其同样失准。生产统计修复待方案确认后实施。",
-        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
+        "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
       ]
     },
     "MET-03": {
       "tasks": [
         "P2-M",
+        "P4-S",
         "P2-M-A",
-        "P4-S"
+        "P4-R1",
+        "P4-R4"
       ],
-      "acceptance": "保持与 MET-02 严格同值；标准板规格、旋转与超限仍属 IN-03/Q-07，不重新引入未确认的开料公式。",
+      "acceptance": "保持与 MET-02 严格同值；标准板规格、旋转与超限仍属 IN-03/Q-07，不重新引入未确认的开料公式。 A/H设计已确认；先由P4-R1修理论搜索漏角，保持理论与制造白线指标分离。",
       "actionStates": [
-        "needs_acceptance"
+        "agent_ready"
       ],
-      "stage": "acceptance",
-      "implementation": "implemented",
+      "stage": "planned",
+      "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
-        "type": "user",
-        "name": "用户"
+        "type": "unassigned",
+        "name": null
       },
-      "depends": [],
+      "depends": [
+        "P4-S"
+      ],
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
         "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
         "本次发现理论搜索对整条轮廓32等分采样会漏尖角；展示用全原生顶点独立重算。制造白线使用分段路径，不据此推断其同样失准。生产统计修复待方案确认后实施。",
-        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
+        "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
       ]
     },
     "MET-04": {
@@ -1390,9 +1600,11 @@
     "MET-05": {
       "tasks": [
         "P2-M",
+        "P4-A",
         "P2-M-A",
         "P2-M-B",
-        "P4-A"
+        "P4-R4",
+        "P4-R6"
       ],
       "acceptance": "同一零件内全部折弯线按同一无限直线归并计一次，包括需要刨槽的折弯；平行偏移不合并。 长度按对应实际线长求和，不把共线线段之间空隙计入长度；同一零件内折弯/刨槽按同一无限直线计次，平行偏移不合并；焊接每条语义焊缝一次，不按共线合并；同焊缝两侧引用不重复，编号数量只乘一次。",
       "actionStates": [
@@ -1414,9 +1626,11 @@
     "MET-06": {
       "tasks": [
         "P2-M",
+        "P4-A",
         "P2-M-A",
         "P2-M-B",
-        "P4-A"
+        "P4-R4",
+        "P4-R6"
       ],
       "acceptance": "每条语义焊缝取对应线长求和；同一焊缝的两侧零件引用不重复计长。 长度按对应实际线长求和，不把共线线段之间空隙计入长度；同一零件内折弯/刨槽按同一无限直线计次，平行偏移不合并；焊接每条语义焊缝一次，不按共线合并；同焊缝两侧引用不重复，编号数量只乘一次。",
       "actionStates": [
@@ -1438,9 +1652,9 @@
     "MET-07": {
       "tasks": [
         "P2-M",
+        "P4-A",
         "P2-M-A",
-        "P2-M-B",
-        "P4-A"
+        "P2-M-B"
       ],
       "acceptance": "一条语义焊接线计一次，不因共线合并，也不因同缝两侧引用增加次数。 长度按对应实际线长求和，不把共线线段之间空隙计入长度；同一零件内折弯/刨槽按同一无限直线计次，平行偏移不合并；焊接每条语义焊缝一次，不按共线合并；同焊缝两侧引用不重复，编号数量只乘一次。",
       "actionStates": [
@@ -1462,9 +1676,9 @@
     "MET-08": {
       "tasks": [
         "P2-M",
+        "P4-A",
         "P2-M-A",
-        "P2-M-B",
-        "P4-A"
+        "P2-M-B"
       ],
       "acceptance": "最终刨槽标记对应的折弯线长求和；共线之间的空隙不计长度。 长度按对应实际线长求和，不把共线线段之间空隙计入长度；同一零件内折弯/刨槽按同一无限直线计次，平行偏移不合并；焊接每条语义焊缝一次，不按共线合并；同焊缝两侧引用不重复，编号数量只乘一次。",
       "actionStates": [
@@ -1486,9 +1700,9 @@
     "MET-09": {
       "tasks": [
         "P2-M",
+        "P4-A",
         "P2-M-A",
-        "P2-M-B",
-        "P4-A"
+        "P2-M-B"
       ],
       "acceptance": "同一零件内刨槽线按同一无限直线归并计一次；平行偏移不合并。 长度按对应实际线长求和，不把共线线段之间空隙计入长度；同一零件内折弯/刨槽按同一无限直线计次，平行偏移不合并；焊接每条语义焊缝一次，不按共线合并；同焊缝两侧引用不重复，编号数量只乘一次。",
       "actionStates": [
@@ -1612,9 +1826,11 @@
       "tasks": [
         "P1",
         "P3",
+        "P4-S",
         "P4",
         "P1-A",
-        "P4-S"
+        "P4-R3",
+        "P4-R4"
       ],
       "acceptance": "S04 已确认目标；公式为建议 v1。先统一指标与配置版本，再接入排名；不等于完整报价。",
       "actionStates": [
@@ -1641,7 +1857,8 @@
       ],
       "verificationEvidence": [
         "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
-        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
+        "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
       ]
     },
     "TOOL-01": {
@@ -1670,13 +1887,19 @@
     "QA-01": {
       "tasks": [
         "P0",
-        "P4",
         "P4-A",
-        "P4-S"
+        "P4-S",
+        "P4",
+        "P4-R1",
+        "P4-R2",
+        "P4-R3",
+        "P4-R4",
+        "P4-R5",
+        "P4-R6"
       ],
       "acceptance": "P0 已完成代表模型工程贯通；P4-A独立验证当前DSH自主规划/制造链与多模型适用范围，不等待正式成本P3。P4保留完整产品、专家与实机验收；软件门禁不替代人工验收。",
       "actionStates": [
-        "agent_active",
+        "agent_ready",
         "waiting_dependency"
       ],
       "stage": "verification",
@@ -1695,14 +1918,16 @@
         "2026-09-18：DSH 0.1.5-rc.2 同案恢复完成基线→局部改进→比较→保留基线→制造→回读→受控打开；37 pass、2 unknown，102 对象。证据 docs/verification/2026-09-18-p0/README.md。",
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
         "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
-        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+        "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
+        "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
       ]
     },
     "OPS-01": {
       "tasks": [
         "H0",
         "H1",
-        "H2"
+        "H2",
+        "P4-R2"
       ],
       "acceptance": "每个任务绑定需求 ID、负责人、唯一写入边界和验证证据；两个入口由集成人维护。",
       "actionStates": [
@@ -1829,8 +2054,8 @@
     "MET-16": {
       "tasks": [
         "P2-M",
-        "P2-M-B",
-        "P4-A"
+        "P4-A",
+        "P2-M-B"
       ],
       "acceptance": "全部制造折弯线长度求和。 长度按对应实际线长求和，不把共线线段之间空隙计入长度；同一零件内折弯/刨槽按同一无限直线计次，平行偏移不合并；焊接每条语义焊缝一次，不按共线合并；同焊缝两侧引用不重复，编号数量只乘一次。",
       "actionStates": [
@@ -2035,7 +2260,7 @@
       {
         "id": "S04",
         "title": "加工方案与搜索",
-        "summary": "整件拆拼样板已原生执行，等待你确认；自动搜索与制造补偿随后按样板修改。",
+        "summary": "A/H已获用户认可并冻结；接下来修可信指标、有限多轮搜索及自动拆分并回。",
         "checks": [
           {
             "label": "折焊与受限分割候选",
@@ -2054,7 +2279,7 @@
             "state": "planned"
           },
           {
-            "label": "窄条切分并回一整件的原生样板",
+            "label": "A/H两份拆拼目标及不可变参考资料",
             "state": "exists"
           }
         ],
@@ -2063,7 +2288,11 @@
           "P2-M",
           "P3",
           "P4-A",
-          "P4-S"
+          "P4-S",
+          "P4-R1",
+          "P4-R2",
+          "P4-R3",
+          "P4-R4"
         ],
         "requirements": [
           "COST-01",
@@ -2072,15 +2301,15 @@
           "MET-06"
         ],
         "minimum": "完成现有基线→验证→一次改进→验证→比较；更差时保留基线，不要求首次贯通就达到最优。",
-        "next": "先看P4-S整件样板：无小件，边长增加15.52mm；确认后逐步修复短边资格提示、候选组合与矩形漏角。",
-        "blocked": "不等待报价即可验证几何；正式金额仍由Q-11单独约束。整件样板尚未通过制造补偿。",
+        "next": "P4-R1先修矩形与请求兑现；随后P4-R2/R3/R4扩展有限搜索、通用拆分和同阶段比较。",
+        "blocked": "A/H设计方向无需再确认。Q-11只约束正式金额；本案例制造补偿由P4-R5独立修复。",
         "evidence": [
           "E01",
           "E16",
           "E18"
         ],
         "actionStates": [
-          "needs_acceptance",
+          "agent_ready",
           "waiting_dependency"
         ],
         "stage": "planned",
@@ -2091,7 +2320,7 @@
           "name": null
         },
         "depends": [
-          "P2-M"
+          "P4-R1"
         ],
         "openQuestions": [
           "Q-11"
@@ -2099,13 +2328,14 @@
         "verificationEvidence": [
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
           "2026-09-28：Rhino整件样板H在原参数下1件、无小件、无展开重叠；全顶点矩形1.799817㎡，理论焊344.483mm、共线刀数11。1237.892mm一边不变，另一边较A增加15.522mm。补偿仍fail，仅等待设计确认。证据 docs/verification/2026-09-28-strip-reconnect/README.md。",
-          "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。"
+          "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
+          "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
         ]
       },
       {
         "id": "S05",
         "title": "真实几何与门禁",
-        "summary": "37项软件检查通过，2项unknown；制造门禁真实拦截了一份候选。",
+        "summary": "A/H理论几何与制造失败证据已固定；先修真实缺陷，保留未知项。",
         "checks": [
           {
             "label": "真实物化与自动几何检查",
@@ -2123,33 +2353,37 @@
         "tasks": [
           "P0",
           "P4",
-          "P4-A"
+          "P4-A",
+          "P4-R1",
+          "P4-R5",
+          "P4-R6"
         ],
         "requirements": [
           "QA-01"
         ],
         "minimum": "执行已有必过检查；记录 pass / fail / unknown，失败候选回到 S04 修正，不能跳过门禁。",
-        "next": "P4-A正在独立验证当前DSH自主规划→制造→文件/统计回读及已有模型适用范围；人工、专家与实机验收继续独立保留。",
+        "next": "P4-R1修理论测量与请求诊断；P4-R5复现并修制造端点和缺失焊偏移，分别执行原生见证。",
         "blocked": "首次工程联测已通过；manufacturing_acceptance和shape_preservation仍为unknown，不能升级专家/生产验收。 已明确工程验证不等待P3成本规则或人工逐项验收。",
         "evidence": [
           "E01",
           "E16"
         ],
         "actionStates": [
-          "agent_active",
+          "agent_ready",
           "needs_acceptance"
         ],
         "stage": "verification",
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "agent",
-          "name": "主代理"
+          "type": "unassigned",
+          "name": null
         },
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
+          "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
         ]
       },
       {
@@ -2209,7 +2443,7 @@
       {
         "id": "S07",
         "title": "制造补偿与净轮廓",
-        "summary": "统一缩进配置和资源冻结已接入；原补偿数学逻辑保持，默认等价已有分项原生对照。",
+        "summary": "配置与旧模型验证保留；A/H新拆拼仍有端点警告及H焊偏移缺失，Agent可修。",
         "checks": [
           {
             "label": "按现有折弯 / 刨槽规则补偿",
@@ -2230,7 +2464,8 @@
         ],
         "tasks": [
           "P0",
-          "P2-E"
+          "P2-E",
+          "P4-R5"
         ],
         "requirements": [
           "IN-05",
@@ -2242,7 +2477,7 @@
           "OUT-05"
         ],
         "minimum": "保留现行角度、正反折、缩进与回退，完成原制造链；不能用理论草稿替代。",
-        "next": "请复核补偿与出图结果；旧默认等价、统一缩进及冻结已验证。",
+        "next": "P4-R5从冻结A/H分别复现；修几何和最终覆盖统计，不靠降低门槛通过。",
         "blocked": "历史失败候选仍保留诊断，不能绕过补偿门禁；专家与实机效果未据软件验证升级。",
         "evidence": [
           "E04",
@@ -2250,19 +2485,23 @@
           "E08"
         ],
         "actionStates": [
+          "agent_ready",
           "needs_acceptance"
         ],
-        "stage": "acceptance",
-        "implementation": "implemented",
+        "stage": "planned",
+        "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "user",
-          "name": "用户"
+          "type": "unassigned",
+          "name": null
         },
-        "depends": [],
+        "depends": [
+          "P4-S"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
+          "2026-09-28：A有5个端点警告、2次主侧修复跳过但12/12焊偏移覆盖；H有11个端点警告、6次跳过，应10条偏移实际8条，缺FW_008/FW_013。"
         ]
       },
       {
@@ -2301,7 +2540,10 @@
           "P2-M",
           "P2-M-A",
           "P2-M-B",
-          "P4-A"
+          "P4-A",
+          "P4-R1",
+          "P4-R4",
+          "P4-R6"
         ],
         "requirements": [
           "MET-01",
@@ -2322,7 +2564,7 @@
           "MET-16"
         ],
         "minimum": "输出已有工程字段的真实名称、单位、来源和限制；缺项保留 unknown，暂不出正式报价或成本最优结论。",
-        "next": "工序长度与次数已实现并真实制造验证；可核对统计结果。仍只需决定折边、圆弧和板型分类规则。",
+        "next": "已确认线长/次数继续使用；P4-R1修理论矩形，P4-R4/R6分阶段比较及统计回读。其余分类问题只影响对应字段。",
         "blocked": "Q-01/Q-03/Q-07只阻塞对应分类字段，不阻塞Q-06统计。",
         "evidence": [
           "E10",
@@ -2356,7 +2598,7 @@
       {
         "id": "S09",
         "title": "当前制造图交付",
-        "summary": "当前3DM输出外观已获用户认可；必要尺寸与额外格式暂缓。",
+        "summary": "当前图纸格式认可保留；A/H须修制造补偿后再验证新图纸，不能用设计稿顶替。",
         "checks": [
           {
             "label": "白 / 绿 / 蓝 / 红制造线",
@@ -2384,7 +2626,9 @@
           "P2-D",
           "P4",
           "P2-D-A",
-          "P4-A"
+          "P4-A",
+          "P4-R5",
+          "P4-R6"
         ],
         "requirements": [
           "OUT-01",
@@ -2395,8 +2639,8 @@
           "OUT-06"
         ],
         "minimum": "提供现有制造复核3DM与纯白线3DM。",
-        "next": "保持当前图纸形式，后续具体图纸问题再修复。",
-        "blocked": "当前图纸格式无阻塞。暂缓的尺寸不标成已实现；实机验收独立。",
+        "next": "P4-R5修制造缺线，再由P4-R6核验同候选图纸、统计和角度标注；尺寸与额外格式仍暂缓。",
+        "blocked": "本案例正式制造输出等待P4-R5/R6；设计样板已认可。",
         "evidence": [
           "E07",
           "E08",
@@ -2404,26 +2648,30 @@
           "E19"
         ],
         "actionStates": [
-          "done"
+          "waiting_dependency"
         ],
-        "stage": "complete",
+        "stage": "planned",
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "user",
-          "name": "用户"
+          "type": "unassigned",
+          "name": null
         },
-        "depends": [],
+        "depends": [
+          "P4-R5",
+          "P4-R6"
+        ],
         "openQuestions": [],
         "verificationEvidence": [
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
-          "2026-09-21 用户认可现有输出外观；尺寸及额外格式暂缓。"
+          "2026-09-21 用户认可现有输出外观；尺寸及额外格式暂缓。",
+          "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
         ]
       },
       {
         "id": "S10",
         "title": "复核、反馈与续算",
-        "summary": "案件/候选/报告/文件哈希及编号版本受控发布已接入；图上反馈和任意多轮仍未完成。",
+        "summary": "A/H设计认可已持久冻结；有限多轮恢复与桌面自主交付将分步接入。",
         "checks": [
           {
             "label": "案件 / 候选 / 报告持久身份",
@@ -2442,7 +2690,10 @@
           "P0",
           "P2-U",
           "P4",
-          "P4-A"
+          "P4-A",
+          "P4-S",
+          "P4-R2",
+          "P4-R6"
         ],
         "requirements": [
           "QA-01",
@@ -2450,35 +2701,36 @@
           "OPS-01"
         ],
         "minimum": "同一候选、报告与文件哈希通过后打开复核图，记录已验证与未验证项；允许人工提出下一次修改请求。",
-        "next": "P4-A正在独立验证当前DSH自主规划→制造→文件/统计回读及已有模型适用范围；人工、专家与实机验收继续独立保留。",
-        "blocked": "常驻参数面板不等于图上反馈产品；专家和实机验收分别记录，任意多轮未因本轮配置功能而获得支持。 已明确工程验证不等待P3成本规则或人工逐项验收。",
+        "next": "按P4-R2/R6推进有限多轮和真实桌面全链，保持候选、报告与文件身份一致。",
+        "blocked": "用户已确认本案例设计方向；依赖工程任务，完整回折/专家/实机仍独立。",
         "evidence": [
           "E01",
           "E15",
           "E16"
         ],
         "actionStates": [
-          "agent_active",
-          "needs_acceptance",
-          "waiting_dependency"
+          "waiting_dependency",
+          "needs_acceptance"
         ],
-        "stage": "verification",
+        "stage": "planned",
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "agent",
-          "name": "主代理"
+          "type": "unassigned",
+          "name": null
         },
         "depends": [
-          "P4"
+          "P4-R2",
+          "P4-R6"
         ],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
+          "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。"
         ]
       }
     ],
-    "updated": "2026-09-23",
+    "updated": "2026-09-28",
     "currentMilestone": "M2",
     "policy": "数量仅统计下面列明的已有代码能力条目，不表示工时百分比或业务验收。",
     "milestones": [
@@ -2554,26 +2806,31 @@
         "title": "再优化 · 成本与方案质量",
         "tasks": [
           "P3",
-          "P4"
+          "P4",
+          "P4-S",
+          "P4-R1",
+          "P4-R2",
+          "P4-R3",
+          "P4-R4",
+          "P4-R5",
+          "P4-R6"
         ],
-        "goal": "用可解释成本做候选比较，以专家样板、真实工时逐步校准。",
+        "goal": "先以已认可A/H样板改正指标、拆拼搜索和制造交付，再接正式金额模型与泛化回归。",
         "exit": "比较可复现，不丢更好的基线；完整产品回归与专家验收分开记载。",
-        "defer": "组合套料与任意多轮搜索另列后续需求，不冒充当前支持。",
+        "defer": "正式金额仍属P3/Q-11，不阻塞A/H工程改进；组合套料和无界搜索不在本轮。",
         "actionStates": [
+          "agent_ready",
           "waiting_dependency"
         ],
         "stage": "planned",
-        "implementation": "not_started",
+        "implementation": "partial",
         "verificationLevel": "none",
         "owner": {
           "type": "unassigned",
           "name": null
         },
         "depends": [
-          "P2-E",
-          "P2-T",
-          "P2-M",
-          "P2-U"
+          "P4-S"
         ],
         "openQuestions": [],
         "verificationEvidence": []
@@ -3511,7 +3768,7 @@ document.getElementById('processLegend').innerHTML=Object.entries(taxonomy.actio
 document.getElementById('milestoneList').innerHTML=tracking.process.milestones.map(m=>`<section class="milestone"><span class="mid">${m.id}</span>${actionBadges(m)}<h4>${esc(m.title)}</h4><p>${esc(m.goal)}</p><p class="exit"><strong>完成判据</strong><br>${esc(m.exit)}</p><p class="small">${esc(m.defer)}</p><details><summary>阶段与验证详情</summary>${dimensionDetails(m)}</details><div class="node-links">${processLinks(m.tasks)}</div></section>`).join('');
 document.getElementById('processBoard').addEventListener('click',e=>{const button=e.target.closest('[data-process-node]');if(button){const focused=document.activeElement===button;const id=button.dataset.processNode;selectProcessNode(id);if(focused)document.querySelector('[data-process-node="'+id+'"]').focus({preventScroll:true});}});
 document.querySelectorAll('[data-process-mode]').forEach(b=>b.addEventListener('click',()=>{processMode=b.dataset.processMode;renderProcess();}));
-document.getElementById('focusFirstBreak').onclick=()=>selectProcessNode('S05',true);
+document.getElementById('focusFirstBreak').onclick=()=>selectProcessNode('S04',true);
 renderProcess();
 document.getElementById('taskList').innerHTML=tracking.tasks.map(t=>`<details class="stage" id="${t.id}"><summary><span class="stage-no">${t.id}</span><h3>${esc(t.title)}</h3>${actionBadges(t)}</summary><div class="stage-body">${dimensionDetails(t)}<p class="small">开发批次：${esc(t.wave)} · 工作范围：${esc(t.lane)}</p><p>需求：${processLinks(t.requirements)}</p><p>写入边界：${esc(t.scope)}</p><p><strong>完成条件：</strong>${esc(t.accept)}</p><p class="small">验证证据：${t.verificationEvidence.length?t.verificationEvidence.map(esc).join('；'):'未登记'}。分支与工作区见 PROJECT_STATUS 对应任务。</p></div></details>`).join('');
 const dispositions={S01:'已采纳 → IN-01/IN-09、P1/P2-U：零厚度外皮，DSH 独立设置。',S02:'已采纳 → IN-05～IN-08、P0-U/P1/P2-U：前端入口使用 DSH 插件。',S03:'保留未决 → Q-10：仅有讨论标记，无补充文字；不改算法。',S04:'目标已采纳 → COST-01、P2-M/P3；四参数金额函数为本次建议。',S06:'已采纳 → IN-06/TOOL-01、P2-T：存在任一可用刀具则不刨槽。',S07:'已采纳 → IN-05/IN-07、P2-E：保持算法，规范配置；实测未验收。'};
