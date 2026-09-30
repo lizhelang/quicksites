@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "3f679679dc16d8e2d5e31274ba94687bb472493e",
-    "committedAt": "2026-09-30T21:49:19+10:00",
-    "checkedAt": "2026-09-30T11:49:58+00:00",
-    "trackerRevision": "AEA-REQ-20260930-02",
+    "commit": "ada3320807d80d77ee44d235c50e6d2fed9a6d03",
+    "committedAt": "2026-09-30T22:13:40+10:00",
+    "checkedAt": "2026-09-30T12:14:20+00:00",
+    "trackerRevision": "AEA-REQ-20260930-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-30T11:49:58+00:00",
+    "generatedAt": "2026-09-30T12:14:20+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1100,14 +1100,14 @@
       "id": "P4-R3",
       "title": "自动生成窄条拆分与并回候选",
       "actionStates": [
-        "done"
+        "agent_ready"
       ],
-      "stage": "complete",
-      "implementation": "implemented",
+      "stage": "ready",
+      "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
-        "name": "搜索代理"
+        "name": "主代理"
       },
       "depends": [
         "P4-R1",
@@ -1115,7 +1115,11 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-29：通用源拓扑凹窄条生成器14项变体回归通过（平移/三维旋转/重编号/尺寸/反向/无窄条等），生产Host串联和两个真实DSH新会话自主生成6cut H方向。未读取A/H操作作为生成输入；支持未切分父候选上的平面单外环直边凹窄条，任意曲面/曲边不在此实现范围。"
+        "2026-09-29：通用源拓扑凹窄条生成器14项变体回归通过（平移/三维旋转/重编号/尺寸/反向/无窄条等），生产Host串联和两个真实DSH新会话自主生成6cut H方向。未读取A/H操作作为生成输入；支持未切分父候选上的平面单外环直边凹窄条，任意曲面/曲边不在此实现范围。",
+        "2026-09-30：037独立Rhino实测未调用DSH。完整AEA评估142次、最终3次切分；同输入/参数均4件，白线外接矩形面积由DSH的1.574537648432降至1.296590244585㎡。旧A/H端到端证据仍有效，不能外推本例优化合格。",
+        "2026-09-30：同制造阶段焊长2.662014609→1.876064910m、折弯动作16→18；按32×㎡+10×m+动作数比较，93.00535084→78.25153693（-15.8634%）。这只是三项参数评分，不是完整工厂报价。",
+        "2026-09-30：另行直接原生评估16次（基线+15组改进），3组改进通过原生搜索检查，其中1组面面积少199.99mm²不能接受，另2组报告面积守恒；均未制造，不能与制造值混比。新完整AEA结果仍有独立窄件、白线近接触unknown及角标占区冲突；尚非最优或合格工厂交付。",
+        "2026-09-30：P4-R3恢复Agent可处理；继续部分切分、切分与换连接联合搜索、统一白线成本与图纸质量。P4-R2流程恢复结论不变，不等待用户补充要求。证据 docs/verification/2026-09-30-037-independent-review/README.md。"
       ],
       "requirements": [
         "QA-01",
