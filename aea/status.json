@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "b7a401371f6a19edbf8e2f91c5351084103b73a9",
-    "committedAt": "2026-09-29T11:00:24+10:00",
-    "checkedAt": "2026-09-29T01:01:14+00:00",
-    "trackerRevision": "AEA-REQ-20260929-03",
+    "commit": "13c1b1b871b78bb1ea5ba0050674fe26aa84e951",
+    "committedAt": "2026-09-30T21:07:54+10:00",
+    "checkedAt": "2026-09-30T11:08:31+00:00",
+    "trackerRevision": "AEA-REQ-20260930-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-29T01:01:14+00:00",
+    "generatedAt": "2026-09-30T11:08:31+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -465,7 +465,8 @@
       "verificationEvidence": [
         "2026-09-18：真实 DSH 控件保存3.2并重启读回；资源metadata持久化、冲突/非法值拒绝；真实 Host 建案读取3.2。资源未应用到制造，P1/P2-U未完成。证据 AEA-docs/plans/2026-09-18-dsh-parameter-entry-proof.md。",
         "2026-09-26：官方 DeepSeek Harness Desktop macOS arm64 0.1.7-rc.2 通过 SHA-512、codesign 与 spctl 校验；独立 desktop profile 启用 AEA bundle，模式选择器实际显示并选中“展开模式”。仅证明桌面入口可用，不升级制造或专家验收。",
-        "2026-09-26：发现旧 Web 的 OpenAI 风格网关根地址被桌面版沿用，桌面版改用 Messages 后首轮模型请求 HTTP 404；备份并修正 desktop profile 后，同一模型最小请求成功回复。需求行为未变，未据此升级制造验收。"
+        "2026-09-26：发现旧 Web 的 OpenAI 风格网关根地址被桌面版沿用，桌面版改用 Messages 后首轮模型请求 HTTP 404；备份并修正 desktop profile 后，同一模型最小请求成功回复。需求行为未变，未据此升级制造验收。",
+        "2026-09-30：Desktop 0.2旧入口证书链失败，首步5次TRANSPORT、0工具。授权清理旧配置、重启并迁移14个主会话next；账号flash/high最小请求一轮一步回复OK，0重试/工具。23面模型未重跑，制造与验收状态不变。见 docs/verification/2026-09-30-dsh-account-cleanup/README.md。"
       ],
       "requirements": [
         "IN-08",
