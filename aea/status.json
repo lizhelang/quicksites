@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "394dd1e36234a0c8bbb713cc31dbe662216890bb",
-    "committedAt": "2026-10-01T06:17:07+10:00",
-    "checkedAt": "2026-09-30T20:18:05+00:00",
-    "trackerRevision": "AEA-REQ-20261001-03",
+    "commit": "6eacee1208ca5887edfd45f4372656be5e9c52cc",
+    "committedAt": "2026-10-01T06:54:10+10:00",
+    "checkedAt": "2026-09-30T20:55:12+00:00",
+    "trackerRevision": "AEA-REQ-20261001-04",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-30T20:18:05+00:00",
+    "generatedAt": "2026-09-30T20:55:12+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -306,10 +306,19 @@
           "2026-10-01：DEC-20261001-01按用户新要求重新开放P2-D-A（OUT-03/OUT-04）；旧A方案大字、中点引线与锚点由贴线角标取代，历史证据保留但不证明新布局通过。本轮实现与原生验证尚在进行，未升级专家或生产验收。",
           "2026-10-01：DEC-20261001-01贴线角标已实现。037的7条、A/H的4条及旋转/交叉/隐藏线共23项原生检查通过；正式制造重新出图后2项独立回读通过。真实字形整段沿自己的有限折弯线，实际16/22mm、无重叠、无引线/锚点；必要时对应v槽标记仅沿同线避让。零新增Rhino GUI窗口。新外观尚未由用户确认，未升级专家/生产验收。见 docs/verification/2026-10-01-inline-fold-angles/README.md。",
           "2026-10-01：DEC-20261001-02重新开放P2-D-A、OUT-03/04、S09。整句字形包络中线须与自身有限折弯/刨槽线重合，可覆盖自身线。旧23+2项检查只证明单侧贴线，不代表新规则通过。详见 docs/verification/2026-10-01-centered-fold-angles/README.md。",
-          "2026-10-01：DEC-20261001-02已实现。23项原生及3项新图回读通过；037为14/18/22mm、A/H全22mm，中心距≤0.001mm，无角标重叠或异线接触。实际字形预览已检查、GUI零新增。正式制造59 pass/2既有unknown；用户未确认外观，非生产验收。见 docs/verification/2026-10-01-centered-fold-angles/README.md。"
+          "2026-10-01：DEC-20261001-02已实现。23项原生及3项新图回读通过；037为14/18/22mm、A/H全22mm，中心距≤0.001mm，无角标重叠或异线接触。实际字形预览已检查、GUI零新增。正式制造59 pass/2既有unknown；用户未确认外观，非生产验收。见 docs/verification/2026-10-01-centered-fold-angles/README.md。",
+          "2026-10-01：DEC-20261001-04重新开放P2-D-A、OUT-03/04及S09。骑线外观规则不改；修复DSH选择/打开旧制造报告时绕过当前图纸契约的问题。",
+          "已定位：本次会话把新基线与9月29日旧优胜制造报告混比，随后打开旧3DM；其中4个60mm角标仍含4引线/4锚点。完成阶段直接返回旧报告，选择/打开仅核验哈希，未检查图纸契约版本。",
+          "本轮要求保存3DM后原生核验真实字形，生成fold_angle_layout_current及版本2证据；旧成功报告保留可读，但不得充当当前制造交付或参与最新交付选择。",
+          "过期候选通过selection.staleDrawingCandidateIds和nextActions明确提示；显式finalize_stage_candidate同一冻结候选生成新报告，保留旧报告及参数。unknown只按原attempt对账，不重放原生操作。",
+          "2026-10-01：DEC-20261001-04交付版本门禁已实现。原生witness36/36、实际文件独立检查5/5、Bridge59/59、Node24/24通过；三份新图各4条骑线角标，旧图被正确拒绝，GUI文档不变。",
+          "三候选均显式重出新制造报告，fold_angle_layout_current均pass，契约为centered-on-bend-glyph-envelope-v2；比较新报告后deliveryReady=true，staleDrawingCandidateIds为空。",
+          "优胜方案新旧评分同为72.97563731194184，面积和工序指标不变；输出对象141→133，仅移除8个引线/锚点。输入版本与全部旧报告SHA保持，未改变冻结参数。",
+          "优胜制造报告48 pass、0 fail、2 unknown；unknown为manufacturing_acceptance与shape_preservation。已验证软件交付链，未升级用户外观确认、完整回折或生产验收。",
+          "证据：docs/verification/2026-10-01-dsh-drawing-version/README.md。实际调用既有案件的Host原生链，未发送新的DSH模型对话；主DSH已从集成目录安装并正常重启，旧会话恢复；当前预设代次7d1544f6与源码一致，已保存参数值及settings SHA不变。安装后实际工具恢复本案，读到新优胜报告912ad30c与deliveryReady=true；远端版本以发布清单为准。"
         ],
-        "existing": 5,
-        "total": 6
+        "existing": 6,
+        "total": 7
       },
       {
         "id": "S10",
@@ -996,7 +1005,16 @@
         "2026-10-01：DEC-20261001-01按用户新要求重新开放P2-D-A（OUT-03/OUT-04）；旧A方案大字、中点引线与锚点由贴线角标取代，历史证据保留但不证明新布局通过。本轮实现与原生验证尚在进行，未升级专家或生产验收。",
         "2026-10-01：DEC-20261001-01贴线角标已实现。037的7条、A/H的4条及旋转/交叉/隐藏线共23项原生检查通过；正式制造重新出图后2项独立回读通过。真实字形整段沿自己的有限折弯线，实际16/22mm、无重叠、无引线/锚点；必要时对应v槽标记仅沿同线避让。零新增Rhino GUI窗口。新外观尚未由用户确认，未升级专家/生产验收。见 docs/verification/2026-10-01-inline-fold-angles/README.md。",
         "2026-10-01：DEC-20261001-02重新开放P2-D-A、OUT-03/04、S09。整句字形包络中线须与自身有限折弯/刨槽线重合，可覆盖自身线。旧23+2项检查只证明单侧贴线，不代表新规则通过。详见 docs/verification/2026-10-01-centered-fold-angles/README.md。",
-        "2026-10-01：DEC-20261001-02已实现。23项原生及3项新图回读通过；037为14/18/22mm、A/H全22mm，中心距≤0.001mm，无角标重叠或异线接触。实际字形预览已检查、GUI零新增。正式制造59 pass/2既有unknown；用户未确认外观，非生产验收。见 docs/verification/2026-10-01-centered-fold-angles/README.md。"
+        "2026-10-01：DEC-20261001-02已实现。23项原生及3项新图回读通过；037为14/18/22mm、A/H全22mm，中心距≤0.001mm，无角标重叠或异线接触。实际字形预览已检查、GUI零新增。正式制造59 pass/2既有unknown；用户未确认外观，非生产验收。见 docs/verification/2026-10-01-centered-fold-angles/README.md。",
+        "2026-10-01：DEC-20261001-04重新开放P2-D-A、OUT-03/04及S09。骑线外观规则不改；修复DSH选择/打开旧制造报告时绕过当前图纸契约的问题。",
+        "已定位：本次会话把新基线与9月29日旧优胜制造报告混比，随后打开旧3DM；其中4个60mm角标仍含4引线/4锚点。完成阶段直接返回旧报告，选择/打开仅核验哈希，未检查图纸契约版本。",
+        "本轮要求保存3DM后原生核验真实字形，生成fold_angle_layout_current及版本2证据；旧成功报告保留可读，但不得充当当前制造交付或参与最新交付选择。",
+        "过期候选通过selection.staleDrawingCandidateIds和nextActions明确提示；显式finalize_stage_candidate同一冻结候选生成新报告，保留旧报告及参数。unknown只按原attempt对账，不重放原生操作。",
+        "2026-10-01：DEC-20261001-04交付版本门禁已实现。原生witness36/36、实际文件独立检查5/5、Bridge59/59、Node24/24通过；三份新图各4条骑线角标，旧图被正确拒绝，GUI文档不变。",
+        "三候选均显式重出新制造报告，fold_angle_layout_current均pass，契约为centered-on-bend-glyph-envelope-v2；比较新报告后deliveryReady=true，staleDrawingCandidateIds为空。",
+        "优胜方案新旧评分同为72.97563731194184，面积和工序指标不变；输出对象141→133，仅移除8个引线/锚点。输入版本与全部旧报告SHA保持，未改变冻结参数。",
+        "优胜制造报告48 pass、0 fail、2 unknown；unknown为manufacturing_acceptance与shape_preservation。已验证软件交付链，未升级用户外观确认、完整回折或生产验收。",
+        "证据：docs/verification/2026-10-01-dsh-drawing-version/README.md。实际调用既有案件的Host原生链，未发送新的DSH模型对话；主DSH已从集成目录安装并正常重启，旧会话恢复；当前预设代次7d1544f6与源码一致，已保存参数值及settings SHA不变。安装后实际工具恢复本案，读到新优胜报告912ad30c与deliveryReady=true；远端版本以发布清单为准。"
       ],
       "requirements": [
         "OUT-01",
