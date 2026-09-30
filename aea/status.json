@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "d28ab8fea0549fa992a1ad040e31c264e0d89824",
-    "committedAt": "2026-09-30T21:31:07+10:00",
-    "checkedAt": "2026-09-30T11:32:09+00:00",
+    "commit": "eee0879ccbd58366ee8e8f62a51728b3afb6791b",
+    "committedAt": "2026-09-30T21:40:29+10:00",
+    "checkedAt": "2026-09-30T11:41:06+00:00",
     "trackerRevision": "AEA-REQ-20260930-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-30T11:32:09+00:00",
+    "generatedAt": "2026-09-30T11:41:06+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1086,7 +1086,8 @@
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-29：27项阶段回归、19项相关Harness检查通过；真实桌面两轮试验分别完成基线+3/2个不同改进、指定报告比较与停止记录。候选上限8，未知执行先对账；恢复、锁、重复/过期拒绝有软件回归，未实测Desktop进程崩溃恢复。调用/时间预算限当前turn/process，不声称跨重启累计。",
-        "2026-09-30：037真实案例暴露确定性重叠失败被误归verification_unknown，报告未保存导致剩余7次搜索锁住。正在修复失败报告归档、旧完成响应对账与真实模型回归；不更改制造门禁，不将A/H成功外推到本例。"
+        "2026-09-30：037真实案例暴露确定性重叠失败被误归verification_unknown，报告未保存导致剩余7次搜索锁住。正在修复失败报告归档、旧完成响应对账与真实模型回归；不更改制造门禁，不将A/H成功外推到本例。",
+        "2026-09-30：旧案无重放恢复、35项阶段回归和037原生失败后续算通过；新Desktop暴露修复规划耗尽32768token。接入原生初始贪心proposal，4项Host/19项Harness回归通过；显式重放4件且独立重叠0，制造与桌面复测中。"
       ],
       "requirements": [
         "QA-01",
