@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "cc6060f0bfe69860a040b00c6cd2f74eabfbb40b",
-    "committedAt": "2026-09-30T23:17:08+10:00",
-    "checkedAt": "2026-09-30T13:17:58+00:00",
-    "trackerRevision": "AEA-REQ-20260930-04",
+    "commit": "5f811870a775b9df18455df5370b54d106ade59d",
+    "committedAt": "2026-10-01T05:17:35+10:00",
+    "checkedAt": "2026-09-30T19:18:30+00:00",
+    "trackerRevision": "AEA-REQ-20261001-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-30T13:17:58+00:00",
+    "generatedAt": "2026-09-30T19:18:30+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -295,10 +295,12 @@
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
           "2026-09-21 用户认可现有输出外观；尺寸及额外格式暂缓。",
           "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。",
-          "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。"
+          "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
+          "2026-10-01：DEC-20261001-01按用户新要求重新开放P2-D-A（OUT-03/OUT-04）；旧A方案大字、中点引线与锚点由贴线角标取代，历史证据保留但不证明新布局通过。本轮实现与原生验证尚在进行，未升级专家或生产验收。",
+          "2026-10-01：DEC-20261001-01贴线角标已实现。037的7条、A/H的4条及旋转/交叉/隐藏线共23项原生检查通过；正式制造重新出图后2项独立回读通过。真实字形整段沿自己的有限折弯线，实际16/22mm、无重叠、无引线/锚点；必要时对应v槽标记仅沿同线避让。零新增Rhino GUI窗口。新外观尚未由用户确认，未升级专家/生产验收。见 docs/verification/2026-10-01-inline-fold-angles/README.md。"
         ],
         "existing": 4,
-        "total": 5
+        "total": 6
       },
       {
         "id": "S10",
@@ -959,14 +961,14 @@
       "id": "P2-D-A",
       "title": "已明确图层标记与激光子集",
       "actionStates": [
-        "done"
+        "needs_acceptance"
       ],
-      "stage": "complete",
+      "stage": "acceptance",
       "implementation": "implemented",
       "verificationLevel": "end_to_end",
       "owner": {
-        "type": "agent",
-        "name": "主代理"
+        "type": "user",
+        "name": "用户"
       },
       "depends": [
         "P1-A"
@@ -974,7 +976,9 @@
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
-        "2026-09-24：用户选择A方案；正式制造图层角度标注已绑定实际折弯线中点并加引线，正折非90°、反折90°显示，普通正折90°不重复标注。正式witness回读4个角度文字，见 docs/verification/2026-09-24-p4-independent/angle-annotation-readback.json。"
+        "2026-09-24：用户选择A方案；正式制造图层角度标注已绑定实际折弯线中点并加引线，正折非90°、反折90°显示，普通正折90°不重复标注。正式witness回读4个角度文字，见 docs/verification/2026-09-24-p4-independent/angle-annotation-readback.json。",
+        "2026-10-01：DEC-20261001-01按用户新要求重新开放P2-D-A（OUT-03/OUT-04）；旧A方案大字、中点引线与锚点由贴线角标取代，历史证据保留但不证明新布局通过。本轮实现与原生验证尚在进行，未升级专家或生产验收。",
+        "2026-10-01：DEC-20261001-01贴线角标已实现。037的7条、A/H的4条及旋转/交叉/隐藏线共23项原生检查通过；正式制造重新出图后2项独立回读通过。真实字形整段沿自己的有限折弯线，实际16/22mm、无重叠、无引线/锚点；必要时对应v槽标记仅沿同线避让。零新增Rhino GUI窗口。新外观尚未由用户确认，未升级专家/生产验收。见 docs/verification/2026-10-01-inline-fold-angles/README.md。"
       ],
       "requirements": [
         "OUT-01",
