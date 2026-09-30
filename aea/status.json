@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "3544f1897b874f625090776fb73ee166bd6d85c9",
-    "committedAt": "2026-10-01T05:29:16+10:00",
-    "checkedAt": "2026-09-30T19:29:53+00:00",
-    "trackerRevision": "AEA-REQ-20261001-02",
+    "commit": "394dd1e36234a0c8bbb713cc31dbe662216890bb",
+    "committedAt": "2026-10-01T06:17:07+10:00",
+    "checkedAt": "2026-09-30T20:18:05+00:00",
+    "trackerRevision": "AEA-REQ-20261001-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-09-30T19:29:53+00:00",
+    "generatedAt": "2026-09-30T20:18:05+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -110,9 +110,9 @@
           "needs_decision",
           "needs_acceptance"
         ],
-        "stage": "planning",
+        "stage": "acceptance",
         "implementation": "partial",
-        "verificationLevel": "end_to_end",
+        "verificationLevel": "local",
         "owner": {
           "type": "user",
           "name": "用户"
@@ -124,10 +124,17 @@
           "Q-07"
         ],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
+          "2026-10-01：DEC-20261001-03已实现常用默认值、折弯系数/刀具直接填表及持久化修复；用户体验尚待确认，不等于制造或生产验收。",
+          "已定位并修复：controller缓存旧基线SHA导致更新后建案拒绝，保存覆盖实际仍在。刷新当前基线并保留覆盖；安装器已兼容官方savedSettings，版本并发检查继续保留。",
+          "本轮检查：后端含安装器32/32、UI10/10、隔离Desktop SettingsForms 1/1、C#24/24通过；Host与AEA构建通过。",
+          "主Desktop保存322条正反折区间及1把原项目刀具稳定副本后，升级安装、正常退出重启成功；重启读回值和settings SHA完全一致。",
+          "实际界面将材料权重设33并点保存，RPC读回33且persistence.verified；验证后恢复32，其余值不变。刨槽1mm、成本32/10/1、材料空值与数量1保留。",
+          "实际DSH RPC→Host→Rhino磁盘建案通过：20面、42连接；折弯表和刀具冻结字节哈希与保存值一致。既有案件输入哈希不变，原用户Rhino文档未修改，仍为2个文档。",
+          "本轮证据：docs/verification/2026-10-01-parameter-persistence/README.md。验证限于设置保存、重启、升级和建案；未新增制造验收或未决业务参数。"
         ],
-        "existing": 5,
-        "total": 5
+        "existing": 6,
+        "total": 6
       },
       {
         "id": "S03",
@@ -569,14 +576,14 @@
       "id": "P2-U",
       "title": "DSH 插件参数与资源入口",
       "actionStates": [
-        "done"
+        "needs_acceptance"
       ],
-      "stage": "complete",
+      "stage": "acceptance",
       "implementation": "implemented",
-      "verificationLevel": "end_to_end",
+      "verificationLevel": "local",
       "owner": {
-        "type": "agent",
-        "name": "DSH界面代理"
+        "type": "user",
+        "name": "用户"
       },
       "depends": [
         "P0-U",
@@ -586,7 +593,14 @@
       "verificationEvidence": [
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
         "2026-09-26：桌面版 profile 的 AEA 参数入口已按本机 Host/workspace 配置生成并在桌面端重启后保留；本次未执行新的制造案件。",
-        "2026-09-26：模型路由修复后，桌面端展开模式完成无工具启动回复并列出当前阶段 AEA 工具；本次未建案或调用 Rhino，完整联验仍以实际案件结果为准。"
+        "2026-09-26：模型路由修复后，桌面端展开模式完成无工具启动回复并列出当前阶段 AEA 工具；本次未建案或调用 Rhino，完整联验仍以实际案件结果为准。",
+        "2026-10-01：DEC-20261001-03已实现常用默认值、折弯系数/刀具直接填表及持久化修复；用户体验尚待确认，不等于制造或生产验收。",
+        "已定位并修复：controller缓存旧基线SHA导致更新后建案拒绝，保存覆盖实际仍在。刷新当前基线并保留覆盖；安装器已兼容官方savedSettings，版本并发检查继续保留。",
+        "本轮检查：后端含安装器32/32、UI10/10、隔离Desktop SettingsForms 1/1、C#24/24通过；Host与AEA构建通过。",
+        "主Desktop保存322条正反折区间及1把原项目刀具稳定副本后，升级安装、正常退出重启成功；重启读回值和settings SHA完全一致。",
+        "实际界面将材料权重设33并点保存，RPC读回33且persistence.verified；验证后恢复32，其余值不变。刨槽1mm、成本32/10/1、材料空值与数量1保留。",
+        "实际DSH RPC→Host→Rhino磁盘建案通过：20面、42连接；折弯表和刀具冻结字节哈希与保存值一致。既有案件输入哈希不变，原用户Rhino文档未修改，仍为2个文档。",
+        "本轮证据：docs/verification/2026-10-01-parameter-persistence/README.md。验证限于设置保存、重启、升级和建案；未新增制造验收或未决业务参数。"
       ],
       "requirements": [
         "IN-01",
