@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "34db145f4b4427404579bac0f0b6f95e8fd1dee3",
-    "committedAt": "2026-10-02T22:00:22+10:00",
-    "checkedAt": "2026-10-02T12:00:50+00:00",
+    "commit": "0fd51c43f1f374a52187a6c7e542722a5ec70e07",
+    "committedAt": "2026-10-02T22:50:01+10:00",
+    "checkedAt": "2026-10-02T12:51:19+00:00",
     "trackerRevision": "AEA-REQ-20261002-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-02T12:00:50+00:00",
+    "generatedAt": "2026-10-02T12:51:19+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -840,7 +840,9 @@
       "openQuestions": [],
       "verificationEvidence": [
         "已完成个人配置审计与代表性本地fixture；不代表制造验收。",
-        "2026-10-02：增加可重复 CRAP 评估入口 script/crap_metrics.py 及最小测试；扫描 349 个方法但无方法级覆盖率，故 CRAP 均为 unknown；结果见 docs/verification/2026-10-02-crap/README.md，不代表制造验收。"
+        "2026-10-02：增加可重复 CRAP 评估入口 script/crap_metrics.py 及最小测试；扫描 349 个方法但无方法级覆盖率，故 CRAP 均为 unknown；结果见 docs/verification/2026-10-02-crap/README.md，不代表制造验收。",
+        "2026-10-02 第二轮：接入真实方法级覆盖率（Node V8、.NET Cobertura、Python trace，无新依赖），新增 script/crap_python_trace.py；2829 个方法中 713 个有 CRAP 分数，AEA 可测 JS/Python 126 个有分，AEA 全部 C# 仍 unknown（待授权引入 dotnet-coverage）。",
+        "2026-10-02 第二轮补充：ASMU 512 个方法有实测覆盖、500 个为 0；定位 ASMU dotnet test 因 deps.json 引用 .rhp 无法启动 testhost，未改项目文件。结果见 docs/verification/2026-10-02-crap/README.md，不代表几何、制造或生产验收。"
       ],
       "requirements": [
         "OPS-02",
