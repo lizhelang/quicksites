@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "a5390b17ac11eb88b39f3855df0e26773c1badfd",
-    "committedAt": "2026-10-02T16:09:59+10:00",
-    "checkedAt": "2026-10-02T06:10:51+00:00",
-    "trackerRevision": "AEA-REQ-20261002-01",
+    "commit": "d2dfba76a554515662cbd37ceab3fc925660091a",
+    "committedAt": "2026-10-02T21:46:34+10:00",
+    "checkedAt": "2026-10-02T11:47:34+00:00",
+    "trackerRevision": "AEA-REQ-20261002-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-02T06:10:51+00:00",
+    "generatedAt": "2026-10-02T11:47:34+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -222,19 +222,20 @@
         "id": "S06",
         "title": "刀具与刨槽判定",
         "actionStates": [
-          "needs_acceptance"
+          "agent_active"
         ],
-        "stage": "acceptance",
-        "implementation": "implemented",
+        "stage": "implementation",
+        "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "user",
-          "name": "用户"
+          "type": "agent",
+          "name": "主代理"
         },
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
-          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。"
+          "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
+          "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
         ],
         "existing": 4,
         "total": 4
@@ -243,21 +244,22 @@
         "id": "S07",
         "title": "制造补偿与净轮廓",
         "actionStates": [
-          "needs_acceptance"
+          "agent_active"
         ],
-        "stage": "acceptance",
-        "implementation": "implemented",
+        "stage": "implementation",
+        "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "user",
-          "name": "用户"
+          "type": "agent",
+          "name": "主代理"
         },
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
           "2026-09-28：A有5个端点警告、2次主侧修复跳过但12/12焊偏移覆盖；H有11个端点警告、6次跳过，应10条偏移实际8条，缺FW_008/FW_013。",
-          "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。"
+          "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
+          "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
         ],
         "existing": 4,
         "total": 4
@@ -294,14 +296,14 @@
         "id": "S09",
         "title": "当前制造图交付",
         "actionStates": [
-          "needs_acceptance"
+          "agent_active"
         ],
-        "stage": "acceptance",
-        "implementation": "implemented",
+        "stage": "implementation",
+        "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
-          "type": "user",
-          "name": "用户"
+          "type": "agent",
+          "name": "主代理"
         },
         "depends": [],
         "openQuestions": [],
@@ -322,7 +324,8 @@
           "三候选均显式重出新制造报告，fold_angle_layout_current均pass，契约为centered-on-bend-glyph-envelope-v2；比较新报告后deliveryReady=true，staleDrawingCandidateIds为空。",
           "优胜方案新旧评分同为72.97563731194184，面积和工序指标不变；输出对象141→133，仅移除8个引线/锚点。输入版本与全部旧报告SHA保持，未改变冻结参数。",
           "优胜制造报告48 pass、0 fail、2 unknown；unknown为manufacturing_acceptance与shape_preservation。已验证软件交付链，未升级用户外观确认、完整回折或生产验收。",
-          "证据：docs/verification/2026-10-01-dsh-drawing-version/README.md。实际调用既有案件的Host原生链，未发送新的DSH模型对话；主DSH已从集成目录安装并正常重启，旧会话恢复；当前预设代次7d1544f6与源码一致，已保存参数值及settings SHA不变。安装后实际工具恢复本案，读到新优胜报告912ad30c与deliveryReady=true；远端版本以发布清单为准。"
+          "证据：docs/verification/2026-10-01-dsh-drawing-version/README.md。实际调用既有案件的Host原生链，未发送新的DSH模型对话；主DSH已从集成目录安装并正常重启，旧会话恢复；当前预设代次7d1544f6与源码一致，已保存参数值及settings SHA不变。安装后实际工具恢复本案，读到新优胜报告912ad30c与deliveryReady=true；远端版本以发布清单为准。",
+          "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
         ],
         "existing": 6,
         "total": 7
@@ -331,10 +334,9 @@
         "id": "S10",
         "title": "复核、反馈与续算",
         "actionStates": [
-          "agent_ready",
-          "needs_acceptance"
+          "agent_active"
         ],
-        "stage": "ready",
+        "stage": "implementation",
         "implementation": "partial",
         "verificationLevel": "end_to_end",
         "owner": {
@@ -346,7 +348,8 @@
         "verificationEvidence": [
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
           "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。",
-          "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。"
+          "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
+          "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
         ],
         "existing": 2,
         "total": 3
@@ -1023,14 +1026,14 @@
       "id": "P2-D-A",
       "title": "已明确图层标记与激光子集",
       "actionStates": [
-        "needs_acceptance"
+        "agent_active"
       ],
-      "stage": "acceptance",
-      "implementation": "implemented",
+      "stage": "implementation",
+      "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
-        "type": "user",
-        "name": "用户"
+        "type": "agent",
+        "name": "主代理"
       },
       "depends": [
         "P1-A"
@@ -1051,7 +1054,8 @@
         "三候选均显式重出新制造报告，fold_angle_layout_current均pass，契约为centered-on-bend-glyph-envelope-v2；比较新报告后deliveryReady=true，staleDrawingCandidateIds为空。",
         "优胜方案新旧评分同为72.97563731194184，面积和工序指标不变；输出对象141→133，仅移除8个引线/锚点。输入版本与全部旧报告SHA保持，未改变冻结参数。",
         "优胜制造报告48 pass、0 fail、2 unknown；unknown为manufacturing_acceptance与shape_preservation。已验证软件交付链，未升级用户外观确认、完整回折或生产验收。",
-        "证据：docs/verification/2026-10-01-dsh-drawing-version/README.md。实际调用既有案件的Host原生链，未发送新的DSH模型对话；主DSH已从集成目录安装并正常重启，旧会话恢复；当前预设代次7d1544f6与源码一致，已保存参数值及settings SHA不变。安装后实际工具恢复本案，读到新优胜报告912ad30c与deliveryReady=true；远端版本以发布清单为准。"
+        "证据：docs/verification/2026-10-01-dsh-drawing-version/README.md。实际调用既有案件的Host原生链，未发送新的DSH模型对话；主DSH已从集成目录安装并正常重启，旧会话恢复；当前预设代次7d1544f6与源码一致，已保存参数值及settings SHA不变。安装后实际工具恢复本案，读到新优胜报告912ad30c与deliveryReady=true；远端版本以发布清单为准。",
+        "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
       ],
       "requirements": [
         "OUT-01",
@@ -1177,9 +1181,9 @@
       "id": "P4-R3",
       "title": "自动生成窄条拆分与并回候选",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
-      "stage": "verification",
+      "stage": "implementation",
       "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
@@ -1201,7 +1205,8 @@
         "2026-09-30流程修复：不得漏掉中间最佳候选，最新制造比较绑定完整候选集和精确reportId；搜索未停止不得标最终交付。未知执行仅对账，工具错误先恢复已有案。摘要保留决策证据与完整报告路径；较大搜索比较仍可spill，不宣称零截断。54项阶段、31项Harness、22项条带、13项来源及5项原生切线检查通过。",
         "2026-09-30窗口回收完成：原13窗口已收拢；最终原生实测新副本替换时自动关闭旧自有未修改副本，最多原件+1结果。修改/保存/改名副本交还用户，未知Close跨请求禁止重放。最终仅1个未修改原件、MCP仍可用；28项策略/9项传输回归通过。早期嵌套Close实验排队及后续crash如实保留，已撤回该路径。",
         "本轮DSH搜索/制造选型与窗口回收修复已通过限定037见证。独立白线近接触仍unknown，角标占区、复杂模型/源边子段协议及完整加工可达性仍可继续优化；不等于全局最优、专家或实机生产验收。证据 docs/verification/2026-09-30-search-and-window-lifecycle/README.md。",
-        "2026-09-30最终A/H回归：新DSH从原图自主生成6cut H方向，制造仍1件、开料1.765183207㎡、折弯13次，分数95.73436342→72.97563731；保存白线独立检查通过。完整优化器来源在本例因谱系不可导出而返回unsupported，正常使用条带来源；不宣称全局最优或生产验收。"
+        "2026-09-30最终A/H回归：新DSH从原图自主生成6cut H方向，制造仍1件、开料1.765183207㎡、折弯13次，分数95.73436342→72.97563731；保存白线独立检查通过。完整优化器来源在本例因谱系不可导出而返回unsupported，正常使用条带来源；不宣称全局最优或生产验收。",
+        "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
       ],
       "requirements": [
         "QA-01",
