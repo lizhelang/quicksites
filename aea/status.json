@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "80d511624811b43886b48905fc41f095248ac989",
-    "committedAt": "2026-10-03T08:48:06+10:00",
-    "checkedAt": "2026-10-02T22:48:43+00:00",
-    "trackerRevision": "AEA-REQ-20261003-01",
+    "commit": "224169183e4e96a5afd6c6d20d0af81715214992",
+    "committedAt": "2026-10-03T09:37:54+10:00",
+    "checkedAt": "2026-10-02T23:40:49+00:00",
+    "trackerRevision": "AEA-REQ-20261003-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-02T22:48:43+00:00",
+    "generatedAt": "2026-10-02T23:40:49+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -189,7 +189,8 @@
           "2026-09-28追加：I按角部继续切分仍为1件，但全顶点矩形与H相同；较D省4.69%，较H多4条切分线及27.586mm焊缝。推荐H；I未执行制造补偿。",
           "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。",
           "2026-09-29：独立运行完整AEA，62次评估并接受4轮切分重连，未找到A/H；修复矩形后结果不变。现有内核仍需结果评审与后续搜索优化。",
-          "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。"
+          "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
+          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。"
         ],
         "existing": 4,
         "total": 5
@@ -264,7 +265,8 @@
           "2026-10-03：P4-R5-F代码硬门禁完成本地验证。最终原生见证21项规则检查全通过；真实复杂候选被face_material_preservation拒绝，仅保存DIAGNOSTIC_ONLY，未生成合格制造图。旧斜切与拟L分别侵入SF_0009/SF_0015。100×80mm矩形完成正式制造复核/纯白线3DM，保存面积8000mm²、形状及原输入保持、实际白线无侵入。Rhino文档数1→1、零新增，modified状态不变。",
           "阶段61、后端8、Bridge15、Node26、离线见证19项通过；AEA/Host构建0错误，分别55/6条既有警告。独立复杂全图审计遇凹面为unknown，不改为通过。并发远端0fd51c4的V槽v3、焊边修复、恢复搜索和CRAP内容已合并保留；DSH安装与主集成推送另记。证据 docs/verification/2026-10-03-face-material-preservation/README.md。",
           "本例仍有5条真实2mm焊接补偿内缩；当前L形虽保住SF_0009，却侵入SF_0015，不能仅换路线后宣称合格。P4-R5-G继续修补偿布局/拆拼，保持本轮硬门禁及原参数，不需用户补充规则。",
-          "2026-10-03最终集成：保留45e42a0预处理。原生06规则21/21，100×80mm正式制造及保存审计通过、8000mm²；复杂候选仅诊断。Rhino1→1、零新增，Node26通过。证据 docs/verification/2026-10-03-face-material-preservation/evidence/integration-06/summary.json。"
+          "2026-10-03最终集成：保留45e42a0预处理。原生06规则21/21，100×80mm正式制造及保存审计通过、8000mm²；复杂候选仅诊断。Rhino1→1、零新增，Node26通过。证据 docs/verification/2026-10-03-face-material-preservation/evidence/integration-06/summary.json。",
+          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。"
         ],
         "existing": 5,
         "total": 6
@@ -335,7 +337,8 @@
           "2026-10-03：P4-R5-F代码硬门禁完成本地验证。最终原生见证21项规则检查全通过；真实复杂候选被face_material_preservation拒绝，仅保存DIAGNOSTIC_ONLY，未生成合格制造图。旧斜切与拟L分别侵入SF_0009/SF_0015。100×80mm矩形完成正式制造复核/纯白线3DM，保存面积8000mm²、形状及原输入保持、实际白线无侵入。Rhino文档数1→1、零新增，modified状态不变。",
           "阶段61、后端8、Bridge15、Node26、离线见证19项通过；AEA/Host构建0错误，分别55/6条既有警告。独立复杂全图审计遇凹面为unknown，不改为通过。并发远端0fd51c4的V槽v3、焊边修复、恢复搜索和CRAP内容已合并保留；DSH安装与主集成推送另记。证据 docs/verification/2026-10-03-face-material-preservation/README.md。",
           "本例仍有5条真实2mm焊接补偿内缩；当前L形虽保住SF_0009，却侵入SF_0015，不能仅换路线后宣称合格。P4-R5-G继续修补偿布局/拆拼，保持本轮硬门禁及原参数，不需用户补充规则。",
-          "2026-10-03最终集成：保留45e42a0预处理。原生06规则21/21，100×80mm正式制造及保存审计通过、8000mm²；复杂候选仅诊断。Rhino1→1、零新增，Node26通过。证据 docs/verification/2026-10-03-face-material-preservation/evidence/integration-06/summary.json。"
+          "2026-10-03最终集成：保留45e42a0预处理。原生06规则21/21，100×80mm正式制造及保存审计通过、8000mm²；复杂候选仅诊断。Rhino1→1、零新增，Node26通过。证据 docs/verification/2026-10-03-face-material-preservation/evidence/integration-06/summary.json。",
+          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。"
         ],
         "existing": 7,
         "total": 9
@@ -359,7 +362,8 @@
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
           "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。",
           "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
-          "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
+          "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。",
+          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。"
         ],
         "existing": 2,
         "total": 3
@@ -1191,6 +1195,34 @@
       ]
     },
     {
+      "id": "P4-R2-U",
+      "title": "无交互持续推进到结果",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P4-R2"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-03项目规范、阶段/兼容提示及只读continuationPolicy已同步。阶段30/30、安装器1/1、状态导出15/15、发布5/5、两入口检查通过。见docs/verification/2026-10-03-autonomous-completion/README.md。",
+        "安装前DSH有1个活跃或排队Agent，本轮不强制重启；旧问题卡不自动撤回。未发送模型消息，提示/契约测试不证明LLM永不提问或复杂制造已通过；未降低门禁或扩大预算。",
+        "桌面安装代次b5528486e6f2与主目录提示一致；参数值/SHA保持、持久化通过。Host未重启，1个活跃或排队Agent保留，已加载预设仍旧，新预设待正常重启/空闲重载。见docs/verification/2026-10-03-autonomous-completion/desktop-installation.json。"
+      ],
+      "requirements": [
+        "OPS-01",
+        "OPS-02",
+        "QA-01"
+      ]
+    },
+    {
       "id": "P4-R3",
       "title": "自动生成窄条拆分与并回候选",
       "actionStates": [
@@ -1336,6 +1368,31 @@
       "requirements": [
         "OUT-01",
         "QA-01"
+      ]
+    },
+    {
+      "id": "P4-R5-H",
+      "title": "输入亚公差微边自动预处理修复",
+      "actionStates": [
+        "needs_acceptance"
+      ],
+      "stage": "acceptance",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "user",
+        "name": "用户"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-03：粘贴快照AEA-CLIP-AF654C7FD8FA4674含两条0.0018mm微边（SE_0007 SF_0001/SF_0007、SE_0025 SF_0006），小于模型0.01mm公差；修复前源图保留18条连接（含0.00184mm的SC_F0001_F0007_E0007_P01），draft写图用源边长度判定必抛geometry_error，任何折焊决定都无法绕过，制造不可达。",
+        "2026-10-03：AeaBrepFormatter在建边前调用Brep.Repair补齐组件信息，使共线微边可被既有MergeAllEdges合并（raw 38边→Repair后38→RebuildEdges后38→MergeAllEdges后37），并新增裸微边RemoveNakedMicroEdges与回滚保护；AddDraftCurves区分源边退化与放置不匹配，退化跨度记入draftDegenerateConnectionSpans。",
+        "2026-10-03微边原生22/22通过：11面及面积744187.7382064702mm²不变，连接18→17；evaluate无error/fail、draft实际写出、输入哈希不变，未开文档。Node62、AgentBridge通过，AEA/Host构建0错误。见AEA/tests/witnesses/input-micro-edge-repair。",
+        "2026-10-03同输入基线23 pass/2 unknown；native_optimizer27方案、strip_reconnect0提案，有限邻域耗尽。制造被既有面保留门禁拒绝31条违规，含FB_008未解析；继续修复属P4-R5-G，未降低门槛或宣称制造已通过。详见docs/verification/2026-10-03-input-micro-edge-repair/README.md。"
+      ],
+      "requirements": [
+        "IN-01"
       ]
     },
     {
