@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "224169183e4e96a5afd6c6d20d0af81715214992",
-    "committedAt": "2026-10-03T09:37:54+10:00",
-    "checkedAt": "2026-10-02T23:40:49+00:00",
-    "trackerRevision": "AEA-REQ-20261003-02",
+    "commit": "4e47522a9b883d9fd2f88215f33370c1d9c016bb",
+    "committedAt": "2026-10-04T10:40:40+11:00",
+    "checkedAt": "2026-10-03T23:42:27+00:00",
+    "trackerRevision": "AEA-REQ-20261004-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-02T23:40:49+00:00",
+    "generatedAt": "2026-10-03T23:42:27+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1349,11 +1349,11 @@
       "id": "P4-R5-G",
       "title": "本例补偿布局与拆拼修复",
       "actionStates": [
-        "agent_ready"
+        "done"
       ],
-      "stage": "planned",
-      "implementation": "not_started",
-      "verificationLevel": "none",
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -1363,7 +1363,30 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "本例仍有5条真实2mm焊接补偿内缩；当前L形虽保住SF_0009，却侵入SF_0015，不能仅换路线后宣称合格。P4-R5-G继续修补偿布局/拆拼，保持本轮硬门禁及原参数，不需用户补充规则。"
+        "历史运行记录（旧推断由续修纠正）：本例仍有5条真实2mm焊接补偿内缩；当前L形虽保住SF_0009，却侵入SF_0015，不能仅换路线后宣称合格。P4-R5-G继续修补偿布局/拆拼，保持本轮硬门禁及原参数，不需用户补充规则。",
+        "2026-10-03：有限折弯范围钳制修复；FB_008越界1.511324mm曾使白线压折弯线、保留侧未知，候选现用钳制端点并记录区间/冲突字段。完整端点和字段见docs/verification/2026-10-03-compensation-layout-repair/README.md。",
+        "2026-10-03：bend-extent-clamp原生10折/9 resolved/1 clamped通过，resolved范围逐位一致；同程序集微边22/22、面保留正例、Node62、Bridge124通过。见docs/verification/2026-10-03-compensation-layout-repair/README.md。",
+        "历史退化折弯：FB_008改焊后违规31→12、端点警告9→8，成本40.5565→41.0722、1→2件；报告c1d25c43/664d45fa仍仅诊断。三角形坐标、支撑长度与面积见docs/verification/2026-10-03-compensation-layout-repair/README.md。",
+        "历史推断已纠正：inward原位实验违规12→3且焊偏移覆盖清零；当时“需用户决定/仅采样抖动”已由既定保面规则与实际白线漂移证据否定。原实验、纳米量距和检查字段见docs/verification/2026-10-03-compensation-layout-repair/README.md。",
+        "历史失败：修复方案12条违规/8端点警告、promoted=0；全焊13条转到SF_0000且偏移actual=0。三种计划均仅诊断，保留面积/几何/流程失败门禁。全部面边与焊缝明细见docs/verification/2026-10-03-compensation-layout-repair/README.md。",
+        "2026-10-03续修纠正：DEC-20261003-01已规定无实际折弯/刨槽边不得损失原面；旧「普通 inward 仍扣料需用户决定」推断已被覆盖，不需用户再解释规则。布尔白线存在约2.36e-6mm真实向内漂移，不能将旧3条违规仅称为采样误判；保持1e-6硬门槛修复真实输出。",
+        "2026-10-03：11源面案件fe08f6ce1091462d9395f0f8fe19413c已冻结到compensation-layout-preservation fixture，按原输入/参数/刀具回放；向所属面内偏移的焊接在offset/miter前保留完整原seam，有限折弯桥接及严格逐面原材料门禁已实现。",
+        "历史软件pass（已被独立实际文件缺料审计否定交付资格）：2026-10-03：11源面冻结候选3折、8件、14焊，真实制造生产入口的软件门禁全部pass；开料面积929912.6364622707mm²、制造焊长2650.772631689222mm、三项成本59.26493068368488。保存制造复核与纯白线3DM的独立读回仍待白线证书修复，布尔曲线微弯约4.6e-6mm；尚不能写独立审计通过。",
+        "历史软件pass（已被独立实际文件缺料审计否定交付资格）：2026-10-03：原12源面案件9448经6次split得到18制造面，另有9折、9件真实候选，制造生产入口的软件门禁全部pass；开料面积1754062.8780898796mm²、制造焊长2537.9643424543806mm。该原角部输入的保存图独立读回仍待完成，不能用11源面fe08结果替代其证明。",
+        "历史待办：当时11面已读回、原角部仍失败，任务部分实现；现两份最终输入分别通过。旧31→12→3违规与诊断输出不证明自主规划/回折/机床或产品验收。原记录见docs/verification/2026-10-03-compensation-layout-repair/README.md。",
+        "2026-10-04合同纠正：当前交付合同为face-material-preservation-v2，按自己的有限源边与实际有限折弯确定允许舍弃区，独立保存文件审计覆盖边界区间与材料排列。旧3折8件14焊和原角部软件pass候选均被实际文件审计指出缺料，历史软件pass不能作为当前合格交付。规则已明确，修复不需用户新解释。",
+        "2026-10-04：11源面fe08新候选9件、2折、15焊，aea-compensation-two-bend-case-04/summary.json passed=true；制造软件检查、保存制造复核逐面材料审计、纯白线一致性和近直线误差证书均通过，11面完整，白线侵入/缺料/孔洞填充均为0，countsMatch=true、documentUnchanged=true。",
+        "2026-10-04：11源面新候选制造开料面积785496.6991117309mm²、焊长3308.6753354058274mm、三项分数60.222647725633664；按实际制造面积/焊长/2次折弯与冻结32/10/1权重计算，不是货币报价，不证明DSH已自主找到或全局最优。",
+        "历史角部case-03软件pass但实际保存审计失败：SF_0002三处白线侵入、一处缺料，后续case-05已修复。12→18面/6split/9件9折24焊及失败指标见docs/verification/2026-10-03-compensation-layout-repair/evidence/2026-10-04/historical-corner-failure/summary.json。",
+        "历史验证待办（两份最终输入现已分别通过）：当前P4-R5-G保持Agent处理中、部分实现、本地验证；11源面新候选已通过保存文件软件见证，不能替代原角部输入的失败修复。shape_preservation与manufacturing_acceptance仍unknown，完整回折、刀具可达、工序与用户/生产验收没有升级；最终归档证据及原角部后续结果另记。",
+        "2026-10-04最终技术收口：同build22、face-material-preservation-v2下，两份独立冻结输入均通过真实制造软件门禁、实际保存3DM独立逐面材料审计、近直线误差证书和纯白线几何一致性；原文档保持。P4-R5-G技术修复及实际保存材料验证完成，任务完成仅指本地软件执行，不代表OUT-01/QA-01整体或用户/生产验收。",
+        "最终build22：11面fe08，case-07的9件2折15焊通过制造、完整保存材料审计和纯白线一致性；侵入/缺料/填孔均0，文档保持。面积/焊长/分数见docs/verification/2026-10-03-compensation-layout-repair/evidence/2026-10-04/two-bend/summary.json。",
+        "最终build22：原角部case-06，12源面6split→18制造面、9件9折24焊通过制造、完整保存材料审计和纯白线一致性；侵入/缺料/填孔均0，文档保持。指标见docs/verification/2026-10-03-compensation-layout-repair/evidence/2026-10-04/corner/summary.json。",
+        "2026-10-04最终回归：原生逐面规则core53/53（build21，aea-compensation-face-regression-10；build22仅补临时对象释放，算法未变），checker/fixture31/31、Node stage30/30、Bridge61/61。保留旧3折与原角部被独立实际文件审计拒绝的失败证据，未降低1e-6mm物理门槛；只允许自己的有限实际折弯对应区域舍弃材料，无实际折弯/刨槽边完整保留。",
+        "任务执行剩余边界：固定候选的制造与保存材料验证不证明DSH自主搜索、A/H最优或全局最优；shape_preservation与manufacturing_acceptance仍unknown，完整回折、刀具可达、工序顺序和专家/生产验收未验证。OUT-01/QA-01继续保持自身部分实现，后续自主优化/工艺/产品验收不再依赖未完成的P4-R5-G补偿修复；保面规则已明确，不需用户新解释。",
+        "build22显式释放端点临时native曲线；两模型case-07/case-06复跑通过且指标不变，端点15/15通过；core53来自build21，算法未变。DSH下次读取主Host v2，无需桌面重启。见docs/verification/2026-10-03-compensation-layout-repair/README.md。",
+        "2026-10-04主仓库：AEA/Host已构建，旧face-material-preservation-v1报告被当前交付门禁拒绝；DSH下次请求读取主Host v2。未执行DSH自主规划/制造终测，不升级产品验收。见docs/verification/2026-10-03-compensation-layout-repair/README.md。",
+        "2026-10-04发布前校验：契约检查沿用schema v2 publicText的240字符及格式限制，覆盖任务/需求进度/节点/里程碑；拒绝超长、空白、换行和绝对本地路径。契约与exporter回归39/39通过，schema及制造门槛未变。详见script/tests/test_agent_contracts.py与script/tests/test_status_export.py。"
       ],
       "requirements": [
         "OUT-01",
