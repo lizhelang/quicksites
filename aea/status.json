@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "1a8be7639cde0d9c1366f4f3b2cac6bc498339e7",
-    "committedAt": "2026-10-05T08:50:01+11:00",
-    "checkedAt": "2026-10-04T21:53:42+00:00",
-    "trackerRevision": "AEA-REQ-20261005-19",
+    "commit": "619d50e82162a1f731d32323233496bf74810b89",
+    "committedAt": "2026-10-05T09:43:48+11:00",
+    "checkedAt": "2026-10-04T22:50:18+00:00",
+    "trackerRevision": "AEA-REQ-20261005-20",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T21:53:42+00:00",
+    "generatedAt": "2026-10-04T22:50:18+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -186,6 +186,10 @@
           "Q-11"
         ],
         "verificationEvidence": [
+          "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
+          "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
+          "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
+          "2026-10-05优先级调整：先固定真实成功/失败输入并整理制造关键链，分清白线与孔洞、有限补偿、类型化因果来源和完整材料检查职责；不是全面重写或只拆函数。所有原规则/参数/门槛保持，完成后继续自主拆拼优化。见docs/verification/2026-10-05-manufacturing-chain-boundaries/README.md。当前实现中，AEA覆盖率unknown；没有新增用户待决项。",
           "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
           "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
           "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
@@ -235,6 +239,10 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
+          "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
+          "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
+          "2026-10-05优先级调整：先固定真实成功/失败输入并整理制造关键链，分清白线与孔洞、有限补偿、类型化因果来源和完整材料检查职责；不是全面重写或只拆函数。所有原规则/参数/门槛保持，完成后继续自主拆拼优化。见docs/verification/2026-10-05-manufacturing-chain-boundaries/README.md。当前实现中，AEA覆盖率unknown；没有新增用户待决项。",
           "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
           "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
           "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
@@ -302,6 +310,10 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
+          "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
+          "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
+          "2026-10-05优先级调整：先固定真实成功/失败输入并整理制造关键链，分清白线与孔洞、有限补偿、类型化因果来源和完整材料检查职责；不是全面重写或只拆函数。所有原规则/参数/门槛保持，完成后继续自主拆拼优化。见docs/verification/2026-10-05-manufacturing-chain-boundaries/README.md。当前实现中，AEA覆盖率unknown；没有新增用户待决项。",
           "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
           "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
           "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
@@ -384,6 +396,10 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
+          "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
+          "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
+          "2026-10-05优先级调整：先固定真实成功/失败输入并整理制造关键链，分清白线与孔洞、有限补偿、类型化因果来源和完整材料检查职责；不是全面重写或只拆函数。所有原规则/参数/门槛保持，完成后继续自主拆拼优化。见docs/verification/2026-10-05-manufacturing-chain-boundaries/README.md。当前实现中，AEA覆盖率unknown；没有新增用户待决项。",
           "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
           "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
           "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
@@ -450,6 +466,10 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
+          "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
+          "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
+          "2026-10-05优先级调整：先固定真实成功/失败输入并整理制造关键链，分清白线与孔洞、有限补偿、类型化因果来源和完整材料检查职责；不是全面重写或只拆函数。所有原规则/参数/门槛保持，完成后继续自主拆拼优化。见docs/verification/2026-10-05-manufacturing-chain-boundaries/README.md。当前实现中，AEA覆盖率unknown；没有新增用户待决项。",
           "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
           "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
           "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
@@ -875,6 +895,10 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
+        "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
+        "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
+        "2026-10-05优先级调整：先固定真实成功/失败输入并整理制造关键链，分清白线与孔洞、有限补偿、类型化因果来源和完整材料检查职责；不是全面重写或只拆函数。所有原规则/参数/门槛保持，完成后继续自主拆拼优化。见docs/verification/2026-10-05-manufacturing-chain-boundaries/README.md。当前实现中，AEA覆盖率unknown；没有新增用户待决项。",
         "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
         "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
         "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
@@ -1454,6 +1478,10 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
+        "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
+        "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
+        "2026-10-05优先级调整：先固定真实成功/失败输入并整理制造关键链，分清白线与孔洞、有限补偿、类型化因果来源和完整材料检查职责；不是全面重写或只拆函数。所有原规则/参数/门槛保持，完成后继续自主拆拼优化。见docs/verification/2026-10-05-manufacturing-chain-boundaries/README.md。当前实现中，AEA覆盖率unknown；没有新增用户待决项。",
         "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
         "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
         "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
@@ -1798,6 +1826,10 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
+        "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
+        "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
+        "2026-10-05优先级调整：先固定真实成功/失败输入并整理制造关键链，分清白线与孔洞、有限补偿、类型化因果来源和完整材料检查职责；不是全面重写或只拆函数。所有原规则/参数/门槛保持，完成后继续自主拆拼优化。见docs/verification/2026-10-05-manufacturing-chain-boundaries/README.md。当前实现中，AEA覆盖率unknown；没有新增用户待决项。",
         "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
         "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
         "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
