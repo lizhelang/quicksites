@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "5cca21dd1c79a98a47385198574ee9df5000789c",
-    "committedAt": "2026-10-04T16:49:34+11:00",
-    "checkedAt": "2026-10-04T05:50:17+00:00",
+    "commit": "ebc2ec1fec33e5430f5bc757da4474bd2c4004cd",
+    "committedAt": "2026-10-04T17:12:52+11:00",
+    "checkedAt": "2026-10-04T06:13:45+00:00",
     "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T05:50:17+00:00",
+    "generatedAt": "2026-10-04T06:13:45+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -780,7 +780,13 @@
         "trial03已实测1次同turn guard消息被消费，促成模型自主继续修订和制造；Host调用40/48、余8，最终无nextActions。该有限继续机制通过不等于合格制造；不能把搜索候选预算耗尽当作已有候选无需制造。",
         "trial03新缺口：制造shortlist只覆盖基线及bestSearch、跳过已验证备选。有界search-eligible制造覆盖与失败core持久化已实现，保留firstfallbackpass；候选预算耗尽仍制造已有方案，unknown优先对账。Host专项18/18及最终4/4通过，trial04待live验证。",
         "6ea2869已FF推送集成并mainFF；live HMR warnings=[]，trial03真实建案成功。参数SHA保持、模型粘贴client与17b70bc字节一致，Host/generation绑定及激活见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v2.json。",
-        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。"
+        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。",
+        "2026-10-04旧runtime5cca实测：original04与05均从原12面独立建案、自主选合法9件9折24焊结果，制造分数90.50965549970331，无方案/历史操作注入。结果见docs/verification/2026-10-04-dsh-autonomous-v2/original-04-result.json及original-05-result.json。",
+        "04 Host21/48；05最终Host45/48。05首个final-ready已有5份制造，Harness历史失败摘要误导resume至7份，最终仍ready；不把旧runtime这两次通过外推为新JS稳定或全模型合格。",
+        "旧runtime04/05原生独立保存审计均passed=true、白线一致、文档保持，分别归档saved-audit-original-04/与05/，各10个JSON；两result已绑定摘要SHA。此前审计脚本命名空间/双层血缘错误修复10/10，非native/输出缺陷。入口docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
+        "新JS成本汇报门槛、Host动作优先及完整比较结束修复59/59通过（stage43+guard16），尚未live。新运行时须独立新建两次原12面及一次11面，完成自主制造、同阶段比较、保存文件审计和重复性；P4-A/R3/R6仍Agent处理中/部分实现。",
+        "成本边界：原基线制造fail、costEvidence unknown，不能算同阶段节省；97.161搜索分数不可减90.510制造分数。90.50965549970331仅为合法制造方案的optimization_score，不是报价、全局最优或专家/生产验收。9859161报价及超长超宽批注保持。",
+        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。"
       ],
       "requirements": [
         "QA-01",
@@ -1291,7 +1297,13 @@
         "trial03已实测1次同turn guard消息被消费，促成模型自主继续修订和制造；Host调用40/48、余8，最终无nextActions。该有限继续机制通过不等于合格制造；不能把搜索候选预算耗尽当作已有候选无需制造。",
         "trial03新缺口：制造shortlist只覆盖基线及bestSearch、跳过已验证备选。有界search-eligible制造覆盖与失败core持久化已实现，保留firstfallbackpass；候选预算耗尽仍制造已有方案，unknown优先对账。Host专项18/18及最终4/4通过，trial04待live验证。",
         "6ea2869已FF推送集成并mainFF；live HMR warnings=[]，trial03真实建案成功。参数SHA保持、模型粘贴client与17b70bc字节一致，Host/generation绑定及激活见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v2.json。",
-        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。"
+        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。",
+        "2026-10-04旧runtime5cca实测：original04与05均从原12面独立建案、自主选合法9件9折24焊结果，制造分数90.50965549970331，无方案/历史操作注入。结果见docs/verification/2026-10-04-dsh-autonomous-v2/original-04-result.json及original-05-result.json。",
+        "04 Host21/48；05最终Host45/48。05首个final-ready已有5份制造，Harness历史失败摘要误导resume至7份，最终仍ready；不把旧runtime这两次通过外推为新JS稳定或全模型合格。",
+        "旧runtime04/05原生独立保存审计均passed=true、白线一致、文档保持，分别归档saved-audit-original-04/与05/，各10个JSON；两result已绑定摘要SHA。此前审计脚本命名空间/双层血缘错误修复10/10，非native/输出缺陷。入口docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
+        "新JS成本汇报门槛、Host动作优先及完整比较结束修复59/59通过（stage43+guard16），尚未live。新运行时须独立新建两次原12面及一次11面，完成自主制造、同阶段比较、保存文件审计和重复性；P4-A/R3/R6仍Agent处理中/部分实现。",
+        "成本边界：原基线制造fail、costEvidence unknown，不能算同阶段节省；97.161搜索分数不可减90.510制造分数。90.50965549970331仅为合法制造方案的optimization_score，不是报价、全局最优或专家/生产验收。9859161报价及超长超宽批注保持。",
+        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。"
       ],
       "requirements": [
         "QA-01",
@@ -1498,7 +1510,13 @@
         "trial03已实测1次同turn guard消息被消费，促成模型自主继续修订和制造；Host调用40/48、余8，最终无nextActions。该有限继续机制通过不等于合格制造；不能把搜索候选预算耗尽当作已有候选无需制造。",
         "trial03新缺口：制造shortlist只覆盖基线及bestSearch、跳过已验证备选。有界search-eligible制造覆盖与失败core持久化已实现，保留firstfallbackpass；候选预算耗尽仍制造已有方案，unknown优先对账。Host专项18/18及最终4/4通过，trial04待live验证。",
         "6ea2869已FF推送集成并mainFF；live HMR warnings=[]，trial03真实建案成功。参数SHA保持、模型粘贴client与17b70bc字节一致，Host/generation绑定及激活见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v2.json。",
-        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。"
+        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。",
+        "2026-10-04旧runtime5cca实测：original04与05均从原12面独立建案、自主选合法9件9折24焊结果，制造分数90.50965549970331，无方案/历史操作注入。结果见docs/verification/2026-10-04-dsh-autonomous-v2/original-04-result.json及original-05-result.json。",
+        "04 Host21/48；05最终Host45/48。05首个final-ready已有5份制造，Harness历史失败摘要误导resume至7份，最终仍ready；不把旧runtime这两次通过外推为新JS稳定或全模型合格。",
+        "旧runtime04/05原生独立保存审计均passed=true、白线一致、文档保持，分别归档saved-audit-original-04/与05/，各10个JSON；两result已绑定摘要SHA。此前审计脚本命名空间/双层血缘错误修复10/10，非native/输出缺陷。入口docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
+        "新JS成本汇报门槛、Host动作优先及完整比较结束修复59/59通过（stage43+guard16），尚未live。新运行时须独立新建两次原12面及一次11面，完成自主制造、同阶段比较、保存文件审计和重复性；P4-A/R3/R6仍Agent处理中/部分实现。",
+        "成本边界：原基线制造fail、costEvidence unknown，不能算同阶段节省；97.161搜索分数不可减90.510制造分数。90.50965549970331仅为合法制造方案的optimization_score，不是报价、全局最优或专家/生产验收。9859161报价及超长超宽批注保持。",
+        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。"
       ],
       "requirements": [
         "QA-01",
