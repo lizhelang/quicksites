@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "61ae785e33f29388b605a004bebf3b3341a4683e",
-    "committedAt": "2026-10-04T21:48:38+11:00",
-    "checkedAt": "2026-10-04T10:49:06+00:00",
-    "trackerRevision": "AEA-REQ-20261004-05",
+    "commit": "9f5b223c6a1624a4391d59b321f3c99afa9f94bb",
+    "committedAt": "2026-10-04T22:27:44+11:00",
+    "checkedAt": "2026-10-04T11:28:51+00:00",
+    "trackerRevision": "AEA-REQ-20261004-06",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T10:49:06+00:00",
+    "generatedAt": "2026-10-04T11:28:51+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -754,11 +754,11 @@
       "id": "P4-A",
       "title": "已明确功能独立技术验证与修复",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
       "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "end_to_end",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -766,6 +766,8 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-04自主优化续修：完整源空间身份映射13/13原生、曲线严格包络/资格兑现52/52原生、续搜58/58离线、Host阶段95/95通过；已有切分父案生成6份不同差量，实际重建1件/9件两方向（各6刀）。1件制造仍被有限端点/保面门禁拒绝，未称交付；正在当前运行时自主验证，源参数和8候选/48调用不变。见 docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "2026-10-04续轮：用户授权完成全部已明确工程项，优先源空间切分导出、部分切分/多方向重连及更优候选制造修复；并行推进曲边包络/连接诊断、同阶段多取舍保留及报告说明绑定/桌面验证。基点ad36489，当前新改动尚未验证，旧三次限定通过不替代本轮。",
         "当前9abeab9同Host/native核心限定链PASS：11面10与原12面独立重复11/12均自主完成展开、优化、制造和最终完整比较，独立保存材料v2/纯白线/证书/文档保持PASS；不注入方案、不改源模型或冻结参数。见docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
         "original10实际8候选/8制造/8比较，7fail1legal，Host47/48；选10件1折16焊，制造分数59.64952772564888。原12面11/12各3候选/3制造/3比较、2fail1legal，Host25/48与24/48，9件9折24焊，分数90.50965549970331。",
         "广义A/H与变体能力仍partial，解释汇报仍PARTIAL：10/11/12自由说明有跨阶段成本、操作/面面积/折弯计数或链接误述。纯JS报告摘要已实现；78/78及三份真实报告只读投影通过，官方接口review及安装/HMR通过，安装后三报告投影通过；不称新UI原生端到端通过。",
@@ -1191,10 +1193,10 @@
       "id": "P4-R1",
       "title": "可信矩形指标与连接兑现诊断",
       "actionStates": [
-        "agent_ready"
+        "done"
       ],
-      "stage": "ready",
-      "implementation": "partial",
+      "stage": "complete",
+      "implementation": "implemented",
       "verificationLevel": "local",
       "owner": {
         "type": "agent",
@@ -1205,6 +1207,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-04：52/52原生检查通过，完整曲线逐段严格包络、解析弧/圆与独立NURBS极值、A/H全边界与同源图框，F5–F9冻结资格数值及请求/兑现/未知分离；活动文档不改。曲边方向搜索不宣称全局最优，不升级专家/生产。见 docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "2026-10-04续轮：用户授权完成全部已明确工程项，优先源空间切分导出、部分切分/多方向重连及更优候选制造修复；并行推进曲边包络/连接诊断、同阶段多取舍保留及报告说明绑定/桌面验证。基点ad36489，当前新改动尚未验证，旧三次限定通过不替代本轮。",
         "2026-09-29：修复直边完整顶点矩形，旧DLL原生15/19失败、新DLL19/19通过；完整AEA修复后重跑29.77秒仍PLAN_042，准确理论面积1.868771700㎡。连接兑现诊断、一般曲边严格包络与制造验收仍未完成。见 docs/verification/2026-09-29-aea-dsh-comparison/README.md。",
         "2026-09-29：完整直边矩形19/19原生通过；最终DSH白线全顶点独立矩形1.765183207㎡与报告一致。F5–F9资格拒绝的数值诊断、一般曲边严格包络仍是Agent可继续项，不影响本例H链。"
       ],
@@ -1276,11 +1280,11 @@
       "id": "P4-R3",
       "title": "自动生成窄条拆分与并回候选",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
       "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "end_to_end",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -1291,6 +1295,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-04自主优化续修：完整源空间身份映射13/13原生、曲线严格包络/资格兑现52/52原生、续搜58/58离线、Host阶段95/95通过；已有切分父案生成6份不同差量，实际重建1件/9件两方向（各6刀）。1件制造仍被有限端点/保面门禁拒绝，未称交付；正在当前运行时自主验证，源参数和8候选/48调用不变。见 docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "2026-10-04续轮：用户授权完成全部已明确工程项，优先源空间切分导出、部分切分/多方向重连及更优候选制造修复；并行推进曲边包络/连接诊断、同阶段多取舍保留及报告说明绑定/桌面验证。基点ad36489，当前新改动尚未验证，旧三次限定通过不替代本轮。",
         "当前9abeab9同Host/native核心限定链PASS：11面10与原12面独立重复11/12均自主完成展开、优化、制造和最终完整比较，独立保存材料v2/纯白线/证书/文档保持PASS；不注入方案、不改源模型或冻结参数。见docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
         "original10实际8候选/8制造/8比较，7fail1legal，Host47/48；选10件1折16焊，制造分数59.64952772564888。原12面11/12各3候选/3制造/3比较、2fail1legal，Host25/48与24/48，9件9折24焊，分数90.50965549970331。",
         "广义A/H与变体能力仍partial，解释汇报仍PARTIAL：10/11/12自由说明有跨阶段成本、操作/面面积/折弯计数或链接误述。纯JS报告摘要已实现；78/78及三份真实报告只读投影通过，官方接口review及安装/HMR通过，安装后三报告投影通过；不称新UI原生端到端通过。",
@@ -1355,11 +1361,11 @@
       "id": "P4-R4",
       "title": "同阶段候选比较与双目标保留",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
-      "stage": "ready",
+      "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "end_to_end",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "成本代理"
@@ -1370,6 +1376,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-04自主优化续修：完整源空间身份映射13/13原生、曲线严格包络/资格兑现52/52原生、续搜58/58离线、Host阶段95/95通过；已有切分父案生成6份不同差量，实际重建1件/9件两方向（各6刀）。1件制造仍被有限端点/保面门禁拒绝，未称交付；正在当前运行时自主验证，源参数和8候选/48调用不变。见 docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "2026-10-04续轮：用户授权完成全部已明确工程项，优先源空间切分导出、部分切分/多方向重连及更优候选制造修复；并行推进曲边包络/连接诊断、同阶段多取舍保留及报告说明绑定/桌面验证。基点ad36489，当前新改动尚未验证，旧三次限定通过不替代本轮。",
         "2026-09-29：同阶段reportId/输入/参数/版本绑定成本已实现，48项成本断言及Bridge15项检查通过，桌面实测三项理论成本96.636降至72.039；材料/折弯/焊接与小件增量惩罚独立显示。未知/失败不能获胜，制造不覆盖search证据。A/H不同取舍专门保留策略及复杂加工难度排除仍为Agent可继续项；本轮未证明正式报价。"
       ],
       "requirements": [
@@ -1515,11 +1523,11 @@
       "id": "P4-R6",
       "title": "桌面自主拆拼到制造交付回归",
       "actionStates": [
-        "agent_ready"
+        "agent_active"
       ],
       "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "end_to_end",
+      "verificationLevel": "local",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -1531,6 +1539,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-04自主优化续修：完整源空间身份映射13/13原生、曲线严格包络/资格兑现52/52原生、续搜58/58离线、Host阶段95/95通过；已有切分父案生成6份不同差量，实际重建1件/9件两方向（各6刀）。1件制造仍被有限端点/保面门禁拒绝，未称交付；正在当前运行时自主验证，源参数和8候选/48调用不变。见 docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "2026-10-04续轮：用户授权完成全部已明确工程项，优先源空间切分导出、部分切分/多方向重连及更优候选制造修复；并行推进曲边包络/连接诊断、同阶段多取舍保留及报告说明绑定/桌面验证。基点ad36489，当前新改动尚未验证，旧三次限定通过不替代本轮。",
         "当前9abeab9同Host/native核心限定链PASS：11面10与原12面独立重复11/12均自主完成展开、优化、制造和最终完整比较，独立保存材料v2/纯白线/证书/文档保持PASS；不注入方案、不改源模型或冻结参数。见docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
         "original10实际8候选/8制造/8比较，7fail1legal，Host47/48；选10件1折16焊，制造分数59.64952772564888。原12面11/12各3候选/3制造/3比较、2fail1legal，Host25/48与24/48，9件9折24焊，分数90.50965549970331。",
         "广义A/H与变体能力仍partial，解释汇报仍PARTIAL：10/11/12自由说明有跨阶段成本、操作/面面积/折弯计数或链接误述。纯JS报告摘要已实现；78/78及三份真实报告只读投影通过，官方接口review及安装/HMR通过，安装后三报告投影通过；不称新UI原生端到端通过。",
