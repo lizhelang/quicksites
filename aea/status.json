@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "619d50e82162a1f731d32323233496bf74810b89",
-    "committedAt": "2026-10-05T09:43:48+11:00",
-    "checkedAt": "2026-10-04T22:50:18+00:00",
-    "trackerRevision": "AEA-REQ-20261005-20",
+    "commit": "fd94f4c1617e6d728e93f6f50b560462d072d79f",
+    "committedAt": "2026-10-05T10:28:29+11:00",
+    "checkedAt": "2026-10-04T23:31:51+00:00",
+    "trackerRevision": "AEA-REQ-20261005-21",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T22:50:18+00:00",
+    "generatedAt": "2026-10-04T23:31:51+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -895,6 +895,9 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点21：复杂白线构造提取为WhiteContours模块，实际原生24/24通过，原环与孔全量校验；联合来源模块的完整joint45制造及独立保存审计通过。仅四个MP001浮点末位不同，整体指标相同，不能称统计逐位全同。见AEA/tests/witnesses/native-region-material-fallback/README.md。",
+        "检查点21：自动拆分重连六提案内优先保留同附件数、保焊子片的较少切分凸组合，受影响223/223通过；原6提案/beam24/每面6刀/8候选/48Host保持。首39操作实际制造材料写前/保存全0违规0unknown、白线构造和来源警告消除，但五个折弯端点仍拒，只是诊断，非成本赢家。见docs/verification/2026-10-05-simple-convex-prefix/README.md。",
+        "检查点21：Agent继续五端点的实际有限补偿布局及11面完整材料域修复，无需用户补规则。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计尚未完成，A/H目标与专家/生产验收未完成；原模型/参数、骑线文字和无按钮直接⌘V保持。",
         "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
         "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
         "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
@@ -1478,6 +1481,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点21：复杂白线构造提取为WhiteContours模块，实际原生24/24通过，原环与孔全量校验；联合来源模块的完整joint45制造及独立保存审计通过。仅四个MP001浮点末位不同，整体指标相同，不能称统计逐位全同。见AEA/tests/witnesses/native-region-material-fallback/README.md。",
+        "检查点21：自动拆分重连六提案内优先保留同附件数、保焊子片的较少切分凸组合，受影响223/223通过；原6提案/beam24/每面6刀/8候选/48Host保持。首39操作实际制造材料写前/保存全0违规0unknown、白线构造和来源警告消除，但五个折弯端点仍拒，只是诊断，非成本赢家。见docs/verification/2026-10-05-simple-convex-prefix/README.md。",
+        "检查点21：Agent继续五端点的实际有限补偿布局及11面完整材料域修复，无需用户补规则。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计尚未完成，A/H目标与专家/生产验收未完成；原模型/参数、骑线文字和无按钮直接⌘V保持。",
         "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
         "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
         "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
@@ -1613,6 +1619,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点21：复杂白线构造提取为WhiteContours模块，实际原生24/24通过，原环与孔全量校验；联合来源模块的完整joint45制造及独立保存审计通过。仅四个MP001浮点末位不同，整体指标相同，不能称统计逐位全同。见AEA/tests/witnesses/native-region-material-fallback/README.md。",
+        "检查点21：自动拆分重连六提案内优先保留同附件数、保焊子片的较少切分凸组合，受影响223/223通过；原6提案/beam24/每面6刀/8候选/48Host保持。首39操作实际制造材料写前/保存全0违规0unknown、白线构造和来源警告消除，但五个折弯端点仍拒，只是诊断，非成本赢家。见docs/verification/2026-10-05-simple-convex-prefix/README.md。",
+        "检查点21：Agent继续五端点的实际有限补偿布局及11面完整材料域修复，无需用户补规则。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计尚未完成，A/H目标与专家/生产验收未完成；原模型/参数、骑线文字和无按钮直接⌘V保持。",
         "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
         "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
         "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
@@ -1826,6 +1835,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点21：复杂白线构造提取为WhiteContours模块，实际原生24/24通过，原环与孔全量校验；联合来源模块的完整joint45制造及独立保存审计通过。仅四个MP001浮点末位不同，整体指标相同，不能称统计逐位全同。见AEA/tests/witnesses/native-region-material-fallback/README.md。",
+        "检查点21：自动拆分重连六提案内优先保留同附件数、保焊子片的较少切分凸组合，受影响223/223通过；原6提案/beam24/每面6刀/8候选/48Host保持。首39操作实际制造材料写前/保存全0违规0unknown、白线构造和来源警告消除，但五个折弯端点仍拒，只是诊断，非成本赢家。见docs/verification/2026-10-05-simple-convex-prefix/README.md。",
+        "检查点21：Agent继续五端点的实际有限补偿布局及11面完整材料域修复，无需用户补规则。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计尚未完成，A/H目标与专家/生产验收未完成；原模型/参数、骑线文字和无按钮直接⌘V保持。",
         "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
         "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
         "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
