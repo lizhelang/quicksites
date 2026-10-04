@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "985916162d737bf8bd74afa7208979b240e417fe",
-    "committedAt": "2026-10-04T16:18:13+11:00",
-    "checkedAt": "2026-10-04T05:18:40+00:00",
+    "commit": "3c7e01898bd92320b4d14f0e01990e7a066860ab",
+    "committedAt": "2026-10-04T16:25:31+11:00",
+    "checkedAt": "2026-10-04T05:26:17+00:00",
     "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T05:18:40+00:00",
+    "generatedAt": "2026-10-04T05:26:17+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -765,7 +765,13 @@
         "2026-10-04认领：用户授权DSH从原始模型自主展开→优化→比较→制造出图，主P4-A配套P4-R3/R6；原12面输入独立重复，另跑11面快照，源模型和冻结参数不改，不注入历史操作/候选答案。",
         "本轮验收：逐面材料按face-material-preservation-v2，合法的不同候选按同制造阶段成本比较；选中报告绑定实际图纸、统计、参数和保存文件独立读回。预算不增加，未知先对账且不重放；固定候选回放不算DSH自主通过。",
         "本轮状态：Agent处理中/验证中/部分实现，尚未验证本轮自主产出与稳定性。原12面每次从原始输入独立建案，11面快照另行验证；证据待执行后归档至docs/verification/2026-10-04-dsh-autonomous-v2/。专家、机床及完整回折验收仍独立。",
-        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。"
+        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。",
+        "2026-10-04集成激活：前置stagefix b290af5及merge 7f3dc3e已推送集成并安装主仓库；live HMR application=applied，runtime 0745d51b…与源码stage SHA匹配，工程参数hash不变。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation.json。",
+        "2026-10-04用户再次要求保留远端17b70bc移除“粘贴Rhino”按钮；已合并该提交，不恢复按钮，当前对话输入框⌘V保留。原12面首轮真实DSH自主运行已启动，尚无通过结论；P4-A/R3/R6继续Agent处理中、部分实现、本轮未验证。",
+        "2026-10-04首轮自主12面失败：3份制造报告均未过补偿/逐面材料/有效几何/管线硬门禁，无合格交付；结束时仍comparison_ready、余3候选且无stopReason，最后候选未制造。见docs/verification/2026-10-04-dsh-autonomous-v2/first-trial-failure.json。",
+        "首轮缺陷：native_optimizer因lineage不支持返回unsupported；strip_reconnect仅提供bend重连、缺weld备选。finish_search在其他父案仍有4条建议、余预算4时接受no_improvement；模型文本结束不代表搜索或制造完成。",
+        "2026-10-04修复进度：finish_search停止门禁专项13/13、strip的bend/weld方向专项28/28通过；同轮自动继续、实际闭环及预算保护仍在集成，尚未live验证。下一步新建自主运行与独立重复，不注入历史操作，不增预算、不降v2门禁。",
+        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。"
       ],
       "requirements": [
         "QA-01",
@@ -996,7 +1002,8 @@
         "实际调用已有参数入口createCase，以快照路径、省略objectId及独立验证编号建案成功，inspection无error；保存参数SHA不变。此为工具级建案验证，没有调用LLM或制造。",
         "DSH正常重启后参数读回SHA保持一致，persistence.verified为true；模型粘贴插件已安装，代次2478fb30c11178e666400c16d969e00433f0ec569fba8f3ade2931ce0990617f。",
         "本轮检查：client26、capture7、native32、安装器16项通过；安装器拒绝现有配置冲突和编译期间的并发改写，保留其他配置与已保存参数。",
-        "证据：docs/verification/2026-10-02-model-paste/README.md。验证等级为本地验证；用户发送后模型自主处理、制造及业务验收未据此标为通过。"
+        "证据：docs/verification/2026-10-02-model-paste/README.md。验证等级为本地验证；用户发送后模型自主处理、制造及业务验收未据此标为通过。",
+        "2026-10-04输入入口：用户再次强调保留17b70bc移除“粘贴Rhino”按钮的改动，已合并；输入框⌘V粘贴仍保留。不恢复按钮，既有历史粘贴见证保留原范围，当前激活不自动升级用户验收。"
       ],
       "requirements": [
         "IN-01"
@@ -1260,7 +1267,13 @@
         "2026-10-04认领：用户授权DSH从原始模型自主展开→优化→比较→制造出图，主P4-A配套P4-R3/R6；原12面输入独立重复，另跑11面快照，源模型和冻结参数不改，不注入历史操作/候选答案。",
         "本轮验收：逐面材料按face-material-preservation-v2，合法的不同候选按同制造阶段成本比较；选中报告绑定实际图纸、统计、参数和保存文件独立读回。预算不增加，未知先对账且不重放；固定候选回放不算DSH自主通过。",
         "本轮状态：Agent处理中/验证中/部分实现，尚未验证本轮自主产出与稳定性。原12面每次从原始输入独立建案，11面快照另行验证；证据待执行后归档至docs/verification/2026-10-04-dsh-autonomous-v2/。专家、机床及完整回折验收仍独立。",
-        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。"
+        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。",
+        "2026-10-04集成激活：前置stagefix b290af5及merge 7f3dc3e已推送集成并安装主仓库；live HMR application=applied，runtime 0745d51b…与源码stage SHA匹配，工程参数hash不变。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation.json。",
+        "2026-10-04用户再次要求保留远端17b70bc移除“粘贴Rhino”按钮；已合并该提交，不恢复按钮，当前对话输入框⌘V保留。原12面首轮真实DSH自主运行已启动，尚无通过结论；P4-A/R3/R6继续Agent处理中、部分实现、本轮未验证。",
+        "2026-10-04首轮自主12面失败：3份制造报告均未过补偿/逐面材料/有效几何/管线硬门禁，无合格交付；结束时仍comparison_ready、余3候选且无stopReason，最后候选未制造。见docs/verification/2026-10-04-dsh-autonomous-v2/first-trial-failure.json。",
+        "首轮缺陷：native_optimizer因lineage不支持返回unsupported；strip_reconnect仅提供bend重连、缺weld备选。finish_search在其他父案仍有4条建议、余预算4时接受no_improvement；模型文本结束不代表搜索或制造完成。",
+        "2026-10-04修复进度：finish_search停止门禁专项13/13、strip的bend/weld方向专项28/28通过；同轮自动继续、实际闭环及预算保护仍在集成，尚未live验证。下一步新建自主运行与独立重复，不注入历史操作，不增预算、不降v2门禁。",
+        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。"
       ],
       "requirements": [
         "QA-01",
@@ -1452,7 +1465,13 @@
         "2026-10-04认领：用户授权DSH从原始模型自主展开→优化→比较→制造出图，主P4-A配套P4-R3/R6；原12面输入独立重复，另跑11面快照，源模型和冻结参数不改，不注入历史操作/候选答案。",
         "本轮验收：逐面材料按face-material-preservation-v2，合法的不同候选按同制造阶段成本比较；选中报告绑定实际图纸、统计、参数和保存文件独立读回。预算不增加，未知先对账且不重放；固定候选回放不算DSH自主通过。",
         "本轮状态：Agent处理中/验证中/部分实现，尚未验证本轮自主产出与稳定性。原12面每次从原始输入独立建案，11面快照另行验证；证据待执行后归档至docs/verification/2026-10-04-dsh-autonomous-v2/。专家、机床及完整回折验收仍独立。",
-        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。"
+        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。",
+        "2026-10-04集成激活：前置stagefix b290af5及merge 7f3dc3e已推送集成并安装主仓库；live HMR application=applied，runtime 0745d51b…与源码stage SHA匹配，工程参数hash不变。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation.json。",
+        "2026-10-04用户再次要求保留远端17b70bc移除“粘贴Rhino”按钮；已合并该提交，不恢复按钮，当前对话输入框⌘V保留。原12面首轮真实DSH自主运行已启动，尚无通过结论；P4-A/R3/R6继续Agent处理中、部分实现、本轮未验证。",
+        "2026-10-04首轮自主12面失败：3份制造报告均未过补偿/逐面材料/有效几何/管线硬门禁，无合格交付；结束时仍comparison_ready、余3候选且无stopReason，最后候选未制造。见docs/verification/2026-10-04-dsh-autonomous-v2/first-trial-failure.json。",
+        "首轮缺陷：native_optimizer因lineage不支持返回unsupported；strip_reconnect仅提供bend重连、缺weld备选。finish_search在其他父案仍有4条建议、余预算4时接受no_improvement；模型文本结束不代表搜索或制造完成。",
+        "2026-10-04修复进度：finish_search停止门禁专项13/13、strip的bend/weld方向专项28/28通过；同轮自动继续、实际闭环及预算保护仍在集成，尚未live验证。下一步新建自主运行与独立重复，不注入历史操作，不增预算、不降v2门禁。",
+        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。"
       ],
       "requirements": [
         "QA-01",
