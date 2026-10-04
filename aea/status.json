@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "4e7922e1f9ccfe3946c1e0a85d0e8cb3ba167838",
-    "committedAt": "2026-10-04T23:55:09+11:00",
-    "checkedAt": "2026-10-04T12:57:14+00:00",
-    "trackerRevision": "AEA-REQ-20261004-07",
+    "commit": "10daeb11447e45df34c20563a0b1e995092836b1",
+    "committedAt": "2026-10-05T00:13:54+11:00",
+    "checkedAt": "2026-10-04T13:14:57+00:00",
+    "trackerRevision": "AEA-REQ-20261005-08",
     "remoteVerified": true
   },
   "publication": {
-    "mode": "handoff-script",
-    "generatedAt": "2026-10-04T12:57:14+00:00",
+    "mode": "github-actions",
+    "generatedAt": "2026-10-04T13:14:57+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -766,6 +766,10 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-05检查点08：旧118/4e7922e原12面实际8候选、Host48/48、8制造/8完整比较，7fail1legal；自主strip及报告绑定repair完成9件6折24焊保底。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "检查点08：选中报告d9736553…的制造与独立保存审计均通过：15保存面、9件、3次native切分、6折24焊；缺材/填孔/切入检查及文档保持通过。开料1.870570㎡、焊6.659866m、分数132.456907；基线制造fail，节省unknown。",
+        "检查点08：旧118优化器62方案全因finite boundary导出unsupported，失败保留。真端点触碰的零区间修复73/73离线通过（新增8）；AEA build0错误/56既有警告，独立review COMMENT，无新false-pass。",
+        "检查点08：fresh同输入/冻结参数原生导出已恢复：62评估、6份selected/Pareto/操作差异候选，error=null。仅证明严格导出恢复；新安装DSH自主验证及候选制造待跑，P4-A/R3/R4/R6仍Agent处理中/部分实现，A/H、全局最优、专家/生产未验收。",
         "2026-10-04检查点07：多方案导出65/65与源映射17/17离线通过；原生评估62方案，保留6份selected/Pareto/操作差异候选。6份实际制造均fail，不能将搜索成功当交付。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
         "2026-10-04检查点07：最新1件6刀目标仍有13条折弯端点失败记录；逐面材料before/saved通过，违规及unknown均0。先前9件合法保底已完整制造及保存审计通过；不代表A/H优化完成。",
         "2026-10-04检查点07：禁止按0.01mm删除真实源微段；Boolean计算tol收紧至1e-9，物理门槛未改。fresh103/103原生通过，有限源回走证书与严格Outside修复保留原环、cut/hole审核和物理阈值；正矩形完整制造/回读及旧坏角安全拒绝，剩余端点失败未掩盖。",
@@ -1300,6 +1304,10 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-05检查点08：旧118/4e7922e原12面实际8候选、Host48/48、8制造/8完整比较，7fail1legal；自主strip及报告绑定repair完成9件6折24焊保底。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "检查点08：选中报告d9736553…的制造与独立保存审计均通过：15保存面、9件、3次native切分、6折24焊；缺材/填孔/切入检查及文档保持通过。开料1.870570㎡、焊6.659866m、分数132.456907；基线制造fail，节省unknown。",
+        "检查点08：旧118优化器62方案全因finite boundary导出unsupported，失败保留。真端点触碰的零区间修复73/73离线通过（新增8）；AEA build0错误/56既有警告，独立review COMMENT，无新false-pass。",
+        "检查点08：fresh同输入/冻结参数原生导出已恢复：62评估、6份selected/Pareto/操作差异候选，error=null。仅证明严格导出恢复；新安装DSH自主验证及候选制造待跑，P4-A/R3/R4/R6仍Agent处理中/部分实现，A/H、全局最优、专家/生产未验收。",
         "2026-10-04检查点07：多方案导出65/65与源映射17/17离线通过；原生评估62方案，保留6份selected/Pareto/操作差异候选。6份实际制造均fail，不能将搜索成功当交付。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
         "2026-10-04检查点07：最新1件6刀目标仍有13条折弯端点失败记录；逐面材料before/saved通过，违规及unknown均0。先前9件合法保底已完整制造及保存审计通过；不代表A/H优化完成。",
         "2026-10-04检查点07：禁止按0.01mm删除真实源微段；Boolean计算tol收紧至1e-9，物理门槛未改。fresh103/103原生通过，有限源回走证书与严格Outside修复保留原环、cut/hole审核和物理阈值；正矩形完整制造/回读及旧坏角安全拒绝，剩余端点失败未掩盖。",
@@ -1386,6 +1394,10 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-05检查点08：旧118/4e7922e原12面实际8候选、Host48/48、8制造/8完整比较，7fail1legal；自主strip及报告绑定repair完成9件6折24焊保底。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "检查点08：选中报告d9736553…的制造与独立保存审计均通过：15保存面、9件、3次native切分、6折24焊；缺材/填孔/切入检查及文档保持通过。开料1.870570㎡、焊6.659866m、分数132.456907；基线制造fail，节省unknown。",
+        "检查点08：旧118优化器62方案全因finite boundary导出unsupported，失败保留。真端点触碰的零区间修复73/73离线通过（新增8）；AEA build0错误/56既有警告，独立review COMMENT，无新false-pass。",
+        "检查点08：fresh同输入/冻结参数原生导出已恢复：62评估、6份selected/Pareto/操作差异候选，error=null。仅证明严格导出恢复；新安装DSH自主验证及候选制造待跑，P4-A/R3/R4/R6仍Agent处理中/部分实现，A/H、全局最优、专家/生产未验收。",
         "2026-10-04检查点07：多方案导出65/65与源映射17/17离线通过；原生评估62方案，保留6份selected/Pareto/操作差异候选。6份实际制造均fail，不能将搜索成功当交付。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
         "2026-10-04检查点07：最新1件6刀目标仍有13条折弯端点失败记录；逐面材料before/saved通过，违规及unknown均0。先前9件合法保底已完整制造及保存审计通过；不代表A/H优化完成。",
         "2026-10-04检查点07：禁止按0.01mm删除真实源微段；Boolean计算tol收紧至1e-9，物理门槛未改。fresh103/103原生通过，有限源回走证书与严格Outside修复保留原环、cut/hole审核和物理阈值；正矩形完整制造/回读及旧坏角安全拒绝，剩余端点失败未掩盖。",
@@ -1554,6 +1566,10 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-05检查点08：旧118/4e7922e原12面实际8候选、Host48/48、8制造/8完整比较，7fail1legal；自主strip及报告绑定repair完成9件6折24焊保底。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
+        "检查点08：选中报告d9736553…的制造与独立保存审计均通过：15保存面、9件、3次native切分、6折24焊；缺材/填孔/切入检查及文档保持通过。开料1.870570㎡、焊6.659866m、分数132.456907；基线制造fail，节省unknown。",
+        "检查点08：旧118优化器62方案全因finite boundary导出unsupported，失败保留。真端点触碰的零区间修复73/73离线通过（新增8）；AEA build0错误/56既有警告，独立review COMMENT，无新false-pass。",
+        "检查点08：fresh同输入/冻结参数原生导出已恢复：62评估、6份selected/Pareto/操作差异候选，error=null。仅证明严格导出恢复；新安装DSH自主验证及候选制造待跑，P4-A/R3/R4/R6仍Agent处理中/部分实现，A/H、全局最优、专家/生产未验收。",
         "2026-10-04检查点07：多方案导出65/65与源映射17/17离线通过；原生评估62方案，保留6份selected/Pareto/操作差异候选。6份实际制造均fail，不能将搜索成功当交付。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
         "2026-10-04检查点07：最新1件6刀目标仍有13条折弯端点失败记录；逐面材料before/saved通过，违规及unknown均0。先前9件合法保底已完整制造及保存审计通过；不代表A/H优化完成。",
         "2026-10-04检查点07：禁止按0.01mm删除真实源微段；Boolean计算tol收紧至1e-9，物理门槛未改。fresh103/103原生通过，有限源回走证书与严格Outside修复保留原环、cut/hole审核和物理阈值；正矩形完整制造/回读及旧坏角安全拒绝，剩余端点失败未掩盖。",
