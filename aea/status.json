@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "88ea5afe865dcae401828a7440cb38d4d018e108",
-    "committedAt": "2026-10-04T17:58:16+11:00",
-    "checkedAt": "2026-10-04T07:00:01+00:00",
+    "commit": "9abeab9f34c83bb263dd5a75e8563411e28764c9",
+    "committedAt": "2026-10-04T18:18:00+11:00",
+    "checkedAt": "2026-10-04T07:19:48+00:00",
     "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
-    "mode": "handoff-script",
-    "generatedAt": "2026-10-04T07:00:01+00:00",
+    "mode": "github-actions",
+    "generatedAt": "2026-10-04T07:19:48+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -761,6 +761,11 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "09同11面实际失败：Host32/48、候选3/8，三份制造均fail，无合法结果或最终比较，audited=false；FB_008→weld已消除原continuity失败，仍有8折弯unsupported_endpoint及逐面材料失败。见docs/verification/2026-10-04-dsh-autonomous-v2/original-09-result.json。",
+        "当前88ea5af已安装/HMR applied，Host3d2e3fd7…、stage721be0bc…及8模块匹配，参数与17b70bc入口保持。06/07原12面自主和审计PASS不外推09；本轮2×12+1×11未完成。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v6.json。",
+        "09端点metadata聚合缺少严格目标。逐折弯结构失败证据和combo-first已实现、独立review无finding；仅采用实际completed失败报告且严格pin/lineage，参数/预算/v2门禁保持。代码检查完成，fresh10实际制造及保存审计待验证；09仍无合法结果，任务继续处理中，OUT/QA不升级。",
+        "endpoint修复C#16独立用例PASS（新增5+既有repair11，malformed7为子例）；122源producer隔离构建0错误57警告，前两次隔离duplicate-assembly已解决。见docs/verification/2026-10-04-dsh-autonomous-v2/endpoint-repair-host-checks.json。",
+        "JS stage51/51通过（新增2）；actualRunSummary只统计实际执行账本，09真实3/3制造fail，生成提议不算执行或等价方案通过。见docs/verification/2026-10-04-dsh-autonomous-v2/actual-run-summary-final.tap。",
         "2026-09-24：构建与回归通过；native MCP恢复并完成22场景原生见证，内存监控稳定。真实Web Agent完成建案、基线、一次改进、比较和定稿，返回diagnostic_only预览；制造门禁fail，未完成生产交付。",
         "2026-10-04认领：用户授权DSH从原始模型自主展开→优化→比较→制造出图，主P4-A配套P4-R3/R6；原12面输入独立重复，另跑11面快照，源模型和冻结参数不改，不注入历史操作/候选答案。",
         "本轮验收：逐面材料按face-material-preservation-v2，合法的不同候选按同制造阶段成本比较；选中报告绑定实际图纸、统计、参数和保存文件独立读回。预算不增加，未知先对账且不重放；固定候选回放不算DSH自主通过。",
@@ -1275,6 +1280,11 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "09同11面实际失败：Host32/48、候选3/8，三份制造均fail，无合法结果或最终比较，audited=false；FB_008→weld已消除原continuity失败，仍有8折弯unsupported_endpoint及逐面材料失败。见docs/verification/2026-10-04-dsh-autonomous-v2/original-09-result.json。",
+        "当前88ea5af已安装/HMR applied，Host3d2e3fd7…、stage721be0bc…及8模块匹配，参数与17b70bc入口保持。06/07原12面自主和审计PASS不外推09；本轮2×12+1×11未完成。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v6.json。",
+        "09端点metadata聚合缺少严格目标。逐折弯结构失败证据和combo-first已实现、独立review无finding；仅采用实际completed失败报告且严格pin/lineage，参数/预算/v2门禁保持。代码检查完成，fresh10实际制造及保存审计待验证；09仍无合法结果，任务继续处理中，OUT/QA不升级。",
+        "endpoint修复C#16独立用例PASS（新增5+既有repair11，malformed7为子例）；122源producer隔离构建0错误57警告，前两次隔离duplicate-assembly已解决。见docs/verification/2026-10-04-dsh-autonomous-v2/endpoint-repair-host-checks.json。",
+        "JS stage51/51通过（新增2）；actualRunSummary只统计实际执行账本，09真实3/3制造fail，生成提议不算执行或等价方案通过。见docs/verification/2026-10-04-dsh-autonomous-v2/actual-run-summary-final.tap。",
         "2026-09-29：通用源拓扑凹窄条生成器14项变体回归通过（平移/三维旋转/重编号/尺寸/反向/无窄条等），生产Host串联和两个真实DSH新会话自主生成6cut H方向。未读取A/H操作作为生成输入；支持未切分父候选上的平面单外环直边凹窄条，任意曲面/曲边不在此实现范围。",
         "2026-09-30：037独立Rhino实测未调用DSH。完整AEA评估142次、最终3次切分；同输入/参数均4件，白线外接矩形面积由DSH的1.574537648432降至1.296590244585㎡。旧A/H端到端证据仍有效，不能外推本例优化合格。",
         "2026-09-30：同制造阶段焊长2.662014609→1.876064910m、折弯动作16→18；按32×㎡+10×m+动作数比较，93.00535084→78.25153693（-15.8634%）。这只是三项参数评分，不是完整工厂报价。",
@@ -1504,6 +1514,11 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "09同11面实际失败：Host32/48、候选3/8，三份制造均fail，无合法结果或最终比较，audited=false；FB_008→weld已消除原continuity失败，仍有8折弯unsupported_endpoint及逐面材料失败。见docs/verification/2026-10-04-dsh-autonomous-v2/original-09-result.json。",
+        "当前88ea5af已安装/HMR applied，Host3d2e3fd7…、stage721be0bc…及8模块匹配，参数与17b70bc入口保持。06/07原12面自主和审计PASS不外推09；本轮2×12+1×11未完成。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v6.json。",
+        "09端点metadata聚合缺少严格目标。逐折弯结构失败证据和combo-first已实现、独立review无finding；仅采用实际completed失败报告且严格pin/lineage，参数/预算/v2门禁保持。代码检查完成，fresh10实际制造及保存审计待验证；09仍无合法结果，任务继续处理中，OUT/QA不升级。",
+        "endpoint修复C#16独立用例PASS（新增5+既有repair11，malformed7为子例）；122源producer隔离构建0错误57警告，前两次隔离duplicate-assembly已解决。见docs/verification/2026-10-04-dsh-autonomous-v2/endpoint-repair-host-checks.json。",
+        "JS stage51/51通过（新增2）；actualRunSummary只统计实际执行账本，09真实3/3制造fail，生成提议不算执行或等价方案通过。见docs/verification/2026-10-04-dsh-autonomous-v2/actual-run-summary-final.tap。",
         "2026-09-29：两个真实DSH新会话自主生成6cut H、1件；各验证3/2份改进。制造开料1.765183207㎡；保存文件独立回读、4条角标及受控打开通过。复测直接磁盘建案，理论11刀组与制造13动作分开。旧模型制造回归通过；跨模型自主搜索泛化、完整回折/机床/生产验收未完成。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
         "2026-09-29集成：日常目录AEA/Host重新构建0错误，桌面新代次active；冻结参数和用户设置哈希不变。稳定目录原生读取12面/27连接通过；931个原有用户文件逐字节保留。见本轮evidence/stable-install/summary.json。",
         "2026-10-04认领：用户授权DSH从原始模型自主展开→优化→比较→制造出图，主P4-A配套P4-R3/R6；原12面输入独立重复，另跑11面快照，源模型和冻结参数不改，不注入历史操作/候选答案。",
