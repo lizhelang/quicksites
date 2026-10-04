@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "7ea382e77d17052bc29dedab82194865690a5521",
-    "committedAt": "2026-10-05T07:09:30+11:00",
-    "checkedAt": "2026-10-04T20:11:49+00:00",
-    "trackerRevision": "AEA-REQ-20261005-17",
+    "commit": "7394c17347debffef980d97f787110eea4220e8c",
+    "committedAt": "2026-10-05T07:55:14+11:00",
+    "checkedAt": "2026-10-04T20:58:31+00:00",
+    "trackerRevision": "AEA-REQ-20261005-18",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T20:11:49+00:00",
+    "generatedAt": "2026-10-04T20:58:31+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -186,6 +186,9 @@
           "Q-11"
         ],
         "verificationEvidence": [
+          "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+          "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+          "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
           "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
           "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
           "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
@@ -229,6 +232,9 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+          "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+          "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
           "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
           "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
           "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
@@ -290,6 +296,9 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+          "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+          "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
           "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
           "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
           "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
@@ -366,6 +375,9 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+          "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+          "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
           "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
           "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
           "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
@@ -426,6 +438,9 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+          "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+          "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
           "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
           "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
           "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
@@ -845,6 +860,9 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+        "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+        "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
         "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
         "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
         "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
@@ -1418,6 +1436,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+        "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+        "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
         "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
         "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
         "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
@@ -1543,6 +1564,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+        "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+        "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
         "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
         "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
         "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
@@ -1750,6 +1774,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
+        "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
+        "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
         "检查点17：通用body端横带/端帽重连已实现，Host210/210；原27defaults/body9、6提案/beam24/每面6切分、8候选/48Host及合法父案保持。实际运行208原操作，210仅补来源；见docs/verification/2026-10-05-source-body-band-search/summary.json。",
         "检查点17：DDEpin整端帽41操作/4切分/3件，13要求全部合格兑现、0重叠/0材料违规/0端点失败；MP003材料侧1unknown及BWC警告3仍拒。开料2.008910㎡、焊2.513767m、13折，三项诊断102.422783，非合法赢家。",
         "检查点17：联合45操作/8切分/7件，13要求全部合格兑现；7件before/saved材料0违规0unknown、0端点失败，BWC警告2+2+1仍拒。三项诊断97.503728不含件数惩罚。DSH仍v11，最终2×12+11、A/H、专家/生产未完成；Agent继续BWC修复。",
