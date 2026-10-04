@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "7f3dc3eea161843394bcada02c7f10d989182470",
-    "committedAt": "2026-10-04T16:01:51+11:00",
-    "checkedAt": "2026-10-04T05:02:53+00:00",
+    "commit": "cfe46eb44fce68ec09ecf7850e90c32a1215c43c",
+    "committedAt": "2026-10-04T16:09:24+11:00",
+    "checkedAt": "2026-10-04T05:09:52+00:00",
     "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T05:02:53+00:00",
+    "generatedAt": "2026-10-04T05:09:52+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1218,7 +1218,8 @@
       "verificationEvidence": [
         "2026-10-03项目规范、阶段/兼容提示及只读continuationPolicy已同步。阶段30/30、安装器1/1、状态导出15/15、发布5/5、两入口检查通过。见docs/verification/2026-10-03-autonomous-completion/README.md。",
         "安装前DSH有1个活跃或排队Agent，本轮不强制重启；旧问题卡不自动撤回。未发送模型消息，提示/契约测试不证明LLM永不提问或复杂制造已通过；未降低门禁或扩大预算。",
-        "桌面安装代次b5528486e6f2与主目录提示一致；参数值/SHA保持、持久化通过。Host未重启，1个活跃或排队Agent保留，已加载预设仍旧，新预设待正常重启/空闲重载。见docs/verification/2026-10-03-autonomous-completion/desktop-installation.json。"
+        "桌面安装代次b5528486e6f2与主目录提示一致；参数值/SHA保持、持久化通过。Host未重启，1个活跃或排队Agent保留，已加载预设仍旧，新预设待正常重启/空闲重载。见docs/verification/2026-10-03-autonomous-completion/desktop-installation.json。",
+        "2026-10-04运行时一致性补强：Node 27/27、Host build；旧代次拒绝、参数按 case 冻结、磁盘输入与 Rhino 文档隔离。见 AEA/AgentHarness/runtime-freshness.test.mjs。"
       ],
       "requirements": [
         "OPS-01",
