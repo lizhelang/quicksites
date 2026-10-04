@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "ad3648967a840da997f2bb9771d86cb11717eed6",
-    "committedAt": "2026-10-04T19:05:11+11:00",
-    "checkedAt": "2026-10-04T08:06:43+00:00",
-    "trackerRevision": "AEA-REQ-20261004-03",
+    "commit": "3479cb131cbbb0df504640808f5918a0f93c1091",
+    "committedAt": "2026-10-04T21:44:38+11:00",
+    "checkedAt": "2026-10-04T10:45:20+00:00",
+    "trackerRevision": "AEA-REQ-20261004-04",
     "remoteVerified": true
   },
   "publication": {
-    "mode": "handoff-script",
-    "generatedAt": "2026-10-04T08:06:43+00:00",
+    "mode": "github-actions",
+    "generatedAt": "2026-10-04T10:45:20+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -114,6 +114,7 @@
         "id": "S02",
         "title": "配置与资源冻结",
         "actionStates": [
+          "agent_ready",
           "needs_decision",
           "needs_acceptance"
         ],
@@ -131,6 +132,7 @@
           "Q-07"
         ],
         "verificationEvidence": [
+          "2026-10-04 DEC-20261004-01：折边20/30mm分段免计价规则已确认，IN-02/MET-04可按确定部分继续；仅正反折适用范围未决。本轮仅登记需求，未核验代码实现。",
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
           "2026-10-01：DEC-20261001-03已实现常用默认值、折弯系数/刀具直接填表及持久化修复；用户体验尚待确认，不等于制造或生产验收。",
           "已定位并修复：controller缓存旧基线SHA导致更新后建案拒绝，保存覆盖实际仍在。刷新当前基线并保留覆盖；安装器已兼容官方savedSettings，版本并发检查继续保留。",
@@ -275,6 +277,7 @@
         "id": "S08",
         "title": "面积、工序与板型",
         "actionStates": [
+          "agent_ready",
           "needs_decision",
           "needs_acceptance"
         ],
@@ -292,6 +295,7 @@
           "Q-07"
         ],
         "verificationEvidence": [
+          "2026-10-04 DEC-20261004-01：折边20/30mm分段免计价规则已确认，IN-02/MET-04可按确定部分继续；仅正反折适用范围未决。本轮仅登记需求，未核验代码实现。",
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
           "2026-09-21：22场景原生及共享runner通过；完整Host编号数量3联验39 pass/2 unknown；实际3DM线长与报告一致，折弯9/刨槽3/焊接18次。docs/verification/2026-09-21-operations/README.md。",
           "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。"
@@ -537,6 +541,7 @@
         "Q-07"
       ],
       "verificationEvidence": [
+        "2026-10-04 DEC-20261004-01：Q-03已确认外边缘面宽≤20mm整面免计价，20<w≤30mm仅外侧20mm带免计价，w>30mm整面计价；30为资格上限、20为免计价带宽。仅正反折适用范围未决；本轮为需求登记，未验证代码符合性。",
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。"
       ],
       "requirements": [
@@ -664,6 +669,7 @@
         "Q-07"
       ],
       "verificationEvidence": [
+        "2026-10-04 DEC-20261004-01：Q-03已确认外边缘面宽≤20mm整面免计价，20<w≤30mm仅外侧20mm带免计价，w>30mm整面计价；30为资格上限、20为免计价带宽。仅正反折适用范围未决；本轮为需求登记，未验证代码符合性。",
         "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 仅对应已确认部分；本任务剩余问题没有被标完成。",
         "2026-09-21：22场景原生及共享runner通过；完整Host编号数量3联验39 pass/2 unknown；实际3DM线长与报告一致，折弯9/刨槽3/焊接18次。docs/verification/2026-09-21-operations/README.md。 其余分类字段仍待各自问题。"
       ],
