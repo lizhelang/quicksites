@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "6ea2869155c44a8c7dbe5e92121fa6bad74e3809",
-    "committedAt": "2026-10-04T16:29:48+11:00",
-    "checkedAt": "2026-10-04T05:30:43+00:00",
+    "commit": "5cca21dd1c79a98a47385198574ee9df5000789c",
+    "committedAt": "2026-10-04T16:49:34+11:00",
+    "checkedAt": "2026-10-04T05:50:17+00:00",
     "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T05:30:43+00:00",
+    "generatedAt": "2026-10-04T05:50:17+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -771,7 +771,16 @@
         "2026-10-04首轮自主12面失败：3份制造报告均未过补偿/逐面材料/有效几何/管线硬门禁，无合格交付；结束时仍comparison_ready、余3候选且无stopReason，最后候选未制造。见docs/verification/2026-10-04-dsh-autonomous-v2/first-trial-failure.json。",
         "首轮缺陷：native_optimizer因lineage不支持返回unsupported；strip_reconnect仅提供bend重连、缺weld备选。finish_search在其他父案仍有4条建议、余预算4时接受no_improvement；模型文本结束不代表搜索或制造完成。",
         "2026-10-04修复进度：finish_search停止门禁专项13/13、strip的bend/weld方向专项28/28通过；同轮自动继续、实际闭环及预算保护仍在集成，尚未live验证。下一步新建自主运行与独立重复，不注入历史操作，不增预算、不降v2门禁。",
-        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。"
+        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。",
+        "2026-10-04第二轮original02在建案前失败：parameter-ui generation缺runtime-freshness依赖，import失败；caseCreated=false、nativeGeometryStarted=false。见docs/verification/2026-10-04-dsh-autonomous-v2/second-trial-entry-failure.json。",
+        "2026-10-04入口修复：parameter-ui安装器现打包并校验runtime-freshness；真实临时generation import专项12/12通过。JS guard接线68/68通过（含guard16、stage31）。见docs/verification/2026-10-04-dsh-autonomous-v2/continuation-integration.tap。",
+        "源提交6ea2869已推送feature；修复后新的原模型trial03正在推进，尚无自主成功结论。P4-A/R3/R6仍Agent处理中/验证中/部分实现、本轮未验证；12面独立重复及11面快照、制造后独立保存文件审计和稳定性待验证。",
+        "远端9859161的报价及超长超宽新需求口径已合并保留；cfe46eb运行时一致性和17b70bc按钮移除继续保留，输入框⌘V可用。本轮保持源模型、冻结参数、预算与v2逐面材料门禁，既有固定9件验证不替代自主验收。",
+        "2026-10-04 trial03自主交付仍失败：8个搜索候选中4份制造均fail、4个已验证备选未制造，stopReason=candidate_budget。见docs/verification/2026-10-04-dsh-autonomous-v2/third-trial-shortlist-failure.json。",
+        "trial03已实测1次同turn guard消息被消费，促成模型自主继续修订和制造；Host调用40/48、余8，最终无nextActions。该有限继续机制通过不等于合格制造；不能把搜索候选预算耗尽当作已有候选无需制造。",
+        "trial03新缺口：制造shortlist只覆盖基线及bestSearch、跳过已验证备选。有界search-eligible制造覆盖与失败core持久化已实现，保留firstfallbackpass；候选预算耗尽仍制造已有方案，unknown优先对账。Host专项18/18及最终4/4通过，trial04待live验证。",
+        "6ea2869已FF推送集成并mainFF；live HMR warnings=[]，trial03真实建案成功。参数SHA保持、模型粘贴client与17b70bc字节一致，Host/generation绑定及激活见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v2.json。",
+        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。"
       ],
       "requirements": [
         "QA-01",
@@ -1273,7 +1282,16 @@
         "2026-10-04首轮自主12面失败：3份制造报告均未过补偿/逐面材料/有效几何/管线硬门禁，无合格交付；结束时仍comparison_ready、余3候选且无stopReason，最后候选未制造。见docs/verification/2026-10-04-dsh-autonomous-v2/first-trial-failure.json。",
         "首轮缺陷：native_optimizer因lineage不支持返回unsupported；strip_reconnect仅提供bend重连、缺weld备选。finish_search在其他父案仍有4条建议、余预算4时接受no_improvement；模型文本结束不代表搜索或制造完成。",
         "2026-10-04修复进度：finish_search停止门禁专项13/13、strip的bend/weld方向专项28/28通过；同轮自动继续、实际闭环及预算保护仍在集成，尚未live验证。下一步新建自主运行与独立重复，不注入历史操作，不增预算、不降v2门禁。",
-        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。"
+        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。",
+        "2026-10-04第二轮original02在建案前失败：parameter-ui generation缺runtime-freshness依赖，import失败；caseCreated=false、nativeGeometryStarted=false。见docs/verification/2026-10-04-dsh-autonomous-v2/second-trial-entry-failure.json。",
+        "2026-10-04入口修复：parameter-ui安装器现打包并校验runtime-freshness；真实临时generation import专项12/12通过。JS guard接线68/68通过（含guard16、stage31）。见docs/verification/2026-10-04-dsh-autonomous-v2/continuation-integration.tap。",
+        "源提交6ea2869已推送feature；修复后新的原模型trial03正在推进，尚无自主成功结论。P4-A/R3/R6仍Agent处理中/验证中/部分实现、本轮未验证；12面独立重复及11面快照、制造后独立保存文件审计和稳定性待验证。",
+        "远端9859161的报价及超长超宽新需求口径已合并保留；cfe46eb运行时一致性和17b70bc按钮移除继续保留，输入框⌘V可用。本轮保持源模型、冻结参数、预算与v2逐面材料门禁，既有固定9件验证不替代自主验收。",
+        "2026-10-04 trial03自主交付仍失败：8个搜索候选中4份制造均fail、4个已验证备选未制造，stopReason=candidate_budget。见docs/verification/2026-10-04-dsh-autonomous-v2/third-trial-shortlist-failure.json。",
+        "trial03已实测1次同turn guard消息被消费，促成模型自主继续修订和制造；Host调用40/48、余8，最终无nextActions。该有限继续机制通过不等于合格制造；不能把搜索候选预算耗尽当作已有候选无需制造。",
+        "trial03新缺口：制造shortlist只覆盖基线及bestSearch、跳过已验证备选。有界search-eligible制造覆盖与失败core持久化已实现，保留firstfallbackpass；候选预算耗尽仍制造已有方案，unknown优先对账。Host专项18/18及最终4/4通过，trial04待live验证。",
+        "6ea2869已FF推送集成并mainFF；live HMR warnings=[]，trial03真实建案成功。参数SHA保持、模型粘贴client与17b70bc字节一致，Host/generation绑定及激活见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v2.json。",
+        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。"
       ],
       "requirements": [
         "QA-01",
@@ -1471,7 +1489,16 @@
         "2026-10-04首轮自主12面失败：3份制造报告均未过补偿/逐面材料/有效几何/管线硬门禁，无合格交付；结束时仍comparison_ready、余3候选且无stopReason，最后候选未制造。见docs/verification/2026-10-04-dsh-autonomous-v2/first-trial-failure.json。",
         "首轮缺陷：native_optimizer因lineage不支持返回unsupported；strip_reconnect仅提供bend重连、缺weld备选。finish_search在其他父案仍有4条建议、余预算4时接受no_improvement；模型文本结束不代表搜索或制造完成。",
         "2026-10-04修复进度：finish_search停止门禁专项13/13、strip的bend/weld方向专项28/28通过；同轮自动继续、实际闭环及预算保护仍在集成，尚未live验证。下一步新建自主运行与独立重复，不注入历史操作，不增预算、不降v2门禁。",
-        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。"
+        "远端cfe46eb与17b70bc均已合并保留；运行时一致性保护及移除“粘贴Rhino”按钮不回退，输入框⌘V保留。既有4e47522固定9件候选的本地保存文件通过范围不变，不证明此次自主通过；P4-A/R3/R6仍Agent处理中/部分实现。",
+        "2026-10-04第二轮original02在建案前失败：parameter-ui generation缺runtime-freshness依赖，import失败；caseCreated=false、nativeGeometryStarted=false。见docs/verification/2026-10-04-dsh-autonomous-v2/second-trial-entry-failure.json。",
+        "2026-10-04入口修复：parameter-ui安装器现打包并校验runtime-freshness；真实临时generation import专项12/12通过。JS guard接线68/68通过（含guard16、stage31）。见docs/verification/2026-10-04-dsh-autonomous-v2/continuation-integration.tap。",
+        "源提交6ea2869已推送feature；修复后新的原模型trial03正在推进，尚无自主成功结论。P4-A/R3/R6仍Agent处理中/验证中/部分实现、本轮未验证；12面独立重复及11面快照、制造后独立保存文件审计和稳定性待验证。",
+        "远端9859161的报价及超长超宽新需求口径已合并保留；cfe46eb运行时一致性和17b70bc按钮移除继续保留，输入框⌘V可用。本轮保持源模型、冻结参数、预算与v2逐面材料门禁，既有固定9件验证不替代自主验收。",
+        "2026-10-04 trial03自主交付仍失败：8个搜索候选中4份制造均fail、4个已验证备选未制造，stopReason=candidate_budget。见docs/verification/2026-10-04-dsh-autonomous-v2/third-trial-shortlist-failure.json。",
+        "trial03已实测1次同turn guard消息被消费，促成模型自主继续修订和制造；Host调用40/48、余8，最终无nextActions。该有限继续机制通过不等于合格制造；不能把搜索候选预算耗尽当作已有候选无需制造。",
+        "trial03新缺口：制造shortlist只覆盖基线及bestSearch、跳过已验证备选。有界search-eligible制造覆盖与失败core持久化已实现，保留firstfallbackpass；候选预算耗尽仍制造已有方案，unknown优先对账。Host专项18/18及最终4/4通过，trial04待live验证。",
+        "6ea2869已FF推送集成并mainFF；live HMR warnings=[]，trial03真实建案成功。参数SHA保持、模型粘贴client与17b70bc字节一致，Host/generation绑定及激活见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v2.json。",
+        "2026-10-04覆盖修复检查点：Host专项18/18及最终4/4通过（19个不同用例、7新增）；review结束冲突已修为nextActions=[]。缺少compared报告仍严格pin并fail-closed，不放宽绑定门禁。有界覆盖已实现，trial04真实自主制造及独立重复尚待验证。"
       ],
       "requirements": [
         "QA-01",
