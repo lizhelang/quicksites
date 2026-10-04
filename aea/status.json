@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "17b70bcadd7cb151e37fe9b7859f91ddadf78ba7",
-    "committedAt": "2026-10-04T15:58:57+11:00",
-    "checkedAt": "2026-10-04T04:59:26+00:00",
-    "trackerRevision": "AEA-REQ-20261004-02",
+    "commit": "7f3dc3eea161843394bcada02c7f10d989182470",
+    "committedAt": "2026-10-04T16:01:51+11:00",
+    "checkedAt": "2026-10-04T05:02:53+00:00",
+    "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T04:59:26+00:00",
+    "generatedAt": "2026-10-04T05:02:53+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -753,7 +753,7 @@
       ],
       "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "end_to_end",
+      "verificationLevel": "none",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -761,7 +761,11 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-09-24：构建与回归通过；native MCP恢复并完成22场景原生见证，内存监控稳定。真实Web Agent完成建案、基线、一次改进、比较和定稿，返回diagnostic_only预览；制造门禁fail，未完成生产交付。"
+        "2026-09-24：构建与回归通过；native MCP恢复并完成22场景原生见证，内存监控稳定。真实Web Agent完成建案、基线、一次改进、比较和定稿，返回diagnostic_only预览；制造门禁fail，未完成生产交付。",
+        "2026-10-04认领：用户授权DSH从原始模型自主展开→优化→比较→制造出图，主P4-A配套P4-R3/R6；原12面输入独立重复，另跑11面快照，源模型和冻结参数不改，不注入历史操作/候选答案。",
+        "本轮验收：逐面材料按face-material-preservation-v2，合法的不同候选按同制造阶段成本比较；选中报告绑定实际图纸、统计、参数和保存文件独立读回。预算不增加，未知先对账且不重放；固定候选回放不算DSH自主通过。",
+        "本轮状态：Agent处理中/验证中/部分实现，尚未验证本轮自主产出与稳定性。原12面每次从原始输入独立建案，11面快照另行验证；证据待执行后归档至docs/verification/2026-10-04-dsh-autonomous-v2/。专家、机床及完整回折验收仍独立。",
+        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。"
       ],
       "requirements": [
         "QA-01",
@@ -1228,9 +1232,9 @@
       "actionStates": [
         "agent_active"
       ],
-      "stage": "implementation",
+      "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "end_to_end",
+      "verificationLevel": "none",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -1251,7 +1255,11 @@
         "2026-09-30窗口回收完成：原13窗口已收拢；最终原生实测新副本替换时自动关闭旧自有未修改副本，最多原件+1结果。修改/保存/改名副本交还用户，未知Close跨请求禁止重放。最终仅1个未修改原件、MCP仍可用；28项策略/9项传输回归通过。早期嵌套Close实验排队及后续crash如实保留，已撤回该路径。",
         "本轮DSH搜索/制造选型与窗口回收修复已通过限定037见证。独立白线近接触仍unknown，角标占区、复杂模型/源边子段协议及完整加工可达性仍可继续优化；不等于全局最优、专家或实机生产验收。证据 docs/verification/2026-09-30-search-and-window-lifecycle/README.md。",
         "2026-09-30最终A/H回归：新DSH从原图自主生成6cut H方向，制造仍1件、开料1.765183207㎡、折弯13次，分数95.73436342→72.97563731；保存白线独立检查通过。完整优化器来源在本例因谱系不可导出而返回unsupported，正常使用条带来源；不宣称全局最优或生产验收。",
-        "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
+        "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。",
+        "2026-10-04认领：用户授权DSH从原始模型自主展开→优化→比较→制造出图，主P4-A配套P4-R3/R6；原12面输入独立重复，另跑11面快照，源模型和冻结参数不改，不注入历史操作/候选答案。",
+        "本轮验收：逐面材料按face-material-preservation-v2，合法的不同候选按同制造阶段成本比较；选中报告绑定实际图纸、统计、参数和保存文件独立读回。预算不增加，未知先对账且不重放；固定候选回放不算DSH自主通过。",
+        "本轮状态：Agent处理中/验证中/部分实现，尚未验证本轮自主产出与稳定性。原12面每次从原始输入独立建案，11面快照另行验证；证据待执行后归档至docs/verification/2026-10-04-dsh-autonomous-v2/。专家、机床及完整回折验收仍独立。",
+        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。"
       ],
       "requirements": [
         "QA-01",
@@ -1422,14 +1430,14 @@
       "id": "P4-R6",
       "title": "桌面自主拆拼到制造交付回归",
       "actionStates": [
-        "done"
+        "agent_active"
       ],
-      "stage": "complete",
-      "implementation": "implemented",
-      "verificationLevel": "end_to_end",
+      "stage": "verification",
+      "implementation": "partial",
+      "verificationLevel": "none",
       "owner": {
         "type": "agent",
-        "name": "集成代理"
+        "name": "主代理"
       },
       "depends": [
         "P4-R3",
@@ -1439,7 +1447,11 @@
       "openQuestions": [],
       "verificationEvidence": [
         "2026-09-29：两个真实DSH新会话自主生成6cut H、1件；各验证3/2份改进。制造开料1.765183207㎡；保存文件独立回读、4条角标及受控打开通过。复测直接磁盘建案，理论11刀组与制造13动作分开。旧模型制造回归通过；跨模型自主搜索泛化、完整回折/机床/生产验收未完成。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
-        "2026-09-29集成：日常目录AEA/Host重新构建0错误，桌面新代次active；冻结参数和用户设置哈希不变。稳定目录原生读取12面/27连接通过；931个原有用户文件逐字节保留。见本轮evidence/stable-install/summary.json。"
+        "2026-09-29集成：日常目录AEA/Host重新构建0错误，桌面新代次active；冻结参数和用户设置哈希不变。稳定目录原生读取12面/27连接通过；931个原有用户文件逐字节保留。见本轮evidence/stable-install/summary.json。",
+        "2026-10-04认领：用户授权DSH从原始模型自主展开→优化→比较→制造出图，主P4-A配套P4-R3/R6；原12面输入独立重复，另跑11面快照，源模型和冻结参数不改，不注入历史操作/候选答案。",
+        "本轮验收：逐面材料按face-material-preservation-v2，合法的不同候选按同制造阶段成本比较；选中报告绑定实际图纸、统计、参数和保存文件独立读回。预算不增加，未知先对账且不重放；固定候选回放不算DSH自主通过。",
+        "本轮状态：Agent处理中/验证中/部分实现，尚未验证本轮自主产出与稳定性。原12面每次从原始输入独立建案，11面快照另行验证；证据待执行后归档至docs/verification/2026-10-04-dsh-autonomous-v2/。专家、机床及完整回折验收仍独立。",
+        "2026-10-04前置修复：stage-controller读取Host根resumeReason并兼容历史字段；Node专项31/31通过。未知制造仍仅对账，真实DSH自主制造尚待执行；不作为本轮端到端通过。详见docs/verification/2026-10-04-dsh-autonomous-v2/stage-controller-test-result.json。"
       ],
       "requirements": [
         "QA-01",
