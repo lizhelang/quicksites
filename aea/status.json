@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "7394c17347debffef980d97f787110eea4220e8c",
-    "committedAt": "2026-10-05T07:55:14+11:00",
-    "checkedAt": "2026-10-04T20:58:31+00:00",
-    "trackerRevision": "AEA-REQ-20261005-18",
+    "commit": "1a8be7639cde0d9c1366f4f3b2cac6bc498339e7",
+    "committedAt": "2026-10-05T08:50:01+11:00",
+    "checkedAt": "2026-10-04T21:53:42+00:00",
+    "trackerRevision": "AEA-REQ-20261005-19",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T20:58:31+00:00",
+    "generatedAt": "2026-10-04T21:53:42+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -186,6 +186,9 @@
           "Q-11"
         ],
         "verificationEvidence": [
+          "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+          "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+          "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
           "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
           "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
           "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
@@ -232,6 +235,9 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+          "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+          "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
           "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
           "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
           "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
@@ -296,6 +302,9 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+          "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+          "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
           "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
           "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
           "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
@@ -375,6 +384,9 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+          "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+          "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
           "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
           "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
           "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
@@ -438,6 +450,9 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+          "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+          "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
           "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
           "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
           "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
@@ -860,6 +875,9 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+        "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+        "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
         "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
         "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
         "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
@@ -1436,6 +1454,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+        "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+        "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
         "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
         "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
         "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
@@ -1564,6 +1585,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+        "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+        "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
         "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
         "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
         "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
@@ -1774,6 +1798,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点19：真实展开失败已接通source_boundary_repair，验证时9资产SHA和完整父操作/actual Boolean双侧whole leaf绑定；47/47 Host、100/100 Node，旧无绑定报告unsupported。见AEA/tests/SourceBoundaryRepair/README.md。",
+        "检查点19：Rhino新版对象表完整枚举回读实际24/24，负例拒绝、原模型与文档保持。11面追加whole拆开后0端点失败/0材料违规，但SF7及SF2/SF6三处材料侧仍unknown，全部诊断。见docs/verification/2026-10-05-source-boundary-repair/README.md。",
+        "检查点19：Agent继续复杂白环/真实边来源/11面材料侧修复，规则明确，无需用户补说明。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计未完成，A/H目标与专家/生产未完成。",
         "检查点18：拆分重连在原6提案/beam24内保留不同切分、附件与整片保焊方向，源原子、合法父案和8候选/48Host保持。Host221/221；两实际候选因白环未闭合仍诊断，正式面积unknown。见AEA/tests/witnesses/source-corner-repair/fairness/native-diagnostic.json。",
         "检查点18：原位有限红线来源与克隆消费者修复，actual107/107；同joint45完整制造三条30→28.5mm，实际焊长减4.5mm、白线面积及13蓝不变。SF0012两条BWC警告仍拒，非合格交付。见AEA/tests/witnesses/original-position-finite-subset/README.md。",
         "检查点18：当前Agent继续修空白环构造、复杂边来源及11面严格构造；规则明确，不需用户补说明。DSH仍v11，最新2×12+11自主/独立保存审计及A/H目标未完成，无按钮直接⌘V、冻结参数和原模型保持。",
