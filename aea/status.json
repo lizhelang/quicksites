@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "9abeab9f34c83bb263dd5a75e8563411e28764c9",
-    "committedAt": "2026-10-04T18:18:00+11:00",
-    "checkedAt": "2026-10-04T07:21:52+00:00",
+    "commit": "dca76ac954ce4971684a23f3f4bfc422fd877f64",
+    "committedAt": "2026-10-04T18:56:58+11:00",
+    "checkedAt": "2026-10-04T07:58:17+00:00",
     "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
-    "mode": "handoff-script",
-    "generatedAt": "2026-10-04T07:21:52+00:00",
+    "mode": "github-actions",
+    "generatedAt": "2026-10-04T07:58:17+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -749,11 +749,11 @@
       "id": "P4-A",
       "title": "已明确功能独立技术验证与修复",
       "actionStates": [
-        "agent_active"
+        "agent_ready"
       ],
       "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -761,6 +761,12 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "当前9abeab9同Host/native核心限定链PASS：11面10与原12面独立重复11/12均自主完成展开、优化、制造和最终完整比较，独立保存材料v2/纯白线/证书/文档保持PASS；不注入方案、不改源模型或冻结参数。见docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
+        "original10实际8候选/8制造/8比较，7fail1legal，Host47/48；选10件1折16焊，制造分数59.64952772564888。原12面11/12各3候选/3制造/3比较、2fail1legal，Host25/48与24/48，9件9折24焊，分数90.50965549970331。",
+        "广义A/H与变体能力仍partial，解释汇报仍PARTIAL：10/11/12自由说明有跨阶段成本、操作/面面积/折弯计数或链接误述。纯JS报告摘要已实现；78/78及三份真实报告只读投影通过，官方接口review通过；安装待完成，不称新UI原生端到端通过。",
+        "本轮限定软件链为端到端验证；任务保持Agent可处理/验证中/部分实现。OUT-01/QA-01仍partial，完整回折、机床/工序、shape_preservation与manufacturing_acceptance、专家/生产验收独立；不同模型和基线制造fail不能证明节省或全局最优。",
+        "9abe生产Host构建0错误5警告、nativeAEA构建0错误57警告；8runtime模块、Host/native DLL、参数与17b70bc无按钮/直接⌘V入口匹配。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v7.json。",
+        "历史范围：06/07仅ebc成功，不计当前9abe重复验收；08/09真实失败保留。以下旧检查点保持原文，只描述当时的安装、执行和待验证状态，不表示当前核心链仍失败或未live。",
         "09同11面实际失败：Host32/48、候选3/8，三份制造均fail，无合法结果或最终比较，audited=false；FB_008→weld已消除原continuity失败，仍有8折弯unsupported_endpoint及逐面材料失败。见docs/verification/2026-10-04-dsh-autonomous-v2/original-09-result.json。",
         "当前88ea5af已安装/HMR applied，Host3d2e3fd7…、stage721be0bc…及8模块匹配，参数与17b70bc入口保持。06/07原12面自主和审计PASS不外推09；本轮2×12+1×11未完成。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v6.json。",
         "09端点metadata聚合缺少严格目标。逐折弯结构失败证据和combo-first已实现、独立review无finding；仅采用实际completed失败报告且严格pin/lineage，参数/预算/v2门禁保持。代码检查完成，fresh10实际制造及保存审计待验证；09仍无合法结果，任务继续处理中，OUT/QA不升级。",
@@ -1265,11 +1271,11 @@
       "id": "P4-R3",
       "title": "自动生成窄条拆分与并回候选",
       "actionStates": [
-        "agent_active"
+        "agent_ready"
       ],
       "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -1280,6 +1286,12 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "当前9abeab9同Host/native核心限定链PASS：11面10与原12面独立重复11/12均自主完成展开、优化、制造和最终完整比较，独立保存材料v2/纯白线/证书/文档保持PASS；不注入方案、不改源模型或冻结参数。见docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
+        "original10实际8候选/8制造/8比较，7fail1legal，Host47/48；选10件1折16焊，制造分数59.64952772564888。原12面11/12各3候选/3制造/3比较、2fail1legal，Host25/48与24/48，9件9折24焊，分数90.50965549970331。",
+        "广义A/H与变体能力仍partial，解释汇报仍PARTIAL：10/11/12自由说明有跨阶段成本、操作/面面积/折弯计数或链接误述。纯JS报告摘要已实现；78/78及三份真实报告只读投影通过，官方接口review通过；安装待完成，不称新UI原生端到端通过。",
+        "本轮限定软件链为端到端验证；任务保持Agent可处理/验证中/部分实现。OUT-01/QA-01仍partial，完整回折、机床/工序、shape_preservation与manufacturing_acceptance、专家/生产验收独立；不同模型和基线制造fail不能证明节省或全局最优。",
+        "9abe生产Host构建0错误5警告、nativeAEA构建0错误57警告；8runtime模块、Host/native DLL、参数与17b70bc无按钮/直接⌘V入口匹配。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v7.json。",
+        "历史范围：06/07仅ebc成功，不计当前9abe重复验收；08/09真实失败保留。以下旧检查点保持原文，只描述当时的安装、执行和待验证状态，不表示当前核心链仍失败或未live。",
         "09同11面实际失败：Host32/48、候选3/8，三份制造均fail，无合法结果或最终比较，audited=false；FB_008→weld已消除原continuity失败，仍有8折弯unsupported_endpoint及逐面材料失败。见docs/verification/2026-10-04-dsh-autonomous-v2/original-09-result.json。",
         "当前88ea5af已安装/HMR applied，Host3d2e3fd7…、stage721be0bc…及8模块匹配，参数与17b70bc入口保持。06/07原12面自主和审计PASS不外推09；本轮2×12+1×11未完成。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v6.json。",
         "09端点metadata聚合缺少严格目标。逐折弯结构失败证据和combo-first已实现、独立review无finding；仅采用实际completed失败报告且严格pin/lineage，参数/预算/v2门禁保持。代码检查完成，fresh10实际制造及保存审计待验证；09仍无合法结果，任务继续处理中，OUT/QA不升级。",
@@ -1498,11 +1510,11 @@
       "id": "P4-R6",
       "title": "桌面自主拆拼到制造交付回归",
       "actionStates": [
-        "agent_active"
+        "agent_ready"
       ],
       "stage": "verification",
       "implementation": "partial",
-      "verificationLevel": "none",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -1514,6 +1526,12 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "当前9abeab9同Host/native核心限定链PASS：11面10与原12面独立重复11/12均自主完成展开、优化、制造和最终完整比较，独立保存材料v2/纯白线/证书/文档保持PASS；不注入方案、不改源模型或冻结参数。见docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
+        "original10实际8候选/8制造/8比较，7fail1legal，Host47/48；选10件1折16焊，制造分数59.64952772564888。原12面11/12各3候选/3制造/3比较、2fail1legal，Host25/48与24/48，9件9折24焊，分数90.50965549970331。",
+        "广义A/H与变体能力仍partial，解释汇报仍PARTIAL：10/11/12自由说明有跨阶段成本、操作/面面积/折弯计数或链接误述。纯JS报告摘要已实现；78/78及三份真实报告只读投影通过，官方接口review通过；安装待完成，不称新UI原生端到端通过。",
+        "本轮限定软件链为端到端验证；任务保持Agent可处理/验证中/部分实现。OUT-01/QA-01仍partial，完整回折、机床/工序、shape_preservation与manufacturing_acceptance、专家/生产验收独立；不同模型和基线制造fail不能证明节省或全局最优。",
+        "9abe生产Host构建0错误5警告、nativeAEA构建0错误57警告；8runtime模块、Host/native DLL、参数与17b70bc无按钮/直接⌘V入口匹配。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v7.json。",
+        "历史范围：06/07仅ebc成功，不计当前9abe重复验收；08/09真实失败保留。以下旧检查点保持原文，只描述当时的安装、执行和待验证状态，不表示当前核心链仍失败或未live。",
         "09同11面实际失败：Host32/48、候选3/8，三份制造均fail，无合法结果或最终比较，audited=false；FB_008→weld已消除原continuity失败，仍有8折弯unsupported_endpoint及逐面材料失败。见docs/verification/2026-10-04-dsh-autonomous-v2/original-09-result.json。",
         "当前88ea5af已安装/HMR applied，Host3d2e3fd7…、stage721be0bc…及8模块匹配，参数与17b70bc入口保持。06/07原12面自主和审计PASS不外推09；本轮2×12+1×11未完成。见docs/verification/2026-10-04-dsh-autonomous-v2/desktop-activation-v6.json。",
         "09端点metadata聚合缺少严格目标。逐折弯结构失败证据和combo-first已实现、独立review无finding；仅采用实际completed失败报告且严格pin/lineage，参数/预算/v2门禁保持。代码检查完成，fresh10实际制造及保存审计待验证；09仍无合法结果，任务继续处理中，OUT/QA不升级。",
