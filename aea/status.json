@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "ebc2ec1fec33e5430f5bc757da4474bd2c4004cd",
-    "committedAt": "2026-10-04T17:12:52+11:00",
-    "checkedAt": "2026-10-04T06:20:36+00:00",
+    "commit": "7f23dc6b70ff8fa8803bbf5c8e1385f5c3a67e1a",
+    "committedAt": "2026-10-04T17:35:21+11:00",
+    "checkedAt": "2026-10-04T06:36:03+00:00",
     "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
-    "mode": "handoff-script",
-    "generatedAt": "2026-10-04T06:20:36+00:00",
+    "mode": "github-actions",
+    "generatedAt": "2026-10-04T06:36:03+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -786,7 +786,11 @@
         "旧runtime04/05原生独立保存审计均passed=true、白线一致、文档保持，分别归档saved-audit-original-04/与05/，各10个JSON；两result已绑定摘要SHA。此前审计脚本命名空间/双层血缘错误修复10/10，非native/输出缺陷。入口docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
         "新JS成本汇报门槛、Host动作优先及完整比较结束修复59/59通过（stage43+guard16），尚未live。新运行时须独立新建两次原12面及一次11面，完成自主制造、同阶段比较、保存文件审计和重复性；P4-A/R3/R6仍Agent处理中/部分实现。",
         "成本边界：原基线制造fail、costEvidence unknown，不能算同阶段节省；97.161搜索分数不可减90.510制造分数。90.50965549970331仅为合法制造方案的optimization_score，不是报价、全局最优或专家/生产验收。9859161报价及超长超宽批注保持。",
-        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。"
+        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。",
+        "2026-10-04 ebc2ec1实测06/07：原12面独立自主制造与savedAudit均PASS，9件9折24焊、制造分数90.50965549970331。final comparison ready、无resume；Host分别29/48与36/48。证据见本轮original-06/07-result.json、saved-audit-original-06/07/summary.json。",
+        "06/07原生独立保存审计均passed=true，laser白线一致、误差证书通过、用户文档保持；exactcopies归档于docs/verification/2026-10-04-dsh-autonomous-v2/deliverables/original-06/及original-07/，provenance绑定精确报告与文件哈希。",
+        "07真实artifact与SHA正确，聊天链接漏/.dsh是汇报缺陷。selectedDelivery按选中报告身份/SHA恢复准确路径，62/62通过（stage46+guard16），TAP见本轮selected-delivery-paths-final.tap；仅Node内置摘要、无新runtime依赖/几何改变。尚未live，08不同11面及审计pending。",
+        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。"
       ],
       "requirements": [
         "QA-01",
@@ -1303,7 +1307,11 @@
         "旧runtime04/05原生独立保存审计均passed=true、白线一致、文档保持，分别归档saved-audit-original-04/与05/，各10个JSON；两result已绑定摘要SHA。此前审计脚本命名空间/双层血缘错误修复10/10，非native/输出缺陷。入口docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
         "新JS成本汇报门槛、Host动作优先及完整比较结束修复59/59通过（stage43+guard16），尚未live。新运行时须独立新建两次原12面及一次11面，完成自主制造、同阶段比较、保存文件审计和重复性；P4-A/R3/R6仍Agent处理中/部分实现。",
         "成本边界：原基线制造fail、costEvidence unknown，不能算同阶段节省；97.161搜索分数不可减90.510制造分数。90.50965549970331仅为合法制造方案的optimization_score，不是报价、全局最优或专家/生产验收。9859161报价及超长超宽批注保持。",
-        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。"
+        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。",
+        "2026-10-04 ebc2ec1实测06/07：原12面独立自主制造与savedAudit均PASS，9件9折24焊、制造分数90.50965549970331。final comparison ready、无resume；Host分别29/48与36/48。证据见本轮original-06/07-result.json、saved-audit-original-06/07/summary.json。",
+        "06/07原生独立保存审计均passed=true，laser白线一致、误差证书通过、用户文档保持；exactcopies归档于docs/verification/2026-10-04-dsh-autonomous-v2/deliverables/original-06/及original-07/，provenance绑定精确报告与文件哈希。",
+        "07真实artifact与SHA正确，聊天链接漏/.dsh是汇报缺陷。selectedDelivery按选中报告身份/SHA恢复准确路径，62/62通过（stage46+guard16），TAP见本轮selected-delivery-paths-final.tap；仅Node内置摘要、无新runtime依赖/几何改变。尚未live，08不同11面及审计pending。",
+        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。"
       ],
       "requirements": [
         "QA-01",
@@ -1516,7 +1524,11 @@
         "旧runtime04/05原生独立保存审计均passed=true、白线一致、文档保持，分别归档saved-audit-original-04/与05/，各10个JSON；两result已绑定摘要SHA。此前审计脚本命名空间/双层血缘错误修复10/10，非native/输出缺陷。入口docs/verification/2026-10-04-dsh-autonomous-v2/README.md。",
         "新JS成本汇报门槛、Host动作优先及完整比较结束修复59/59通过（stage43+guard16），尚未live。新运行时须独立新建两次原12面及一次11面，完成自主制造、同阶段比较、保存文件审计和重复性；P4-A/R3/R6仍Agent处理中/部分实现。",
         "成本边界：原基线制造fail、costEvidence unknown，不能算同阶段节省；97.161搜索分数不可减90.510制造分数。90.50965549970331仅为合法制造方案的optimization_score，不是报价、全局最优或专家/生产验收。9859161报价及超长超宽批注保持。",
-        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。"
+        "新JS最终59/59通过（stage43+guard16），历史resumeReason提示和完成base文字冲突均已修；最后文字scope/断言stage43/43另跑通过。新JS尚未live，新运行时独立两12面与一11面制造/比较/保存审计仍pending，任务不标完成。见本轮stage-continuation-final.tap与stage-completion-rule-final.tap。",
+        "2026-10-04 ebc2ec1实测06/07：原12面独立自主制造与savedAudit均PASS，9件9折24焊、制造分数90.50965549970331。final comparison ready、无resume；Host分别29/48与36/48。证据见本轮original-06/07-result.json、saved-audit-original-06/07/summary.json。",
+        "06/07原生独立保存审计均passed=true，laser白线一致、误差证书通过、用户文档保持；exactcopies归档于docs/verification/2026-10-04-dsh-autonomous-v2/deliverables/original-06/及original-07/，provenance绑定精确报告与文件哈希。",
+        "07真实artifact与SHA正确，聊天链接漏/.dsh是汇报缺陷。selectedDelivery按选中报告身份/SHA恢复准确路径，62/62通过（stage46+guard16），TAP见本轮selected-delivery-paths-final.tap；仅Node内置摘要、无新runtime依赖/几何改变。尚未live，08不同11面及审计pending。",
+        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。"
       ],
       "requirements": [
         "QA-01",
