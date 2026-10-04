@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "7f23dc6b70ff8fa8803bbf5c8e1385f5c3a67e1a",
-    "committedAt": "2026-10-04T17:35:21+11:00",
-    "checkedAt": "2026-10-04T06:37:29+00:00",
+    "commit": "88ea5afe865dcae401828a7440cb38d4d018e108",
+    "committedAt": "2026-10-04T17:58:16+11:00",
+    "checkedAt": "2026-10-04T06:58:52+00:00",
     "trackerRevision": "AEA-REQ-20261004-03",
     "remoteVerified": true
   },
   "publication": {
-    "mode": "handoff-script",
-    "generatedAt": "2026-10-04T06:37:29+00:00",
+    "mode": "github-actions",
+    "generatedAt": "2026-10-04T06:58:52+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -790,7 +790,10 @@
         "2026-10-04 ebc2ec1实测06/07：原12面独立自主制造与savedAudit均PASS，9件9折24焊、制造分数90.50965549970331。final comparison ready、无resume；Host分别29/48与36/48。证据见本轮original-06/07-result.json、saved-audit-original-06/07/summary.json。",
         "06/07原生独立保存审计均passed=true，laser白线一致、误差证书通过、用户文档保持；exactcopies归档于docs/verification/2026-10-04-dsh-autonomous-v2/deliverables/original-06/及original-07/，provenance绑定精确报告与文件哈希。",
         "07真实artifact与SHA正确，聊天链接漏/.dsh是汇报缺陷。selectedDelivery按选中报告身份/SHA恢复准确路径，62/62通过（stage46+guard16），TAP见本轮selected-delivery-paths-final.tap；仅Node内置摘要、无新runtime依赖/几何改变。尚未live，08不同11面及审计pending。",
-        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。"
+        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。",
+        "2026-10-04 original08真实失败：11面17连接、3/8候选、Host29/48，仅基线制造因FB_008未过补偿/材料/几何/管线硬门禁，无合法制造或最终比较，audited=false。见docs/verification/2026-10-04-dsh-autonomous-v2/original-08-result.json。",
+        "新manufacturing_repair策略仅从本案实际completed失败制造报告的结构FB源连接提出bend→weld，严格绑定报告SHA及缓存响应SHA，保留非目标决策/预算/门槛；生成不dispatch native，unknown先对账。当前是工具能力缺口，不需用户补规则或改源模型。",
+        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。"
       ],
       "requirements": [
         "QA-01",
@@ -1311,7 +1314,10 @@
         "2026-10-04 ebc2ec1实测06/07：原12面独立自主制造与savedAudit均PASS，9件9折24焊、制造分数90.50965549970331。final comparison ready、无resume；Host分别29/48与36/48。证据见本轮original-06/07-result.json、saved-audit-original-06/07/summary.json。",
         "06/07原生独立保存审计均passed=true，laser白线一致、误差证书通过、用户文档保持；exactcopies归档于docs/verification/2026-10-04-dsh-autonomous-v2/deliverables/original-06/及original-07/，provenance绑定精确报告与文件哈希。",
         "07真实artifact与SHA正确，聊天链接漏/.dsh是汇报缺陷。selectedDelivery按选中报告身份/SHA恢复准确路径，62/62通过（stage46+guard16），TAP见本轮selected-delivery-paths-final.tap；仅Node内置摘要、无新runtime依赖/几何改变。尚未live，08不同11面及审计pending。",
-        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。"
+        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。",
+        "2026-10-04 original08真实失败：11面17连接、3/8候选、Host29/48，仅基线制造因FB_008未过补偿/材料/几何/管线硬门禁，无合法制造或最终比较，audited=false。见docs/verification/2026-10-04-dsh-autonomous-v2/original-08-result.json。",
+        "新manufacturing_repair策略仅从本案实际completed失败制造报告的结构FB源连接提出bend→weld，严格绑定报告SHA及缓存响应SHA，保留非目标决策/预算/门槛；生成不dispatch native，unknown先对账。当前是工具能力缺口，不需用户补规则或改源模型。",
+        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。"
       ],
       "requirements": [
         "QA-01",
@@ -1528,7 +1534,10 @@
         "2026-10-04 ebc2ec1实测06/07：原12面独立自主制造与savedAudit均PASS，9件9折24焊、制造分数90.50965549970331。final comparison ready、无resume；Host分别29/48与36/48。证据见本轮original-06/07-result.json、saved-audit-original-06/07/summary.json。",
         "06/07原生独立保存审计均passed=true，laser白线一致、误差证书通过、用户文档保持；exactcopies归档于docs/verification/2026-10-04-dsh-autonomous-v2/deliverables/original-06/及original-07/，provenance绑定精确报告与文件哈希。",
         "07真实artifact与SHA正确，聊天链接漏/.dsh是汇报缺陷。selectedDelivery按选中报告身份/SHA恢复准确路径，62/62通过（stage46+guard16），TAP见本轮selected-delivery-paths-final.tap；仅Node内置摘要、无新runtime依赖/几何改变。尚未live，08不同11面及审计pending。",
-        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。"
+        "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。",
+        "2026-10-04 original08真实失败：11面17连接、3/8候选、Host29/48，仅基线制造因FB_008未过补偿/材料/几何/管线硬门禁，无合法制造或最终比较，audited=false。见docs/verification/2026-10-04-dsh-autonomous-v2/original-08-result.json。",
+        "新manufacturing_repair策略仅从本案实际completed失败制造报告的结构FB源连接提出bend→weld，严格绑定报告SHA及缓存响应SHA，保留非目标决策/预算/门槛；生成不dispatch native，unknown先对账。当前是工具能力缺口，不需用户补规则或改源模型。",
+        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。"
       ],
       "requirements": [
         "QA-01",
