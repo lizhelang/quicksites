@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "8aeb899489a54f599ed0539a840042858ca2fc19",
-    "committedAt": "2026-10-06T10:13:38+11:00",
-    "checkedAt": "2026-10-05T23:14:49+00:00",
-    "trackerRevision": "AEA-REQ-20261006-02",
+    "commit": "77cdfe58577757e46e9f08db3b8df1c8f0f5c720",
+    "committedAt": "2026-10-06T10:37:50+11:00",
+    "checkedAt": "2026-10-05T23:38:19+00:00",
+    "trackerRevision": "AEA-REQ-20261006-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-05T23:14:49+00:00",
+    "generatedAt": "2026-10-05T23:38:19+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1938,6 +1938,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-06：FB010外缘诊断试改15/15及保存回读通过，36段白线连续，10蓝线/其他对象不变；通用生产代码未接入、完整制造未过、DSH未更新。见AEA/tests/witnesses/current-slanted-one-piece/evidence/corner/summary.json。",
         "2026-10-06同图修正版已safe open_result：新serial268435468、白环37段、modified=false；只退役未改旧agent461，用户458/84对象保持。9/9离线及catalog实际42/42通过。见AEA/tests/witnesses/current-slanted-one-piece/evidence/retrace/display-verification.json。",
         "2026-10-06追加：同折弯补偿来源短往返去回两腿取消，partial返程保留native剩余；真实源侧/唯一trace/owning绑定及后续防回补已接入，42/42原生专项通过。见AEA/tests/witnesses/current-slanted-one-piece/evidence/retrace/summary.json。",
         "2026-10-06最终582cfbb0：同11斜面保留1件10折7焊、4源边unknown仍candidate_validation；目标重线去除，另一处回走及约1.5mm端点离白线仍诊断。自然三件控制软件pass，不是本工件候选，DSH未安装，专家/生产unknown。",
