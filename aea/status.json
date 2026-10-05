@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "61b8b2c8d1b585d1e542facce0b24aa78515df4b",
-    "committedAt": "2026-10-05T15:21:39+11:00",
-    "checkedAt": "2026-10-05T04:23:13+00:00",
-    "trackerRevision": "AEA-REQ-20261005-27",
+    "commit": "f9fcc8ff9b85e324007547087fcbac07d1357431",
+    "committedAt": "2026-10-05T19:12:20+11:00",
+    "checkedAt": "2026-10-05T08:12:45+00:00",
+    "trackerRevision": "AEA-REQ-20261005-29",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-05T04:23:13+00:00",
+    "generatedAt": "2026-10-05T08:12:45+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -172,7 +172,7 @@
         "id": "S04",
         "title": "加工方案与搜索",
         "actionStates": [
-          "agent_active"
+          "agent_ready"
         ],
         "stage": "verification",
         "implementation": "partial",
@@ -186,6 +186,11 @@
           "Q-11"
         ],
         "verificationEvidence": [
+          "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+          "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+          "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+          "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+          "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
           "检查点24：完整原生短连接保持kind2；完整有向链、两真实owner、native档案与当前原子位置全部重放一致才消费。161/161及旧133/133原生通过，见AEA/tests/witnesses/original-free-native-boundary/README.md。",
           "检查点24：03联合45完整制造与独立保存审计通过，全部指标逐值同旧合格控制。完整11面材料违规已0、端点0，但SF2/SF6仍两处侧unknown、MP2旧BWC1，仍诊断，未作全案验收。",
           "检查点24：源角41四端仍拒；52组合413材料违规；两whole桥实际8.178mm²重叠。47横带解除两端、材料0违规0unknown，但五件/剩两端/三个BWC，非A/H或合法成本赢家。见docs/verification/2026-10-05-source-component-search/README.md。",
@@ -234,7 +239,7 @@
         "id": "S05",
         "title": "真实几何与门禁",
         "actionStates": [
-          "agent_active"
+          "agent_ready"
         ],
         "stage": "verification",
         "implementation": "partial",
@@ -246,6 +251,11 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+          "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+          "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+          "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+          "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
           "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
           "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
           "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
@@ -283,7 +293,7 @@
         "id": "S06",
         "title": "刀具与刨槽判定",
         "actionStates": [
-          "agent_active"
+          "agent_ready"
         ],
         "stage": "implementation",
         "implementation": "partial",
@@ -295,6 +305,11 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+          "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+          "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+          "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+          "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。 验证限于已实现范围，不代表专家或实机认证。",
           "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。"
         ],
@@ -305,7 +320,7 @@
         "id": "S07",
         "title": "制造补偿与净轮廓",
         "actionStates": [
-          "agent_active"
+          "agent_ready"
         ],
         "stage": "verification",
         "implementation": "partial",
@@ -317,6 +332,11 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+          "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+          "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+          "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+          "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
           "检查点20：制造关键链按白线/孔、有限补偿、typed来源账本和完整材料检查划分职责。来源生产者用单一native曲线+种类+完整owner原子，旧角色从同序列投影；消费者完整身份与PrimarySourceEdgeId严格AND。actual133/133，见AEA/tests/witnesses/original-position-signed-accounting/README.md。",
           "检查点20：同源joint45联合组合完整制造及独立保存检查通过，7件/13折弯/3刨槽，开料1.811309㎡、焊2.647683m。全部实际统计逐值等同qualified09，材料与孔/白蓝/端点门禁保持。该方向成本仍高于保底，不称A/H赢家或DSH自主完成；见docs/verification/2026-10-05-manufacturing-chain-boundaries/joint-typed-source-summary.json。",
           "检查点20：Agent继续复杂白线构造和11面完整受保护材料域的数值能力修复，冻结参数/源模型/原预算与硬门槛保持。DSH仍v11，新runtime两次原12面+一次11面中性自主及独立保存审计未完成；规则明确，无需用户补说明。",
@@ -391,7 +411,7 @@
         "id": "S09",
         "title": "当前制造图交付",
         "actionStates": [
-          "agent_active"
+          "agent_ready"
         ],
         "stage": "verification",
         "implementation": "partial",
@@ -403,6 +423,11 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+          "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+          "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+          "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+          "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
           "检查点24：完整原生短连接保持kind2；完整有向链、两真实owner、native档案与当前原子位置全部重放一致才消费。161/161及旧133/133原生通过，见AEA/tests/witnesses/original-free-native-boundary/README.md。",
           "检查点24：03联合45完整制造与独立保存审计通过，全部指标逐值同旧合格控制。完整11面材料违规已0、端点0，但SF2/SF6仍两处侧unknown、MP2旧BWC1，仍诊断，未作全案验收。",
           "检查点24：源角41四端仍拒；52组合413材料违规；两whole桥实际8.178mm²重叠。47横带解除两端、材料0违规0unknown，但五件/剩两端/三个BWC，非A/H或合法成本赢家。见docs/verification/2026-10-05-source-component-search/README.md。",
@@ -468,7 +493,7 @@
         "id": "S10",
         "title": "复核、反馈与续算",
         "actionStates": [
-          "agent_active"
+          "agent_ready"
         ],
         "stage": "verification",
         "implementation": "partial",
@@ -480,6 +505,11 @@
         "depends": [],
         "openQuestions": [],
         "verificationEvidence": [
+          "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+          "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+          "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+          "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+          "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
           "检查点24：完整原生短连接保持kind2；完整有向链、两真实owner、native档案与当前原子位置全部重放一致才消费。161/161及旧133/133原生通过，见AEA/tests/witnesses/original-free-native-boundary/README.md。",
           "检查点24：03联合45完整制造与独立保存审计通过，全部指标逐值同旧合格控制。完整11面材料违规已0、端点0，但SF2/SF6仍两处侧unknown、MP2旧BWC1，仍诊断，未作全案验收。",
           "检查点24：源角41四端仍拒；52组合413材料违规；两whole桥实际8.178mm²重叠。47横带解除两端、材料0违规0unknown，但五件/剩两端/三个BWC，非A/H或合法成本赢家。见docs/verification/2026-10-05-source-component-search/README.md。",
@@ -550,7 +580,7 @@
         "id": "M2",
         "title": "再补齐 · 最小用户产品",
         "actionStates": [
-          "agent_active",
+          "agent_ready",
           "needs_decision",
           "needs_acceptance"
         ],
@@ -570,6 +600,7 @@
           "Q-07"
         ],
         "verificationEvidence": [
+          "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
           "2026-09-19：真实DSH编号建案、明确拒绝/整体更新/独立编号/冷启动通过；展开模式实际挂载、可空材料schema及依赖声明兼容修复通过；当前Host/Rhino制造39 pass、2 unknown；103个完整对象及3条切割曲线全部继承编号版本。详见 docs/verification/2026-09-19-m2/README.md。",
           "2026-09-21：22场景原生及共享runner通过；完整Host编号数量3联验39 pass/2 unknown；实际3DM线长与报告一致，折弯9/刨槽3/焊接18次。docs/verification/2026-09-21-operations/README.md。"
         ],
@@ -603,6 +634,7 @@
         ],
         "openQuestions": [],
         "verificationEvidence": [
+          "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
           "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。"
         ],
         "taskIds": [
@@ -904,7 +936,7 @@
       "id": "P4-A",
       "title": "已明确功能独立技术验证与修复",
       "actionStates": [
-        "agent_active"
+        "agent_ready"
       ],
       "stage": "verification",
       "implementation": "partial",
@@ -916,6 +948,11 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+        "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+        "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+        "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+        "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
         "检查点27：已有合法保底不再挡住不同已知失败候选的有界修复；未决执行仍先对账，先制造已有合格候选，保留同制造阶段fallback与8候选/48Host。限定同一已采用single-child finite intent从bend改weld，完整父cut/default/其他scope不变；actual41/51结构45/45和最终9项Stage回归通过，仅离线政策证据，候选仍unknown。",
         "检查点27：源自动合并连续窄条与其他child整边重连已实现，完整源原子/27父默认/6提案/beam24/每面6刀保持；366/366离线通过。实际37与合并35均未过制造：35为3件/0重叠，但主板白环缺失、247诊断违规与27unknown；不能称材料缺口已修、成本赢家或A/H完成。",
         "检查点27：实际37只读102记录定位完整来源与append末位漂移，不是102项制造通过。Reader07实际104记录仍2失败；共享端点有向child已恢复，但另一面出生与最终账本绑定仍修复中。新Core未提交安装，不把该局部检查升级全案通过。",
@@ -1506,7 +1543,7 @@
       "id": "P4-R3",
       "title": "自动生成窄条拆分与并回候选",
       "actionStates": [
-        "agent_active"
+        "agent_ready"
       ],
       "stage": "verification",
       "implementation": "partial",
@@ -1521,6 +1558,11 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+        "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+        "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+        "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+        "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
         "检查点27：已有合法保底不再挡住不同已知失败候选的有界修复；未决执行仍先对账，先制造已有合格候选，保留同制造阶段fallback与8候选/48Host。限定同一已采用single-child finite intent从bend改weld，完整父cut/default/其他scope不变；actual41/51结构45/45和最终9项Stage回归通过，仅离线政策证据，候选仍unknown。",
         "检查点27：源自动合并连续窄条与其他child整边重连已实现，完整源原子/27父默认/6提案/beam24/每面6刀保持；366/366离线通过。实际37与合并35均未过制造：35为3件/0重叠，但主板白环缺失、247诊断违规与27unknown；不能称材料缺口已修、成本赢家或A/H完成。",
         "检查点27：实际37只读102记录定位完整来源与append末位漂移，不是102项制造通过。Reader07实际104记录仍2失败；共享端点有向child已恢复，但另一面出生与最终账本绑定仍修复中。新Core未提交安装，不把该局部检查升级全案通过。",
@@ -1659,7 +1701,7 @@
       "id": "P4-R4",
       "title": "同阶段候选比较与双目标保留",
       "actionStates": [
-        "agent_active"
+        "agent_ready"
       ],
       "stage": "verification",
       "implementation": "partial",
@@ -1674,6 +1716,11 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+        "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+        "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+        "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+        "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
         "检查点21：复杂白线构造提取为WhiteContours模块，实际原生24/24通过，原环与孔全量校验；联合来源模块的完整joint45制造及独立保存审计通过。仅四个MP001浮点末位不同，整体指标相同，不能称统计逐位全同。见AEA/tests/witnesses/native-region-material-fallback/README.md。",
         "检查点21：自动拆分重连六提案内优先保留同附件数、保焊子片的较少切分凸组合，受影响223/223通过；原6提案/beam24/每面6刀/8候选/48Host保持。首39操作实际制造材料写前/保存全0违规0unknown、白线构造和来源警告消除，但五个折弯端点仍拒，只是诊断，非成本赢家。见docs/verification/2026-10-05-simple-convex-prefix/README.md。",
         "检查点21：Agent继续五端点的实际有限补偿布局及11面完整材料域修复，无需用户补规则。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计尚未完成，A/H目标与专家/生产验收未完成；原模型/参数、骑线文字和无按钮直接⌘V保持。",
@@ -1874,7 +1921,7 @@
       "id": "P4-R6",
       "title": "桌面自主拆拼到制造交付回归",
       "actionStates": [
-        "agent_active"
+        "agent_ready"
       ],
       "stage": "verification",
       "implementation": "partial",
@@ -1890,6 +1937,11 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
+        "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
+        "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
+        "最新完整制造：3件/0重叠，但主板白线闭环缺失、247诊断违规、27unknown；14面最终仅5面绑定、9面来源链缺失，正式面积unknown，非A/H或成本赢家。",
+        "收尾保留全部WIP和失败原件，集成仅同步状态/证据。DSH仍原v11；新运行时2×12+11中性自主和保存审计未完成，原模型/冻参/权重/骑线文字/无按钮⌘V保持。",
         "检查点27：已有合法保底不再挡住不同已知失败候选的有界修复；未决执行仍先对账，先制造已有合格候选，保留同制造阶段fallback与8候选/48Host。限定同一已采用single-child finite intent从bend改weld，完整父cut/default/其他scope不变；actual41/51结构45/45和最终9项Stage回归通过，仅离线政策证据，候选仍unknown。",
         "检查点27：源自动合并连续窄条与其他child整边重连已实现，完整源原子/27父默认/6提案/beam24/每面6刀保持；366/366离线通过。实际37与合并35均未过制造：35为3件/0重叠，但主板白环缺失、247诊断违规与27unknown；不能称材料缺口已修、成本赢家或A/H完成。",
         "检查点27：实际37只读102记录定位完整来源与append末位漂移，不是102项制造通过。Reader07实际104记录仍2失败；共享端点有向child已恢复，但另一面出生与最终账本绑定仍修复中。新Core未提交安装，不把该局部检查升级全案通过。",
