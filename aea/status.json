@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "fd94f4c1617e6d728e93f6f50b560462d072d79f",
-    "committedAt": "2026-10-05T10:28:29+11:00",
-    "checkedAt": "2026-10-04T23:31:51+00:00",
-    "trackerRevision": "AEA-REQ-20261005-21",
+    "commit": "bdf6eb3686098c455e24a213ec3e3cee6724344b",
+    "committedAt": "2026-10-05T12:33:58+11:00",
+    "checkedAt": "2026-10-05T01:36:11+00:00",
+    "trackerRevision": "AEA-REQ-20261005-22",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-04T23:31:51+00:00",
+    "generatedAt": "2026-10-05T01:36:11+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -895,6 +895,8 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点22：真实原面上的无连接正短边由完整原生来源证明保留；长边面保持既有生产链，PreservedBendConnector工艺补偿不冒充原始free。最终pin ecd66edb…实际33/33及旧来源133/133通过；joint45完整制造与独立保存审计通过，7件/13折/3槽、开料1.811309㎡、焊2.647683m。见AEA/tests/witnesses/original-free-native-boundary/README.md。",
+        "检查点22：同pin真实11面仍有5条材料违规、SF_0002/SF_0006两处材料侧unknown及MP_002一处BWC警告，只输出诊断。新的Regions来源构造未实际采用；不得用局部回归通过宣称全案完成。DSH仍v11，新runtime两次12面+一次11面中性自主及独立保存审计未完成；Agent继续自动拆拼和更低成本合法制造，无需用户补规则。",
         "检查点21：复杂白线构造提取为WhiteContours模块，实际原生24/24通过，原环与孔全量校验；联合来源模块的完整joint45制造及独立保存审计通过。仅四个MP001浮点末位不同，整体指标相同，不能称统计逐位全同。见AEA/tests/witnesses/native-region-material-fallback/README.md。",
         "检查点21：自动拆分重连六提案内优先保留同附件数、保焊子片的较少切分凸组合，受影响223/223通过；原6提案/beam24/每面6刀/8候选/48Host保持。首39操作实际制造材料写前/保存全0违规0unknown、白线构造和来源警告消除，但五个折弯端点仍拒，只是诊断，非成本赢家。见docs/verification/2026-10-05-simple-convex-prefix/README.md。",
         "检查点21：Agent继续五端点的实际有限补偿布局及11面完整材料域修复，无需用户补规则。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计尚未完成，A/H目标与专家/生产验收未完成；原模型/参数、骑线文字和无按钮直接⌘V保持。",
@@ -1835,6 +1837,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点22：真实原面上的无连接正短边由完整原生来源证明保留；长边面保持既有生产链，PreservedBendConnector工艺补偿不冒充原始free。最终pin ecd66edb…实际33/33及旧来源133/133通过；joint45完整制造与独立保存审计通过，7件/13折/3槽、开料1.811309㎡、焊2.647683m。见AEA/tests/witnesses/original-free-native-boundary/README.md。",
+        "检查点22：同pin真实11面仍有5条材料违规、SF_0002/SF_0006两处材料侧unknown及MP_002一处BWC警告，只输出诊断。新的Regions来源构造未实际采用；不得用局部回归通过宣称全案完成。DSH仍v11，新runtime两次12面+一次11面中性自主及独立保存审计未完成；Agent继续自动拆拼和更低成本合法制造，无需用户补规则。",
         "检查点21：复杂白线构造提取为WhiteContours模块，实际原生24/24通过，原环与孔全量校验；联合来源模块的完整joint45制造及独立保存审计通过。仅四个MP001浮点末位不同，整体指标相同，不能称统计逐位全同。见AEA/tests/witnesses/native-region-material-fallback/README.md。",
         "检查点21：自动拆分重连六提案内优先保留同附件数、保焊子片的较少切分凸组合，受影响223/223通过；原6提案/beam24/每面6刀/8候选/48Host保持。首39操作实际制造材料写前/保存全0违规0unknown、白线构造和来源警告消除，但五个折弯端点仍拒，只是诊断，非成本赢家。见docs/verification/2026-10-05-simple-convex-prefix/README.md。",
         "检查点21：Agent继续五端点的实际有限补偿布局及11面完整材料域修复，无需用户补规则。DSH仍v11；新runtime两次原12面+一次11面中性自主和独立保存审计尚未完成，A/H目标与专家/生产验收未完成；原模型/参数、骑线文字和无按钮直接⌘V保持。",
