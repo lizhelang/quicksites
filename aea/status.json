@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "948cb099b004c1162e1f28d02a77cf1c723c9656",
-    "committedAt": "2026-10-05T14:06:56+11:00",
-    "checkedAt": "2026-10-05T03:08:57+00:00",
-    "trackerRevision": "AEA-REQ-20261005-25",
+    "commit": "938eaf534d5429abc6b3743bf31d1c5a346f9653",
+    "committedAt": "2026-10-05T14:36:18+11:00",
+    "checkedAt": "2026-10-05T03:38:23+00:00",
+    "trackerRevision": "AEA-REQ-20261005-26",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-05T03:08:57+00:00",
+    "generatedAt": "2026-10-05T03:38:23+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -916,6 +916,10 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点26：完整短free来源、当前整条native与每已采用轴逐值一致才复制原路径。04专项56/56、旧133/133、joint45及保存审计通过；SF6 native保持但账本仍0，完整11仍两侧unknown/旧BWC，不能称全案已修。",
+        "检查点26：成功源提案截断前保不同完整family的未试代表；一槽可达新方向，多槽保首项和多方向。当前报告SHA、完整父操作与语义核对；unknown拒/已试失败不重跑。旧两负回归失败，修后39/39离线通过，6/8/48保持。",
+        "检查点26：源完整拆接/有限正尾/桥族冻结340/340离线通过，保27默认及6/8/48。Normal51双侧绑定成功但主白环缺失；换whole桥43三件/材料0/0/无BWC，却六蓝端失败且110.906高于合法90.510。均真实失败，非赢家；源组合继续。",
+        "检查点26：新失败反馈发现已有合法fallback会挡repair、finite父也unsupported；已继续修当前derived-child有限范围与端点报告映射。DSH仍v11；新runtime两次12面+11面、保存审计及A/H目标未完成，无新增用户待决。",
         "检查点24：完整原生短连接保持kind2；完整有向链、两真实owner、native档案与当前原子位置全部重放一致才消费。161/161及旧133/133原生通过，见AEA/tests/witnesses/original-free-native-boundary/README.md。",
         "检查点24：03联合45完整制造与独立保存审计通过，全部指标逐值同旧合格控制。完整11面材料违规已0、端点0，但SF2/SF6仍两处侧unknown、MP2旧BWC1，仍诊断，未作全案验收。",
         "检查点24：源角41四端仍拒；52组合413材料违规；两whole桥实际8.178mm²重叠。47横带解除两端、材料0违规0unknown，但五件/剩两端/三个BWC，非A/H或合法成本赢家。见docs/verification/2026-10-05-source-component-search/README.md。",
@@ -1167,6 +1171,7 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点25在线已核验：Actions37258220802成功，公网完整HTML/JSON均948cb09/rev25。仅网站发布，DSH/制造验收不提升。",
         "检查点25：24发布曾因匿名GitHub元数据HTTP403失败；本机恢复后公网HTML/JSON核对aa1eef1/rev24。Actions元数据改用其现有只读token，不落盘/不作推送凭据、严格主机校验保持；专项3项通过，新Actions在线验证待执行。",
         "Actions 35113861503 attempt 2 使用专用key发布成功；公网完整HTML与JSON均核对源18c8e89，schema v2与双责任标签通过。",
         "验证范围是需求网页与Git发布链路，不是Rhino制造或业务验收。"
@@ -1512,6 +1517,10 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点26：完整短free来源、当前整条native与每已采用轴逐值一致才复制原路径。04专项56/56、旧133/133、joint45及保存审计通过；SF6 native保持但账本仍0，完整11仍两侧unknown/旧BWC，不能称全案已修。",
+        "检查点26：成功源提案截断前保不同完整family的未试代表；一槽可达新方向，多槽保首项和多方向。当前报告SHA、完整父操作与语义核对；unknown拒/已试失败不重跑。旧两负回归失败，修后39/39离线通过，6/8/48保持。",
+        "检查点26：源完整拆接/有限正尾/桥族冻结340/340离线通过，保27默认及6/8/48。Normal51双侧绑定成功但主白环缺失；换whole桥43三件/材料0/0/无BWC，却六蓝端失败且110.906高于合法90.510。均真实失败，非赢家；源组合继续。",
+        "检查点26：新失败反馈发现已有合法fallback会挡repair、finite父也unsupported；已继续修当前derived-child有限范围与端点报告映射。DSH仍v11；新runtime两次12面+11面、保存审计及A/H目标未完成，无新增用户待决。",
         "检查点24：完整原生短连接保持kind2；完整有向链、两真实owner、native档案与当前原子位置全部重放一致才消费。161/161及旧133/133原生通过，见AEA/tests/witnesses/original-free-native-boundary/README.md。",
         "检查点24：03联合45完整制造与独立保存审计通过，全部指标逐值同旧合格控制。完整11面材料违规已0、端点0，但SF2/SF6仍两处侧unknown、MP2旧BWC1，仍诊断，未作全案验收。",
         "检查点24：源角41四端仍拒；52组合413材料违规；两whole桥实际8.178mm²重叠。47横带解除两端、材料0违规0unknown，但五件/剩两端/三个BWC，非A/H或合法成本赢家。见docs/verification/2026-10-05-source-component-search/README.md。",
@@ -1873,6 +1882,10 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "检查点26：完整短free来源、当前整条native与每已采用轴逐值一致才复制原路径。04专项56/56、旧133/133、joint45及保存审计通过；SF6 native保持但账本仍0，完整11仍两侧unknown/旧BWC，不能称全案已修。",
+        "检查点26：成功源提案截断前保不同完整family的未试代表；一槽可达新方向，多槽保首项和多方向。当前报告SHA、完整父操作与语义核对；unknown拒/已试失败不重跑。旧两负回归失败，修后39/39离线通过，6/8/48保持。",
+        "检查点26：源完整拆接/有限正尾/桥族冻结340/340离线通过，保27默认及6/8/48。Normal51双侧绑定成功但主白环缺失；换whole桥43三件/材料0/0/无BWC，却六蓝端失败且110.906高于合法90.510。均真实失败，非赢家；源组合继续。",
+        "检查点26：新失败反馈发现已有合法fallback会挡repair、finite父也unsupported；已继续修当前derived-child有限范围与端点报告映射。DSH仍v11；新runtime两次12面+11面、保存审计及A/H目标未完成，无新增用户待决。",
         "检查点24：完整原生短连接保持kind2；完整有向链、两真实owner、native档案与当前原子位置全部重放一致才消费。161/161及旧133/133原生通过，见AEA/tests/witnesses/original-free-native-boundary/README.md。",
         "检查点24：03联合45完整制造与独立保存审计通过，全部指标逐值同旧合格控制。完整11面材料违规已0、端点0，但SF2/SF6仍两处侧unknown、MP2旧BWC1，仍诊断，未作全案验收。",
         "检查点24：源角41四端仍拒；52组合413材料违规；两whole桥实际8.178mm²重叠。47横带解除两端、材料0违规0unknown，但五件/剩两端/三个BWC，非A/H或合法成本赢家。见docs/verification/2026-10-05-source-component-search/README.md。",
