@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "bdf6eb3686098c455e24a213ec3e3cee6724344b",
-    "committedAt": "2026-10-05T12:33:58+11:00",
-    "checkedAt": "2026-10-05T01:36:11+00:00",
-    "trackerRevision": "AEA-REQ-20261005-22",
+    "commit": "7b64d9bc87aafd79fc92d7b881e3267da7e229bb",
+    "committedAt": "2026-10-05T13:08:06+11:00",
+    "checkedAt": "2026-10-05T02:09:18+00:00",
+    "trackerRevision": "AEA-REQ-20261005-23",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-05T01:36:11+00:00",
+    "generatedAt": "2026-10-05T02:09:18+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -218,7 +218,10 @@
           "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。",
           "2026-09-29：独立运行完整AEA，62次评估并接受4轮切分重连，未找到A/H；修复矩形后结果不变。现有内核仍需结果评审与后续搜索优化。",
           "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
-          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。"
+          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。",
+          "检查点23：自动搜索在no_improvement/candidate_budget停止后，对所有实际verified且GeometryEligible的已有候选完成制造与比较；普通来源稀疏、理论劣势或基线已合法均不能跳过。只用原8候选/48Host预算，用户显式停止范围及unknown先对账/不重放保持。",
+          "检查点23：漏制造修复前两新用例均失败；修后专项7/7。完整Stage114项113通过、1旧断言失败，纠正该断言后相关最终4/4通过；分批证据不称一次114/114。冻结SHA与独立复核通过，均离线、未调用Rhino。见docs/verification/2026-10-05-final-manufacturing-coverage/README.md。",
+          "检查点23：自动原模型拆分/重新连接、真实有限端点和轮廓制造修复继续开发，无需用户补规则。DSH仍v11、此次Stage未激活；新runtime两次12面+一次11面中性自主、A/H合法目标与保存3DM独立审计未完成；原模型/冻结设置、骑线文字与无按钮直接⌘V保持。"
         ],
         "existing": 4,
         "total": 5
@@ -445,7 +448,10 @@
           "阶段61、后端8、Bridge15、Node26、离线见证19项通过；AEA/Host构建0错误，分别55/6条既有警告。独立复杂全图审计遇凹面为unknown，不改为通过。并发远端0fd51c4的V槽v3、焊边修复、恢复搜索和CRAP内容已合并保留；DSH安装与主集成推送另记。证据 docs/verification/2026-10-03-face-material-preservation/README.md。",
           "本例仍有5条真实2mm焊接补偿内缩；当前L形虽保住SF_0009，却侵入SF_0015，不能仅换路线后宣称合格。P4-R5-G继续修补偿布局/拆拼，保持本轮硬门禁及原参数，不需用户补充规则。",
           "2026-10-03最终集成：保留45e42a0预处理。原生06规则21/21，100×80mm正式制造及保存审计通过、8000mm²；复杂候选仅诊断。Rhino1→1、零新增，Node26通过。证据 docs/verification/2026-10-03-face-material-preservation/evidence/integration-06/summary.json。",
-          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。"
+          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。",
+          "检查点23：自动搜索在no_improvement/candidate_budget停止后，对所有实际verified且GeometryEligible的已有候选完成制造与比较；普通来源稀疏、理论劣势或基线已合法均不能跳过。只用原8候选/48Host预算，用户显式停止范围及unknown先对账/不重放保持。",
+          "检查点23：漏制造修复前两新用例均失败；修后专项7/7。完整Stage114项113通过、1旧断言失败，纠正该断言后相关最终4/4通过；分批证据不称一次114/114。冻结SHA与独立复核通过，均离线、未调用Rhino。见docs/verification/2026-10-05-final-manufacturing-coverage/README.md。",
+          "检查点23：自动原模型拆分/重新连接、真实有限端点和轮廓制造修复继续开发，无需用户补规则。DSH仍v11、此次Stage未激活；新runtime两次12面+一次11面中性自主、A/H合法目标与保存3DM独立审计未完成；原模型/冻结设置、骑线文字与无按钮直接⌘V保持。"
         ],
         "existing": 7,
         "total": 9
@@ -496,7 +502,10 @@
           "2026-09-28：用户明确认可A/H为本案例两份拆拼目标，其他候选不采用。已冻结源模型、有效参数/刀具、操作、原生3DM、独立指标与哈希。认可限于设计；A/H制造补偿仍fail，完整回折/实机未验。见 AEA/tests/reference-cases/strip-reconnect-AH/README.md。",
           "2026-09-29：真实DSH桌面两个新会话均由原始模型自主生成H方向；基线后分别验证3/2份改进，当前会话6条切线、1件、无独立小件，制造开料1.765183207㎡、白线净面积1.743228679㎡。制造门禁、保存文件独立回读和受控打开通过；角标4条、文字间重叠0。完整回折、机床顺序和生产验收仍unknown。见 docs/verification/2026-09-29-autonomous-ah/README.md。",
           "2026-10-02：DEC-20261002-02重新开放V槽普通骑线文字、实际白线焊接偏移错误和停止后恢复搜索。截图案件旧报告含TextDot；已定位20mm焊缝错误延伸至180mm，旧有效/闭合检查未覆盖此边界。保留原输入、冻结参数、旧报告及用户文档；Agent实施并以同输入原生重制造验证，不等待用户补充规则。",
-          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。"
+          "DEC-20261003-02：常规展开默认无交互；制造失败按真实报告自动推进已有修复方向，不以P编号切换重新询问。预算、原件、冻结参数和硬门禁保持。",
+          "检查点23：自动搜索在no_improvement/candidate_budget停止后，对所有实际verified且GeometryEligible的已有候选完成制造与比较；普通来源稀疏、理论劣势或基线已合法均不能跳过。只用原8候选/48Host预算，用户显式停止范围及unknown先对账/不重放保持。",
+          "检查点23：漏制造修复前两新用例均失败；修后专项7/7。完整Stage114项113通过、1旧断言失败，纠正该断言后相关最终4/4通过；分批证据不称一次114/114。冻结SHA与独立复核通过，均离线、未调用Rhino。见docs/verification/2026-10-05-final-manufacturing-coverage/README.md。",
+          "检查点23：自动原模型拆分/重新连接、真实有限端点和轮廓制造修复继续开发，无需用户补规则。DSH仍v11、此次Stage未激活；新runtime两次12面+一次11面中性自主、A/H合法目标与保存3DM独立审计未完成；原模型/冻结设置、骑线文字与无按钮直接⌘V保持。"
         ],
         "existing": 2,
         "total": 3
@@ -999,7 +1008,10 @@
         "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。",
         "2026-10-04 original08真实失败：11面17连接、3/8候选、Host29/48，仅基线制造因FB_008未过补偿/材料/几何/管线硬门禁，无合法制造或最终比较，audited=false。见docs/verification/2026-10-04-dsh-autonomous-v2/original-08-result.json。",
         "新manufacturing_repair策略仅从本案实际completed失败制造报告的结构FB源连接提出bend→weld，严格绑定报告SHA及缓存响应SHA，保留非目标决策/预算/门槛；生成不dispatch native，unknown先对账。当前是工具能力缺口，不需用户补规则或改源模型。",
-        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。"
+        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。",
+        "检查点23：自动搜索在no_improvement/candidate_budget停止后，对所有实际verified且GeometryEligible的已有候选完成制造与比较；普通来源稀疏、理论劣势或基线已合法均不能跳过。只用原8候选/48Host预算，用户显式停止范围及unknown先对账/不重放保持。",
+        "检查点23：漏制造修复前两新用例均失败；修后专项7/7。完整Stage114项113通过、1旧断言失败，纠正该断言后相关最终4/4通过；分批证据不称一次114/114。冻结SHA与独立复核通过，均离线、未调用Rhino。见docs/verification/2026-10-05-final-manufacturing-coverage/README.md。",
+        "检查点23：自动原模型拆分/重新连接、真实有限端点和轮廓制造修复继续开发，无需用户补规则。DSH仍v11、此次Stage未激活；新runtime两次12面+一次11面中性自主、A/H合法目标与保存3DM独立审计未完成；原模型/冻结设置、骑线文字与无按钮直接⌘V保持。"
       ],
       "requirements": [
         "QA-01",
@@ -1595,7 +1607,10 @@
         "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。",
         "2026-10-04 original08真实失败：11面17连接、3/8候选、Host29/48，仅基线制造因FB_008未过补偿/材料/几何/管线硬门禁，无合法制造或最终比较，audited=false。见docs/verification/2026-10-04-dsh-autonomous-v2/original-08-result.json。",
         "新manufacturing_repair策略仅从本案实际completed失败制造报告的结构FB源连接提出bend→weld，严格绑定报告SHA及缓存响应SHA，保留非目标决策/预算/门槛；生成不dispatch native，unknown先对账。当前是工具能力缺口，不需用户补规则或改源模型。",
-        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。"
+        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。",
+        "检查点23：自动搜索在no_improvement/candidate_budget停止后，对所有实际verified且GeometryEligible的已有候选完成制造与比较；普通来源稀疏、理论劣势或基线已合法均不能跳过。只用原8候选/48Host预算，用户显式停止范围及unknown先对账/不重放保持。",
+        "检查点23：漏制造修复前两新用例均失败；修后专项7/7。完整Stage114项113通过、1旧断言失败，纠正该断言后相关最终4/4通过；分批证据不称一次114/114。冻结SHA与独立复核通过，均离线、未调用Rhino。见docs/verification/2026-10-05-final-manufacturing-coverage/README.md。",
+        "检查点23：自动原模型拆分/重新连接、真实有限端点和轮廓制造修复继续开发，无需用户补规则。DSH仍v11、此次Stage未激活；新runtime两次12面+一次11面中性自主、A/H合法目标与保存3DM独立审计未完成；原模型/冻结设置、骑线文字与无按钮直接⌘V保持。"
       ],
       "requirements": [
         "QA-01",
@@ -1942,7 +1957,10 @@
         "当前只通过ebc原12面两次有界软件链；此次2×12+1×11整体验证未完成，P4-A/R3/R6仍Agent处理中/验证中/部分实现、最终新运行时未验证。保留native_optimizer lineage unsupported、onepiece reconnect补偿fail；9件保守合法输出不是AH ideal/全局最优/专家生产验收。",
         "2026-10-04 original08真实失败：11面17连接、3/8候选、Host29/48，仅基线制造因FB_008未过补偿/材料/几何/管线硬门禁，无合法制造或最终比较，audited=false。见docs/verification/2026-10-04-dsh-autonomous-v2/original-08-result.json。",
         "新manufacturing_repair策略仅从本案实际completed失败制造报告的结构FB源连接提出bend→weld，严格绑定报告SHA及缓存响应SHA，保留非目标决策/预算/门槛；生成不dispatch native，unknown先对账。当前是工具能力缺口，不需用户补规则或改源模型。",
-        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。"
+        "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。",
+        "检查点23：自动搜索在no_improvement/candidate_budget停止后，对所有实际verified且GeometryEligible的已有候选完成制造与比较；普通来源稀疏、理论劣势或基线已合法均不能跳过。只用原8候选/48Host预算，用户显式停止范围及unknown先对账/不重放保持。",
+        "检查点23：漏制造修复前两新用例均失败；修后专项7/7。完整Stage114项113通过、1旧断言失败，纠正该断言后相关最终4/4通过；分批证据不称一次114/114。冻结SHA与独立复核通过，均离线、未调用Rhino。见docs/verification/2026-10-05-final-manufacturing-coverage/README.md。",
+        "检查点23：自动原模型拆分/重新连接、真实有限端点和轮廓制造修复继续开发，无需用户补规则。DSH仍v11、此次Stage未激活；新runtime两次12面+一次11面中性自主、A/H合法目标与保存3DM独立审计未完成；原模型/冻结设置、骑线文字与无按钮直接⌘V保持。"
       ],
       "requirements": [
         "QA-01",
