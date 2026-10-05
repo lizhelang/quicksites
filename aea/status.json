@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "f9fcc8ff9b85e324007547087fcbac07d1357431",
-    "committedAt": "2026-10-05T19:12:20+11:00",
-    "checkedAt": "2026-10-05T08:12:45+00:00",
+    "commit": "97242bd5930dff41051a354b8c1d1f93a90137d8",
+    "committedAt": "2026-10-05T21:24:37+11:00",
+    "checkedAt": "2026-10-05T10:25:12+00:00",
     "trackerRevision": "AEA-REQ-20261005-29",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-05T08:12:45+00:00",
+    "generatedAt": "2026-10-05T10:25:12+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1014,6 +1014,7 @@
         "检查点09：native实际62评估/6导出，4native及3strip方向重放、早制造后续多方向。选9件9折24焊、开料1.754063㎡、焊2.537964m、分数90.509655；audit02同原文件读回18面，无缺材/填孔/切入，证书/统计/文档保持通过。",
         "检查点09：旧audit01唯一missingMaterial失败保留；有限正权控制凸包实际误差上界+浮点裕量扣预算修复31/31通过，四项1e-7准入及物理1e-6不变，不删源微段。同源/冻结参数/实际资产合法选中分数较旧118低31.67%；基线节省unknown，非报价/AH最优。",
         "检查点09：strict moments原生119/119及真实raw通过：29/29、23/23区域保留，600.259273mm²与三Inside点恢复，重建白蓝重叠0；旧18.999999mm诊断侵入不写回。新6刀1件材料before/saved通过但13端点失败，7刀斜向仍diagnostic，不入生产generator。",
+        "2026-10-05：单件方案保留；13个折弯断点失败单列为制造几何缺陷，断点修复前不作交付验收。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
         "检查点09：P4-A/R3/R4/R6仍Agent处理中/验证中/部分实现。当前strict moments与审计预算修复后的fresh新运行时DSH终测、独立重复及多输入未完成；A/H目标、完整回折、工装/工序、shape_preservation/manufacturing_acceptance、专家与生产仍独立。",
         "2026-10-05检查点08：旧118/4e7922e原12面实际8候选、Host48/48、8制造/8完整比较，7fail1legal；自主strip及报告绑定repair完成9件6折24焊保底。见docs/verification/2026-10-04-autonomous-optimization/README.md。",
         "检查点08：选中报告d9736553…的制造与独立保存审计均通过：15保存面、9件、3次native切分、6折24焊；缺材/填孔/切入检查及文档保持通过。开料1.870570㎡、焊6.659866m、分数132.456907；基线制造fail，节省unknown。",
