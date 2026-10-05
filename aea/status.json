@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "97242bd5930dff41051a354b8c1d1f93a90137d8",
-    "committedAt": "2026-10-05T21:24:37+11:00",
-    "checkedAt": "2026-10-05T10:25:12+00:00",
-    "trackerRevision": "AEA-REQ-20261005-29",
+    "commit": "09a58d998cfc8fd83584a431ef20f3529af79b46",
+    "committedAt": "2026-10-06T09:31:33+11:00",
+    "checkedAt": "2026-10-05T22:32:25+00:00",
+    "trackerRevision": "AEA-REQ-20261006-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-05T10:25:12+00:00",
+    "generatedAt": "2026-10-05T22:32:25+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1938,6 +1938,15 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-06本轮输入：case0575fbb0f45b49e1a2195a6827a5da01；SHA af6188cb57c6fa38b7ea78906836490e1e97aecffc58bf8699bd42abda87b08d；11面17连接、1件10折7焊，参数未改。不是旧12面optimizer夹具；此前误展示不计本轮验证。",
+        "2026-10-06原pinned DLL绕过DSH重现失败，非DSH独有；旧Boolean后边索引错绑对角线，FB_008旧81.8436mm。见AEA/tests/witnesses/current-slanted-one-piece/README.md。",
+        "2026-10-06直接几何试改：FB_008有限140.9607mm外缘路线，局部白蓝重合0、内部交叉0、两端接白线，闭线计算面积增加1187.4195mm²（非保料证明）；仅diagnostic，source身份与完整端点/材料门未过，1.5mm释放线有往返重线，simpleLaserContour=false。",
+        "2026-10-06主代码仅在topology_binding unknown时保留完整未补偿单件诊断3DM，严格门不降。fresh仍candidate_validation、1件10折7焊；unresolvedPlanBoundaryTraces=4（SF_0005一条、SF_0010三条），非制造通过。",
+        "2026-10-06展示：safe open_result已打开试改05新copy，新serial268435461/旧268435458已核对，GUI对象和选择保持；非制造通过。证据归档路径：AEA/tests/witnesses/current-slanted-one-piece/evidence/summary.json。",
+        "2026-10-06历史纠错：BestPlan不限制件数，按最低搜索cost选择；1件40.556、2件39.982均为阶段搜索分数，非制造报价；此前“始终最低成本单件/优先单件”为错误陈述，原文保留作历史。",
+        "2026-10-06范围：仅本轮有限亲手试改与诊断保留；旧A/H自主拆分、重连、优化全流程仍暂停，不改DSH策略、不新开自主任务、不安装DSH。保持部分实现、本地验证；完整回折、刀具/工序、shape_preservation/manufacturing_acceptance、专家/生产均unknown。",
+        "历史写入边界（2026-10-05原文）：用户暂缓本目标：本轮只保存现有代码、失败证据并同步状态，不开新Native/DSH或优化修复；历史推进认领不授权自动恢复。 从实际DSH默认展开入口读取源模型，自主生成比较、制造并受控打开；同候选绑定图纸/统计/参数/报告，验证角度标注和相关旧模型。 本轮重新认领当前v2自主全链回归，原12面模型每次从原始输入独立重复，另跑11面快照；既有2026-09-29限定A/H完成记录保留为历史，不替代本轮验证。",
+        "历史完成条件（2026-10-05原文）：原目标未完成；只有用户明确恢复后才执行以下原完成条件，本次收尾不代替其验证。 一条用户指令完成多候选到可回读制造输出，保留中断恢复和失败诊断；自主测试不注入A/H操作。角度文字沿对应折弯线可读；不得把设计确认或软件检查升级为生产验收。 本轮当前v2实际DSH调用需完成原12面独立重复与11面快照的制造交付；图纸/统计/参数/报告一致，保存制造复核与纯白线3DM独立审计通过，失败和预算停止如实保留，不把固定回放或旧会话通过当成本轮结果。",
         "用户于2026-10-05暂缓自主拆分、重连、优化到A/H的目标；任务未完成，无新增待决规则，不自动恢复。Agent可处理仅表示规则明确，待用户明确恢复目标后再执行。",
         "收尾：集成代码基线61b8b2c构建0错误/56旧警告，Host0错误/7警告，相关3/3离线检查通过；不是全套或制造验收。见docs/verification/2026-10-05-autonomy-pause/README.md。",
         "工作检查点：Reader11专项142/142、新Stage11/11与9/9、wrapper22项局部通过，未安装新运行时；旧133与局部Stage断言仍失败，不称完整回归通过。",
