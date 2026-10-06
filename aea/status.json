@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "1cded1ae577cb40a8e843f968c1428af877ba6c6",
-    "committedAt": "2026-10-06T12:03:19+11:00",
-    "checkedAt": "2026-10-06T01:04:04+00:00",
-    "trackerRevision": "AEA-REQ-20261006-05",
+    "commit": "6d407e75696765dc1bb9dd21a30b72736e13ce53",
+    "committedAt": "2026-10-06T13:51:46+11:00",
+    "checkedAt": "2026-10-06T02:52:27+00:00",
+    "trackerRevision": "AEA-REQ-20261006-06",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-06T01:04:04+00:00",
+    "generatedAt": "2026-10-06T02:52:27+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1938,6 +1938,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-06：授权DSH更新，1cded1a/ff8000ee已live热加载；13项对账及29项安装回归通过，参数/426文件/三Rhino文档保持。单件端点与保料仍失败，旧会话未迁移、A/H暂停。见docs/verification/2026-10-06-dsh-one-piece-update/README.md。",
         "2026-10-06：FW006双侧裁掉不适用展开焊，1件10折保持；补料示意46/46+来源50/50、离线17/17、catalog通过。其他端点/保料仍fail，DSH未安装。见AEA/tests/witnesses/current-slanted-one-piece/evidence/overlap-removed-weld/removed-weld-summary.json。",
         "2026-10-06：当前11面单件四条边已分开认证：②SE0033子段、③SE0031原边、①④新裁切来源，多旧边到一新边支持。e5a1b84b原生50/50、离线14/14；拓扑pass/10轴0unknown，制造仍在FW006源焊补偿拒绝，DSH未安装。见AEA/tests/witnesses/current-slanted-one-piece/evidence/provenance/provenance-summary.json。",
         "2026-10-06：FB010外缘诊断试改15/15及保存回读通过，36段白线连续，10蓝线/其他对象不变；通用生产代码未接入、完整制造未过、DSH未更新。见AEA/tests/witnesses/current-slanted-one-piece/evidence/corner/summary.json。",
