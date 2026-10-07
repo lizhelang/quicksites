@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "e456456de5fa351cece94ef5a571fb3f38b6a292",
-    "committedAt": "2026-10-07T10:28:18+11:00",
-    "checkedAt": "2026-10-06T23:29:17+00:00",
-    "trackerRevision": "AEA-REQ-20261007-01",
+    "commit": "b91d884ae41b65298a3940e593dfafd11702881c",
+    "committedAt": "2026-10-07T23:47:28+11:00",
+    "checkedAt": "2026-10-07T12:49:32+00:00",
+    "trackerRevision": "AEA-REQ-20261007-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-06T23:29:17+00:00",
+    "generatedAt": "2026-10-07T12:49:32+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1938,6 +1938,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "DEC-20261007-02：最终case07顶部L形收口，共同cut24.04mm；整图/激光及四材审通过，原生25/25、Compute回传105/105、综合10/10，pin d473d006。单件/冻参/17决定保持，DSH未重装、回折/生产未验。见AEA/tests/witnesses/current-slanted-one-piece/evidence/overlap-common-cut/README.md。",
         "2026-10-07：0.01mm制造判定及实际端裁/连接段来源修复；同原11面1件10折完整制造软件门禁和保存v3通过，26/26精度正反例、25/25端裁来源、122/122旧焊源；原输入/17决定/GUI保持，未安装DSH/未恢复旧A/H。最终pin和证据见AEA/tests/witnesses/current-slanted-one-piece/evidence/precision-policy/README.md。",
         "2026-10-06：取消端点接白边门及旧报告改焊入口，同图8接触失败消失、23线CRC保持；原生14/14、报告8/8、Host10/10、归档6/6。有限跨度/保料仍fail，未再安装DSH。见AEA/tests/witnesses/current-slanted-one-piece/evidence/endpoint-contact-policy/README.md。",
         "2026-10-06：同11面单件保存图8端点编号总览及两页放大，6/6原生只读与6/6离线通过；6处约1.5mm不直接判缺口，不改几何/门禁/DSH。见AEA/tests/witnesses/current-slanted-one-piece/evidence/endpoint-figures/README.md。",
