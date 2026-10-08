@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "d96ef0f28f6eb1be937355d164dd81f0ca520d39",
-    "committedAt": "2026-10-08T17:20:13+11:00",
-    "checkedAt": "2026-10-08T06:22:01+00:00",
-    "trackerRevision": "AEA-REQ-20261008-09",
+    "commit": "79fe6a65b3c91a5639b69c3b5f1dfbbed12fc4a6",
+    "committedAt": "2026-10-08T20:02:41+11:00",
+    "checkedAt": "2026-10-08T09:05:13+00:00",
+    "trackerRevision": "AEA-REQ-20261008-12",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-08T06:22:01+00:00",
+    "generatedAt": "2026-10-08T09:05:13+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,52 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R8-G",
+      "title": "刚体去重与可辨识模型目录",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "verification",
+      "implementation": "partial",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "0.1mm刚体核验已安装：325保留/287启用，3对归并、51对疑似不隐藏；35几何回归与145网页/provider通过，原件/文档/历史不变。参数化/拓扑、SumSurface及候选覆盖仍有缺口，不宣称全库唯一。见docs/verification/2026-10-08-rigid-model-dedup/README.md。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
+    {
+      "id": "P4-R8-F",
+      "title": "原调用对账与批量测试恢复",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "DSH032498d4安装并实际结清原两调用，无重放/预算复位；原案件46/48，failed/nativeResolved=true，批次complete。7搜索通过、7制造失败；73unit+Loader1通过，全量/报价/基线未完成。见docs/verification/2026-10-08-native-invocation-recovery/README.md。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P0",
       "title": "当前工程链首次贯通",
@@ -2158,7 +2204,7 @@
       "id": "P4-R8",
       "title": "模型语料与DSH回归测试中心",
       "actionStates": [
-        "blocked"
+        "agent_ready"
       ],
       "stage": "verification",
       "implementation": "implemented",
@@ -2170,6 +2216,8 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "0.1mm刚体核验已安装：325保留/287启用，3对归并、51对疑似不隐藏；35几何回归与145网页/provider通过，原件/文档/历史不变。参数化/拓扑、SumSurface及候选覆盖仍有缺口，不宣称全库唯一。见docs/verification/2026-10-08-rigid-model-dedup/README.md。",
+        "DSH032498d4安装并实际结清原两调用，无重放/预算复位；原案件46/48，failed/nativeResolved=true，批次complete。7搜索通过、7制造失败；73unit+Loader1通过，全量/报价/基线未完成。见docs/verification/2026-10-08-native-invocation-recovery/README.md。",
         "2026-10-08 P4-R8：328独立模型/290启用、43原档及回读SHA通过；回归网页已安装，Node109/109、CLI13/13。首件2搜索候选通过、制造未完成；重复ID触发DSH原生unknown，缺精确对账provider，全库未运行。见docs/verification/2026-10-08-model-regression-center/README.md。"
       ],
       "requirements": [
