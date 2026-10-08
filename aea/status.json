@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "eddd7e9e59de9efb8bcfdc2fe9905e5f3a547340",
-    "committedAt": "2026-10-08T21:45:18+11:00",
-    "checkedAt": "2026-10-08T10:46:29+00:00",
-    "trackerRevision": "AEA-REQ-20261008-15",
+    "commit": "5ff4087d0da03c80ba3595bece74d0b628cac583",
+    "committedAt": "2026-10-08T23:56:05+11:00",
+    "checkedAt": "2026-10-08T12:57:21+00:00",
+    "trackerRevision": "AEA-REQ-20261008-16",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-08T10:46:29+00:00",
+    "generatedAt": "2026-10-08T12:57:21+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,31 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R8-I",
+      "title": "曲边制造来源、角度与末尾回执升级",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "native-05同一冻结M0023全焊候选evaluate/finalize及10源面保存回读通过，原7项来源警告清零；47项native曲线、56项解析角度、59项C#、312项Node及8+3项Host验证通过。源面朝向额外翻转假设已由实际API与原生对照排除。见docs/verification/2026-10-08-curved-manufacturing-upgrade/README.md。",
+        "C#方法覆盖率/CRAP仍unknown；collectCaseEvidence实际CRAP53.00→50.82；曲线解析12→5、重绑定38→34、Writer93→89，BWC主循环68不增。一般曲边恒角/曲线刀具能力不由采样证明；原五折仍拒绝，全焊不宣称最低成本或车间验收。",
+        "已安装ae08ae43对应runtime 17585434…，native b58ef26b…与最终witness一致。真实回归RPC将旧run归档为failed/nativeResolved=true，8搜索+7制造失败完整保留，未复用旧选择/宣称交付；原971案件文件、冻结预算、工程设置和用户文档未变。安装证据见同目录installation.json。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-R8-H",
       "title": "M0023完整曲边出图与版本重验",
