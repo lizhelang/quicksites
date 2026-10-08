@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "79fe6a65b3c91a5639b69c3b5f1dfbbed12fc4a6",
-    "committedAt": "2026-10-08T20:02:41+11:00",
-    "checkedAt": "2026-10-08T09:05:13+00:00",
-    "trackerRevision": "AEA-REQ-20261008-12",
+    "commit": "eddd7e9e59de9efb8bcfdc2fe9905e5f3a547340",
+    "committedAt": "2026-10-08T21:45:18+11:00",
+    "checkedAt": "2026-10-08T10:46:29+00:00",
+    "trackerRevision": "AEA-REQ-20261008-15",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-08T09:05:13+00:00",
+    "generatedAt": "2026-10-08T10:46:29+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,29 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R8-H",
+      "title": "M0023完整曲边出图与版本重验",
+      "actionStates": [
+        "agent_ready"
+      ],
+      "stage": "verification",
+      "implementation": "partial",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "原案新版重验与29/32段保存回读通过；同案8/8候选、48/48调用，4次制造均失败，另1个几何候选未制造，无交付/报价。续行隔离和网页状态已实测，原记录保留。见docs/verification/2026-10-08-m0023-segmented-draft/README.md。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-R8-G",
       "title": "刚体去重与可辨识模型目录",
