@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "c5f3f947f0aeea6303a068a43c2b94b3ba191c2a",
-    "committedAt": "2026-10-08T11:19:44+11:00",
-    "checkedAt": "2026-10-08T00:20:43+00:00",
-    "trackerRevision": "AEA-REQ-20261008-05",
+    "commit": "20f2241ec30333c0eb4bb1f34441ed38729dc8c2",
+    "committedAt": "2026-10-08T14:18:23+11:00",
+    "checkedAt": "2026-10-08T03:19:17+00:00",
+    "trackerRevision": "AEA-REQ-20261008-06",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-08T00:20:43+00:00",
+    "generatedAt": "2026-10-08T03:19:17+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -2098,6 +2098,31 @@
         "OUT-05",
         "MET-05",
         "MET-06"
+      ]
+    },
+    {
+      "id": "P4-R6-C",
+      "title": "最终制造选型加入每件一分",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-08：含件数制造成本及四维保留实现中，搜索规则不变；同案报告投影/安装读回待完成。见docs/verification/2026-10-08-manufacturing-piece-cost/README.md。",
+        "2026-10-08：成本69/保留85/Node175及真实摘要联测通过；同案单件40.882483获推荐。DSH6fa5a95/da070d9b已HMR、10/10保护与安装摘要读回；26261文件/native保持。见docs/verification/2026-10-08-manufacturing-piece-cost/README.md。"
+      ],
+      "requirements": [
+        "OUT-01",
+        "MET-05",
+        "QA-01"
       ]
     }
   ]
