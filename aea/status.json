@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "5ff4087d0da03c80ba3595bece74d0b628cac583",
-    "committedAt": "2026-10-08T23:56:05+11:00",
-    "checkedAt": "2026-10-08T12:57:21+00:00",
-    "trackerRevision": "AEA-REQ-20261008-16",
+    "commit": "c6e840142cbe1c8c8e4f13c7a847d1bc4d8e0127",
+    "committedAt": "2026-10-09T08:05:16+11:00",
+    "checkedAt": "2026-10-08T21:06:11+00:00",
+    "trackerRevision": "AEA-REQ-20261009-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-08T12:57:21+00:00",
+    "generatedAt": "2026-10-08T21:06:11+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,31 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R8-J",
+      "title": "单曲圆弧比例例外与双曲整面拆焊",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "44项实际Rhino/继承与61项Host检查通过；M0023四阶段见证证明15连接初始全部weld、原五折提前拒绝、全焊10件15焊缝制造与保存回读通过。原模型/冻结参数/预算与用户文档保持，完整回折和车间未验。见docs/verification/2026-10-09-curved-edge-weld-policy/README.md。",
+        "DSH已加载源de22218f/代次1a9b7cd8，active preset和真实回归RPC均核对，native16cb6154与执行见证一致；无需重装DSH应用。保留现有回归独立配置及旧批次历史，802+22脏文件和971原案件文件逐项SHA保持。安装见同目录installation.json。"
+      ],
+      "requirements": [
+        "IN-04",
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-R8-I",
       "title": "曲边制造来源、角度与末尾回执升级",
