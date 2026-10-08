@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "20f2241ec30333c0eb4bb1f34441ed38729dc8c2",
-    "committedAt": "2026-10-08T14:18:23+11:00",
-    "checkedAt": "2026-10-08T03:19:17+00:00",
-    "trackerRevision": "AEA-REQ-20261008-06",
+    "commit": "c4451e80200a6012fa458ecafefed6e28d23783d",
+    "committedAt": "2026-10-08T15:34:56+11:00",
+    "checkedAt": "2026-10-08T04:36:19+00:00",
+    "trackerRevision": "AEA-REQ-20261008-08",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-08T03:19:17+00:00",
+    "generatedAt": "2026-10-08T04:36:19+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -2096,6 +2096,35 @@
         "OUT-01",
         "OUT-03",
         "OUT-05",
+        "MET-05",
+        "MET-06"
+      ]
+    },
+    {
+      "id": "P4-R7",
+      "title": "同对话统一流程与四视图实时控制",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-08：统一流程已安装读回，DSH b0585a4e、AEA 058bcc44/bc173eae；provider=aea，8节点，无独立Start。Web/Loader各2/2；115会话、190原Session文件和26432保护文件保持，无新模型/native。证据docs/verification/2026-10-08-dsh-unified-workflow/README.md。",
+        "P4-R7为同对话软件end_to_end，不提高广义P4-R6/OUT-01/QA-01验收；unknown自动对账仍不支持、预算/冻参保持，成本任务新Host与原native均保留；未提交新模型，旧历史不补造、旧A/H不恢复，完整回折暂缓、车间用户负责。"
+      ],
+      "requirements": [
+        "IN-08",
+        "OUT-01",
+        "OUT-03",
+        "OUT-05",
+        "QA-01",
         "MET-05",
         "MET-06"
       ]
