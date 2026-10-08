@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "081ebd9106ed08738345b12532a5acc0fdbc79d0",
-    "committedAt": "2026-10-08T09:40:01+11:00",
-    "checkedAt": "2026-10-07T22:41:35+00:00",
-    "trackerRevision": "AEA-REQ-20261008-02",
+    "commit": "c5f3f947f0aeea6303a068a43c2b94b3ba191c2a",
+    "committedAt": "2026-10-08T11:19:44+11:00",
+    "checkedAt": "2026-10-08T00:20:43+00:00",
+    "trackerRevision": "AEA-REQ-20261008-05",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-07T22:41:35+00:00",
+    "generatedAt": "2026-10-08T00:20:43+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -2085,7 +2085,10 @@
         "Host隔离build成功，最终25独立用例PASS（11新增+14旧；首轮8+后续16+2含1重验），review无findings、diffcheck通过。最后strict split-lineage2/2与producer一致，门槛不降；JS70/70（stage49+document5+guard16）通过。fresh09同11输入真实新策略/制造/保存审计pending。",
         "检查点23：自动搜索在no_improvement/candidate_budget停止后，对所有实际verified且GeometryEligible的已有候选完成制造与比较；普通来源稀疏、理论劣势或基线已合法均不能跳过。只用原8候选/48Host预算，用户显式停止范围及unknown先对账/不重放保持。",
         "检查点23：漏制造修复前两新用例均失败；修后专项7/7。完整Stage114项113通过、1旧断言失败，纠正该断言后相关最终4/4通过；分批证据不称一次114/114。冻结SHA与独立复核通过，均离线、未调用Rhino。见docs/verification/2026-10-05-final-manufacturing-coverage/README.md。",
-        "检查点23：自动原模型拆分/重新连接、真实有限端点和轮廓制造修复继续开发，无需用户补规则。DSH仍v11、此次Stage未激活；新runtime两次12面+一次11面中性自主、A/H合法目标与保存3DM独立审计未完成；原模型/冻结设置、骑线文字与无按钮直接⌘V保持。"
+        "检查点23：自动原模型拆分/重新连接、真实有限端点和轮廓制造修复继续开发，无需用户补规则。DSH仍v11、此次Stage未激活；新runtime两次12面+一次11面中性自主、A/H合法目标与保存3DM独立审计未完成；原模型/冻结设置、骑线文字与无按钮直接⌘V保持。",
+        "2026-10-08：可选原生dispatch桥接，10项plugin/StageController边界回归及既有阶段/续行/文档/审计合计120/120通过；未安装或执行Rhino。见AEA/AgentHarness/native-dispatch.test.mjs。",
+        "2026-10-08：受控注册兼容集、实际工具scope续行过滤及user_requested后不自动制造；13项桥接与阶段/续行/文档/审计合计123/123通过，未安装/未Rhino。见AEA/AgentHarness/native-dispatch.test.mjs。",
+        "2026-10-08：DSH Fork 2a7d88f原位安装、四页/小监控/图端口读回，114会话及冻结/历史文件SHA保持；AEA7ff2ad9/d64a0e75桥接active，Host/native未变。新工件未执行/精确未知恢复未实现，不升级partial/local。见docs/verification/2026-10-08-dsh-production-studio/README.md。"
       ],
       "requirements": [
         "QA-01",
