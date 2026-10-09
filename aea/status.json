@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "69e359e7ffaef3f37c05b75f46f15480fdd5ce4a",
-    "committedAt": "2026-10-09T20:55:18+11:00",
-    "checkedAt": "2026-10-09T09:57:45+00:00",
+    "commit": "008bcc8f60c423928f313ff2064ca2f4efa97cb0",
+    "committedAt": "2026-10-09T21:09:16+11:00",
+    "checkedAt": "2026-10-09T10:11:20+00:00",
     "trackerRevision": "AEA-REQ-20261009-06",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-09T09:57:45+00:00",
+    "generatedAt": "2026-10-09T10:11:20+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -673,7 +673,7 @@
         "用户确认后源码103bed12/代次7ab8dbba已安装并正常重启，页面实际返回ready与一致SHA；安装器40项通过，32095原文件内容保留（1会话仅追加空结束事件），无新模型/native调用。见docs/verification/2026-10-09-workflow-v2/activation.md。",
         "真实建案暴露DSH工具分类遗漏；两个回执均无Host子调用，原会话已正常暂停。租约注册和真实装配补修见docs/verification/2026-10-09-dsh-lease-compat/README.md。",
         "租约补修：AEA62、DSH26、真实Loader2通过；DSH b6e2590d/AEA2eae1d04安装代次9e7853cd实际ready；33063原文件0丢失，默认展开模式与工程设置保持，原run仍暂停且执行3次未变。未重跑制造。见docs/verification/2026-10-09-dsh-lease-compat/README.md。",
-        "2026-10-09新运行：建案及12条连接决策通过；布局报告523a6926因Connection span lies outside its source trace失败，Host能力终态与外层运行状态未对齐。开发侧续修已获授权；最终隔离build-07以5件/2折连接/10焊连接完整制造与保存通过，DSH原会话续接仍处理中。见docs/verification/2026-10-09-connection-span-recovery/README.md。"
+        "七面原输入build-07以5件/2折连接/10焊连接完整制造与回读通过。原DSH续接暴露比较后动作遗漏，补修Host13/Node170通过，正式交付待验证。见docs/verification/2026-10-09-connection-span-recovery/README.md。"
       ],
       "requirements": [
         "QA-01",
