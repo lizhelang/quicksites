@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "4dd542fbca8785cd125f2b8ac7531052c744bf66",
-    "committedAt": "2026-10-09T22:16:28+11:00",
-    "checkedAt": "2026-10-09T11:17:58+00:00",
-    "trackerRevision": "AEA-REQ-20261009-06",
+    "commit": "461d8ea54804fd8ae854e75b084bcccf9bf89597",
+    "committedAt": "2026-10-09T23:14:13+11:00",
+    "checkedAt": "2026-10-09T12:15:56+00:00",
+    "trackerRevision": "AEA-REQ-20261009-07",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-09T11:17:58+00:00",
+    "generatedAt": "2026-10-09T12:15:56+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,30 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R10",
+      "title": "Harness 三维预览与折焊退让审计",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-09：DSH 3DM预览已安装并实机读回；62套/591项及TypeScript通过，审阅32→1→32、激光5轮廓，50971原文件0缺失、设置/模型保持。折弯审计确认补偿映射缺陷导致五件保底，本轮未修复。见docs/verification/2026-10-09-rhino-preview-and-bend-audit/README.md。"
+      ],
+      "requirements": [
+        "OUT-03",
+        "IN-08",
+        "QA-01"
+      ]
+    },
     {
       "id": "P4-R9",
       "title": "受控执行、阶段证据与轻量知识重构",
