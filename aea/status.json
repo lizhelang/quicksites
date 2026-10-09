@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "461d8ea54804fd8ae854e75b084bcccf9bf89597",
-    "committedAt": "2026-10-09T23:14:13+11:00",
-    "checkedAt": "2026-10-09T12:15:56+00:00",
-    "trackerRevision": "AEA-REQ-20261009-07",
+    "commit": "c7cc2e4081ec5f755438d6acfc881e7b15b1fda0",
+    "committedAt": "2026-10-10T05:43:13+11:00",
+    "checkedAt": "2026-10-09T18:44:22+00:00",
+    "trackerRevision": "AEA-REQ-20261010-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-09T12:15:56+00:00",
+    "generatedAt": "2026-10-09T18:44:22+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,32 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R11",
+      "title": "保留通过布局并修复混合曲边补偿来源",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-10：原生归档确证主体源曲线完整一致，误挂约1.2e-8mm补桥导致3处绑定失败；14→16是正常拆段。修复与同输入见证进行中，原文档保持。见docs/verification/2026-10-10-layout-binding/native-archive-01/result.json。",
+        "2026-10-10：同输入两件五折完整原生制造与9项保存读回通过；20新来源及133旧来源检查通过，Host实际原案只读保留最佳布局/公布同候选刷新。4页PDF标图完成；运行时安装读回待执行。见docs/verification/2026-10-10-layout-binding/README.md。",
+        "2026-10-10：AEA 组件已安装并正常重启读回，Host/原生程序集 hash 与验证 pin 一致，展开模式两个组件运行中；41个受保护文件仅组件运行绑定改变，工程默认参数不变，214个会话文件完整且大小不变，DeepSeek应用包未改。原案及历史消息不覆盖，本轮两件五折结果来自独立同输入原生见证，未新增付费DSH对话执行。见docs/verification/2026-10-10-layout-binding/desktop-activation.json。"
+      ],
+      "requirements": [
+        "OUT-01",
+        "OUT-03",
+        "QA-01"
+      ]
+    },
     {
       "id": "P4-R10",
       "title": "Harness 三维预览与折焊退让审计",
