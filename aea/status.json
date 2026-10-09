@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "201d7a4d1b0cf9bfc7974e9598c8fdf31f3cdf61",
-    "committedAt": "2026-10-09T13:34:01+11:00",
-    "checkedAt": "2026-10-09T02:34:33+00:00",
-    "trackerRevision": "AEA-REQ-20261009-04",
+    "commit": "5d98befde45e376b27555ef9b52e53f3d950f30e",
+    "committedAt": "2026-10-09T18:09:08+11:00",
+    "checkedAt": "2026-10-09T07:10:20+00:00",
+    "trackerRevision": "AEA-REQ-20261009-05",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-09T02:34:33+00:00",
+    "generatedAt": "2026-10-09T07:10:20+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -670,7 +670,9 @@
       "verificationEvidence": [
         "2026-10-09：482项不同Node检查、Host专项42（集成复验12）、XML5、最终native四阶段和真实HTML/PDF通过；原模型/预算/四个GUI文档保持。实际供应商子Agent及完整DSH自主批次未执行；后续已授权激活见下项。见 docs/verification/2026-10-09-workflow-v2/README.md。",
         "激活前隔离候选8774fb29：16个Harness文件、9个报告模块及Host/runner/native SHA吻合；安装XML实查通过，live配置SHA保持。见docs/verification/2026-10-09-workflow-v2/runtime-candidate.json。",
-        "用户确认后源码103bed12/代次7ab8dbba已安装并正常重启，页面实际返回ready与一致SHA；安装器40项通过，32095原文件内容保留（1会话仅追加空结束事件），无新模型/native调用。见docs/verification/2026-10-09-workflow-v2/activation.md。"
+        "用户确认后源码103bed12/代次7ab8dbba已安装并正常重启，页面实际返回ready与一致SHA；安装器40项通过，32095原文件内容保留（1会话仅追加空结束事件），无新模型/native调用。见docs/verification/2026-10-09-workflow-v2/activation.md。",
+        "真实建案暴露DSH工具分类遗漏；两个回执均无Host子调用，原会话已正常暂停。租约注册和真实装配补修见docs/verification/2026-10-09-dsh-lease-compat/README.md。",
+        "租约补修：AEA62、DSH26、真实Loader2通过；DSH b6e2590d/AEA2eae1d04安装代次9e7853cd实际ready；33063原文件0丢失，默认展开模式与工程设置保持，原run仍暂停且执行3次未变。未重跑制造。见docs/verification/2026-10-09-dsh-lease-compat/README.md。"
       ],
       "requirements": [
         "QA-01",
