@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "c6e840142cbe1c8c8e4f13c7a847d1bc4d8e0127",
-    "committedAt": "2026-10-09T08:05:16+11:00",
-    "checkedAt": "2026-10-08T21:06:11+00:00",
-    "trackerRevision": "AEA-REQ-20261009-01",
+    "commit": "db281ccddefd7e250988377efe8037dd0d8d2484",
+    "committedAt": "2026-10-09T13:05:12+11:00",
+    "checkedAt": "2026-10-09T02:06:00+00:00",
+    "trackerRevision": "AEA-REQ-20261009-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-08T21:06:11+00:00",
+    "generatedAt": "2026-10-09T02:06:00+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,34 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R9",
+      "title": "受控执行、阶段证据与轻量知识重构",
+      "actionStates": [
+        "needs_acceptance"
+      ],
+      "stage": "acceptance",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-09：482项不同Node检查、Host专项42（集成复验12）、XML5、最终native四阶段和真实HTML/PDF通过；原模型/预算/四个GUI文档保持。实际供应商子Agent及完整DSH自主批次未执行，当前桌面未切换。见 docs/verification/2026-10-09-workflow-v2/README.md。",
+        "候选8774fb29：16个Harness文件、9个报告模块及Host/runner/native SHA吻合；安装XML实查通过，live配置SHA保持。见docs/verification/2026-10-09-workflow-v2/runtime-candidate.json。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01",
+        "OUT-03",
+        "IN-08",
+        "MET-05",
+        "MET-06"
+      ]
+    },
     {
       "id": "P4-R8-J",
       "title": "单曲圆弧比例例外与双曲整面拆焊",
