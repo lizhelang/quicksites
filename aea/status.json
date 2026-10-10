@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "aa61bef7a7078634488d4b16d13181a361acd384",
-    "committedAt": "2026-10-10T13:37:31+11:00",
-    "checkedAt": "2026-10-10T02:38:01+00:00",
-    "trackerRevision": "AEA-REQ-20261010-02",
+    "commit": "4577ce05b11a94dcd279b3c0d0ec4f89924d1972",
+    "committedAt": "2026-10-10T21:19:04+11:00",
+    "checkedAt": "2026-10-10T10:20:19+00:00",
+    "trackerRevision": "AEA-REQ-20261010-03",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-10T02:38:01+00:00",
+    "generatedAt": "2026-10-10T10:20:19+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,29 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R13",
+      "title": "建案参数一致性、拒绝恢复与上下文续跑",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-10：参数同源、原拒绝回执结清、案件身份恢复及自动摘要修复；原会话成功建案续跑，上下文98%→28%。282项测试通过，设置与原件保留。7候选3制造仍失败，调用47/48，不代表制造交付。证据：docs/verification/2026-10-10-case-configuration-recovery/README.md。"
+      ],
+      "requirements": [
+        "IN-01",
+        "QA-01"
+      ]
+    },
     {
       "id": "P4-R12",
       "title": "原案件单步输出翻倍试验",
