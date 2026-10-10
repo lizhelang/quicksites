@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "c7cc2e4081ec5f755438d6acfc881e7b15b1fda0",
-    "committedAt": "2026-10-10T05:43:13+11:00",
-    "checkedAt": "2026-10-09T18:44:22+00:00",
-    "trackerRevision": "AEA-REQ-20261010-01",
+    "commit": "f4a9883203532675d9850ff7681632d3cae38eb6",
+    "committedAt": "2026-10-10T13:35:58+11:00",
+    "checkedAt": "2026-10-10T02:36:45+00:00",
+    "trackerRevision": "AEA-REQ-20261010-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-09T18:44:22+00:00",
+    "generatedAt": "2026-10-10T02:36:45+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,29 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R12",
+      "title": "原案件单步输出翻倍试验",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-10：单步保护12项测试通过，新安装代保持原Host/native；原会话turn2的seq85实际请求maxTokens=65536，原案续跑中。见docs/verification/2026-10-10-output-token-trial/README.md。",
+        "2026-10-10：原会话turn2在65536上限下正常结束，16步/17工具/27895输出，单步最高10641；完成2搜索+2制造。原布局补偿与对应通过但保料读回失败，更贵备选制造通过，Host保留最佳布局预览不降级交付。输入/冻参/DeepSeek应用包SHA不变；12项单步保护测试通过。本试验完成，不代表原布局制造或整体验收通过。见docs/verification/2026-10-10-output-token-trial/README.md。"
+      ],
+      "requirements": [
+        "QA-01"
+      ]
+    },
     {
       "id": "P4-R11",
       "title": "保留通过布局并修复混合曲边补偿来源",
