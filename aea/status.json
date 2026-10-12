@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "4577ce05b11a94dcd279b3c0d0ec4f89924d1972",
-    "committedAt": "2026-10-10T21:19:04+11:00",
-    "checkedAt": "2026-10-10T10:20:19+00:00",
-    "trackerRevision": "AEA-REQ-20261010-03",
+    "commit": "f55cb060e6fd3aca836d4674915a5c7d4971f3a7",
+    "committedAt": "2026-10-12T19:22:07+11:00",
+    "checkedAt": "2026-10-12T08:23:22+00:00",
+    "trackerRevision": "AEA-REQ-20261012-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-10T10:20:19+00:00",
+    "generatedAt": "2026-10-12T08:23:22+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,29 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R14",
+      "title": "预算不足终态与任务监控收口",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "预算投影/续行/监控终态回归245/245、已装DSH隔离8/8通过；cost1与未知对账保持。见docs/verification/2026-10-12-budget-terminal/README.md。",
+        "新AEA代8b65be2a安装及8/8复验通过，34609保护文件SHA一致、原48额度不增；旧用户run未重算。见docs/verification/2026-10-12-budget-terminal/install-result.json。"
+      ],
+      "requirements": [
+        "QA-01"
+      ]
+    },
     {
       "id": "P4-R13",
       "title": "建案参数一致性、拒绝恢复与上下文续跑",
