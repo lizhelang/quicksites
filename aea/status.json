@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "660d6c83b485efb437c336bb49f2766a21012079",
-    "committedAt": "2026-10-13T18:07:29+11:00",
-    "checkedAt": "2026-10-13T07:07:59+00:00",
+    "commit": "d52f465791f2010c0b2b915291677cd1a94ab642",
+    "committedAt": "2026-10-13T19:45:01+11:00",
+    "checkedAt": "2026-10-13T08:45:22+00:00",
     "trackerRevision": "AEA-REQ-20261013-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-13T07:07:59+00:00",
+    "generatedAt": "2026-10-13T08:45:22+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,29 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-R16",
+      "title": "按成品几何验收制造图纸",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "P4-R16：120个已保存3DM的端口判定与结果式审计一致，Rhino文档未改。见docs/verification/2026-10-13-outcome-audit/README.md。",
+        "合成门禁：结果通过可带证明失败交付；结果失败与布局失败不交付。历史报告未改写，专家/车间不升级。"
+      ],
+      "requirements": [
+        "QA-01"
+      ]
+    },
     {
       "id": "P4-R15",
       "title": "制造输出结果式审计",
