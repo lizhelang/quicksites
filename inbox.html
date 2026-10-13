@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grokbot 指令盒 · quicksites</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+:root {
+--paper: #f7f1e6;
+--ink: #211f1b;
+--muted: #6d655a;
+--line: #d8c8b1;
+--card: #fffaf0;
+--dark: #26231e;
+--red: #b94632;
+--green: #127d75;
+--shadow: 0 18px 48px rgba(33, 31, 27, 0.12);
+}
+
+* { box-sizing: border-box;}
+
+body {
+margin: 0;
+min-height: 100vh;
+background:
+linear-gradient(135deg, rgba(185, 70, 50, 0.07), transparent 28%),
+linear-gradient(315deg, rgba(18, 125, 117, 0.08), transparent 31%),
+var(--paper);
+color: var(--ink);
+font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", ui-serif, Georgia, Cambria, "Times New Roman", serif;
+}
+
+main {
+width: min(720px, calc(100vw - 32px));
+margin: 0 auto;
+padding: 48px 0;
+}
+
+h1 {
+margin: 0 0 12px;
+font-size: clamp(2rem, 6vw, 3.4rem);
+line-height: 1.05;
+font-weight: 900;
+}
+
+.lede {
+margin: 0 0 28px;
+color: var(--muted);
+font-size: 1.02rem;
+line-height: 1.6;
+}
+
+.back {
+display: inline-block;
+margin-bottom: 20px;
+color: var(--muted);
+font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+font-size: 0.9rem;
+text-decoration: none;
+}
+
+.back:hover { color: var(--ink);}
+
+.panel {
+border: 1px solid var(--line);
+border-radius: 8px;
+background: rgba(255, 250, 240, 0.92);
+box-shadow: var(--shadow);
+padding: 20px;
+margin-bottom: 20px;
+}
+
+.panel h2 {
+margin: 0 0 12px;
+font-size: 1.25rem;
+}
+
+textarea {
+width: 100%;
+min-height: 140px;
+resize: vertical;
+border: 1px solid var(--line);
+border-radius: 6px;
+background: #fffdf8;
+color: var(--ink);
+padding: 12px;
+font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+font-size: 1rem;
+line-height: 1.6;
+}
+
+textarea:focus {
+outline: 2px solid var(--green);
+outline-offset: 1px;
+}
+
+.row {
+display: flex;
+gap: 12px;
+align-items: center;
+margin-top: 14px;
+flex-wrap: wrap;
+}
+
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 44px;
+border: 1px solid var(--dark);
+border-radius: 6px;
+background: var(--dark);
+color: #fffaf0;
+padding: 10px 20px;
+font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+font-size: 1rem;
+cursor: pointer;
+text-decoration: none;
+}
+
+.btn.secondary {
+background: transparent;
+color: var(--dark);
+}
+
+.btn:disabled {
+opacity: 0.45;
+cursor: default;
+}
+
+.hint {
+margin: 10px 0 0;
+color: var(--muted);
+font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+font-size: 0.88rem;
+line-height: 1.6;
+}
+
+.issue-list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: grid;
+gap: 10px;
+}
+
+.issue {
+border: 1px solid var(--line);
+border-radius: 6px;
+background: #fffdf8;
+padding: 12px 14px;
+font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+
+.issue.num {
+color: var(--muted);
+font-size: 0.82rem;
+}
+
+.issue.title {
+margin: 2px 0 6px;
+font-size: 1rem;
+line-height: 1.5;
+}
+
+.issue.title a {
+color: var(--ink);
+text-decoration: none;
+}
+
+.issue.title a:hover { text-decoration: underline;}
+
+.issue.time {
+color: var(--muted);
+font-size: 0.82rem;
+}
+
+.badge {
+display: inline-block;
+border-radius: 999px;
+padding: 2px 10px;
+font-size: 0.78rem;
+background: rgba(18, 125, 117, 0.12);
+color: var(--green);
+margin-left: 8px;
+vertical-align: middle;
+}
+
+.empty,.error {
+color: var(--muted);
+font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+font-size: 0.92rem;
+padding: 8px 0;
+line-height: 1.6;
+}
+
+.error { color: var(--red);}
+
+.updated {
+margin-top: 12px;
+color: var(--muted);
+font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+font-size: 0.82rem;
+}
+
+.meta {
+margin-top: 28px;
+color: var(--muted);
+font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+font-size: 0.85rem;
+line-height: 1.7;
+}
+
+.meta a { color: var(--muted);}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="./">← 返回 quicksites 目录</a>
+<h1>Grokbot 指令盒</h1>
+<p class="lede">在这里给小扎下指令。提交后会生成一条 GitHub Issue，小扎每 5 分钟来收一次，看到新指令就会开工，并在聊天里跟你说一声。</p>
+
+<section class="panel">
+<h2>下指令</h2>
+<textarea id="cmd" placeholder="比如：帮我查一下明天悉尼的天气"></textarea>
+<div class="row">
+<button class="btn" id="submitBtn">提交指令</button>
+</div>
+<p class="hint">点提交后会跳转到 GitHub 的 issue 提交页（标题和内容已自动填好），点「Submit new issue」确认即可。需要登录你的 GitHub 账号。</p>
+</section>
+
+<section class="panel">
+<h2>待处理指令 <span class="badge" id="countBadge">0</span></h2>
+<ul class="issue-list" id="issueList"></ul>
+<div class="row">
+<button class="btn secondary" id="refreshBtn">手动刷新</button>
+</div>
+<p class="updated" id="updatedAt"></p>
+</section>
+
+<p class="meta">
+说明：待处理列表每 2 分钟自动刷新一次。小扎处理完一条指令后会在聊天中汇报结果；issue 可手动关闭归档。<br>
+仓库：<a href="https://github.com/lizhelang/quicksites">lizhelang/quicksites</a>
+</p>
+</main>
+
+<script>
+var PREFIX = "";
+var NEW_ISSUE = "https://github.com/lizhelang/quicksites/issues/new";
+var API = "https://api.github.com/repos/lizhelang/quicksites/issues?state=open&per_page=30";
+
+var cmdEl = document.getElementById("cmd");
+var submitBtn = document.getElementById("submitBtn");
+var refreshBtn = document.getElementById("refreshBtn");
+var listEl = document.getElementById("issueList");
+var badgeEl = document.getElementById("countBadge");
+var updatedEl = document.getElementById("updatedAt");
+
+submitBtn.addEventListener("click", function () {
+var text = cmdEl.value.trim();
+if (!text) {
+cmdEl.focus();
+return;
+}
+var firstLine = text.split("\n")[0].slice(0, 36);
+var title = PREFIX + firstLine;
+var body = text + "\n\n---\n_通过 Grokbot 指令盒页面提交_";
+var url = NEW_ISSUE
++ "?title=" + encodeURIComponent(title)
++ "&body=" + encodeURIComponent(body);
+window.open(url, "_blank", "noopener");
+});
+
+function esc(s) {
+return String(s).replace(/[&<>"']/g, function (c) {
+return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c];
+});
+}
+
+function fmtTime(iso) {
+try {
+return new Date(iso).toLocaleString("zh-CN", { timeZone: "Australia/Sydney"});
+} catch (e) {
+return iso;
+}
+}
+
+function render(issues) {
+var inbox = issues.filter(function (it) {
+return it.title && it.title.indexOf(PREFIX) === 0 &&!it.pull_request;
+});
+badgeEl.textContent = inbox.length;
+if (!inbox.length) {
+listEl.innerHTML = '<li class="empty">现在没有待处理的指令。</li>';
+return;
+}
+listEl.innerHTML = inbox.map(function (it) {
+var shortTitle = esc(it.title.slice(PREFIX.length) || "(无标题)");
+return '<li class="issue">'
++ '<div class="num">#' + it.number + '</div>'
++ '<div class="title"><a href="' + esc(it.html_url) + '" target="_blank" rel="noopener">' + shortTitle + "</a></div>"
++ '<div class="time">' + esc(fmtTime(it.created_at)) + " · " + esc((it.user && it.user.login) || "") + "</div>"
++ "</li>";
+}).join("");
+}
+
+function load() {
+refreshBtn.disabled = true;
+fetch(API)
+.then(function (r) {
+if (!r.ok) throw new Error("HTTP " + r.status);
+return r.json();
+})
+.then(function (data) {
+render(Array.isArray(data)? data: []);
+updatedEl.textContent = "更新于 " + new Date().toLocaleString("zh-CN", { timeZone: "Australia/Sydney"});
+})
+.catch(function () {
+listEl.innerHTML = '<li class="error">列表加载失败，点手动刷新重试。</li>';
+})
+.then(function () {
+refreshBtn.disabled = false;
+});
+}
+
+refreshBtn.addEventListener("click", load);
+load();
+setInterval(load, 120000);
+</script>
+</body>
+</html>
