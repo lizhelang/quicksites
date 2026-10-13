@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "75557f9b53adf77550a9ec25408435a45dfd9253",
-    "committedAt": "2026-10-13T16:13:16+11:00",
-    "checkedAt": "2026-10-13T05:13:37+00:00",
+    "commit": "3ffaa73fa84f3e731f50c0b02f3caa731e1eb8cb",
+    "committedAt": "2026-10-13T17:34:25+11:00",
+    "checkedAt": "2026-10-13T06:34:59+00:00",
     "trackerRevision": "AEA-REQ-20261013-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-13T05:13:37+00:00",
+    "generatedAt": "2026-10-13T06:34:59+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -668,8 +668,8 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "136份报告/120个3DM只读审计：门禁失败且有图81份中62份无结果式硬缺陷，19份硬缺陷与bend_line_continuity一致。见docs/verification/2026-10-13-outcome-audit/README.md。",
-        "用户决定折弯端点处往返重线（333处，多为翻边分离切口）保留不计缺陷；面积残差两组同在约±0.4%内；回折与逐面局部保料未覆盖。离线18/18。"
+        "136份报告/120个3DM只读审计含分片回折：门禁失败且有图81份中60份无结果式硬缺陷（51通过、9仅小缺陷），21份硬缺陷。见docs/verification/2026-10-13-outcome-audit/README.md。",
+        "回折complete78/partial42：新增缺料13、面不全等6；门禁FMP失败62中49份无实测缺料。离线25/25。见docs/verification/2026-10-13-outcome-audit/README.md。"
       ],
       "requirements": [
         "QA-01"
