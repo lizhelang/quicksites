@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "5c07492317e59e3efcedd499a8573025cfb957e6",
-    "committedAt": "2026-10-14T21:39:41+11:00",
-    "checkedAt": "2026-10-14T10:40:34+00:00",
-    "trackerRevision": "AEA-REQ-20261014-01",
+    "commit": "25bbb629d3534df160ff213bf0fabfea24a7b7e7",
+    "committedAt": "2026-10-14T21:55:33+11:00",
+    "checkedAt": "2026-10-14T10:56:22+00:00",
+    "trackerRevision": "AEA-REQ-20261014-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-14T10:40:34+00:00",
+    "generatedAt": "2026-10-14T10:56:22+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -670,6 +670,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-14追加：用户确认图纸正确即可，刀具顺序/折回/试制不列待办。原aea-unroll已更新并HMR applied：8eadc2ee，Hostd89fd/native3248同已验01；17项读回、20项安装器及8项已装模块检查通过，2758旧文件/参数/模型/文档保持。见docs/verification/2026-10-14-ex001-agent-completion/original-mode-installation.json。",
         "2026-10-14：独立Agent192秒完成EX-001，23/48Host、6/8候选；1件18孔、2槽1直弯，20pass/2unknown。真实保存30项native几何、19条激光线及孔/净材域通过；参考、冻参、3个Rhino文档与原模式保持。刀具顺序/保形回折/车间未验。见docs/verification/2026-10-14-ex001-agent-completion/README.md。",
         "阶段历史：2026-10-14：固定方案原生native-holes-06已通过软件制造/保存/材料/结果式几何及激光子集门，1件18孔、2槽1直弯；源角7、分割13、材料侧9、孔守卫20、朝向6、完整映射8、终端14项原生检查通过。原参考17文件保持；独立Agent重跑及旧原孔兼容修复待完成，完整保形/实机仍unknown。见docs/verification/2026-10-14-ex001-agent-completion/README.md。",
         "阶段历史：用户本轮明确允许部分直弯按当前判定变刨槽；其他几何与Agent独立交付完成即可收工，默认刀具干涉和顺序优化后续，不改参考或制造公差。"
