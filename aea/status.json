@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "a1439693def7fccb9251b490580ba676ae95f035",
-    "committedAt": "2026-10-15T13:03:53+11:00",
-    "checkedAt": "2026-10-15T02:04:46+00:00",
-    "trackerRevision": "AEA-REQ-20261015-01",
+    "commit": "ceb97b09499fc5b4133cc7367ef50b701fc25249",
+    "committedAt": "2026-10-16T08:16:37+11:00",
+    "checkedAt": "2026-10-15T21:17:15+00:00",
+    "trackerRevision": "AEA-REQ-20261016-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-15T02:04:46+00:00",
+    "generatedAt": "2026-10-15T21:17:15+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,62 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-S5",
+      "title": "同步官方Harness新版并保留本地定制",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P4-S4"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-16完成：原路径已升0.2.1-alpha.4/a6f6d22，AEA7057fc66/3f667671生效；真实框架父子/迟注册隔离及真实Pro/max独立审阅通过。原dirty35文件、工程参数、模型与历史保留，59705文件备份。详见docs/verification/2026-10-16-subagent-consultation/README.md。",
+        "2026-10-16：已安装保留定制的0.2.1-alpha.4/a6f6d22，59705文件备份核验完成、旧会话和Pro/max默认保留。实机只读JSON返回正确；发现全局team在只读root追加工具声明，补充preset作用域最终声明过滤和执行guard，正在复验。",
+        "2026-10-16：子角色/结果接收及双API兼容已实现；85项Node及旧/新ASAR4项隔离见证通过，空工具/4096/one-shot/清理确认。新桌面旧历史与AEA私有profile通过，真实安装待执行。见docs/verification/2026-10-16-subagent-consultation/README.md。",
+        "2026-10-16：官方已至0.2.1-alpha.4/86a4022，本机仍0.2.0-rc.2组合补丁。隔离候选保留35份dirty快照与d90125b8已安装修复，再合并官方；子代理与流程调度接口迁移、候选构建验证进行中，原应用/会话未动。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
+    {
+      "id": "P4-S4",
+      "title": "修正咨询子代理角色与返回接收",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P4-S3"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-16完成：原路径已升0.2.1-alpha.4/a6f6d22，AEA7057fc66/3f667671生效；真实框架父子/迟注册隔离及真实Pro/max独立审阅通过。原dirty35文件、工程参数、模型与历史保留，59705文件备份。详见docs/verification/2026-10-16-subagent-consultation/README.md。",
+        "2026-10-16：已安装保留定制的0.2.1-alpha.4/a6f6d22，59705文件备份核验完成、旧会话和Pro/max默认保留。实机只读JSON返回正确；发现全局team在只读root追加工具声明，补充preset作用域最终声明过滤和执行guard，正在复验。",
+        "2026-10-16：子角色/结果接收及双API兼容已实现；85项Node及旧/新ASAR4项隔离见证通过，空工具/4096/one-shot/清理确认。新桌面旧历史与AEA私有profile通过，真实安装待执行。见docs/verification/2026-10-16-subagent-consultation/README.md。",
+        "2026-10-16：用户咨询子代理已真实启动并completed，因继承父执行指令输出伪read，且解析器拒绝正常reasoning块，父模型误报未配置。修正子角色/结果分类并验证真实spawn零工具链；当前用户展开仍运行，未热更新。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-S3",
       "title": "修正EX-001角部方耳与对话引用文案",
