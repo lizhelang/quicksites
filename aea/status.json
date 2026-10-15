@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "25bbb629d3534df160ff213bf0fabfea24a7b7e7",
-    "committedAt": "2026-10-14T21:55:33+11:00",
-    "checkedAt": "2026-10-14T10:56:22+00:00",
-    "trackerRevision": "AEA-REQ-20261014-02",
+    "commit": "a1439693def7fccb9251b490580ba676ae95f035",
+    "committedAt": "2026-10-15T13:03:53+11:00",
+    "checkedAt": "2026-10-15T02:04:46+00:00",
+    "trackerRevision": "AEA-REQ-20261015-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-14T10:56:22+00:00",
+    "generatedAt": "2026-10-15T02:04:46+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -653,13 +653,40 @@
   },
   "tasks": [
     {
-      "id": "P4-S2",
-      "title": "EX-001自主展开故障定位与完成",
+      "id": "P4-S3",
+      "title": "修正EX-001角部方耳与对话引用文案",
       "actionStates": [
         "done"
       ],
       "stage": "complete",
       "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P4-S2"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-15：角部方耳与三面收口已修，原生131项及保存图/18孔核验通过。原模式ee5b2e4a已安装，13项读回/8项组件通过；引用复制尾注已去除。见docs/verification/2026-10-15-ex001-corner-boundary/README.md。",
+        "2026-10-15当前实现：native054698fb真实同输入已去方耳并恢复经过实际折弯交点的有限短段收口；55+59+17项原生回归通过，无孔与18孔完整生成均无软件失败。保存文件独立核验通过：白线经过蓝线交点，三蓝线/原1.5mm slit保持，新AEA原模式尚未安装。Harness引用尾注已最小替换、实际复制4行验证通过，其他设置/会话保持。见docs/verification/2026-10-15-ex001-corner-boundary/README.md。",
+        "2026-10-15：用户否定已交付角部方耳。原报告e8112b26及未改激光/011快照已定位；当前review文件被另存过，保留不覆盖。两相邻有限bend已同点收口却绕回原源角，生产修复与独立参考复验进行中。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
+    {
+      "id": "P4-S2",
+      "title": "EX-001自主展开故障定位与完成",
+      "actionStates": [
+        "blocked"
+      ],
+      "stage": "verification",
+      "implementation": "partial",
       "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
@@ -670,6 +697,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-15：新Agent比较6候选、制造2份，报告64a14c13白线与修复版原生相同。但上游503及原900秒限时阻断最终比较/自动交付；已确认会话结束与Host idle，不改预算/模型。见docs/verification/2026-10-15-ex001-corner-boundary/agent-current-mode-result.json。",
+        "2026-10-15验收纠正：用户指出白线有面积方耳，昨日软件检查通过未覆盖此局部正确性，不能据此认定与benchmark收口一致；P4-S3继续修复，历史运行/安装证据保持。",
         "2026-10-14追加：用户确认图纸正确即可，刀具顺序/折回/试制不列待办。原aea-unroll已更新并HMR applied：8eadc2ee，Hostd89fd/native3248同已验01；17项读回、20项安装器及8项已装模块检查通过，2758旧文件/参数/模型/文档保持。见docs/verification/2026-10-14-ex001-agent-completion/original-mode-installation.json。",
         "2026-10-14：独立Agent192秒完成EX-001，23/48Host、6/8候选；1件18孔、2槽1直弯，20pass/2unknown。真实保存30项native几何、19条激光线及孔/净材域通过；参考、冻参、3个Rhino文档与原模式保持。刀具顺序/保形回折/车间未验。见docs/verification/2026-10-14-ex001-agent-completion/README.md。",
         "阶段历史：2026-10-14：固定方案原生native-holes-06已通过软件制造/保存/材料/结果式几何及激光子集门，1件18孔、2槽1直弯；源角7、分割13、材料侧9、孔守卫20、朝向6、完整映射8、终端14项原生检查通过。原参考17文件保持；独立Agent重跑及旧原孔兼容修复待完成，完整保形/实机仍unknown。见docs/verification/2026-10-14-ex001-agent-completion/README.md。",
