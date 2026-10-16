@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "ceb97b09499fc5b4133cc7367ef50b701fc25249",
-    "committedAt": "2026-10-16T08:16:37+11:00",
-    "checkedAt": "2026-10-15T21:17:15+00:00",
-    "trackerRevision": "AEA-REQ-20261016-01",
+    "commit": "29c6dcbef282e00ba6634fb5b2fc911b6dee2d6c",
+    "committedAt": "2026-10-16T22:44:45+11:00",
+    "checkedAt": "2026-10-16T11:46:58+00:00",
+    "trackerRevision": "AEA-REQ-20261016-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-15T21:17:15+00:00",
+    "generatedAt": "2026-10-16T11:46:58+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,29 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-S6",
+      "title": "EX-002工人尺寸对照样例归档",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-16 P4-S6：按用户要求归档EX-002-v1，与EX-001并列。纯模型与工人尺寸AEA参考逐字节保存，16文件核验和临时篡改拒绝通过；第一例保持。图纸格式整理不计为自主展开成功。见AEA/tests/reference-cases/solid-expand02/README.md。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-S5",
       "title": "同步官方Harness新版并保留本地定制",
