@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "4da0e31a342ce69c652df70a6322fb6cbca9f8de",
-    "committedAt": "2026-10-20T10:15:23+11:00",
-    "checkedAt": "2026-10-19T23:16:07+00:00",
+    "commit": "f4ba83aaf9c9cf93cd86ee4f5f40e0f95d01e824",
+    "committedAt": "2026-10-20T21:15:01+11:00",
+    "checkedAt": "2026-10-20T10:15:35+00:00",
     "trackerRevision": "AEA-REQ-20261016-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-19T23:16:07+00:00",
+    "generatedAt": "2026-10-20T10:15:35+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,31 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-S7",
+      "title": "EX-002完整自主闭环",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "verification",
+      "implementation": "partial",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P4-S6"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-20 P4-S7：参考方案原生0fail；修自接触、平均接点、槽内端，FW_004按DEC-20261020-01原位。16孔Φ5.2生成，接缝恢复给出同参考16拆分；EX-001几何不变。待安装与自主会话。见docs/verification/2026-10-20-ex002-closure/README.md。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-S6",
       "title": "EX-002工人尺寸对照样例归档",
