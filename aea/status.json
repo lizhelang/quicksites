@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "6450d92422a6381a09ae6c366fc969fa1912b311",
-    "committedAt": "2026-10-21T13:17:47+11:00",
-    "checkedAt": "2026-10-21T02:18:05+00:00",
+    "commit": "81dd20d5066abd2730eda7b7b3aa8df756cb989e",
+    "committedAt": "2026-10-21T13:20:14+11:00",
+    "checkedAt": "2026-10-21T02:20:34+00:00",
     "trackerRevision": "AEA-REQ-20261016-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-21T02:18:05+00:00",
+    "generatedAt": "2026-10-21T02:20:34+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -670,7 +670,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-10-21 P4-S7：修DSH几何/制造门禁后，agent-run-09自主完成EX-002，DSH流程全部门禁通过并交付；7件16孔70 pass/0 fail，独立核验通过，待专家审核。见docs/verification/2026-10-20-ex002-closure/README.md。"
+        "2026-10-21 P4-S7：修DSH门禁后agent-run-09自主走完DSH全流程交付，0 fail、16孔核验通过；但Host按成本选7件，与验收“5件25折”不符（同轮5件方案成本更高），待用户定夺。见docs/verification/2026-10-20-ex002-closure/README.md。"
       ],
       "requirements": [
         "QA-01",
