@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "3bbede0bf25c0597e08a16186a04b605f4afef05",
-    "committedAt": "2026-10-21T23:11:53+11:00",
-    "checkedAt": "2026-10-21T12:12:16+00:00",
+    "commit": "9c752b669e87eccb8775484f982a1b7c4772e43e",
+    "committedAt": "2026-10-21T23:30:17+11:00",
+    "checkedAt": "2026-10-21T12:30:41+00:00",
     "trackerRevision": "AEA-REQ-20261016-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-21T12:12:16+00:00",
+    "generatedAt": "2026-10-21T12:30:41+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -673,7 +673,8 @@
         "2026-10-21 P4-S7：修DSH门禁后agent-run-09自主走完DSH全流程交付，0 fail、16孔核验通过；但Host按成本选7件，与验收“5件25折”不符（同轮5件方案成本更高），待用户定夺。见docs/verification/2026-10-20-ex002-closure/README.md。",
         "2026-10-21 P4-S7续：交汇角白线收口到两折弯线交点，面保料证书扩展到两轴延长相交角（见证AEA/tests/witnesses/ex002-bend-corner-junction）；成本按DEC-20261021-01每小件+4（搜索v2/制造v3）：7件方案103.25、参考5件93.83；EX-001逐点不变。",
         "2026-10-21 P4-S7完成：agent-run-12冻结模型新会话自主verified_delivery_ready：接缝恢复+E0039改焊（整连接重连建议首位），5件25折16孔，70pass/0fail/2unknown，制造分93.83；保存文件独立审计通过、交汇角白线干净；EX-001逐点不变。见docs/verification/2026-10-20-ex002-closure/README.md。",
-        "2026-10-21 P4-S7收尾：AgentBridge Python 276项全部通过（修复成功的制造修复子代被布局保留误挡、搜索并列序回退，3项旧测按2026-10-10布局保留规则与新控制读更新）；原生展开前要求Rhino活动文档，防空文档崩溃。"
+        "2026-10-21 P4-S7收尾：AgentBridge Python 276项全部通过（修复成功的制造修复子代被布局保留误挡、搜索并列序回退，3项旧测按2026-10-10布局保留规则与新控制读更新）；原生展开前要求Rhino活动文档，防空文档崩溃。",
+        "2026-10-21 晚：用户粘贴失败由3bbede0b前的strip_reconnect分派错误引发，遗留未知原生锁挡住后续建案，模型又把工具调用漏成DSML文字；修AEA、DSH对DSML漏出重试并替换默认DSH后，用户原模型与EX-002粘贴复跑均verified_delivery_ready、0 fail（粘贴提示不含孔规则）。"
       ],
       "requirements": [
         "QA-01",
