@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "38da964de16ab76f6ad10d6e969435e962f70685",
-    "committedAt": "2026-10-21T10:26:44+11:00",
-    "checkedAt": "2026-10-20T23:27:03+00:00",
+    "commit": "50885f70a961fb056acecf8bf88607fb5b4aac1d",
+    "committedAt": "2026-10-21T11:11:32+11:00",
+    "checkedAt": "2026-10-21T00:11:56+00:00",
     "trackerRevision": "AEA-REQ-20261016-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-20T23:27:03+00:00",
+    "generatedAt": "2026-10-21T00:11:56+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -670,7 +670,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-10-21 P4-S7：自主会话出图最佳方案70 pass/0 fail、独立核验通过，但交付关卡未走完：续跑时本机网络对deepseek.com做TLS拦截，模型调用失败。见docs/verification/2026-10-20-ex002-closure/README.md。"
+        "2026-10-21 P4-S7：agent-run-07两案出图均70 pass/0 fail，但停在DSH几何关卡：它取最后一个verified候选，而最后是几何失败的试探。修法待定。见docs/verification/2026-10-20-ex002-closure/README.md。"
       ],
       "requirements": [
         "QA-01",
