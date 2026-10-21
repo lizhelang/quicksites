@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "d925adc953f7dc336d831f35631938d15b05dfa8",
-    "committedAt": "2026-10-22T04:38:01+11:00",
-    "checkedAt": "2026-10-21T17:38:25+00:00",
+    "commit": "923e28f217d8f4f4aaa59ffd8da1665f9ce56b81",
+    "committedAt": "2026-10-22T04:47:45+11:00",
+    "checkedAt": "2026-10-21T17:48:08+00:00",
     "trackerRevision": "AEA-REQ-20261016-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-21T17:38:25+00:00",
+    "generatedAt": "2026-10-21T17:48:08+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,32 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-S8",
+      "title": "孔规则工程默认与粘贴自动出孔",
+      "actionStates": [
+        "needs_acceptance"
+      ],
+      "stage": "acceptance",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
+      "owner": {
+        "type": "user",
+        "name": "用户"
+      },
+      "depends": [
+        "P4-S7"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-22 P4-S8：EX-002案件孔规则存为工程默认hr-23d2fe4c；粘贴快照（平移、重编号）建案saved_rule_applied，偏差0.0024mm。修粘贴副本接缝Join证书、角槽布尔回展开平面、单点小环；粘贴提示自主交付5件16孔70pass/0fail，独立审计同run-12。"
+      ],
+      "requirements": [
+        "IN-08",
+        "IN-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-S7",
       "title": "EX-002完整自主闭环",
