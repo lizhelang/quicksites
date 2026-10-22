@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "923e28f217d8f4f4aaa59ffd8da1665f9ce56b81",
-    "committedAt": "2026-10-22T04:47:45+11:00",
-    "checkedAt": "2026-10-21T17:48:08+00:00",
+    "commit": "97daf9bb724ce592d911847b47411e1b0c5a2437",
+    "committedAt": "2026-10-22T13:58:37+11:00",
+    "checkedAt": "2026-10-22T03:09:44+00:00",
     "trackerRevision": "AEA-REQ-20261016-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-21T17:48:08+00:00",
+    "generatedAt": "2026-10-22T03:09:44+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -653,6 +653,31 @@
   },
   "tasks": [
     {
+      "id": "P4-S9",
+      "title": "GeometryEquals身份精度审计与严格证书",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P4-S8"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-22 P4-S9：GeometryEquals实测为float32舍入比较且不分方向、接缝与面朝向；15处1e-9身份结论改用控制网/曲面/Brep严格证书。证书29/29、拆分50/50、槽11/11；EX-001与EX-002六方案复跑均与HEAD报告逐值相同。见AEA/tests/GeometryEqualsPrecision/README.md"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
+    {
       "id": "P4-S8",
       "title": "孔规则工程默认与粘贴自动出孔",
       "actionStates": [
@@ -670,7 +695,9 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-10-22 P4-S8：EX-002案件孔规则存为工程默认hr-23d2fe4c；粘贴快照（平移、重编号）建案saved_rule_applied，偏差0.0024mm。修粘贴副本接缝Join证书、角槽布尔回展开平面、单点小环；粘贴提示自主交付5件16孔70pass/0fail，独立审计同run-12。"
+        "2026-10-22 P4-S8：EX-002案件孔规则存为工程默认hr-23d2fe4c；粘贴快照（平移、重编号）建案saved_rule_applied，偏差0.0024mm。修粘贴副本接缝Join证书、角槽布尔回展开平面、单点小环；粘贴提示自主交付5件16孔70pass/0fail，独立审计同run-12。",
+        "2026-10-22 后续：设置页“冻结参数并创建案件”经网关被拒（signal非末位参数）已修，createCase导出到(request, signal)方法、进程内签名不变；已装Desktop经网关建案到达Host得干净case_rejected。见docs/verification/2026-10-22-settings-create-case-gateway/README.md。",
+        "2026-10-22 后续：参数插件升级改写已装模块路径时，安装器返回activation（restart-entry，include:aea-parameter-ui），install-desktop的next写明须在Desktop空闲时重启该条目；首次与未变重装为null，不切换运行中Desktop。见AEA/AgentHarness/parameter-ui/README.md。"
       ],
       "requirements": [
         "IN-08",
