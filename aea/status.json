@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "f32d9c5ac8cd1a8c49db15f57c85d158b6064035",
-    "committedAt": "2026-10-23T12:08:26Z",
-    "checkedAt": "2026-10-23T12:10:35+00:00",
+    "commit": "974d0361317496d66b5cedd5bdf6f7816bbe5616",
+    "committedAt": "2026-10-24T01:27:43+08:00",
+    "checkedAt": "2026-10-23T17:28:01+00:00",
     "trackerRevision": "AEA-REQ-20261016-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-23T12:10:35+00:00",
+    "generatedAt": "2026-10-23T17:28:01+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,39 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-S10",
+      "title": "EX-010完整自主闭环",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "verification",
+      "implementation": "partial",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P4-S9"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-23 P4-S10：独立分支codex/ex010-autonomous-closure（基点e445c9f6）认领EX-010自主闭环；冻结纯输入与2.5mm，新会话运行、保存文件独立审核及参考比较尚未执行，不升级验收。证据计划docs/verification/2026-10-23-ex010-autonomous-closure/README.md。",
+        "2026-10-23 07:05Z P4-S10：139例/765文件完整性PASS，manifest 3c6ba0dd；TLS连接得预期未鉴权401，控制文档与Desktop idle已核对。agent-run-02新会话继承deepseek-flash/high运行中；首次无工具TRANSPORT不计有效benchmark。见docs/verification/2026-10-23-ex010-autonomous-closure/README.md。",
+        "2026-10-23 P4-S10：run02自主verified_delivery_ready，8候选8制造比较，Host35/48、预算停止；a0edd851/01008050：1件5折7蓝线、0槽0孔、6焊，31pass/0fail/2unknown、分52.1126；基线失败故节省unknown。独立审核待验。见docs/verification/2026-10-23-ex010-autonomous-closure/README.md。",
+        "2026-10-23 P4-S10限定软件闭环完成：run02自主verified_delivery_ready、8候选8制造、Host35/48；选中1件5折7蓝线0槽0孔6焊，31pass/0fail/2unknown。实际保存独立审计1外环0孔7蓝线、净面积1396603.17188034mm²、0失败0警告；Rhino文档保持。见docs/verification/2026-10-23-ex010-autonomous-closure/README.md。",
+        "P4-S10参考白线匹配NOT PASSED：18对18有限直段刚性fit双向4.427188724/4.2mm，未过0.01mm。当前2.5mm料厚表每侧补偿1.8mm，参考辅助轮廓2.5mm，解释宽差2.8/高差4.2mm。见docs/verification/2026-10-23-ex010-autonomous-closure/README.md。",
+        "P4-S10参考顶部白边880.5mm、绿色面边887.5mm（两端各退3.5mm）；当前887.5mm符合P2-E113原位焊不扣料，旧退让工艺未知。原参考28孔仅辅助，无输入孔规则本次0孔；不改冻结表/基准强贴合，不升级QA-01/OUT-01及专家/生产验收。见docs/verification/2026-10-23-ex010-autonomous-closure/README.md。",
+        "2026-10-23 DEC-20261023-01：普通正焊仅一侧扣板厚，peer/自由边/孔保护，反折原位。P4-S10撤回完成，实施中/部分实现；run02旧pass不代表新规则，新制造保存未验。见docs/verification/2026-10-23-ex010-autonomous-closure/README.md。",
+        "2026-10-23 新规则原生native07：4焊各唯一一侧2.5mm、peer原边保持、最终白线有效段全部覆盖；30pass/0fail/2unknown，保存audit和laser一致通过，guard原生12/12。新版安装/自主复跑未执行。见docs/verification/2026-10-23-ex010-autonomous-closure/weld-thickness-summary.json。",
+        "2026-10-23 分支交接已整理：4a8a2820完成普通正焊单侧板厚扣料及EX-010原生保存验证；README列明源码作用、复现入口、交付SHA和未执行的DSH安装/新版自主搜索。见docs/verification/2026-10-23-ex010-autonomous-closure/README.md。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-S9",
       "title": "GeometryEquals身份精度审计与严格证书",
