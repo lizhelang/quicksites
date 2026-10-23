@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "ec9719a5534df40020fd483d8bead46c9d8217d1",
-    "committedAt": "2026-10-24T04:21:03+08:00",
-    "checkedAt": "2026-10-23T20:21:22+00:00",
-    "trackerRevision": "AEA-REQ-20261016-02",
+    "commit": "e93802d0b6de1dd1f3553e79f40c3c324e93afc1",
+    "committedAt": "2026-10-24T04:33:01+08:00",
+    "checkedAt": "2026-10-23T20:33:18+00:00",
+    "trackerRevision": "AEA-REQ-20261023-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-23T20:21:22+00:00",
+    "generatedAt": "2026-10-23T20:33:18+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,35 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-S11",
+      "title": "EX-001折弯顺序与刀具碰撞修正",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P2-T"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-23认领：实际历史为三折、两槽一直折；源码已有逆向贪心展开，原生观测定位碰撞面索引和状态更新。独立分支基点c42c2d7e包含live集成4f5fde33，未改冻结参数或参考。",
+        "2026-10-23 P4-S11：EX001双刀库三直折零槽，18pass/0fail，保存见证通过；顺序003→002→001，蓝线差3.75e-6mm。白线局部差异、EX002新旧制造失败和未知预算保留；未安装DSH。见docs/verification/2026-10-23-ex001-bend-sequence/README.md。",
+        "2026-10-23 合入前复核：预算耗尽改为保留刨槽并标注；EX-001双刀3直0槽，EX-002 1槽69pass/0fail，EX-006/010同集成线。见docs/verification/2026-10-23-ex001-bend-sequence/README.md。"
+      ],
+      "requirements": [
+        "TOOL-01",
+        "IN-06",
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-S10",
       "title": "EX-010完整自主闭环",
