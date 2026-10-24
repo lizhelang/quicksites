@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "e93802d0b6de1dd1f3553e79f40c3c324e93afc1",
-    "committedAt": "2026-10-24T04:33:01+08:00",
-    "checkedAt": "2026-10-23T20:33:18+00:00",
+    "commit": "5df57f7882fe9ee5ef8bedf7182e2e1d1db69075",
+    "committedAt": "2026-10-24T17:25:50+08:00",
+    "checkedAt": "2026-10-24T09:26:02+00:00",
     "trackerRevision": "AEA-REQ-20261023-02",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-23T20:33:18+00:00",
+    "generatedAt": "2026-10-24T09:26:02+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,31 @@
     ]
   },
   "tasks": [
+    {
+      "id": "P4-S12",
+      "title": "基准 v2 EX-003/EX-005 完整自主闭环",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "P4-S7"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-24 P4-S12：EX-003/005 Windows 无界面自主交付（3件30折、9件14折，0 fail），件数折弯线同参考；修拆回、折焊轮廓、原位焊缝核验，重叠审计提速 15→4 分钟且输出不变；见证 6/6、回归无新 fail。见docs/verification/2026-10-24-benchmark-v2-ex003-ex005.md。"
+      ],
+      "requirements": [
+        "QA-01",
+        "OUT-01"
+      ]
+    },
     {
       "id": "P4-S11",
       "title": "EX-001折弯顺序与刀具碰撞修正",
