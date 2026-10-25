@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "5df57f7882fe9ee5ef8bedf7182e2e1d1db69075",
-    "committedAt": "2026-10-24T17:25:50+08:00",
-    "checkedAt": "2026-10-24T09:26:23+00:00",
-    "trackerRevision": "AEA-REQ-20261023-02",
+    "commit": "dbccd8835b7aeede3ff61be566de23e63a92b4bc",
+    "committedAt": "2026-10-25T21:45:52+08:00",
+    "checkedAt": "2026-10-25T13:46:08+00:00",
+    "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-24T09:26:23+00:00",
+    "generatedAt": "2026-10-25T13:46:08+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -1292,7 +1292,8 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "DSH032498d4安装并实际结清原两调用，无重放/预算复位；原案件46/48，failed/nativeResolved=true，批次complete。7搜索通过、7制造失败；73unit+Loader1通过，全量/报价/基线未完成。见docs/verification/2026-10-08-native-invocation-recovery/README.md。"
+        "DSH032498d4安装并实际结清原两调用，无重放/预算复位；原案件46/48，failed/nativeResolved=true，批次complete。7搜索通过、7制造失败；73unit+Loader1通过，全量/报价/基线未完成。见docs/verification/2026-10-08-native-invocation-recovery/README.md。",
+        "2026-10-26限定修复已安装并实际恢复：原submit_baseline精确补证结清，无重放，原候选1/8、Host3/48保持；全局native锁清空，原任务paused/候选待验证，914保护文件与其他会话保持。分支提交不合并。见docs/verification/2026-10-25-native-discovery-recovery/README.md。"
       ],
       "requirements": [
         "QA-01",
