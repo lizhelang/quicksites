@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "b629309808b090a92202e8f1d87cf9dac4d6abc3",
-    "committedAt": "2026-10-29T06:44:42+08:00",
-    "checkedAt": "2026-10-28T22:44:58+00:00",
+    "commit": "438a97c44c414f131f019f9f1a440a403776d3e3",
+    "committedAt": "2026-10-29T07:43:10+08:00",
+    "checkedAt": "2026-10-28T23:43:27+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-28T22:44:58+00:00",
+    "generatedAt": "2026-10-28T23:43:27+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -656,12 +656,11 @@
       "id": "H3",
       "title": "一键部署脚本（Windows Compute/Desktop 与 Mac Desktop）",
       "actionStates": [
-        "agent_active",
-        "needs_acceptance"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "offline",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -669,7 +668,7 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-10-28 H3：独立复查 34 条成立项已修；Mac 离线模拟测试 14/14、shellcheck 通过；Windows 脚本测试机 PS 5.1 解析与只读预检跑通，实机部署待外部 Rhino 释放插件。见 script/tests/test_deploy_mac.py。"
+        "2026-10-28 H3：PR #46 合入 b6293098，两脚本实机首跑成功：Windows 6600 重编重启（PID 95300，6001/6002 载 41f06d30）并重装 Desktop，Mac 建 worktree 装 Desktop 并核对 manifest；Desktop 待用户重启。见 docs/verification/2026-10-28-deploy-scripts/README.md。"
       ],
       "requirements": [
         "OPS-02"
