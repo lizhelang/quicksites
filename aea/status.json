@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "777884e5dae790fb2d4f89763971c283fa2edc9e",
-    "committedAt": "2026-10-29T14:14:18+08:00",
-    "checkedAt": "2026-10-29T06:14:35+00:00",
+    "commit": "f9746552b89161e75a9378183b18e41e16b527ad",
+    "committedAt": "2026-10-29T16:44:36+08:00",
+    "checkedAt": "2026-10-29T08:44:54+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-29T06:14:35+00:00",
+    "generatedAt": "2026-10-29T08:44:54+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -656,12 +656,11 @@
       "id": "H4",
       "title": "部署版本目录与 Windows 共享资源租约",
       "actionStates": [
-        "agent_active",
-        "needs_acceptance"
+        "done"
       ],
-      "stage": "verification",
+      "stage": "complete",
       "implementation": "implemented",
-      "verificationLevel": "local",
+      "verificationLevel": "end_to_end",
       "owner": {
         "type": "agent",
         "name": "主代理"
@@ -671,7 +670,8 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-10-29 H4：Windows 离线测试租约 46/46、部署 77/77，见证 sweep 单测 17/17；实机用部署函数建版本目录 18 秒、独立实例 ping 哈希与 release.json 一致，gui-rhino 起停、保存提示只取消不丢点与 6600 预检跑通，实测和三路复查发现的问题已修；合入后首次真实部署待执行。见 docs/verification/2026-10-29-release-dirs-leases/README.md。"
+        "2026-10-29 H4：Windows 离线测试租约 46/46、部署 77/77，见证 sweep 单测 17/17；实机用部署函数建版本目录 18 秒、独立实例 ping 哈希与 release.json 一致，gui-rhino 起停、保存提示只取消不丢点与 6600 预检跑通，实测和三路复查发现的问题已修；合入后首次真实部署待执行。见 docs/verification/2026-10-29-release-dirs-leases/README.md。",
+        "2026-10-29 H4 合入后：PR #52 合入 90e8191b，首次按版本目录部署 Windows 6600（AEA.rhp d213788f，PID 98580）与 Desktop（代次 753d489a，待重启）；6600 冒烟 M0276 c0 2.0 mm 通过；Mac 未装，由 PR #49 线程装 adaf5024。见 docs/verification/2026-10-29-release-dirs-leases/README.md。"
       ],
       "requirements": [
         "OPS-02"
