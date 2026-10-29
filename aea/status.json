@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "438a97c44c414f131f019f9f1a440a403776d3e3",
-    "committedAt": "2026-10-29T07:43:10+08:00",
-    "checkedAt": "2026-10-28T23:43:27+00:00",
+    "commit": "90e8191b25634da0508a0e8ef80ee280dd4b0bd0",
+    "committedAt": "2026-10-29T13:31:39+08:00",
+    "checkedAt": "2026-10-29T05:31:55+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-28T23:43:27+00:00",
+    "generatedAt": "2026-10-29T05:31:55+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,31 @@
     ]
   },
   "tasks": [
+    {
+      "id": "H4",
+      "title": "部署版本目录与 Windows 共享资源租约",
+      "actionStates": [
+        "agent_active",
+        "needs_acceptance"
+      ],
+      "stage": "verification",
+      "implementation": "implemented",
+      "verificationLevel": "local",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [
+        "H3"
+      ],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-10-29 H4：Windows 离线测试租约 46/46、部署 77/77，见证 sweep 单测 17/17；实机用部署函数建版本目录 18 秒、独立实例 ping 哈希与 release.json 一致，gui-rhino 起停、保存提示只取消不丢点与 6600 预检跑通，实测和三路复查发现的问题已修；合入后首次真实部署待执行。见 docs/verification/2026-10-29-release-dirs-leases/README.md。"
+      ],
+      "requirements": [
+        "OPS-02"
+      ]
+    },
     {
       "id": "H3",
       "title": "一键部署脚本（Windows Compute/Desktop 与 Mac Desktop）",
