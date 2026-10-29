@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "f9746552b89161e75a9378183b18e41e16b527ad",
-    "committedAt": "2026-10-29T16:44:36+08:00",
-    "checkedAt": "2026-10-29T08:44:54+00:00",
+    "commit": "e18b0df0f6213014adab5e476d19397d695abceb",
+    "committedAt": "2026-10-29T17:49:05+08:00",
+    "checkedAt": "2026-10-29T09:49:21+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-29T08:44:54+00:00",
+    "generatedAt": "2026-10-29T09:49:21+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -717,6 +717,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-29 P4-S12（DEC-20261028-01/02）：self8-a35 验证 M0198 两方案七档 14/14、基准 15 例 PASS（对部署版 10 SAME / 5 differ：折弯线截到相邻折弯交点）、EX-003 6/7（3.5 既有）、M0189 7/7、语料 5 模型无新失败。见 docs/verification/2026-10-29-near-straight-rule.md。",
         "2026-10-27 P4-S12：M0322 方案搜索 A+B（搜索期补偿重叠判定、省料阶段焊改折与成对交换）。Windows 独立实例新旧对照：M0322 首轮搜索选中用户方案（2 件 10 折 6 焊，170.6），EX-006~011/M0277 搜索相同，13 例 × 7 档定稿 91/91 SAME。见docs/verification/2026-10-27-m0322-search-a-b/README.md。",
         "2026-10-24 P4-S12：EX-003/005 Windows 无界面自主交付（3件30折、9件14折，0 fail），件数折弯线同参考；修拆回、折焊轮廓、原位焊缝核验，重叠审计提速 15→4 分钟且输出不变；见证 6/6、回归无新 fail。见docs/verification/2026-10-24-benchmark-v2-ex003-ex005.md。"
       ],
