@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "673f0b7d1c6f41934a8f497d124d7b5639b2a876",
-    "committedAt": "2026-10-29T18:33:46+08:00",
-    "checkedAt": "2026-10-29T10:34:02+00:00",
+    "commit": "322ff187662ae135d7b71604b06ffceb3187d656",
+    "committedAt": "2026-10-31T10:30:46+08:00",
+    "checkedAt": "2026-10-31T02:31:02+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-29T10:34:02+00:00",
+    "generatedAt": "2026-10-31T02:31:02+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -717,6 +717,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-31 P4-S12（DEC-20261029-02）：折弯区端头缝底补料，self8-n3 验证 M0189 拆分折弯候选 fd2b2d14 七档 6/7（部署版 2/7，3.5 既有 file_readback）、基准 15 例 2.0 mm SAME、M0189/M0198 cand9 7/7、EX-003 6/7（3.5 既有）。见 docs/verification/2026-10-29-m0189-notch-bottom.md。",
         "2026-10-29 P4-S12（DEC-20261028-01/02）：self8-a35 验证 M0198 两方案七档 14/14、基准 15 例 PASS（对部署版 10 SAME / 5 differ：折弯线截到相邻折弯交点）、EX-003 6/7（3.5 既有）、M0189 7/7、语料 5 模型无新失败。见 docs/verification/2026-10-29-near-straight-rule.md。",
         "2026-10-29 P4-S12 合入部署：PR #43=e18b0df0 已部署 6600（AEA.rhp a5ae00aa）、Windows/Mac Desktop（待重启）；6600 复跑 M0198 14/14、15 例 2.0 SAME、七档 102/105（3 既有）。见 docs/verification/2026-10-29-near-straight-rule.md。",
         "2026-10-27 P4-S12：M0322 方案搜索 A+B（搜索期补偿重叠判定、省料阶段焊改折与成对交换）。Windows 独立实例新旧对照：M0322 首轮搜索选中用户方案（2 件 10 折 6 焊，170.6），EX-006~011/M0277 搜索相同，13 例 × 7 档定稿 91/91 SAME。见docs/verification/2026-10-27-m0322-search-a-b/README.md。",
