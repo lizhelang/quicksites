@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "aa900dc944af88a2cb26755a4708168a0d93b283",
-    "committedAt": "2026-10-31T14:01:18+08:00",
-    "checkedAt": "2026-10-31T06:01:35+00:00",
+    "commit": "d94bdc5f82f66eb5c4051786e8cdedf0fd505646",
+    "committedAt": "2026-10-31T15:18:43+08:00",
+    "checkedAt": "2026-10-31T07:19:01+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-10-31T06:01:35+00:00",
+    "generatedAt": "2026-10-31T07:19:01+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -717,6 +717,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-10-31 P4-S12 自测 AEA-M0137（PR #48，DEC-20261031-01）：1 件、红线处切开；修角码孔绑定、FW_004 外补换边，共线折弯 1 mm/1° 算一道；合入 #61 后撤回切进保留面的覆盖缝；七档 21/21，15 例同集成线。见 docs/verification/2026-10-28-m0137-bend-zone-red-line.md。",
         "2026-10-31 P4-S12 合入部署：PR #61=00d429b1 已部署 6600（AEA.rhp 50b29a91）、Windows Desktop（代次 bf8133cc）与 Mac Desktop（代次 2c916501），两台 Desktop 待重启；6600 复跑 22 请求×7 档与合并前私有实例逐项相同（146 过、8 既有失败）。见 docs/verification/2026-10-31-m0276-followon-fixes.md。",
         "2026-10-31 P4-S12：M0276 后续通用修复（端头/交点重画不被别处零宽缝挡、布尔后放回或重接零宽缝、焊带切除逐区重试，DEC-20261026-01 不变），self6-ab17 对部署版 322ff187 22 请求×7 档 146 过/过、8 既有失败、无新失败，见证 6 方案 1.5~3.0 全过。见 docs/verification/2026-10-31-m0276-followon-fixes.md。",
         "2026-10-31 P4-S12 合入部署：PR #57=322ff187 已部署 6600（AEA.rhp 9bf11530）与 Windows Desktop（待重启），Mac 待批准；6600 复跑 fd2b2d14 七档 6/7（3.5 既有）、15 例 2.0 mm SAME、M0189 选中方案 7/7。见 docs/verification/2026-10-29-m0189-notch-bottom.md。",
