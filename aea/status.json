@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "7e5bf29331317f6ab104b44a580af8c3e2a52cfb",
-    "committedAt": "2026-11-01T16:31:14+08:00",
-    "checkedAt": "2026-11-01T08:31:37+00:00",
+    "commit": "b9b77169404ec68a280c4af87954ee1ead885aae",
+    "committedAt": "2026-11-01T16:35:02+08:00",
+    "checkedAt": "2026-11-01T08:35:24+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-11-01T08:31:37+00:00",
+    "generatedAt": "2026-11-01T08:35:24+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -656,9 +656,9 @@
       "id": "H5",
       "title": "工具回传瘦身（给模型的精简视图）",
       "actionStates": [
-        "needs_acceptance"
+        "done"
       ],
-      "stage": "acceptance",
+      "stage": "complete",
       "implementation": "implemented",
       "verificationLevel": "end_to_end",
       "owner": {
@@ -668,7 +668,8 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
-        "2026-11-01 H5：Windows 私有实例 slim-new DeepSeek 全流程 rr1101 同批 11 图，选中方案制造分与报告 metrics 全部相同，费用 27.01 → 6.85 元；M0322 新旧各补跑 2 次，新旧都会卡在 Host 搜索收尾循环。见 docs/verification/2026-11-01-tool-result-slim.md。"
+        "2026-11-01 H5：Windows 私有实例 slim-new DeepSeek 全流程 rr1101 同批 11 图，选中方案制造分与报告 metrics 全部相同，费用 27.01 → 6.85 元；M0322 新旧各补跑 2 次，新旧都会卡在 Host 搜索收尾循环。见 docs/verification/2026-11-01-tool-result-slim.md。",
+        "2026-11-01 H5 合入后：PR #73 合入 7e5bf293，部署 Windows 6600（AEA.rhp 8acd4218，PID 99188）、Windows Desktop（代次 c92827c4）、Mac Desktop（代次 ecd10202），两台待重启；6600 冒烟 M0116 2.0 mm PASS。"
       ],
       "requirements": [
         "OPS-01"
