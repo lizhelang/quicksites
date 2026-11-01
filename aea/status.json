@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "42ca3fc2f94605f107e0af01cdb64c0816b92262",
-    "committedAt": "2026-11-02T05:23:52+08:00",
-    "checkedAt": "2026-11-01T21:24:16+00:00",
+    "commit": "2cf07c4b4552e715f54bb362ded7201eb99c70c5",
+    "committedAt": "2026-11-02T05:42:03+08:00",
+    "checkedAt": "2026-11-01T21:42:24+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-11-01T21:24:16+00:00",
+    "generatedAt": "2026-11-01T21:42:24+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -679,9 +679,9 @@
       "id": "H7",
       "title": "阶段切换不丢模型前缀缓存",
       "actionStates": [
-        "needs_acceptance"
+        "done"
       ],
-      "stage": "acceptance",
+      "stage": "complete",
       "implementation": "implemented",
       "verificationLevel": "end_to_end",
       "owner": {
@@ -691,6 +691,7 @@
       "depends": [],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-11-02 H7 合入后：SMU PR #87 合入 42ca3fc2，部署 Windows 6600（AEA.rhp 56de1ee1，PID 88068）与 Desktop（代次 c22d3ef6，待重启）；6600 复跑 M0198 2.0 mm pro 方案同，命中 91.9%，1.63 元。DSH PR #5 合入 master b69282fc；alpha4 线移植 PR #6 待合并。",
         "2026-11-02 H7：Windows 私有实例 procache M0198 2.0 mm DeepSeek 全流程四次（pro 旧/旧、旧/新目录、新/新、flash 新），选中方案制造分与 metrics 全同；pro 2.34 → 1.33 元，命中 73.7% → 91.2%。flash 图片链路试验通（rhino_view 截图未框住模型，另记）。见 docs/verification/2026-11-02-stage-tool-cache.md。"
       ],
       "requirements": [
