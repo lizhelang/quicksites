@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "e91aa6b7b0836e09b4cdd917996a5b82544c4736",
-    "committedAt": "2026-11-01T18:32:25+08:00",
-    "checkedAt": "2026-11-01T10:32:48+00:00",
+    "commit": "00cf0cdbc239520a3de4a94ef4cb458b50de5e1a",
+    "committedAt": "2026-11-01T18:41:05+08:00",
+    "checkedAt": "2026-11-01T10:41:28+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-11-01T10:32:48+00:00",
+    "generatedAt": "2026-11-01T10:41:28+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -652,6 +652,28 @@
     ]
   },
   "tasks": [
+    {
+      "id": "H6",
+      "title": "候选收尾规则（防 M0322 搜索收尾卡死）",
+      "actionStates": [
+        "agent_active"
+      ],
+      "stage": "implementation",
+      "implementation": "partial",
+      "verificationLevel": "offline",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-11-01 H6：本地 .NET 7 离线测试，新增 test_cost_finish_rules.py 5 条通过；AgentBridge 阶段工作流相关测试全量复跑见 PR。"
+      ],
+      "requirements": [
+        "COST-01"
+      ]
+    },
     {
       "id": "H5",
       "title": "工具回传瘦身（给模型的精简视图）",
