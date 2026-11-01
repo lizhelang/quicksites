@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "bd4fa8980ee631267ff67e27c3c1262d75d19cab",
-    "committedAt": "2026-11-01T14:26:16+08:00",
-    "checkedAt": "2026-11-01T06:26:41+00:00",
+    "commit": "0162d0816bd2ba5a43da3e767f690c356ec54bf4",
+    "committedAt": "2026-11-01T14:37:37+08:00",
+    "checkedAt": "2026-11-01T06:38:11+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-11-01T06:26:41+00:00",
+    "generatedAt": "2026-11-01T06:38:11+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -717,6 +717,7 @@
       ],
       "openQuestions": [],
       "verificationEvidence": [
+        "2026-11-01 DEC-20261101-01 合入部署：PR #70=bd4fa898 端头交点优先、其余 A/B 取大，已部署 6600（AEA.rhp 01b41f1c）与两台 Desktop（待重启）；6600 复跑 24 例 2.0 mm 同合并前。见 docs/verification/2026-11-01-bend-zone-end-chamfer.md。",
         "2026-11-01 DEC-20261031-04 合入部署：PR #67=aeb2f1ca 两面夹角查表，已部署 6600（AEA.rhp ef71d471）与两台 Desktop（待重启）；合并前 154 次过→败 0，6600 复跑 22 例 2.0 mm 同合并前。见 docs/verification/2026-10-31-bend-table-dihedral.md。",
         "2026-10-31 P4-S12 合入部署：PR #48=d94bdc5f 已部署 6600（AEA.rhp 01f68fd8）、Windows Desktop（代次 543b0a45）与 Mac Desktop（代次 f6e0b5a1），均待重启；6600 复跑 133 次与合并前私有实例逐项相同（129 过、4 既有失败）。见 docs/verification/2026-10-28-m0137-bend-zone-red-line.md。",
         "2026-10-31 P4-S12 自测 AEA-M0137（PR #48，DEC-20261031-01）：1 件、红线处切开；修角码孔绑定、FW_004 外补换边，共线折弯 1 mm/1° 算一道；合入 #61 后撤回切进保留面的覆盖缝；七档 21/21，15 例同集成线。见 docs/verification/2026-10-28-m0137-bend-zone-red-line.md。",
