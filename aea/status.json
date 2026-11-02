@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "54c1a809e7050badab1a93e8b0380a15495e7c27",
-    "committedAt": "2026-11-02T08:39:14+08:00",
-    "checkedAt": "2026-11-02T00:39:47+00:00",
+    "commit": "e628ab15026dd580ba91332e7dde02ecb00122ee",
+    "committedAt": "2026-11-02T10:41:09+08:00",
+    "checkedAt": "2026-11-02T02:41:34+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-11-02T00:39:47+00:00",
+    "generatedAt": "2026-11-02T02:41:34+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
@@ -673,6 +673,28 @@
       ],
       "requirements": [
         "COST-01"
+      ]
+    },
+    {
+      "id": "H8",
+      "title": "刨槽判定提速（刀具碰撞、整件网格与可展开性探测只算一次）",
+      "actionStates": [
+        "done"
+      ],
+      "stage": "complete",
+      "implementation": "implemented",
+      "verificationLevel": "end_to_end",
+      "owner": {
+        "type": "agent",
+        "name": "主代理"
+      },
+      "depends": [],
+      "openQuestions": [],
+      "verificationEvidence": [
+        "2026-11-02 H8：19 请求 × 7 档新旧对照两次各 133 SAME；PR #95 合入 4aefeba6，部署 6600 版本目录 4aefeba62d64 与 Windows Desktop 代次 0235ea7b；6600 复跑 2.0 mm 19 例 SAME。见 docs/verification/2026-11-02-groove-pass-speedup.md。"
+      ],
+      "requirements": [
+        "OPS-01"
       ]
     },
     {
