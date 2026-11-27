@@ -6,15 +6,15 @@
   },
   "source": {
     "branch": "feat/aea-agent-bridge",
-    "commit": "379f1dcafe4b9c3cffa36a1ee7a1dc368671954e",
-    "committedAt": "2026-11-27T20:16:11+08:00",
-    "checkedAt": "2026-11-27T12:17:04+00:00",
+    "commit": "2c07bfb9d1925e519d2dd58106acc2aec76ab578",
+    "committedAt": "2026-11-27T20:31:49+08:00",
+    "checkedAt": "2026-11-27T12:32:36+00:00",
     "trackerRevision": "AEA-REQ-20261026-01",
     "remoteVerified": true
   },
   "publication": {
     "mode": "github-actions",
-    "generatedAt": "2026-11-27T12:17:04+00:00",
+    "generatedAt": "2026-11-27T12:32:36+00:00",
     "content": "full-requirements"
   },
   "taxonomy": {
